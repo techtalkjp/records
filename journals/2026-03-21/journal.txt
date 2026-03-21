@@ -1,0 +1,98 @@
+2026-03-21 techtalk_records 作業ログ
+
+## track 04「行ってこい」字幕付き動画作成 → X投稿
+
+### やったこと
+
+1. Whisper (uvx経由、mediumモデル) で行ってこい.wav から歌詞タイミングを取得し SRT ファイルを生成
+2. Whisperの誤認識（「天滅」→「点滅」、「クロート超え」→「Claude超え」等）を lyrics.txt の正しい歌詞で修正
+3. ffmpeg で背景画像 + 音声 + 字幕を合成して動画を生成
+   - 標準の brew ffmpeg には subtitles/drawtext フィルタがなかった
+   - brew install ffmpeg-full で libass/libfreetype 付きの ffmpeg を導入
+   - /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg を使用（keg-only）
+   - フォント: Hiragino Sans、白文字＋黒アウトライン
+4. 出力: 行ってこい.mp4, 行ってこい_youtube.mp4
+
+### X投稿
+
+投稿文:
+---
+Cursor の Composer 2 使いたかったけど、
+落ちてて使えなかったので。
+
+新トラック「行ってこい」
+#日本語ラップ #AIrhymes #ClaudeCode
+---
+
+- 時事ネタ（Cursor Composer 2 ダウン）にあわせたテスト投稿
+- 動画添付
+
+## 全4曲の字幕付き動画を制作
+
+### 完成物
+
+| # | トラック | X用 (1:1) | YouTube用 (16:9) |
+|---|---------|-----------|-----------------|
+| 01 | Complexes on the Codex | .mp4 | _youtube.mp4 |
+| 02 | ターミナルの誇り | .mp4 | _youtube.mp4 |
+| 03 | ブランチ切るたび未来が分岐 | .mp4 | _youtube.mp4 |
+| 04 | 行ってこい | .mp4 | _youtube.mp4 |
+
+### 制作プロセスの改善（試行錯誤で得たノウハウ）
+
+1. **Whisper高速化**: openai-whisper → mlx-whisper に切り替え。Apple Silicon GPU活用で数分→30秒に
+2. **word-level timestamps**: `--word_timestamps True` + JSON出力で単語単位の正確なタイミング取得
+3. **字幕タイミング**: 各エントリの開始を歌い出しの0.4秒前に前倒し。終了時間もword timestampsで正確に合わせる
+4. **字幕にしないもの**: カッコ書きの合いの手、バックコーラスの繰り返し、Outroのフックリピート
+5. **テキスト表記**: 固有名詞はアルファベット (Claude Code, Codex)、コマンド/関数は小文字 (exit, diff, sleep(), approve)
+6. **改行制御**: 長い行は意味の区切りで改行。FontSize=18で全角約15文字を目安
+7. **1曲ずつ確認**: 並列生成せずX用→確認→OK→YouTube用の順。問題があれば即修正
+8. **画像サイズ対応**: 03は768x1344の縦長画像→中央クロップで1:1に
+
+### スキルのスクリプトバンドル化
+
+`.claude/skills/make-lyric-video/scripts/` にコマンドをスクリプト化:
+- `whisper.sh` — mlx-whisperでword-level timestamps取得
+- `extract_timestamps.py` — JSONからタイミングを見やすく出力
+- `validate_srt.py` — SRTの問題検出（行幅、表示時間、タイミング逆転）
+- `generate_video.sh` — ffmpegで動画生成（square/youtube、非正方形画像対応）
+
+SKILL.mdから `${CLAUDE_SKILL_DIR}/scripts/` 経由で呼び出す形に更新。
+
+バグ修正:
+- `basename` 変数名がコマンドと衝突 → `out_name` にリネーム
+- `ffmpeg -i` の非ゼロ終了で `set -e` が落ちる → `|| true` で回避
+- macOSの `grep -P` 非対応 → `grep -oE` に変更
+
+## codex 2曲の字幕付き動画を制作
+
+### 完成物
+
+| # | トラック | X用 (1:1) | YouTube用 (16:9) |
+|---|---------|-----------|-----------------|
+| 01 | Hourglass on the Claude Code | .mp4 | _youtube.mp4 |
+| 02 | なんでだよ | .mp4 | _youtube.mp4 |
+
+### メモ
+- codex 01はmlx-whisperが冒頭30秒をスキップする問題あり。`--initial-prompt` で歌詞のヒントを与えることで15秒から認識可能に。冒頭部分は音声を切り出して別途認識
+- codex 02のIntroは短いフレーズが間を置いて出るので、1エントリに詰めず分割が必要
+
+## ディレクトリ構造の再編成
+
+全トラックを以下の構造に統一:
+```
+source/          lyrics.txt, styles.txt, track.wav
+artwork/         cover.png/jpeg
+subtitle/        whisper.json, track.srt
+video/           トラック名 (1080x1080).mp4, トラック名 (1920x1080).mp4
+```
+
+## 新フローで全6曲を再生成
+
+スクリプトバンドル + validate_srt.py のWhisperタイミング突き合わせ + 画像リサイズ(1080p) を適用して全曲再生成。validate問題0件を確認してから動画生成するフローが確立。
+
+### 全体メモ
+- ffmpeg-full は keg-only なのでパス指定が必要: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+- SRTファイル名に日本語が入るとffmpegのフィルタパーサーが失敗する → シンボリックリンクで回避
+- 画像が正方形でない場合はcropフィルタで対応: crop=W:W:0:(ih-W)/2
+- mlx-whisperが冒頭を認識しない場合は `--initial-prompt` や音声切り出しで対処
