@@ -18,7 +18,7 @@ Skin: Light-medium tan, smooth clear texture.
 
 Build: Lean athletic, toned neck, broad straight shoulders.
 
-Clothing: Oversized heavyweight black cotton hoodie layered underneath a distressed vintage-wash blue denim vest. Three layered silver chains of varying lengths: short chain with medallion, medium chain with pendant, long chain with ornate silver cross. Multiple thick silver signet rings on eight fingers. Gold Rolex watch with metal bracelet on left wrist — flashy, status symbol.
+Clothing: Oversized heavyweight black cotton hoodie layered underneath a distressed vintage-wash blue denim vest. Three layered silver chains of varying lengths: two short chains with small coin pendants, long chain with ornate silver cross. Multiple thick silver signet rings on eight fingers. Gold Rolex watch with metal bracelet on left wrist — flashy, status symbol.
 
 No illustration, no anime, no CGI.
 ```
