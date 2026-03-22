@@ -140,6 +140,8 @@ config: {
 - thinkingを"high"にすると品質上がるがレイテンシも上がる
 - 同じキャラを維持するには、前に生成した画像を参考画像として渡す
 - **「シーンを描写せよ、キーワードを並べるな」** を常に意識
+- **背景に地名を書かない** — 「Roppongi」と書くとAIが看板に「六本木」と貼り付けるだけで不自然。代わりに視覚的特徴を描写する（狭い路地、配管、室外機、小さなバーのドアから漏れる光）
+- **Google Image Search グラウンディングが背景に効く** — `tools: [{ googleSearch: { searchTypes: { webSearch: {}, imageSearch: {} } } }]` で実際のWeb画像を参照させるとリアルな東京の路地裏が出る
 
 ## 参考
 - [Gemini 3.1 Flash Image Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image-preview)
