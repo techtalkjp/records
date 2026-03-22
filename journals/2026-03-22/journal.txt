@@ -17,32 +17,64 @@
 - 参照画像ではなくテキストベースが最も安定
 
 ### Claude Code キャラクター確定
-- ベースプロンプトをテキストで作成（base-prompt.md）
 - 歌詞を渡して顔を生成→気に入った顔をGemini 3 Flashで分析→ベースプロンプト化
 - 坊主刈りに変更→キャラのクセが一気に上がった
 - タトゥー: Anthropicのスターバーストマーク（✦）をオレンジ/アンバーで前腕に
-- シャノンのエントロピー公式は見送り（テキスト再現が不安定）
-- 傷跡: 左頬2cm + 鼻筋1cm
-- ほくろ: 右目の下
+- 傷跡: 左頬2cm + 鼻筋1cm、ほくろ: 右目の下
 
 ### Codex キャラクター確定
 - 歌詞を渡して顔を生成→既存リファレンスの顔 + 歌詞生成のファッション
-- 2つの画像をGemini 3 Flashで統合分析→ベースプロンプト化
-- ビーニー、デニムベスト、フーディー、チェーン重ね、リング多数
+- ビーニー、デニムベスト、フーディー、チェーン重ね、リング、ゴールドのロレックス
 
 ### キャラ入れ替え
 - 当初のClaude Code顔→Codexに、Codex顔→Claude Codeに入れ替え
-- 理由: 旧Claude Codeの顔が攻撃的すぎ（Codex向き）、旧Codexの顔が余裕ありすぎ（Claude Code向き）
-
-### リサーチノート追加
-- `notes/face-consistency-technique.md` — 顔一貫性テクニック
-- `notes/gemini-image-generation-guide.md` — Gemini 3.1 Flash Image Previewの使い方
+- 理由: 旧Claude Codeの顔が攻撃的すぎ、旧Codexの顔が余裕ありすぎ
 
 ### 舞台設定
 - Claude Code: 六本木（余裕、大人の格、裏路地）
 - Codex: 高円寺（カウンターカルチャー、泥臭さ）
 
-### 次のステップ
-- マルチターンスクリプト対応
-- ベースプロンプトからportrait/fullbody/worldを生成
-- カバーアート生成パイプライン構築
+## ラップバトル2ショット
+- 六本木交差点で向き合う2人（Claude Code vs Codex）
+- Google Image Searchグラウンディングでリアルな東京の背景
+- 地名をプロンプトに書かない→看板が自然に
+
+## カバーアート制作（ターミナルの誇り）
+
+### make-cover-artスキル作成
+- 歌詞とキャラ設定を読み込み、対話的にシーンを決めて画像生成
+- マルチターン会話方式（ベースプロンプト → 派生）
+- thought_signatureの処理が必要（Thinking有効時のマルチターン）
+
+### 重要な学び: ラッパーの世界観で見立てる
+- テック要素（ターミナル、コード、モニター）を直接見せると不自然
+- ラッパーの世界観に翻訳: ターミナル→路地裏、コーディング→マイクの前
+- モノクロ + スプリットライティング（顔半分だけ照らす）
+- 背景はキャラより暗く（明度50%減）で人物を際立たせる
+
+### 完成した制作フロー
+1. cover.jpg（1:1） → make-cover-artスキルで生成
+2. cover_wide.jpg（16:9） → cover.jpgから拡張生成
+3. 動画生成: square版はcover.jpg、youtube版はcover_wide.jpgを使用
+
+### generate-cover.ts スクリプト作成
+- マルチターン会話を自動化
+- ベースプロンプトの自動読み込み
+- 生成モードと編集モード
+
+### generate_video.sh 改善
+- 画像を先にリサイズしてからエンコード（高速化: 4K→1080p）
+- youtube版でcover_wide.*を自動検出
+- cover_wideがなければ従来のぼかし背景にフォールバック
+
+## リリース告知リサーチ
+- DistroKid HyperFollowでリンク集約
+- X投稿のゴールデンタイム: 20-22時
+- テック業界の時事ネタに絡めるとエンジニア層に刺さる
+- TechTalk Records Webサイト (records.techtalk.jp) を検討中
+  - React Router v7 + Cloudflare Workers + static assets + prerender
+
+## CLAUDE.md 更新
+- 制作フロー全体を文書化
+- ファイル命名規則（cover.jpg, cover_wide.jpg）
+- スクリプト一覧
