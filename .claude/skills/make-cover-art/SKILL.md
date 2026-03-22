@@ -64,14 +64,18 @@ No text, no watermarks.
 - レンズ: 85mm portrait lens, 35mm wide angle
 - ライティング: single amber streetlight, neon glow, backlit silhouette
 
-#### boom-bap × テックの美学
+#### ラッパーの世界観で見立てる（重要）
+テック要素（ターミナル、コード、モニター）を直接見せない。ラッパーの世界観に翻訳する：
+- ターミナル → **レコーディングスタジオ、路地裏**（一人で向き合う場所）
+- コードを書く → **リリックを書く、マイクの前に立つ**
+- 深夜のコーディング → **深夜のストリート、スタジオ**
+- テック要素を直接見せるとラッパーとしてのリアリティが崩れる
+
+#### boom-bap の美学
 - モノクロベース + アクセント1色（Claude Code: アンバー/オレンジ、Codex: 赤）
 - ストリートの質感（コンクリート、グラフィティ、濡れた路面）
 - 夜・暗所のライティング
-- boom-bap × テックの融合要素を活かす：
-  - ターミナルの黒い画面 = 暗い路地
-  - プロンプトの点滅 = ターンテーブルの針
-  - コードのフロウ = MCのフロウ
+- スプリットライティング（顔の半分だけ照らす）が強いインパクトを出す
 
 #### 歌詞からのシンボル埋め込み
 歌詞に出てくる場所やオブジェクトをさりげなく配置する。直接的でなく、わかる人にはわかるレベルで。
@@ -79,74 +83,44 @@ No text, no watermarks.
 #### サムネイル映え
 SpotifyやXでは小さく表示される。シンプルな構図、コントラストの強い配色を意識する。
 
-### 4. マルチターン会話で画像を生成する
+### 4. 画像を生成する
 
-顔の一貫性を保つため、**マルチターン会話**を使う。参照画像を渡す単発生成ではなく、テキストベースプロンプトで顔を確立してから派生させる。
+`scripts/generate-cover.ts` を使う。マルチターン会話、thought_signature、グラウンディングを自動処理する。
 
-#### Turn 1: ベースショット生成
-
-`base-prompt.md` のベースプロンプトをそのまま使い、キャラクターの基準となる画像を生成する。
-
-```typescript
-import { GoogleGenAI } from '@google/genai';
-import { readFileSync, writeFileSync } from 'fs';
-
-const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
-
-// Turn 1: ベースプロンプトでベースショット生成
-const basePrompt = readFileSync('<キャラクターのbase-prompt.mdからBase Prompt部分>', 'utf-8');
-
-const response1 = await ai.models.generateContent({
-  model: 'gemini-3.1-flash-image-preview',
-  contents: [{ role: 'user', parts: [{ text: basePrompt }] }],
-  config: {
-    responseModalities: ['IMAGE', 'TEXT'],
-    imageConfig: { aspectRatio: '1:1', imageSize: '2K' },
-    thinkingConfig: { thinkingLevel: 'High' }
-  }
-});
-
-// Turn 1の結果を保存
-const baseImage = response1.candidates[0].content.parts.find(p => p.inlineData);
-const baseText = response1.candidates[0].content.parts.find(p => p.text);
+#### 新規生成（Turn 1 ベースショット + Turn 2 シーン派生）
+```bash
+bun scripts/generate-cover.ts <character> "<シーンプロンプト>" <出力パス>
 ```
 
-#### Turn 2: カバーアートのシーンに派生
-
-Turn 1の応答（テキスト + 画像）を会話履歴に含めて、カバーアートのシーンを指示する。
-
-```typescript
-// Turn 2: 派生（シーン変更）
-const coverPrompt = `Same person, identical face, same hairstyle.
-Keep all distinctive features exactly the same.
-
-[ここにステップ3で作成したシーン描写を入れる]`;
-
-const response2 = await ai.models.generateContent({
-  model: 'gemini-3.1-flash-image-preview',
-  contents: [
-    { role: 'user', parts: [{ text: basePrompt }] },
-    { role: 'model', parts: [
-      ...(baseText ? [{ text: baseText.text }] : []),
-      { inlineData: baseImage.inlineData }
-    ]},
-    { role: 'user', parts: [{ text: coverPrompt }] }
-  ],
-  config: {
-    responseModalities: ['IMAGE', 'TEXT'],
-    tools: [{ googleSearch: { searchTypes: { webSearch: {}, imageSearch: {} } } }],
-    imageConfig: { aspectRatio: '1:1', imageSize: '2K' },
-    thinkingConfig: { thinkingLevel: 'High' }
-  }
-});
+例:
+```bash
+bun scripts/generate-cover.ts claude-code \
+  "This person standing in a dark narrow alley at night, body facing forward. Hard split lighting, half face lit, half in shadow. Monochrome. Graffiti on wall." \
+  claude_code/02_ターミナルの誇り/artwork/cover_new.jpg
 ```
 
-#### 設定
+#### 既存画像の編集
+```bash
+bun scripts/generate-cover.ts <character> --edit "<編集指示>" <画像パス>
+```
+
+例:
+```bash
+bun scripts/generate-cover.ts claude-code \
+  --edit "Apply extreme split lighting. Only left half of face lit." \
+  claude_code/02_ターミナルの誇り/artwork/cover_new.jpg
+```
+
+#### 設定（スクリプトに組み込み済み）
 - **アスペクト比**: 1:1（スクエア）
-- **解像度**: 2K
+- **解像度**: 4K
 - **Thinking**: High（品質重視）
-- **グラウンディング**: Turn 2以降で有効化（リアルな背景のため）。Turn 1では不要
-- **5ターンの壁**: 5ターン超えると顔が崩れる。長くなったらセッションをリセットしてTurn 1からやり直す
+- **グラウンディング**: Turn 2で自動有効化
+- **5ターンの壁**: 5ターン超えると顔が崩れる。長くなったらスクリプトを再実行してTurn 1からやり直す
+
+#### 注意点
+- AIに「モノクロにして」と編集を重ねるとカラーに戻ることがある。最初からプロンプトに「full black and white monochrome」と入れる方が確実
+- 編集はJPEG再圧縮で画質劣化する。できるだけ少ない編集回数で仕上げる
 
 #### 顔一貫性のポイント（マルチターン方式）
 
