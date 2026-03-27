@@ -1,0 +1,12 @@
+Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn + generate-image.ts edit)
+Character reference: characters/codex/reference.jpg
+Additional reference: characters/claude-code/graffiti_symbol.jpg
+
+Turn 1-2 (generate-cover.ts):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. This person stands leaning against a dark wall on the left side of the frame, next to a closed weathered metal shutter door of a small Japanese backstreet shop. Arms crossed, slouched brooding posture, head turned to the right looking down the dark alley away from camera. He is partially in shadow, lit faintly from the side. The shutter has a large spray-painted hourglass in deep red paint with thick black outlines, paint dripping downward. On the upper right of the shutter, a faded stencil of an interlocking XX symbol with OPENAI CODEX in blocky letters. The number 429 sprayed once in bold red. A small angular geometric beast face in amber-orange with a red X spray-painted over it near the bottom. Wet pavement reflecting light. Very dark moody scene, red as the main color accent. 35mm film, slight grain. No music notes, no watermarks.
+
+Edit (generate-image.ts):
+Remove the animal face graffiti with the red X at the bottom right of the shutter completely. Replace that area with more weathered metal shutter surface with some small random graffiti tags, matching the rest of the shutter texture. Keep everything else exactly the same.
+
+Wide (generate-image.ts):
+Extend this image to 16:9 widescreen aspect ratio. Seamlessly expand the alley and wall to the left and right. The extended areas should be darker and more subdued - the person and shutter remain the visual focal point. The left side extends the dark alley with more wall and shadow. The right side shows more of the building facade fading into darkness. Edges fall into shadow, vignette effect. Keep the same moody lighting and wet pavement.
