@@ -1,0 +1,7 @@
+Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn)
+Character reference: characters/codex/reference.jpg
+
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. This person sits on concrete steps of a fire escape stairwell behind a small live music venue at night. He leans back against the wall with one arm resting on his knee, looking off to the side with a quiet, contemplative expression - not sad, more like thinking things through. A dim red emergency exit light above the metal door provides the faintest glow. The scene is extremely dark, almost silhouette, with just enough red light to catch the edges of his face and the silver chains. Deep shadows everywhere. The mood is solitary but not defeated - more like a fighter taking a moment between rounds. Shot on 35mm film, heavy grain, very dark exposure. No music notes, no watermarks.
+
+Wide (generate-image.ts):
+Extend this image to 16:9 widescreen aspect ratio. Seamlessly expand the fire escape stairwell scene to the left and right. The extended areas should be very dark - more brick wall, metal railing, and deep shadows fading to near black at the edges. The person and EXIT sign remain the focal point in the center. Keep the same extremely dark moody lighting and red accent.
