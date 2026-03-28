@@ -127,8 +127,43 @@ bun scripts/generate-cover.ts claude-code \
 - ワイド版は `01_wide.jpg`, `02_wide.jpg`, ...
 - グラフィティシンボル生成時は `characters/<キャラ>/drafts/` を使う
 
+#### ワイド版（16:9）の生成
+
+**まず outpaint を試し、顔が歪んだらマルチターンで再生成する。**
+
+##### 方法1: outpaint（推奨・まず試す）
+
+`generate-image.ts --input` でスクエア版を入力し、左右を拡張する。同じ画像をベースにするため構図の一貫性が高い。
+
+```bash
+bun scripts/generate-image.ts \
+  "Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The person's face and body proportions must remain exactly as they are. [環境の描写]. Match the existing lighting and atmosphere." \
+  <トラック>/artwork/drafts/01_wide.jpg \
+  --aspect-ratio 16:9 \
+  --input <トラック>/artwork/cover.jpg
+```
+
+- 明るい画像（昼間・自然光）は歪みが目立ちにくく成功しやすい
+- 暗い画像（夜・ハードライト）は顔のプロポーションが崩れやすい
+- 生成後、必ず顔が縦長/横長に歪んでいないか確認する
+
+##### 方法2: マルチターン再生成（outpaintで顔が歪んだ場合のフォールバック）
+
+スクエア版と同じプロンプトをベースに、最初から16:9で生成する。顔の一貫性は高いが、構図が変わる。
+
+```bash
+bun scripts/generate-cover.ts <character> "<シーンプロンプト>" <出力パス> --aspect-ratio 16:9
+```
+
+- プロンプトに「A wide 16:9 cinematic composition」等のワイド構図指示を追加する
+- マルチターンなので毎回異なる画像になる点に注意
+
+##### 使ってはいけない方法
+
+- `generate-cover.ts --edit` でのアスペクト比変更 — editモードはアスペクト比がハードコードされており変更できない
+
 #### 設定（スクリプトに組み込み済み）
-- **アスペクト比**: 1:1（スクエア）
+- **アスペクト比**: 1:1（スクエア）、`--aspect-ratio 16:9` でワイド指定可能
 - **解像度**: 4K
 - **Thinking**: High（品質重視）
 - **グラウンディング**: Turn 2で自動有効化
@@ -137,6 +172,7 @@ bun scripts/generate-cover.ts claude-code \
 #### 注意点
 - AIに「モノクロにして」と編集を重ねるとカラーに戻ることがある。最初からプロンプトに「full black and white monochrome」と入れる方が確実
 - 編集はJPEG再圧縮で画質劣化する。できるだけ少ない編集回数で仕上げる
+- outpaintは明るい画像では成功しやすいが、暗い画像では顔が歪みやすい。歪んだらマルチターンで再生成する
 
 #### 顔一貫性のポイント（マルチターン方式）
 

@@ -39,6 +39,7 @@ async function generateCover(options: {
   character: string;
   scenePrompt: string;
   outputPath: string;
+  aspectRatio?: string;
 }) {
   const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
   if (!apiKey) {
@@ -97,7 +98,7 @@ async function generateCover(options: {
           },
         },
       ],
-      imageConfig: { aspectRatio: "1:1", imageSize: "4K" },
+      imageConfig: { aspectRatio: options.aspectRatio || "1:1", imageSize: "4K" },
       thinkingConfig: { thinkingLevel: "High" },
     },
   });
@@ -187,5 +188,7 @@ if (editIndex !== -1) {
 } else {
   const scenePrompt = args[1];
   const outputPath = args[2] || "cover.jpg";
-  await generateCover({ character, scenePrompt, outputPath });
+  const arIndex = args.indexOf("--aspect-ratio");
+  const aspectRatio = arIndex !== -1 ? args[arIndex + 1] : undefined;
+  await generateCover({ character, scenePrompt, outputPath, aspectRatio });
 }

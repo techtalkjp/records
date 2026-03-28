@@ -33,6 +33,10 @@ fi
 
 echo "Using image: $img_file"
 
+# 絶対パスに変換（cd後も参照できるように）
+img_file="$(realpath "$img_file")"
+track_dir="$(realpath "$track_dir")"
+
 # 出力ディレクトリ
 mkdir -p "$track_dir/video"
 
@@ -78,22 +82,20 @@ elif [ "$format" = "youtube" ]; then
   if [ "$is_wide" = "yes" ]; then
     # ワイド画像 → そのまま1920x1080にリサイズ
     "$FFMPEG" -y -i "$(realpath "$img_file")" -vf "scale=1920:1080" -q:v 1 -update 1 bg_img.jpg 2>/dev/null
-    vf="subtitles=sub.srt:force_style='$FONT_STYLE'"
   else
     # スクエア画像 → ぼかし背景で16:9に
     "$FFMPEG" -y -i "$(realpath "$img_file")" -vf "scale=1920:1080:force_original_aspect_ratio=decrease" -q:v 1 -update 1 fg_img.jpg 2>/dev/null
     "$FFMPEG" -y -i "$(realpath "$img_file")" -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,boxblur=20:5" -q:v 1 -update 1 bg_blur.jpg 2>/dev/null
     # 合成
     "$FFMPEG" -y -i bg_blur.jpg -i fg_img.jpg -filter_complex "overlay=(W-w)/2:(H-h)/2" -q:v 1 -update 1 bg_img.jpg 2>/dev/null
-    vf="subtitles=sub.srt:force_style='$FONT_STYLE'"
   fi
 
   output="$track_dir/video/$track_name (1920x1080).mp4"
 
+  # YouTube用は字幕なし（SRTをYouTube側で別アップする運用）
   "$FFMPEG" -y \
     -loop 1 -i bg_img.jpg \
     -i audio.wav \
-    -vf "$vf" \
     -c:v libx264 -tune stillimage \
     -c:a aac -b:a 192k \
     -pix_fmt yuv420p -shortest \
