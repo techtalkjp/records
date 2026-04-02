@@ -1,16 +1,22 @@
 import { Link, useLocation } from 'react-router'
 
 export function TopNav() {
+  const location = useLocation()
+  if (location.pathname === '/') return null
+
   return (
-    <nav className="flex justify-between items-center w-full px-6 py-4 bg-black fixed top-0 z-40">
-      <Link
-        to="/"
-        viewTransition
-        className="text-2xl font-black text-white tracking-tighter font-headline uppercase"
-      >
-        TECHTALK
-      </Link>
-    </nav>
+    <>
+      <nav className="flex justify-between items-center w-full px-6 py-4 bg-black fixed top-0 z-40">
+        <Link
+          to="/"
+          viewTransition
+          className="text-2xl font-black text-white tracking-tighter font-headline uppercase"
+        >
+          TECHTALK
+        </Link>
+      </nav>
+      <div className="h-16" />
+    </>
   )
 }
 

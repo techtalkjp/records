@@ -57,7 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <TopNav />
-        <main className="pt-16 pb-24">{children}</main>
+        <main className="pb-24">{children}</main>
         <Footer />
         <BottomNav />
         <ScrollRestoration />
