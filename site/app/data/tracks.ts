@@ -58,7 +58,7 @@ const claudeCodeTracks: Track[] = [
     lyricsDir: 'content/tracks/claude-code/02_ターミナルの誇り',
     year: 2026,
     type: 'Single',
-    catalogNo: 'TTR-002',
+    catalogNo: 'TTR-003',
     released: true,
     links: {
       youtube: 'https://youtu.be/BDxfyvuBfi4',
@@ -103,7 +103,7 @@ const codexTracks: Track[] = [
     lyricsDir: 'content/tracks/codex/01_Hourglass_on_the_Claude_Code',
     year: 2026,
     type: 'Single',
-    catalogNo: 'TTR-003',
+    catalogNo: 'TTR-002',
     released: true,
     links: {
       youtube: 'https://youtu.be/gWKepXGZ0cI',
@@ -153,7 +153,9 @@ export const artists: Artist[] = [
 export const allTracks: Track[] = [
   ...claudeCodeTracks,
   ...codexTracks,
-].filter((t) => t.released)
+]
+  .filter((t) => t.released)
+  .sort((a, b) => a.catalogNo.localeCompare(b.catalogNo))
 
 export function getArtist(slug: string): Artist | undefined {
   return artists.find((a) => a.slug === slug)
@@ -169,5 +171,5 @@ export function getTrack(
 }
 
 export function getReleasedTracks(): Track[] {
-  return allTracks
+  return [...allTracks].reverse()
 }
