@@ -1,15 +1,15 @@
 {
-  "name": "techtalk_records",
-  "module": "index.ts",
-  "type": "module",
+  "name": "techtalk-records",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter site dev",
+    "build": "pnpm --filter site build",
+    "preview": "pnpm --filter site preview",
+    "deploy": "pnpm --filter site deploy"
   },
   "dependencies": {
     "@google/genai": "^1.46.0"
-  }
+  },
+  "packageManager": "pnpm@10.24.0"
 }

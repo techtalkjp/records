@@ -1,0 +1,4 @@
+Model: gemini-3.1-flash-image-preview
+Reference input: characters/claude-code/graffiti_symbol_old.jpg
+
+A photorealistic close-up photograph of a concrete wall at night with a single large spray-painted graffiti piece - an angular geometric beast face made of sharp triangular polygon shapes, amber-orange fill with thick black outlines, wide open mouth showing rows of jagged triangular white teeth, aggressive snarling expression, abstract and stylized like origami or low-poly art. Real spray paint texture on rough concrete, with slight paint drips at the bottom edges. The concrete wall has subtle cracks and weathering. Single harsh light from above casting a slight shadow behind the piece. No other graffiti, clean focus on this one piece. 35mm film, slight grain. No text, no watermarks.

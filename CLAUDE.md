@@ -9,16 +9,23 @@ This is a media asset repository for original music tracks themed around develop
 ## Structure
 
 ```
-claude_code/         # Claude Code のトラック
-codex/               # Codex のトラック
-characters/          # キャラクター設定・画像
-  claude-code/       #   Claude Code のリファレンス画像・ベースプロンプト
-  codex/             #   Codex のリファレンス画像・ベースプロンプト
-  claude-code.md     #   Claude Code の設定シート
-  codex.md           #   Codex の設定シート
-notes/               # リサーチノート
-journals/            # 作業ログ
-scripts/             # 画像生成スクリプト
+content/
+  artists/
+    claude-code/
+      profile.md       # キャラクター設定シート
+      images/          # リファレンス画像・ベースプロンプト
+    codex/
+      profile.md
+      images/
+  tracks/
+    claude-code/       # Claude Code のトラック
+    codex/             # Codex のトラック
+site/                  # 公式サイト (records.techtalk.jp)
+  app/               #   React Router v7 アプリ
+  public/            #   静的アセット（カバーアート等）
+scripts/               # 画像生成スクリプト
+notes/                 # リサーチノート
+journals/              # 作業ログ
 ```
 
 ### トラックのディレクトリ構造
@@ -42,8 +49,14 @@ video/
 
 ## 制作フロー
 
-### 1. 楽曲制作
-歌詞を書き（`source/lyrics.txt`）、Suno用プロンプト（`source/styles.txt`）を作成、Sunoで音声生成（`source/track.wav`）。
+### 1. 歌詞の元を生成（`/make-lyrics`）
+テーマ・キャラクター・ネタ素材から、韻ペアと骨格を対話的に作成。japanese-rap スキルで韻を検証しながらイテレーション。
+
+### 2. Suno 入力を準備（`/make-suno-prompt`）
+歌詞の元を Suno V5.5 用フォーマットに変換。漢字→ひらがな、アノテーションタグ付与、V5.5 タグ形式の styles.txt 生成。
+
+### 3. Suno で音声生成（手動）
+suno_prompt.txt を Suno に貼って生成。出力を `source/track.wav` に保存、最終歌詞を `source/lyrics.txt` に記録。
 
 ### 2. カバーアート制作（`/make-cover-art`）
 歌詞とキャラクター設定を読み、対話的にシーンを決めて画像を生成。
@@ -66,6 +79,8 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 
 ## Skills
 
+- `/make-lyrics` — 歌詞の元を生成。テーマ・キャラ・ネタ素材から韻ペアと骨格を対話的に作成
+- `/make-suno-prompt` — Suno V5.5 用入力セット生成。漢字→ひらがな変換、アノテーションタグ、タグ形式 styles.txt
 - `/make-cover-art` — カバーアート生成スキル。歌詞とキャラ設定からシーンを提案し、マルチターン会話で画像生成
 - `/make-lyric-video` — 字幕付き動画生成スキル。Whisperでタイミング取得、SRTバリデーション、ffmpegで動画生成
 - `/make-release-post` — リリース告知文作成スキル。X投稿やYouTube概要欄を対話的に作成。韻パート生成にjapanese-rapスキルを使用

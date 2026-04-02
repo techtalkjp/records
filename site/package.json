@@ -1,0 +1,33 @@
+{
+  "name": "site",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "preview": "npx wrangler pages dev build/client",
+    "deploy": "npx wrangler pages deploy build/client --project-name=records-techtalk-jp",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.13.0",
+    "embla-carousel-react": "^8.6.0",
+    "isbot": "^5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.13.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.13.0",
+    "@tailwindcss/vite": "^4.2.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.1.1",
+    "wrangler": "^4.66.0"
+  }
+}

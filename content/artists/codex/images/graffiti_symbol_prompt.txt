@@ -1,0 +1,4 @@
+Model: gemini-3.1-flash-image-preview
+Reference input: characters/codex/graffiti_symbol_old.jpg
+
+A photorealistic close-up photograph of a concrete wall at night with a single large stencil-style graffiti piece - two thick lines or chain links interlocking to form an X shape, in dark grey-green paint with weathered edges. Below the symbol, the words OPENAI CODEX stenciled in blocky industrial capital letters. The whole piece looks faded and old, with cracks in the wall radiating outward from behind the symbol as if it was punched into the wall. Real spray paint and stencil texture on rough concrete. Single harsh light from above. No other graffiti, clean focus on this one piece. 35mm film, slight grain. No watermarks.

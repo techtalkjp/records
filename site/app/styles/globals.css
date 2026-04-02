@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-headline: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+  --font-body: 'Inter', 'Noto Sans JP', sans-serif;
+  --font-label: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-surface: #131313;
+  --color-surface-dim: #0e0e0e;
+  --color-surface-container: #1f1f1f;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-outline: #919191;
+  --color-outline-variant: #474747;
+
+  --color-amber-accent: #ffb95f;
+  --color-red-accent: #ff5451;
+
+  --radius-none: 0px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #000000;
+  color: #e2e2e2;
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: white;
+  color: black;
+}
+
+/* View Transition: detail pages have fixed transition names */
+.track-detail-cover {
+  view-transition-name: cover-art;
+}
+
+.track-detail-title {
+  view-transition-name: track-title;
+  width: fit-content;
+}
+
+.artist-detail-name {
+  view-transition-name: artist-name;
+  width: fit-content;
+}

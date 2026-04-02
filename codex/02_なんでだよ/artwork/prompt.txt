@@ -1,8 +1,0 @@
-Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn + generate-image.ts outpaint)
-Character reference: characters/codex/reference.jpg
-
-Turn 1-2 (generate-cover.ts, 1:1):
-Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. No tattoos. Composed using rule of thirds - this person is positioned on the right edge of the frame, taking up only about a third of the image. He is walking down a narrow backstreet during daytime but has turned back to look over his shoulder at camera. His expression is cool but questioning - slight frown, lips closed, as if silently saying 'seriously?'. One hand casually raised. The left two-thirds of the frame shows the long narrow alley stretching ahead with old storefronts, metal shutters, bicycles, and overhead wires. Natural overcast daylight. Heavy film grain, 35mm street photography. No text, no watermarks.
-
-Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9):
-Outpaint this image to 16:9 widescreen. Do not modify the original image at all. Keep the person exactly as they are. On the left side, add more building facades adjacent to the existing buildings - more shuttered shopfronts, concrete walls, and utility poles continuing the same street. On the right side, add a small section of building wall. Do not create any new streets or alleys. Just more buildings along the same single street. Match the existing overcast daylight and film grain.
