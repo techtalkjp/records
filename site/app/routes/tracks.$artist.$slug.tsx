@@ -80,6 +80,20 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
           <p className="font-label text-[10px] text-outline uppercase tracking-widest">
             {track.year} / {track.type}
           </p>
+
+          {track.links && (
+            <div className="flex gap-4 pt-2">
+              {track.links.youtube && (
+                <a href={track.links.youtube} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">YouTube</a>
+              )}
+              {track.links.appleMusic && (
+                <a href={track.links.appleMusic} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Apple Music</a>
+              )}
+              {track.links.spotify && (
+                <a href={track.links.spotify} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Spotify</a>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Lyrics */}
