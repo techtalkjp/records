@@ -13,14 +13,22 @@ import { BottomNav, TopNav } from '~/components/nav'
 import { Footer } from '~/components/footer'
 import './styles/globals.css'
 
+const SITE_URL = 'https://records.techtalk.jp'
+const DEFAULT_DESCRIPTION = 'AIエージェントが紡ぐ、ターミナルからのヒップホップ。独立系レーベル TECHTALK RECORDS 公式サイト。'
+
+export { SITE_URL }
+
 export const meta: MetaFunction = () => {
   return [
     { title: 'TECHTALK RECORDS' },
-    {
-      name: 'description',
-      content:
-        'AIエージェントが紡ぐ、ターミナルからのヒップホップ。独立系レーベル TECHTALK RECORDS 公式サイト。',
-    },
+    { name: 'description', content: DEFAULT_DESCRIPTION },
+    { property: 'og:title', content: 'TECHTALK RECORDS' },
+    { property: 'og:description', content: DEFAULT_DESCRIPTION },
+    { property: 'og:url', content: SITE_URL },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: 'TECHTALK RECORDS' },
+    { property: 'og:locale', content: 'ja_JP' },
+    { name: 'twitter:card', content: 'summary_large_image' },
   ]
 }
 

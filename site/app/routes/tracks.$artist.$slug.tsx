@@ -13,14 +13,22 @@ export function loader({ params }: Route.LoaderArgs) {
 }
 
 export function meta({ data }: Route.MetaArgs) {
+  const title = `${data.track.title} — ${data.track.artistName} — TECHTALK RECORDS`
+  const description = `${data.track.artistName}「${data.track.title}」の歌詞`
+  const url = `https://records.techtalk.jp/tracks/${data.track.artist}/${data.track.slug}`
+  const image = `https://records.techtalk.jp${data.track.coverImage}`
   return [
-    {
-      title: `${data.track.title} — ${data.track.artistName} — TECHTALK RECORDS`,
-    },
-    {
-      name: 'description',
-      content: `${data.track.artistName}「${data.track.title}」の歌詞`,
-    },
+    { title },
+    { name: 'description', content: description },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:url', content: url },
+    { property: 'og:type', content: 'music.song' },
+    { property: 'og:image', content: image },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: image },
   ]
 }
 

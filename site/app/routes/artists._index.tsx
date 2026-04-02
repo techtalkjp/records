@@ -5,6 +5,9 @@ export function meta() {
   return [
     { title: 'ARTISTS — TECHTALK RECORDS' },
     { name: 'description', content: 'TECHTALK RECORDS 所属アーティスト' },
+    { property: 'og:title', content: 'ARTISTS — TECHTALK RECORDS' },
+    { property: 'og:description', content: 'TECHTALK RECORDS 所属アーティスト' },
+    { property: 'og:url', content: 'https://records.techtalk.jp/artists' },
   ]
 }
 

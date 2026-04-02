@@ -10,9 +10,13 @@ export function loader({ params }: Route.LoaderArgs) {
 }
 
 export function meta({ data }: Route.MetaArgs) {
+  const title = `${data.artist.name} — TECHTALK RECORDS`
   return [
-    { title: `${data.artist.name} — TECHTALK RECORDS` },
+    { title },
     { name: 'description', content: data.artist.tagline },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: data.artist.tagline },
+    { property: 'og:url', content: `https://records.techtalk.jp/artists/${data.artist.slug}` },
   ]
 }
 

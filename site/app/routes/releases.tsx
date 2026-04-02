@@ -5,6 +5,9 @@ export function meta() {
   return [
     { title: 'RELEASES — TECHTALK RECORDS' },
     { name: 'description', content: 'TECHTALK RECORDS リリース一覧' },
+    { property: 'og:title', content: 'RELEASES — TECHTALK RECORDS' },
+    { property: 'og:description', content: 'TECHTALK RECORDS リリース一覧' },
+    { property: 'og:url', content: 'https://records.techtalk.jp/releases' },
   ]
 }
 
