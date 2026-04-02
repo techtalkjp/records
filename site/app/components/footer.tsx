@@ -4,7 +4,7 @@ export function Footer() {
       <div className="flex gap-8">
         <a
           className="font-headline text-[10px] uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-accent transition-colors duration-75"
-          href="https://x.com/"
+          href="https://x.com/techtalkjp"
           target="_blank"
           rel="noopener noreferrer"
         >
