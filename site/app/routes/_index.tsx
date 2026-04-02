@@ -1,3 +1,4 @@
+import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useViewTransitionState } from 'react-router'
@@ -62,12 +63,21 @@ function ArtistLink({ artist }: { artist: (typeof artists)[number] }) {
 
 export default function Index() {
   const releases = getReleasedTracks()
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ])
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const [canPrev, setCanPrev] = useState(false)
+  const [canNext, setCanNext] = useState(false)
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return
     setSelectedIndex(emblaApi.selectedScrollSnap())
+    setCanPrev(emblaApi.canScrollPrev())
+    setCanNext(emblaApi.canScrollNext())
   }, [emblaApi])
 
   useEffect(() => {
@@ -98,16 +108,40 @@ export default function Index() {
           RELEASES
         </h2>
 
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {releases.map((track, i) => (
-              <CarouselSlide
-                key={track.slug}
-                track={track}
-                isSelected={i === selectedIndex}
-              />
-            ))}
+        <div className="relative group/carousel">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {releases.map((track, i) => (
+                <CarouselSlide
+                  key={track.slug}
+                  track={track}
+                  isSelected={i === selectedIndex}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Prev / Next */}
+          <button
+            type="button"
+            onClick={scrollPrev}
+            disabled={!canPrev}
+            className="absolute left-0 top-0 bottom-6 w-16 flex items-center justify-start pl-2 opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300"
+          >
+            <span className="material-symbols-outlined text-white/70 hover:text-white text-3xl drop-shadow-lg">
+              chevron_left
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={scrollNext}
+            disabled={!canNext}
+            className="absolute right-0 top-0 bottom-6 w-16 flex items-center justify-end pr-2 opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300"
+          >
+            <span className="material-symbols-outlined text-white/70 hover:text-white text-3xl drop-shadow-lg">
+              chevron_right
+            </span>
+          </button>
         </div>
 
         {/* Track info + dots */}
@@ -133,19 +167,21 @@ export default function Index() {
           </div>
         </Link>
 
-        {/* Dot indicators */}
+        {/* Progress indicators */}
         <div className="flex gap-2 mt-4">
           {releases.map((_, i) => (
             <button
               key={i}
               type="button"
-              className={`h-[2px] transition-all duration-300 ${
-                i === selectedIndex
-                  ? 'w-8 bg-white'
-                  : 'w-4 bg-neutral-700 hover:bg-neutral-500'
-              }`}
+              className="relative h-[2px] w-8 bg-neutral-800 overflow-hidden hover:bg-neutral-700 transition-colors"
               onClick={() => emblaApi?.scrollTo(i)}
-            />
+            >
+              <span
+                className={`absolute inset-0 bg-white origin-left ${
+                  i === selectedIndex ? 'animate-progress' : 'scale-x-0'
+                }`}
+              />
+            </button>
           ))}
         </div>
       </section>
