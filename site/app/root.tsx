@@ -28,7 +28,9 @@ export const meta: MetaFunction = () => {
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'TECHTALK RECORDS' },
     { property: 'og:locale', content: 'ja_JP' },
+    { property: 'og:image', content: `${SITE_URL}/images/og-default.png` },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: `${SITE_URL}/images/og-default.png` },
   ]
 }
 
