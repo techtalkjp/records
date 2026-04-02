@@ -171,5 +171,5 @@ export function getTrack(
 }
 
 export function getReleasedTracks(): Track[] {
-  return [...allTracks].reverse()
+  return [...allTracks]
 }

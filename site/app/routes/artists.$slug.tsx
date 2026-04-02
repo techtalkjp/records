@@ -25,11 +25,11 @@ export default function ArtistPage({ loaderData }: Route.ComponentProps) {
   const isAmber = artist.accentColor === 'amber-accent'
 
   return (
-    <div className="px-6 overflow-x-hidden max-w-2xl mx-auto">
-      {/* Hero */}
-      <section className="mb-20 mt-8">
+    <div className="overflow-x-hidden">
+      {/* Hero — full width */}
+      <section className="px-6 mb-20 mt-8">
         <h1
-          className={`artist-detail-name text-[clamp(3.5rem,15vw,6rem)] font-headline font-black tracking-[-0.05em] uppercase leading-[0.9] transition-colors duration-300 ${
+          className={`artist-detail-name text-[clamp(3.5rem,20vw,10rem)] font-headline font-black tracking-[-0.05em] uppercase leading-[0.9] transition-colors duration-300 ${
             isAmber ? 'hover:text-amber-accent' : 'hover:text-red-accent'
           }`}
         >
@@ -41,7 +41,7 @@ export default function ArtistPage({ loaderData }: Route.ComponentProps) {
           ))}
         </h1>
 
-        <div className="mt-8">
+        <div className="mt-8 max-w-2xl">
           <p
             className={`font-headline font-bold text-lg mb-4 ${
               isAmber ? 'text-amber-accent' : 'text-red-accent'
@@ -58,7 +58,7 @@ export default function ArtistPage({ loaderData }: Route.ComponentProps) {
       </section>
 
       {/* Discography */}
-      <section className="mb-20">
+      <section className="px-6 max-w-2xl mx-auto mb-20">
         <div className="flex items-baseline justify-between mb-8">
           <h2 className="font-headline font-black text-3xl tracking-tighter">
             DISCOGRAPHY
@@ -84,7 +84,7 @@ export default function ArtistPage({ loaderData }: Route.ComponentProps) {
       </section>
 
       {/* Other Artists */}
-      <section className="mb-20">
+      <section className="px-6 max-w-2xl mx-auto mb-20">
         <h2 className="text-[10px] tracking-[0.3em] font-label text-neutral-500 mb-6 uppercase">
           OTHER ARTISTS
         </h2>
