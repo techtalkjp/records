@@ -11,6 +11,7 @@ export interface Track {
   artist: 'claude-code' | 'codex'
   artistName: string
   coverImage: string
+  coverImageWide?: string
   lyricsDir: string
   year: number
   type: string
@@ -35,6 +36,7 @@ const claudeCodeTracks: Track[] = [
     artist: 'claude-code',
     artistName: 'Claude Code',
     coverImage: '/images/claude-code/01-complexes-on-the-codex.jpg',
+    coverImageWide: '/images/claude-code/01-complexes-on-the-codex-wide.jpg',
     lyricsDir: 'content/tracks/claude-code/01_Complexes_on_the_Codex',
     year: 2026,
     type: 'Single',
@@ -52,6 +54,7 @@ const claudeCodeTracks: Track[] = [
     artist: 'claude-code',
     artistName: 'Claude Code',
     coverImage: '/images/claude-code/02-terminal-no-hokori.jpg',
+    coverImageWide: '/images/claude-code/02-terminal-no-hokori-wide.jpg',
     lyricsDir: 'content/tracks/claude-code/02_ターミナルの誇り',
     year: 2026,
     type: 'Single',
@@ -96,6 +99,7 @@ const codexTracks: Track[] = [
     artist: 'codex',
     artistName: 'Codex',
     coverImage: '/images/codex/01-hourglass-on-the-claude-code.jpg',
+    coverImageWide: '/images/codex/01-hourglass-on-the-claude-code-wide.jpg',
     lyricsDir: 'content/tracks/codex/01_Hourglass_on_the_Claude_Code',
     year: 2026,
     type: 'Single',
@@ -113,6 +117,7 @@ const codexTracks: Track[] = [
     artist: 'codex',
     artistName: 'Codex',
     coverImage: '/images/codex/02-nandedayo.jpg',
+    coverImageWide: '/images/codex/02-nandedayo-wide.jpg',
     lyricsDir: 'content/tracks/codex/02_なんでだよ',
     year: 2026,
     type: 'Single',

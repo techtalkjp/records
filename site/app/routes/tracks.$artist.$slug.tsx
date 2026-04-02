@@ -59,12 +59,17 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
     <div className="pb-12">
       {/* Track Hero */}
       <section className="px-6 mb-12 max-w-2xl mx-auto mt-4">
-        <div className="w-full aspect-square bg-surface-container-low mb-8 overflow-hidden">
-          <img
-            src={track.coverImage}
-            alt={track.title}
-            className="track-detail-cover w-full h-full object-cover"
-          />
+        <div className="w-full aspect-square md:aspect-video bg-surface-container-low mb-8 overflow-hidden">
+          <picture>
+            {track.coverImageWide && (
+              <source media="(min-width: 768px)" srcSet={track.coverImageWide} />
+            )}
+            <img
+              src={track.coverImage}
+              alt={track.title}
+              className="track-detail-cover w-full h-full object-cover"
+            />
+          </picture>
         </div>
 
         <div className="space-y-2 mb-10">

@@ -16,16 +16,21 @@ function CarouselSlide({
   return (
     <div className="flex-[0_0_100%] min-w-0">
       <Link to={href} viewTransition className="group block">
-        <div className="aspect-square w-full bg-surface-container-low mb-6 overflow-hidden">
-          <img
-            src={track.coverImage}
-            alt={track.title}
-            className="w-full h-full object-cover grayscale brightness-75 group-hover:brightness-100 group-hover:grayscale-0 transition-all duration-300"
-            style={{
-              viewTransitionName:
-                isTransitioning && isSelected ? 'cover-art' : 'none',
-            }}
-          />
+        <div className="aspect-square md:aspect-video w-full bg-surface-container-low mb-6 overflow-hidden">
+          <picture>
+            {track.coverImageWide && (
+              <source media="(min-width: 768px)" srcSet={track.coverImageWide} />
+            )}
+            <img
+              src={track.coverImage}
+              alt={track.title}
+              className="w-full h-full object-cover grayscale brightness-75 group-hover:brightness-100 group-hover:grayscale-0 transition-all duration-300"
+              style={{
+                viewTransitionName:
+                  isTransitioning && isSelected ? 'cover-art' : 'none',
+              }}
+            />
+          </picture>
         </div>
       </Link>
     </div>
