@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
-    "preview": "npx wrangler pages dev build/client",
-    "deploy": "npx wrangler pages deploy build/client --project-name=records-techtalk-jp",
+    "preview": "npx wrangler dev",
+    "deploy": "npx wrangler deploy",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
