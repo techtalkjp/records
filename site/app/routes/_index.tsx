@@ -160,7 +160,7 @@ export default function Index() {
             viewTransition
             className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent px-6 pt-20 pb-6 group/title"
           >
-            <div className="max-w-2xl mx-auto">
+            <div key={selectedIndex} className="max-w-2xl mx-auto animate-fade-up">
               <p className="text-[10px] tracking-widest text-neutral-400 uppercase font-label mb-2">
                 TECHTALK RECORDS <span className="ml-2 text-neutral-500">{current.catalogNo}</span>
               </p>
