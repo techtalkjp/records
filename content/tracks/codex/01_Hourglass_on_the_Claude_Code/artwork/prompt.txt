@@ -1,0 +1,8 @@
+Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn + generate-image.ts outpaint)
+Character reference: characters/codex/reference.jpg
+
+Turn 1-2 (generate-cover.ts, 1:1):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. No tattoos on hands or anywhere visible. This person leaning casually against a wall in a narrow backstreet during daytime, arms crossed, relaxed confident posture. He looks at camera with a slight smirk, one corner of his mouth raised, as if he just said something devastatingly clever and is waiting for the reaction. Not angry, amused and confident. Natural daylight, overcast sky, soft diffused light. Behind him on the wall, a red spray-painted hourglass with dripping paint and the number 429 in bold red. On the other wall, a stenciled interlocking X symbol with OPENAI CODEX below. Heavy film grain, 35mm. No text besides graffiti, no watermarks.
+
+Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9):
+Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The person's face and body proportions must remain exactly as they are. Add more alley wall and street on both sides, matching the existing daylight, overcast lighting, and gritty backstreet atmosphere. Keep all graffiti elements as they are.
