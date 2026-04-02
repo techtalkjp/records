@@ -9,7 +9,7 @@
     "deploy": "pnpm --filter site deploy"
   },
   "dependencies": {
-    "@google/genai": "^1.46.0"
+    "@google/genai": "^1.48.0"
   },
   "packageManager": "pnpm@10.24.0"
 }
