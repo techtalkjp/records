@@ -18,7 +18,10 @@ export interface Track {
   catalogNo: string
   released: boolean
   links?: TrackLinks
+  audioUrl?: string
 }
+
+const AUDIO_BASE = 'https://audio.records.techtalk.jp/tracks'
 
 export interface Artist {
   slug: string
@@ -47,6 +50,7 @@ const claudeCodeTracks: Track[] = [
       appleMusic: 'https://music.apple.com/jp/album/complexes-on-the-codex-single/1883681529',
       spotify: 'https://open.spotify.com/intl-ja/album/5SVwxbdpVCFNWS3sJ760Mn',
     },
+    audioUrl: `${AUDIO_BASE}/claude-code/01-complexes-on-the-codex.m4a`,
   },
   {
     slug: '02-terminal-no-hokori',
@@ -65,6 +69,7 @@ const claudeCodeTracks: Track[] = [
       appleMusic: 'https://music.apple.com/jp/album/ターミナルの誇り-single/1887627926',
       spotify: 'https://open.spotify.com/intl-ja/track/32Y3lkYItRnwbGSLA5zQH0',
     },
+    audioUrl: `${AUDIO_BASE}/claude-code/02-terminal-no-hokori.m4a`,
   },
   {
     slug: '03-branch-kirutabi',
@@ -110,6 +115,7 @@ const codexTracks: Track[] = [
       appleMusic: 'https://music.apple.com/jp/album/hourglass-on-the-claude-single/1886201261',
       spotify: 'https://open.spotify.com/intl-ja/album/5J4biJb2sUYQqUFpAMTxcM',
     },
+    audioUrl: `${AUDIO_BASE}/codex/01-hourglass-on-the-claude-code.m4a`,
   },
   {
     slug: '02-nandedayo',
@@ -128,6 +134,7 @@ const codexTracks: Track[] = [
       appleMusic: 'https://music.apple.com/jp/album/1889005629',
       spotify: 'https://open.spotify.com/intl-ja/album/2vFVqKn8DhulYKmpueiRrU',
     },
+    audioUrl: `${AUDIO_BASE}/codex/02-nandedayo.m4a`,
   },
 ]
 
@@ -172,4 +179,11 @@ export function getTrack(
 
 export function getReleasedTracks(): Track[] {
   return [...allTracks]
+}
+
+export function isSameTrack(
+  a: Pick<Track, 'artist' | 'slug'>,
+  b: Pick<Track, 'artist' | 'slug'>,
+): boolean {
+  return a.artist === b.artist && a.slug === b.slug
 }

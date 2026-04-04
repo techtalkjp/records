@@ -7,3 +7,6 @@ build/
 
 # opensrc - source code for packages
 opensrc/
+
+# generated audio files
+dist-audio/

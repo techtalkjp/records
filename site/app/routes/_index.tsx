@@ -3,6 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useViewTransitionState } from 'react-router'
 import { artists, getArtist, getReleasedTracks } from '~/data/tracks'
+import { usePlayer } from '~/components/player/player-context'
 
 function CarouselSlide({
   track,
@@ -107,13 +108,15 @@ export default function Index() {
     return () => clearInterval(interval)
   }, [isPlaying, selectedIndex])
 
+  const { play, isPlaying: isAudioPlaying, togglePlayPause, isCurrentTrack } = usePlayer()
+
   const current = releases[selectedIndex]!
   const currentArtist = getArtist(current.artist)
-  const accentHover = currentArtist?.accentColor === 'amber-accent'
-    ? 'group-hover/title:text-amber-accent'
-    : 'group-hover/title:text-red-accent'
+  const accent = currentArtist?.accentColor ?? 'amber-accent'
+  const accentHover = `group-hover/title:text-${accent}`
   const currentHref = `/tracks/${current.artist}/${current.slug}`
   const isCurrentTransitioning = useViewTransitionState(currentHref)
+  const isCurrentPlaying = isCurrentTrack(current)
 
   return (
     <div>
@@ -179,6 +182,26 @@ export default function Index() {
               </p>
             </div>
           </Link>
+
+          {/* Play button */}
+          {current.audioUrl && (
+            <div className="absolute bottom-6 right-6 z-10">
+              <button
+                type="button"
+                onClick={() =>
+                  isCurrentPlaying ? togglePlayPause() : play(current)
+                }
+                className={`flex items-center justify-center w-14 h-14 rounded-full transition-all hover:scale-110 shadow-lg bg-${accent}`}
+              >
+                <span
+                  className="material-symbols-outlined text-3xl text-black"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  {isCurrentPlaying && isAudioPlaying ? 'pause' : 'play_arrow'}
+                </span>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Progress indicators */}

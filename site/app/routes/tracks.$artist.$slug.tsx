@@ -2,6 +2,7 @@ import { Link, data } from 'react-router'
 import type { Route } from './+types/tracks.$artist.$slug'
 import { getTrack, getArtist } from '~/data/tracks'
 import { readLyrics } from '~/data/lyrics.server'
+import { usePlayer } from '~/components/player/player-context'
 
 export function loader({ params }: Route.LoaderArgs) {
   const track = getTrack(params.artist, params.slug)
@@ -52,8 +53,10 @@ function parseLyrics(raw: string) {
 export default function TrackPage({ loaderData }: Route.ComponentProps) {
   const { track, lyrics } = loaderData
   const artist = getArtist(track.artist)
-  const isAmber = artist?.accentColor === 'amber-accent'
+  const accent = artist?.accentColor ?? 'amber-accent'
   const sections = parseLyrics(lyrics)
+  const { play, isPlaying, togglePlayPause, isCurrentTrack: checkCurrentTrack } = usePlayer()
+  const isActive = checkCurrentTrack(track)
 
   return (
     <div className="pb-12">
@@ -74,9 +77,7 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
       <section className="px-6 mb-12 max-w-2xl mx-auto">
         <div className="space-y-2 mb-10">
           <p
-            className={`font-mono text-[10px] tracking-[0.3em] uppercase ${
-              isAmber ? 'text-amber-accent' : 'text-red-accent'
-            }`}
+            className={`font-mono text-[10px] tracking-[0.3em] uppercase text-${accent}`}
           >
             {track.catalogNo}
           </p>
@@ -107,6 +108,24 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
               )}
             </div>
           )}
+
+          {track.audioUrl && (
+            <button
+              type="button"
+              onClick={() =>
+                isActive ? togglePlayPause() : play(track)
+              }
+              className={`mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full font-headline font-bold text-sm uppercase tracking-widest transition-all hover:scale-105 bg-${accent} text-black`}
+            >
+              <span
+                className="material-symbols-outlined text-xl"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                {isActive && isPlaying ? 'pause' : 'play_arrow'}
+              </span>
+              {isActive && isPlaying ? 'PAUSE' : 'PLAY'}
+            </button>
+          )}
         </div>
 
         {/* Lyrics */}
@@ -124,9 +143,7 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
               {sections.map((section, i) => (
                 <div key={i}>
                   <span
-                    className={`block mb-4 text-xs font-bold ${
-                      isAmber ? 'text-amber-accent' : 'text-red-accent'
-                    }`}
+                    className={`block mb-4 text-xs font-bold text-${accent}`}
                   >
                     [{section.tag}]
                   </span>

@@ -11,6 +11,8 @@ import {
 } from 'react-router'
 import { BottomNav, TopNav } from '~/components/nav'
 import { Footer } from '~/components/footer'
+import { PlayerProvider } from '~/components/player/player-context'
+import { MiniPlayer } from '~/components/player/mini-player'
 import './styles/globals.css'
 
 const SITE_URL = 'https://records.techtalk.jp'
@@ -66,12 +68,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <TopNav />
-        <main className="pb-24">{children}</main>
-        <Footer />
-        <BottomNav />
-        <ScrollRestoration />
-        <Scripts />
+        <PlayerProvider>
+          <TopNav />
+          <main className="pb-24">{children}</main>
+          <Footer />
+          <MiniPlayer />
+          <BottomNav />
+          <ScrollRestoration />
+          <Scripts />
+        </PlayerProvider>
       </body>
     </html>
   )
