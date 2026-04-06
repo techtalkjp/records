@@ -30,16 +30,7 @@ argument-hint: [トラックディレクトリのパス]
 
 Suno の歌詞入力欄に貼る内容を生成する。
 
-**構造:**
-```
-[指示行]
---
-[歌詞の元]
-```
-
-**指示行**: 短い日本語の指示。例:
-- 「日本語のboom-bap。韻をわかりやすくいれて」
-- 「日本語ラップ。韻を踏んで」
+**重要: タグ外テキストは全て歌われる。** 指示行や `--` 区切りを歌詞欄に入れてはいけない。全ての指示はセクションタグのアノテーション内に収める。
 
 **歌詞の元の変換ルール:**
 
@@ -47,6 +38,7 @@ Suno の歌詞入力欄に貼る内容を生成する。
    - Before: `[Verse 1]`
    - After: `[Verse 1 - laid-back, conversational, close vocal]`
    - アノテーションは英語の短いフレーズ。歌われず、生成の方向性ガイドとして機能
+   - **最初のセクションタグに曲全体の指示も含める**（例: `[Intro - Japanese chill boom-bap, rhyme-focused, slow fade-in]`）
 
 2. **漢字 → ひらがな変換**
    - 全ての漢字をひらがなに変換する（Suno の音声合成はひらがなベース）
@@ -58,6 +50,7 @@ Suno の歌詞入力欄に貼る内容を生成する。
 3. **タグ外にコマンドテキストを書かない**
    - 歌詞フィールドのタグ外テキストは全て歌われる
    - 指示や説明はアノテーションタグ内に収める
+   - `[指示行]\n--\n` のような構造は使わない（歌われてしまう）
 
 ### 2. styles.txt の生成 (V5.5 タグ形式)
 
@@ -95,7 +88,7 @@ Japanese boom bap, 90 BPM, dusty, male rap, warm Rhodes, vinyl crackle, laid-bac
 
 ### 3. lyrics.txt について
 
-**この段階では lyrics.txt は空のまま**。lyrics.txt は Suno が生成した最終歌詞を記録するファイル。Suno で生成後に手動で記録する。
+Suno で生成確定後、最終歌詞を **漢字表記（表示用）** で記録する。suno_prompt.txt のひらがな版ではなく、元の歌詞の漢字版を使う。lyrics.txt は人が読む・表示する用途のファイル。
 
 ### 4. 出力
 
@@ -104,6 +97,7 @@ Japanese boom bap, 90 BPM, dusty, male rap, warm Rhodes, vinyl crackle, laid-bac
 ```
 <トラック>/source/suno_prompt.txt  — Suno の歌詞欄に貼る内容
 <トラック>/source/styles.txt       — Suno の Style 欄に入力するタグ
+<トラック>/source/sliders.txt      — Exclude + スライダー設定
 ```
 
 書き出し前にユーザーに内容を確認してもらう。

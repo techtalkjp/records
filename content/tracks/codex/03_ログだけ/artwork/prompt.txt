@@ -1,0 +1,8 @@
+Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn + generate-image.ts outpaint)
+Character reference: content/artists/codex/images/reference.jpg
+
+Turn 1-2 (generate-cover.ts, 1:1):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. This person sitting on a grassy riverbank slope in early morning, leaning back on his hands, legs stretched out casually. He wears a faded dark hoodie with the hood down, showing his beanie. Relaxed posture, looking out at the river with a faint genuine smile, not posing, just at peace. Soft early morning light, pale golden and slightly misty. Calm river reflecting the sky. Wide open sky with gentle pastel tones, dawn just past. No other people around. Shallow depth of field, 85mm lens, warm soft color grade, gentle film grain. No text, no watermarks.
+
+Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9):
+Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The person's face and body proportions must remain exactly as they are. Add more grassy riverbank slope and calm river on both sides, continuing the same early morning atmosphere with misty pale golden light and gentle pastel sky. Match the existing lighting, color grade, and film grain.

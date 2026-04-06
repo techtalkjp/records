@@ -32,8 +32,10 @@ journals/              # 作業ログ
 
 ```
 source/
-  lyrics.txt           # 歌詞
-  styles.txt           # 音楽生成プロンプト（Suno用）
+  lyrics.txt           # 歌詞（漢字表記・表示用）
+  suno_prompt.txt      # Suno歌詞欄に貼る内容（ひらがな＋アノテーション）
+  styles.txt           # Suno Style欄に入力するタグ
+  sliders.txt          # Suno Exclude＋スライダー設定
   track.wav            # Suno出力の音声
 artwork/
   cover.jpg            # カバーアート 1:1（メイン）
@@ -53,21 +55,21 @@ video/
 テーマ・キャラクター・ネタ素材から、韻ペアと骨格を対話的に作成。japanese-rap スキルで韻を検証しながらイテレーション。
 
 ### 2. Suno 入力を準備（`/make-suno-prompt`）
-歌詞の元を Suno V5.5 用フォーマットに変換。漢字→ひらがな、アノテーションタグ付与、V5.5 タグ形式の styles.txt 生成。
+歌詞の元を Suno V5.5 用フォーマットに変換。漢字→ひらがな、アノテーションタグ付与、V5.5 タグ形式の styles.txt 生成。sliders.txt に Exclude とスライダー設定を記録。
 
 ### 3. Suno で音声生成（手動）
-suno_prompt.txt を Suno に貼って生成。出力を `source/track.wav` に保存、最終歌詞を `source/lyrics.txt` に記録。
+suno_prompt.txt を Suno に貼って生成。出力を `source/track.wav` に保存、最終歌詞を `source/lyrics.txt` に漢字表記で記録。
 
-### 2. カバーアート制作（`/make-cover-art`）
+### 4. カバーアート制作（`/make-cover-art`）
 歌詞とキャラクター設定を読み、対話的にシーンを決めて画像を生成。
 - `cover.jpg`（1:1）を先に作り、そこから `cover_wide.jpg`（16:9）を拡張生成
 - ラッパーの世界観で見立てる（テック要素を直接見せない）
 - モノクロ + アクセント1色（Claude Code: アンバー、Codex: 赤）
 
-### 3. 字幕制作（`/make-lyric-video`）
+### 5. 字幕制作（`/make-lyric-video`）
 Whisperでタイミング取得 → SRT作成 → バリデーション（問題0件まで）。
 
-### 4. 動画生成（`/make-lyric-video`）
+### 6. 動画生成（`/make-lyric-video`）
 1曲ずつ X用 → 確認 → YouTube用 の順で生成。
 
 ## Conventions

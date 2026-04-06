@@ -1,0 +1,7 @@
+Exclude: aggressive, auto-tune, female vocals, EDM drops
+
+Section Sliders:
+  Intro    — Weirdness: 50%  Style Influence: 60%
+  Verse    — Weirdness: 40%  Style Influence: 60%
+  Chorus   — Weirdness: 35%  Style Influence: 75%
+  Outro    — Weirdness: 50%  Style Influence: 55%

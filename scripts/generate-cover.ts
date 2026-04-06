@@ -19,7 +19,7 @@ const MODEL_NAME = "gemini-3.1-flash-image-preview";
 const PROJECT_ROOT = resolve(import.meta.dir, "..");
 
 function getBasePrompt(character: string): string {
-  const path = `${PROJECT_ROOT}/characters/${character}/base-prompt.md`;
+  const path = `${PROJECT_ROOT}/content/artists/${character}/images/base-prompt.md`;
   const content = readFileSync(path, "utf-8");
   const match = content.match(/```\n([\s\S]*?)```/);
   if (!match) throw new Error(`Base prompt not found in ${path}`);
@@ -27,7 +27,7 @@ function getBasePrompt(character: string): string {
 }
 
 function getDeriveTemplate(character: string): string {
-  const path = `${PROJECT_ROOT}/characters/${character}/base-prompt.md`;
+  const path = `${PROJECT_ROOT}/content/artists/${character}/images/base-prompt.md`;
   const content = readFileSync(path, "utf-8");
   const blocks = content.match(/```\n([\s\S]*?)```/g);
   if (!blocks || blocks.length < 2)
