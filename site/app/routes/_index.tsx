@@ -122,7 +122,7 @@ export default function Index() {
     <div>
       {/* Hero + Carousel */}
       <section className="mb-24">
-        <div className="relative group/carousel h-[calc(100dvh-5rem)]">
+        <div className="relative group/carousel h-[calc(100svh-5rem)]">
           <div className="overflow-hidden h-full" ref={emblaRef}>
             <div className="flex h-full">
               {releases.map((track, i) => (
