@@ -15,22 +15,22 @@ allowed-tools: Bash(bun *)
 ```
 <トラック>/source/lyrics.txt     — 歌詞
 <トラック>/artwork/              — 生成した画像を保存
-characters/<キャラ>/reference.jpg — キャラクター参照画像
-characters/<キャラ>/base-prompt.md — キャラクターのベースプロンプト
-characters/<キャラ>/graffiti_symbol.jpg — グラフィティシンボル
+content/artists/<キャラ>/images/reference.jpg — キャラクター参照画像
+content/artists/<キャラ>/images/base-prompt.md — キャラクターのベースプロンプト
+content/artists/<キャラ>/images/graffiti_symbol.jpg — グラフィティシンボル
 ```
 
 ### キャラクター判別
-- `claude_code/` 配下のトラック → `characters/claude-code/`
-- `codex/` 配下のトラック → `characters/codex/`
+- `claude-code/` 配下のトラック → `content/artists/claude-code/`
+- `codex/` 配下のトラック → `content/artists/codex/`
 
 ## 手順
 
 ### 1. 素材を読み込む
 
 - `source/lyrics.txt` を読む
-- 該当キャラクターの `base-prompt.md` を読む
-- 該当キャラクターの `characters/*.md`（設定シート）を読む
+- 該当キャラクターの `content/artists/<キャラ>/images/base-prompt.md` を読む
+- 該当キャラクターの `content/artists/<キャラ>/profile.md`（設定シート）を読む
 
 ### 2. シーンを対話的に決める
 
@@ -71,11 +71,13 @@ No text, no watermarks.
 - 深夜のコーディング → **深夜のストリート、スタジオ**
 - テック要素を直接見せるとラッパーとしてのリアリティが崩れる
 
-#### boom-bap の美学
-- モノクロベース + アクセント1色（Claude Code: アンバー/オレンジ、Codex: 赤）
-- ストリートの質感（コンクリート、グラフィティ、濡れた路面）
-- 夜・暗所のライティング
+#### ビジュアルのデフォルト
+以下はシリーズの基本トーンだが、曲の方向性に合わせて大胆に変えてよい。ユーザーに確認して決める。
+
+- **デフォルト**: モノクロベース + アクセント1色（Claude Code: アンバー/オレンジ、Codex: 赤）
+- **デフォルト**: ストリートの質感（コンクリート、グラフィティ、濡れた路面）、夜・暗所のライティング
 - スプリットライティング（顔の半分だけ照らす）が強いインパクトを出す
+- **例外**: チルな曲なら暖色のゴールデンアワー、自然光、河川敷などストリートから離れた舞台もあり（03「ログだけ」参照）
 
 #### 歌詞からのシンボル埋め込み
 歌詞に出てくる場所やオブジェクトをさりげなく配置する。直接的でなく、わかる人にはわかるレベルで。
@@ -125,7 +127,7 @@ bun scripts/generate-cover.ts claude-code \
 #### ファイル命名規則（drafts内）
 - 連番で `01.jpg`, `02.jpg`, ... と名前をつける
 - ワイド版は `01_wide.jpg`, `02_wide.jpg`, ...
-- グラフィティシンボル生成時は `characters/<キャラ>/drafts/` を使う
+- グラフィティシンボル生成時は `content/artists/<キャラ>/images/drafts/` を使う
 
 #### ワイド版（16:9）の生成
 
