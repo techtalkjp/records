@@ -10,6 +10,7 @@ export default {
     '/releases',
     '/tracks/claude-code/01-complexes-on-the-codex',
     '/tracks/claude-code/02-terminal-no-hokori',
+    '/tracks/claude-code/03-branch-kirutabi',
     '/tracks/codex/01-hourglass-on-the-claude-code',
     '/tracks/codex/02-nandedayo',
   ],
