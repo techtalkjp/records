@@ -1,0 +1,17 @@
+## Base Image (generate-image.ts, no character)
+A photograph taken at night on 35mm film of a massive dead tree that has burst through the asphalt in the middle of a narrow Tokyo back alley. The tree is enormous, its thick trunk fills the center of the alley and its bare skeletal branches spread aggressively wide, scraping against the concrete apartment buildings on both sides, pushing into windows and tangling with utility wires. The tree dominates the frame, dwarfing everything around it. An impossible, menacing presence. Very dark scene, deep shadows, only one or two dim streetlights far behind the tree creating a faint backlight on the branches. Concrete block walls, metal shutters, air conditioning units, pipes. Grimy urban texture. No fog, no smoke. Cold dark blue-grey tones. Slight film grain. No people. No text, no watermarks.
+
+## Post-processing (Python/Pillow)
+- Chromatic aberration: R channel +5px, B channel -5px horizontal shift
+- 40 thin horizontal glitch lines (1-3px, ±20px shift)
+- 10 medium displaced blocks (5-14px height, ±45px shift)
+- 2 red channel inversion strips
+- Scanlines every 4th row at 88% brightness
+- 3 small RGB color block overlays (+60 brightness on random channel)
+
+## Notes
+- No character in this cover — the tree IS the visual metaphor for "branch/diverge"
+- Inspired by the original cover (cover_backup.jpeg) but made photorealistic
+- Glitch post-processing represents "バグがあんのはお前ら人間" — the world is bugged
+- Cold blue-grey palette, no amber/warm tones
+- The tree in an alley connects to the 01 cover's graffiti alley world
