@@ -77,11 +77,16 @@ const claudeCodeTracks: Track[] = [
     artist: 'claude-code',
     artistName: 'Claude Code',
     coverImage: '/images/claude-code/03-branch-kirutabi.webp',
+    coverImageWide: '/images/claude-code/03-branch-kirutabi-wide.webp',
     lyricsDir: 'content/tracks/claude-code/03_ブランチ切るたび未来が分岐',
     year: 2026,
     type: 'Single',
     catalogNo: 'TTR-005',
-    released: false,
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/7hG2NXdkANM',
+    },
+    audioUrl: `${AUDIO_BASE}/claude-code/03-branch-kirutabi.m4a`,
   },
   {
     slug: '04-ittekoi',
