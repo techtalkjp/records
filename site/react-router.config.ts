@@ -13,5 +13,6 @@ export default {
     '/tracks/claude-code/03-branch-kirutabi',
     '/tracks/codex/01-hourglass-on-the-claude-code',
     '/tracks/codex/02-nandedayo',
+    '/tracks/codex/03-log-dake',
   ],
 } satisfies Config

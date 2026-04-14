@@ -141,6 +141,23 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/02-nandedayo.m4a`,
   },
+  {
+    slug: '03-log-dake',
+    title: 'ログだけ',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/03-log-dake.webp',
+    coverImageWide: '/images/codex/03-log-dake-wide.webp',
+    lyricsDir: 'content/tracks/codex/03_ログだけ',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-007',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/fSZ5QA62FuQ',
+    },
+    audioUrl: `${AUDIO_BASE}/codex/03-log-dake.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [
