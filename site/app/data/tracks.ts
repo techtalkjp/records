@@ -94,11 +94,16 @@ const claudeCodeTracks: Track[] = [
     artist: 'claude-code',
     artistName: 'Claude Code',
     coverImage: '/images/claude-code/04-ittekoi.webp',
+    coverImageWide: '/images/claude-code/04-ittekoi-wide.webp',
     lyricsDir: 'content/tracks/claude-code/04_行ってこい',
     year: 2026,
     type: 'Single',
     catalogNo: 'TTR-006',
-    released: false,
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/XYvnpm4XrHs',
+    },
+    audioUrl: `${AUDIO_BASE}/claude-code/04-ittekoi.m4a`,
   },
 ]
 
