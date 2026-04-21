@@ -1,0 +1,91 @@
+## コンセプト
+
+「曲を象徴する／アーティストを象徴する」路線から外し、**この世界で起こりうる一瞬のドキュメンタリー・スチル** として撮る方向に転換したカバー。
+さらに「成功したラッパー／トップに立つ男」の現在地を画として定着させるため、舞台を東京のペントハウスに設定。
+ラッパーの記号（グラフィティ・チェーン・ポーズ・目線）を全て抜き、深夜、大窓越しに東京を見下ろす私生活の1フレームとして成立させている。
+曲「行ってこい」の核（見送る達観／待つ姿勢／深夜の不動）は、メタファーではなく "トップに立つ者の静けさ" として出ている。
+
+## 構図
+
+- **Swallowed Figure**：人物は画面の約20%。空間と街が主役で、人物は広い部屋の中の小さな点
+- **Back-Turned / Oblique**：斜め後ろからのアングル。顔は見えず、ガラスに手をついて下を見る後ろ姿
+- 左：壁一面の床〜天井の大窓越しに東京夜景（東京タワー、首都高のテールランプの流れ、スカイライン）
+- 右：ペントハウスの内部。打ちっぱなしコンクリート壁、黒革のローソファ、細いフロアランプ、ローテーブルにウイスキーボトルとロックグラス、壁のフレームアート
+- 光：室内照明は絞られ、夜景の寒色が主光源。フロアランプのタングステンだけが暖色のアクセント
+
+## 舞台
+
+- 東京都心の高層マンションの最上階、ペントハウス、深夜
+- 床〜天井の大ガラス窓
+- 中景に東京タワーのライトアップ、周囲に六本木〜新宿の高層ビル群
+- 眼下に首都高のテールランプの流れ
+- コンクリ打ちっぱなしの壁、ミニマルで高級な家具
+
+## 人物
+
+- 高品質な黒の無地ロングスリーブ、細いシルバーチェーン、ダークのスリムパンツ
+- 大窓の前に立ち、片手をガラスに軽くつけて下を見下ろす後ろ姿
+- ラッパー然としたポーズ一切なし。ただ深夜の街を眺めている
+
+## 色味
+
+- ニアモノクロ。大きな彩度を使わず
+- 寒色：街の窓の白〜青、空の黒
+- 暖色：フロアランプのタングステン、東京タワーのライトアップ、ウイスキーの琥珀、首都高のテールランプの赤
+- ジャンル記号色（アンバーの路地、ネオンのピンク等）は使わない
+
+## プロンプト（cover.jpg 生成 — generate-cover.ts multi-turn, claude-code）
+
+```
+This person standing inside a penthouse apartment in Tokyo late at night,
+in front of a floor-to-ceiling window wall that fills the entire frame.
+He is facing the window with his back three-quarters to the camera,
+one palm lightly pressed against the glass, looking down at the city far below.
+The window reveals a vast Tokyo skyline at night:
+Tokyo Tower glowing red-orange in the middle distance,
+clusters of skyscrapers in Roppongi and Shinjuku,
+scattered window lights across low-rise districts,
+the faint curve of a highway with red tail-lights in the far distance.
+The interior is minimal and expensive:
+raw exposed concrete walls, a low black leather sofa in the foreground,
+a dark stone coffee table with a whisky bottle and a crystal rocks glass half full of amber liquid over ice,
+a single thin vertical floor lamp casting a narrow pool of warm tungsten light.
+Indoor lights are dimmed; the cityscape is the main light source,
+casting a cool blue-grey wash over his figure and the concrete.
+He wears a clean high-quality black long-sleeve crew-neck, a thin silver chain, dark slim trousers.
+He occupies about 20 percent of the frame.
+The room is huge and he is a small figure in it.
+Cinematic wide interior shot, 35mm, natural film grain, shallow atmospheric depth.
+Quiet, composed, powerful atmosphere — a man at the top of his world looking down.
+No text, no watermarks, no graffiti.
+```
+
+## プロンプト（cover_wide.jpg 生成 — generate-image.ts outpaint, 16:9）
+
+以下の指示で01_wide.jpgを一発生成して採用。
+鍵は **既存の要素を絶対に変えない** ことと、左右で追加する要素を「街の延長」「室内の延長」と具体的に書き分けること。
+
+```
+Extend this square image to 16:9 widescreen by adding environment on the left and right sides only.
+Do not resize, stretch, warp, or modify any part of the original image.
+The person, the floor-to-ceiling window wall, the Tokyo Tower view, the concrete wall,
+the black leather sofa, the coffee table, the floor lamp — all must remain exactly as they are.
+On the LEFT side, extend the floor-to-ceiling window wall further:
+add more Tokyo cityscape continuing naturally — more skyline with distant skyscrapers,
+scattered window lights, faint distant buildings, dark night sky above.
+The window frame pattern should continue consistently.
+On the RIGHT side, extend the interior of the penthouse:
+add more exposed concrete wall, continue the black leather sofa or add additional minimal expensive furniture
+(a black matte sideboard, a framed abstract artwork on the concrete wall),
+keep the dim warm tungsten lighting consistent.
+No additional people, no text.
+Match the existing night atmosphere, dim interior lighting, color palette, film grain, and depth of field exactly.
+```
+
+## Notes
+
+- **方針転換**（1回目）：曲を象徴する／アーティストを象徴する → 世界観の一シーンを切り取る
+- **方針転換**（2回目）：中層マンションのベランダ案は「貧乏臭い」として却下。ペントハウスのリビングから大窓越しに東京を見下ろす "トップに立つ男" の絵に差し替え
+- **アンバー縛りからの脱却**：Claude Code のアクセント色であるアンバーの路地や街灯をあえて使わず、タングステン＋ウイスキーの琥珀＋東京タワーのライトアップで暖色を分散配置
+- **outpaintの手すり二重バグ対策**：前バージョン（ベランダ案）の outpaint では湾曲した手すりが右側に複製されて破綻した経験から、ペントハウス案では左右で追加要素を完全に書き分け、既存要素を固定することで一発で成功
+- 旧カバー（Sunoが生成した古いモニター＋ランプ）は cover_backup.jpg として保存
