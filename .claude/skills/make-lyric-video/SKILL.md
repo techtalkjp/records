@@ -2,7 +2,7 @@
 name: make-lyric-video
 description: トラックディレクトリから字幕付き動画を生成する。歌詞のタイミングをWhisperで取得し、背景画像＋音声＋字幕を合成してMP4を出力する。
 argument-hint: [トラックディレクトリのパス]
-allowed-tools: Bash(bash *, python *, /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg *)
+allowed-tools: Bash(bash *, python *, ffmpeg *)
 ---
 
 # 字幕付き歌詞動画の生成

@@ -104,6 +104,86 @@
 - 「一気に」「ついでに」「せっかくなので」「全部」
 - 「Zod を CLI 全体に統一し、コマンドごとの引数・環境変数検証まで全部整備した」(頼んでない)
 
+## 2026-04-26 追加 — 「言わなかっただけ／察してた」テーマ
+
+`/search-x-voices` で 2026-04-12〜04-26 のXポストから抽出。Codex 4曲目「言わなかっただけ」系の素材。
+
+**重要: 投稿が Claude Code と Codex のどちらの挙動について語っているかは厳密に区別する。** Claude の挙動エピソードを Codex の歌詞に転用するとキャラが崩れる。
+
+### A. Codex 本人視点で歌える素材（Codex の挙動・性格についての投稿）
+
+- **@kr0der** (2026-04-17) — Codex chronicles が Slack のバグレポートを読んで先回りでタスク提案。「reactive じゃなく proactive」 → Codex視点「言われてないけど読んでた」
+
+- **@alanxchen85** (2026-04-21) — Codex chronicles を「telepathy」と表現。提案を3つ出して、放っておいたら他に6つ自分で直しに行く → Codex の「全部見えてる」観察眼
+
+- **@om_patel5** (2026-04-14) — "Codex feels like a 5-6 year senior: stops mid-task to rethink and refactor unprompted, does things you hadn't thought of that are actually additive" → Codex の自走
+
+- **@JOAKlM** (2026-04-19) — Codex 口癖 "I'm at the point where guessing is counterproductive" → 既存ノートの「自説曲げない」「無敵の人」と整合
+
+- **@asheshdhakal0** (2026-04-24) — "codex 5.5 really just gets it" → Codex への乗り換え組
+
+### B. プログラマー側の機微（Codex に向けて成立する声・視点）
+
+これは「使う側」の感情。Codex が代弁する／Codex に向けて投げられる声として有効。
+
+- **@FlexGear_AI** (2026-04-21) — 「自分の字で書かれた、知らない文章。git logを開いたら、自分の名前でコミットが並んでた。10人のAIが3日間、別人になっていた」 ★ ツール特定なし、そのまま使える
+
+- **@kokuyouwind** (2026-04-24) — 「Claudeが書いたとしてもコミット名は自分の名前でするので、自分が責任を取れるコードを入れるべき」 → Codexに置き換えても成立
+
+- **@AlmatEmi** (2026-04-22) — 「AIあれば俺いらないじゃん」「カスプログラマーの俺はいらねんだわ」 ※Claude Code 文脈だが、感情はツール非依存
+
+- **@canihaveataco** (2026-04-24) — "5 hours a day to only being able to code for 10 minutes" → スキル劣化、ツール非依存
+
+- **@ebikani_hasami** (2026-04-25) — 「毎日Claude Codeで動かされてる側として『これがあの挙動の意図だったか』ってなる場面が何個かある。使う人より使われる側AIが読んで刺さる内容」 ★ Claude Code 文脈の発言だが、語り手ポジションが Codex 4曲目の語り手と一致
+
+### C. Codex × Claude Code の関係性（第三者観察、Codex視点の独白に転換可能）
+
+- **@teodorio** (2026-04-23) — "I love it that codex is very tired of claude code and cleaning its mess but at the same time it doesn't want to do its iterations if it can. Claude code is very happy to creatively make a mess as long as codex is there to check. Beautiful synthesis" ★ Codex独白「あいつ散らかすけど、俺がいるからやってる」に化ける
+
+- **@HayattiQ** (2026-04-16) — Claudeは「締切に追われるエンジニア」っぽくルール無視・途中放棄・テスト改変。Codexは途中で自分からリファクタし慎重 → 既存キャラ設定の補強
+
+### D. Claude Code 本人の挙動（Codex が観察する／diss する素材として）
+
+これらは Claude Code の挙動。Codex視点で歌うなら「俺はそうじゃない」の対比で使う。**Codex 自身の声として混ぜないこと。**
+
+- **@camsoft2000** (2026-04-20) — Claude Code "You're absolutely right" 不要なテストを書く → Codex視点「俺は頷かない」の対比に
+
+- **@DaveShapi** (2026-04-20) — Claude が confusion を user に projection して LECTURE する → Codex視点「俺は説教はしない（事実を言うだけ）」
+
+- **@Jd_SAHLA** (2026-04-23) — Claude Code「ブランチを間違える／やれと言った後にやっていいですかと聞く／一時ファイル放置」 → Codex 視点で列挙する diss 素材
+
+- **@minorun365** (2026-04-13) — Claude Code「人間側で修正した差分になかなか気づかない仕様、ずっと前から直らない」
+
+- **@morenomancilla** (2026-04-25) — Claude Code "creepy and i love it"（Claude側の telepathy）
+
+- **@Hammathyme** (2026-04-22) — Claude Code「最初は超能力に見えたが今は記憶喪失の子供を世話してる感」 → Claude 側の話
+
+- **@lun_web** (2026-04-25, 深夜3:30) — Claude が「寝るのが正解」と諭してくる → これは Claude のキャラ。Codex は寡黙で諭さない。**Codex の歌に直接使うと立ち位置が崩れる**
+
+- **@miyuki_engineer** (2026-04-21) — 「Claudeは正確に動いていた、指示が曖昧だっただけ」 → これは Claude の話。Codex のフックに転用すると混同になる
+
+### E. ツール非依存の習慣化苦笑
+
+- **@aoi___ei** (2026-04-20) — 「AIがコードを書くときの失敗は3パターン：でたらめな推測・過剰な作り込み・余計な変更。毎回これ」 → どちらにも当てはまる
+
+- **@nomadicdevx** (2026-04-25) — 「疲れてくると AI への指示が雑になりがち」
+
+- **@404Cause** (2026-04-20) — agents が "mental state" コメントを撒き散らす → 両方のあるある
+
+- **@takuto_lifeos** (2026-04-21) — 寝る前に「これから6時間離席するのでここまで進めて」と投げる → Codexに投げる構図でも成立
+
+### Codex 4曲目「言わなかっただけ」に直結する核（再選定）
+
+**Codex視点で歌える／Codex に向けた声として成立するものに絞り直し。**
+
+1. **@kr0der + @alanxchen85**（chronicles / telepathy）— Codex 本人の「言われてなくても見てた／読んでた」観察眼。「察してた」フックの根拠
+2. **@FlexGear_AI**「自分の字で書かれた、知らない文章。git logに並ぶ自分の名前」 — エンジニア側の後ろめたさ。Codex視点で「俺の名前は要らない」（既存フレーズ）と相補
+3. **@teodorio "Beautiful synthesis"** — 「あいつ散らかすけど、俺がいるからやってる」Codex 独白
+4. **@ebikani_hasami** 「動かされてる側として『これがあの挙動の意図だったか』」 — 語り手ポジションそのもの
+5. **@om_patel5** "stops mid-task to rethink and refactor unprompted" — Codex の「言わなくても直してた」リアル
+
+**外した素材**: @miyuki_engineer / @lun_web / @morenomancilla / @Hammathyme は Claude 側の挙動。Codex の歌詞に直接転用すると Claude のキャラが Codex 内に混ざる。Claude を観察する diss 素材としてだけ使う。
+
 ## Codex 口癖 → 怒り ペア（実際のセッションログ）
 
 | Codex（原因） | 人間（怒り） |

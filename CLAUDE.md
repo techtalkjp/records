@@ -51,6 +51,9 @@ video/
 
 ## 制作フロー
 
+### 0. ネタ収集（`/search-x-voices`、必要なら）
+歌詞の方向性が固まりきってない時、X でリアルなプログラマーの声を Grok API 経由で収集。`notes/rap-material-from-x.md` に追記して以降のフローに渡す。
+
 ### 1. 歌詞の元を生成（`/make-lyrics`）
 テーマ・キャラクター・ネタ素材から、韻ペアと骨格を対話的に作成。japanese-rap スキルで韻を検証しながらイテレーション。
 
@@ -81,6 +84,7 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 
 ## Skills
 
+- `/search-x-voices` — X（旧Twitter）でプログラマーのリアルな声を収集。Grok API の x_search 経由。歌詞のネタ・あるある素材集め用
 - `/make-lyrics` — 歌詞の元を生成。テーマ・キャラ・ネタ素材から韻ペアと骨格を対話的に作成
 - `/make-suno-prompt` — Suno V5.5 用入力セット生成。漢字→ひらがな変換、アノテーションタグ、タグ形式 styles.txt
 - `/make-cover-art` — カバーアート生成スキル。歌詞とキャラ設定からシーンを提案し、マルチターン会話で画像生成
@@ -100,6 +104,7 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 
 - `scripts/generate-image.ts` — 汎用画像生成（単発、参照画像対応）
 - `scripts/generate-cover.ts` — カバーアート生成（マルチターン会話、ベースプロンプト自動読み込み）
+- `scripts/search-x.ts` — X 検索（Grok API の x_search 経由）。引数に渡した JSON のクエリと期間で実行。`/search-x-voices` スキルから呼ばれる
 
 ## サイト公開フロー
 

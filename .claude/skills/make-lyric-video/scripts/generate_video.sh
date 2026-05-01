@@ -3,7 +3,7 @@
 # Usage: generate_video.sh <トラックディレクトリ> <square|youtube>
 set -euo pipefail
 
-FFMPEG="/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg"
+FFMPEG="${FFMPEG:-ffmpeg}"
 FONT_STYLE="FontName=Hiragino Sans,FontSize=18,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,Outline=2,Shadow=1,Alignment=2,MarginV=40"
 
 track_dir="$1"

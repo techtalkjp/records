@@ -112,7 +112,25 @@ Suno で生成確定後、最終歌詞を **漢字表記（表示用）** で記
 
 ### 6. スライダー設定の提案
 
-曲の構成に応じたスライダー設定を提案する:
+**重要: Suno の初期生成では Weirdness/Style Influence は曲全体に1セットしか設定できない。** セクション別に値を変えるには Replace Section ワークフローを使う必要がある。
+
+`sliders.txt` は以下の構成で記録する:
+
+```
+Initial Generation:
+  Weirdness: NN%
+  Style Influence: NN%
+
+Replace Section targets (if needed):
+  Intro    — Weirdness: NN%  Style Influence: NN%
+  Verse    — Weirdness: NN%  Style Influence: NN%
+  Chorus   — Weirdness: NN%  Style Influence: NN%
+  Outro    — Weirdness: NN%  Style Influence: NN%
+```
+
+初期生成値は Verse/Chorus の中間あたりを狙うと安定。曲の核がサビ重視なら Chorus 寄り、Verse 重視なら Verse 寄り。
+
+セクション別の参考値:
 
 | セクション | Weirdness | Style Influence |
 |---|---|---|
@@ -121,7 +139,6 @@ Suno で生成確定後、最終歌詞を **漢字表記（表示用）** で記
 | Bridge | 55-70% | 45-60% |
 
 - 安全範囲: 15-85（赤域を回避）
-- Verse/Chorus で設定を変える場合は Replace Section ワークフローを提案
 - **Vocal Gender も sliders.txt に記録する**（このプロジェクトでは Male）
 
 ### 7. タイトルについて
