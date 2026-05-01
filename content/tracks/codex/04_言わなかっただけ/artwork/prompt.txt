@@ -1,0 +1,25 @@
+Model: gemini-3.1-flash-image-preview (generate-cover.ts multi-turn + generate-image.ts outpaint)
+Character reference: content/artists/codex/images/reference.jpg
+
+Turn 1-2 (generate-cover.ts, 1:1):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie.
+
+Wide shot from behind. He stands on the exterior walkway of an old 4-5 story Showa-era apartment building in Koenji, Tokyo, around 3am. He leans on a rusted dark-green iron railing, both forearms resting on the top rail, looking out at the neighborhood. He wears the same oversized black hoodie under a distressed denim vest, hood down. His back occupies only the lower-right third of the frame; the rest is the Koenji night.
+
+The view: dense overhead electrical wires crisscrossing the sky, weather-worn low-rise rooftops with rusted antennas and old air conditioning units. Below, a narrow alley with a 24-hour convenience store spilling cold white light, paper lanterns of a closed izakaya, orange sodium streetlights. In the middle distance, the elevated Chuo line tracks with a passing train blurred into a streak of red and white. A vending machine inside the corridor to his right casts pale blue light on the concrete floor. A bicycle leans against the corridor wall behind him.
+
+Lighting is layered and atmospheric: sodium-orange streetlights, fluorescent white from the convenience store, cool blue from the vending machine, warm tungsten from a single lit window across the street, red and white blur from the train. No dominant accent color, lights scattered across the scene.
+
+Mood: solitary, observant, quiet. Documentary stillness, not cinematic glamor. The quiet of someone who sees everything but says nothing.
+
+35mm full frame, natural film grain, slight low angle so wires and rooftops dominate the upper two-thirds of the frame. Slight urban haze. No text, no watermarks.
+
+Edit pass (generate-cover.ts --edit, 1:1):
+Remove all text from the red paper lanterns. Keep the lanterns themselves but make them blank/plain red with no characters or markings. Also remove any small Japanese text from signs and lanterns in the lower-left izakaya area. Keep the FamilyMart sign as-is. Keep everything else exactly as it is - same person, same composition, same lighting, same overall scene.
+
+Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9):
+Outpaint this image to 16:9 widescreen by adding more environment on the LEFT side only. Do not stretch, resize, or modify the original image content. The person, the iron railing, the corridor ceiling beam, the vending machine on the right, the bicycle, the FamilyMart, and all existing structures must stay exactly as they are — do NOT duplicate or extend them.
+
+On the LEFT side, add more Koenji night cityscape continuing seamlessly: more weather-worn low-rise rooftops with rusted antennas and old air conditioning units, more dense overhead electrical wires crisscrossing the dark sky, the elevated Chuo line tracks continuing into the distance with their concrete pillar supports, more narrow alley below with orange sodium streetlights, scattered warm window lights from apartments, urban haze. Match the existing nighttime atmosphere, layered lighting (sodium-orange, fluorescent white, tungsten), and natural film grain.
+
+The iron railing must NOT be extended further left — it ends exactly where it ends in the original. Add only buildings and rooftops in the upper-left and middle-left area, beyond the railing's endpoint.

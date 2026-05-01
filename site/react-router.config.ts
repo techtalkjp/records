@@ -15,5 +15,6 @@ export default {
     '/tracks/codex/01-hourglass-on-the-claude-code',
     '/tracks/codex/02-nandedayo',
     '/tracks/codex/03-log-dake',
+    '/tracks/codex/04-iwanakatta-dake',
   ],
 } satisfies Config

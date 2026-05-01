@@ -1,0 +1,12 @@
+{
+  "from_date": "2026-04-12",
+  "to_date": "2026-04-26",
+  "queries": [
+    "X上で直近2週間の投稿を検索してください。OpenAI Codex または Claude Code を毎日使ってるプログラマーが、AIに『察してくれてた』『気づいてた』『言わなかっただけ』『そこまで読めてたか』のような、AIに見抜かれた／こちらが見抜いた瞬間の機微を書いている投稿を集めてください。明示的に賞賛するものではなく、ふと気づいた苦笑、半ば諦めの気づき、独り言のような気づきが滲むものを優先。@ユーザー名・投稿日・本文を含めて15件以上、日本語と英語の両方を含めて。",
+    "X上で直近2週間、Codex / Claude Code を使ってるプログラマーが『AIに頼り切ってる自覚』『自分の名前でコミットする後ろめたさ』『もう自力では書けない気がする』『AIなしじゃ仕事できない』のような、依存と自虐が滲む投稿を探してください。笑いを含むトーンを優先。@ユーザー名・日付・本文を含めて15件以上。",
+    "X上で直近2週間、Codex / Claude Code を毎日使ってるプログラマーが『またこれかよ』『毎回これ』『またやった』のような、習慣化した苦笑・定型化したパターン・AIの口癖や挙動への愛憎が滲む投稿を探してください。具体的なやりとりや挙動の描写を含むものを優先。@ユーザー名・日付・本文を含めて15件以上。",
+    "X上で直近2週間、深夜・真夜中・週末などにAIコーディングエージェントとやりとりしているプログラマーの投稿で、相手がAIだからこその距離感（句読点崩れた短いプロンプト、独り言のようなチャット、寝落ち寸前の指示）が出てる投稿を探してください。@ユーザー名・日付・本文を含めて10件以上。",
+    "Search recent (last 2 weeks) X posts where programmers express moments of mutual understanding, anticipation, or unspoken communication with AI coding agents (Codex, Claude Code, Cursor). Look for posts like 'it just knew what I wanted', 'I didn't even ask but it did it', 'we get each other now', or self-deprecating versions of this. Include @username, date, and full text. 15+ posts.",
+    "Search recent (last 2 weeks) X posts where programmers describe specific habitual frustrations or quirks of AI coding agents that they've come to accept or even find endearing. 'every time it does X', 'I keep having to remind it', 'I know it will do Y but I let it'. Include @username, date, full text. 15+ posts."
+  ]
+}

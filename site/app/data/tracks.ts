@@ -163,6 +163,23 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/03-log-dake.m4a`,
   },
+  {
+    slug: '04-iwanakatta-dake',
+    title: '言わなかっただけ',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/04-iwanakatta-dake.webp',
+    coverImageWide: '/images/codex/04-iwanakatta-dake-wide.webp',
+    lyricsDir: 'content/tracks/codex/04_言わなかっただけ',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-008',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/ApyUo7h7COA',
+    },
+    audioUrl: `${AUDIO_BASE}/codex/04-iwanakatta-dake.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [

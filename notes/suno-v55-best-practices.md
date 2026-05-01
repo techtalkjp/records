@@ -36,12 +36,15 @@ Japanese boom bap, 90 BPM, dusty, male rap, warm Rhodes, vinyl crackle, laid-bac
 
 ## スライダー設定の目安
 
+**重要: 初期生成では Weirdness/Style Influence は曲全体に1セットしか設定できない。** セクション別に変えるには Replace Section ワークフローを使う。
+
 | セクション | Weirdness | Style Influence | 目的 |
 |---|---|---|---|
 | Chorus | 35-45% | 70-85% | フック安定 |
 | Verse | 40-55% | 55-70% | 変化と安定のバランス |
 | Bridge | 55-70% | 45-60% | 実験的テクスチャ |
 
+- 初期生成値は Verse/Chorus の中間あたりを狙うと安定（曲の重心に応じて寄せる）
 - 両方高くすると歌詞タグへの追従性が上がる
 - **赤域（0-14, 86-100）は回避**。安全範囲: 15-85
 

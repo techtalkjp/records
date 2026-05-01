@@ -1,0 +1,13 @@
+Vocal Gender: Male
+
+Exclude: aggressive, auto-tune, female vocals, EDM drops
+
+Initial Generation:
+  Weirdness: 40%
+  Style Influence: 65%
+
+Replace Section targets (if needed):
+  Intro    — Weirdness: 50%  Style Influence: 60%
+  Verse    — Weirdness: 40%  Style Influence: 60%
+  Chorus   — Weirdness: 35%  Style Influence: 75%
+  Outro    — Weirdness: 55%  Style Influence: 55%
