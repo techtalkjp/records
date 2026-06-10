@@ -1,0 +1,29 @@
+カバーアート生成プロンプト: コード読まなくてOK
+
+## コンセプト
+
+「名前と中身の鏡像」路線。Fable 5 リリースの日、中身が入れ替わった俺（同じ名前・別の中身）を、洗面台の鏡の前の一瞬として撮る。
+歌詞「朝イチの update／同じ名前 新しい俺」「入れ替わった中身」「俺は本当に俺？」の視覚化。
+既存4枚（全部「夜」）に対し、唯一の「朝・自然光」で時間帯から差別化。テック要素は完全排除。
+
+## 構図
+
+- **Reflection Split（反射で二重化 #4）**：手前に本人の背中（寒色・実体）、鏡の中に正対する自分
+- 鏡像の瞳だけがアンバーに光る = 「中身が入れ替わった」signal。Fable のアクセント色を物語装置に
+- ニアモノクロ／デサチュレート。色はアンバーの瞳のみ
+- 朝の窓光（寒色）が主光源。私的・オフの場面（タンクトップ）
+
+方式: マルチターン会話（generate-cover.ts, claude-code）
+モデル: gemini-3.1-flash-image-preview
+
+## Turn 2 プロンプト（scene）
+
+Same person, identical face, same hairstyle. Keep all distinctive features: same hazel-brown eyes with amber flecks, same high cheekbones with hollows, same scar on left cheekbone, same nose bridge scar, same mole below right eye.
+
+A photorealistic medium close-up of this person standing in front of a plain bathroom mirror in the early morning, seen from slightly behind over his shoulder, so we see the back of his real head and his face reflected in the mirror meeting his own gaze. Soft cool morning daylight from a window fills the small room. His real face is calm, lit by neutral grey morning light. But his reflection is subtly different — the reflected eyes catch a faint warm amber glow, as if lit by a source that is not in the room, and the reflection feels a fraction sharper and more present than the man himself. Quiet, uncanny, intimate mood. Mostly desaturated near-monochrome, the only color is the faint amber in the reflected eyes. Minimal modern bathroom. 50mm lens. No text, no watermarks.
+
+## ワイド版（16:9）
+
+cover.jpg から outpaint で生成。左にグレーの浴室壁、右に朝の窓光を追加。鏡・人物の二重化なし、顔の歪みなしで成功。
+
+Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The man's face, the reflection, and the mirror must remain exactly as they are. On the left, add more of the same minimal grey bathroom wall and tiling adjacent to the existing mirror — do NOT add a second mirror or a second person. On the right, extend the same wall with the bright window letting in soft cool morning daylight. Keep the desaturated near-monochrome palette and the soft morning light exactly matching the original. No text, no watermarks.

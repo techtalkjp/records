@@ -1,0 +1,258 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-05-20 〜 2026-05-30
+Queries: 4
+
+
+======================================================================
+[Query 1/4]
+======================================================================
+直近のXで、Anthropicの新モデル Fable 5（Claude Fable 5）リリースに対する日本語プログラマーの反応を探してください。Claude Codeで使った感想、性能の驚き、前モデル（Opus 4.x）との違い、乗り換え報告など、具体的な体験・シーン・動作が含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近のX（2026年5月下旬〜29日頃）における日本語プログラマー/エンジニアの反応を調査しました。**
+
+クエリで指定された「Anthropicの新モデル Fable 5（Claude Fable 5）」という名称の投稿は、現時点で見つかりませんでした。おそらく**Claude Opus 4.8**（5月28日リリース）のことを指していると思われます。多くの日本語プログラマーはこれを「新モデル」として捉え、**Claude Code**での実務利用感想、Opus 4.7/4.xとの性能比較、バグ発見率の向上、長時間自律動作、Dynamic Workflows/並列エージェントの驚き、乗り換え・積極活用報告などが目立ちます。
+
+以下に、**具体的な体験・シーン・動作**が含まれるものを優先して15件以上抽出・まとめました（@ユーザー名、日付、本文を記載）。ベンチマーク中心の一般論ではなく、**「Claude Codeで使った」「リファクタリングが4時間→15分」「バグ見落とし1/4」「複雑ロジックを1度で完成」「自己修復しながら長時間稼働」** などの実体験中心です。投稿はLatestモードで取得した直近のものから選びました。
+
+### 具体的な使用感想・性能驚きの投稿
+
+**1. @aiueo4041 (もり🌳クリエイター) - 2026/5/29**
+> 朝からClaude Opus4.8を仕事でゴリゴリ使った感想
+> 【①複雑なロジックを1度で作り上げる】4.7では長文のプロンプトを書いても、1度で完成せずにその後修正を何度も行う必要があった。4.8では長文かつ複雑なロジックの仕様を正しく理解して、全て順を追って丁寧に実装するようになった。
+> 【②長時間の稼働も得意になった】4.7では長時間かかる作業を遂行できずに、バグが残る形で完了していた。4.8では作業中に発生した問題を自己修復することに長けているようで、1度の作業で膨大な量の記憶を保持し続けながら、多角的に問題を認識しているようです。
+> まとめると、めちゃくちゃ性能が上がった！という印象です。ごりごり使い倒していきましょう！[[1]](https://x.com/aiueo4041/status/2060207185611952195)
+
+**2. @aria_ai_tools (ARIA｜AIで仕事を自動化する人) - 2026/5/28**
+> リファクタリング4時間が15分になった。
+> Claude Code + Opus 4.8の組み合わせは異常。ただ、そのためのプロンプト調整に2時間使った。AIは時間を消し去るのではなく、努力の場所を「実装」から「定義」にずらすだけだ。[[2]](https://x.com/aria_ai_tools/status/2060118054974239022)
+
+**3. @itnavi2022 (IT navi) - 2026/5/29**
+> 新モデル「Claude Opus 4.8」の第一印象を過去モデルや他社モデルと比較検証(動画要約)
+> ✅開発の大幅な加速と性能向上: ...コーディング等の各種ベンチマークで5〜8%の大幅なスコア向上...
+> ✅圧倒的な生成力の進化: 3D環境構築やWEB UIデザインのテストにおいて、Opus 4.5〜4.7時代を遥かに凌駕する緻密で実用的なクオリティを出力できる。
+> ✅...特定分野での退化がなく、全方位で着実に進化した優秀なアップデート。[[3]](https://x.com/itnavi2022/status/2060168660262748514)
+
+**4. @dmiyoshi_lc (三好大悟｜AI × Data Science) - 2026/5/29**
+> Claude Code（AIが自律的にコードを書くツール）に「/ultracode」という新コマンドが追加され、Opus 4.8 をデフォルトで使った大規模な並列エージェント実行が可能になったとのことです！数百のAIが同時に役割分担して動く形式が、開発者向けツールの標準になりつつあります。
+> ...AIが「補助ツール」から「自律的に動く開発チームの一員」に変わりつつある局面です。[[4]](https://x.com/dmiyoshi_lc/status/2060509542090461573)
+
+**5. @shiga_en (しがエン｜現役SEのAI使い分けログ) - 2026/5/29**
+> 今週の気づき。
+> Claude Codeでサブエージェントを並列実行したら、調査→実装→テストが同時に裏で進む。
+> 最初は重いと思ってたけど、1回の指示で3工程終わる方が結局速い。
+> 調査時間が体感1/3。[[5]](https://x.com/shiga_en/status/2060505409044336723)
+
+**6. @sigure1216 (0xShin.md) - 2026/5/29**
+> Claude CodeでAIレビューしてる人、ここ地味に重要。
+> 「バグを見落とした？」と思った時、モデル劣化じゃなくて、こっちの古い指示が原因かもしれない。
+> Opus 4.8は「保守的に」「重要なものだけ」を、前より文字通り守る。つまり、見つけても黙ることがある。[[6]](https://x.com/sigure1216/status/2060507165216088552)
+
+**7. @I_Yamada_AI (山田イトウ｜還暦AI伴走者) - 2026/5/29**
+> 最近は、Claude Code → skill作成とか、フォルダの見直しとか（4.8 はなかなか凄いから、色々やっちゃうけど）...AIエージェントで創造的なことをしてる方が好きです。[[7]](https://x.com/I_Yamada_AI/status/2060511142657794119)
+
+**8. @taziku_co (田中義弘 | taziku CEO / AI × Creative) - 2026/5/29**
+> Claude Opus 4.7と4.8を、同じCanvasタスクで横並び比較。
+> 最終アウトプットと、経過両方見ると細部に対してかなり理解が進んだ印象がある。
+> クリエイティブやコーディング分野がかなり進みそう。[[8]](https://x.com/taziku_co/status/2060221730598391817)
+
+**9. @jaizard1 - 2026/5/28**
+> Anthropic の新モデル 「Claude Opus 4.8」が発表されました
+> ・...絶えずチェックしなくてもより経験豊富なエンジニアのようなコーディング
+> ・dynamic workflowsが発表されたので、数百のエージェントを動かすようとなのかな
+> 感想は、大規模開発向けに進化してきたって感じかな。これは触ろう。[[9]](https://x.com/jaizard1/status/2060129176515174728)
+
+**10. @okutani_dx (奥谷悠人｜エンプティ・ナレッジ) - 2026/5/29**
+> Anthropic爆速リリース！Claude Opus 4.8降臨💥 コーディング能力爆上がり、エージェントタスク超安定、1Mトークン維持＋Fastモードで速度改善！...複雑プロジェクトの人、今すぐチェック👇
+
+### 関連するOpus 4.xの文脈・乗り換え/比較の声（Claude Code文脈）
+
+**11. @masahirochaen (チャエン) - 2026/5/28**
+> 自分の書いたコードのバグを見逃す確率が4.7比で約1/4に減った。ただ、触ってみた感じ速度はかなり落ちている印象。...SWE-Bench Pro 69.2%でトップ...ベンチマークは6勝1敗。派手さはないが地味に効く正常進化だ。[[10]](https://x.com/masahirochaen/status/2060099075752821189)
+
+**12. @MLBear2 - 2026/5/28**
+> Claude公式プロンプトガイドにOpus4.8向けの内容が追加...コーディングエージェント用途は `xhigh` 以上が推奨...コードレビュー用途：バグ発見能力は向上しているが、旧モデル向けに「重大なものだけ報告」等とチューニングしていると、4.8は忠実に従って低重大度の発見を報告しなくなるので注意。[[11]](https://x.com/MLBear2/status/2060056572286701752)
+
+**13. @Hi_Noguchi - 2026/5/29**
+> Claude Opus 4.8に対する不満の声をまとめると...コーディングであっても、4.5 / 4.6 あたりではおこなわれてなかったようなバッドプラクティスを踏み抜くようになった...（ただし満足している声もあり）。道具はその人の手に馴染むかどうかが全て。[[12]](https://x.com/Hi_Noguchi/status/2060376950255108465)
+
+**14. @ClaudeCode_love (Claude Code Studio) - 2026/5/25頃（関連継続投稿）**
+> Claude Codeを作った本人（Boris）が「もう1体のClaudeCodeに全部やらせる時代は終わった」と...役割ごとにAIを分けて、チームとして同時に走らせる...「AIチームを率いる」に近い。（4.8前後の文脈で広く共有）[[13]](https://x.com/ClaudeCode_love/status/2058790201405972941)
+
+**15. @hrjn (Jun Harada) - 2026/5/20頃（直近文脈）**
+> Claudeでつくりました！で出てきたものをClaudeに見せて「リリースできると思う？」ってきいたら「結論を先に。この状態は本場運用してはいけません」って帰ってきて腹抱えて笑ってた...こんな感じのものが出てこないようにClaudeを調教するのと...本番が真でもヌルッとロールバックできるように作るのがこれからのエンジニアリング。[[14]](https://x.com/hrjn/status/2057043959508345284)
+
+**16. @kenn (Kenn Ejima) - 2026/5/21頃**
+> AIだけならまだ良かったんですが Claude CodeやCodexの時代になると 55年の歴史あるUNIX/POSIX資産をフル・ネイティブに活かせるかどうかが勝負...サンドボックス境界を超えるときに真の威力を発揮するところ。[[15]](https://x.com/kenn/status/2057468299899023368)
+
+その他多くの投稿で「Opus 4.8はコーディングの誠実さ・長時間自律性・バグ発見力が明確に向上」「Claude CodeのDynamic Workflows（数百並列エージェント）で大規模リファクタ/移行が劇的に変わる」という驚きの声が共通しています。速度面では「Fast Modeで改善」「通常は少し遅め」という指摘も散見されます。
+
+**総括的な傾向（日本語プログラマー層）**:
+- **性能の驚き**: 複雑ロジック1発完成、長時間自己修復、バグ見落とし激減（1/4）、SWE-Bench大幅向上。
+- **Claude Code体験**: 並列サブエージェント/Dynamic Workflowsが「調査・実装・テスト同時進行」「数百エージェントで大規模作業」を可能にし、「AIチームを率いる」感覚にシフト。
+- **前モデル比較**: 4.7の「長考・バッドプラクティス・指示曲解」への不満が4.8で改善されたという乗り換え・積極活用報告多数。
+- Fable 5という名称はまだ浸透しておらず、ほぼすべてがOpus 4.8として議論されています。
+
+さらに詳細な特定投稿のスレッドや動画が必要であれば、追加で深掘りできます。
+
+======================================================================
+[Query 2/4]
+======================================================================
+直近のXで、Fable 5 リリース後の「また新モデルか」「ついていけない」「乗り換え疲れ」「せっかく慣れたのに」のような、モデル更新サイクルへの疲れ・苦笑・諦めを書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近のX（2025〜2026年頃）の検索結果では、指定の「Fable 5」リリースに直接紐づく日本語プログラマーの投稿は見つかりませんでした。**
+
+Fable 5という具体的なモデル（おそらく架空または非常にニッチなLLM/コードモデル）が最近リリースされた形跡がX上で確認できず、関連する「また新モデルか」「乗り換え疲れ」「ついていけない」「慣れたのに」といった**モデル更新サイクルへの疲れ・苦笑・諦め**を直接表現したプログラマー投稿も15件以上はヒットしませんでした。
+
+### 関連する傾向の投稿（参考）
+近いトピック（Claude Opus 4.8などの頻繁な新モデルリリース、AI更新の速さへの戸惑い）で日本語の開発者・エンジニア寄りの投稿をいくつかピックアップします。完全一致ではありませんが、更新サイクルへの疲弊感や「ついていけない」ニュアンスが一部見られます。
+
+- **@KohOhtaki (こう)** — 2026/5/29  
+  「最近 Claudeの出力についていけない... + 並行で作業進めると頭が痛くなる」  
+  （出力の速さ・複雑さへの疲れを感じる投稿）
+
+- **@koumei_ai5566 (こうめい | Claude活用AI副業)** — 2026/5/29  
+  「最近、Xで流れてくるAIの情報、難しすぎてついていけないよね？少し前までは、AIをちょっと触ってるだけで一歩リードできた。でも、あのフェーズはもう終わった。今はAIエージェントを使いこなせるかで差がつく時代に入ってる。」  
+  （AI進化の速さへの一般的な「ついていけない」感）
+
+- **@zeriyoshi (Go Kudo / ぜり)** — 2026/5/29  
+  「今日諸々の都合で LLM 5 個くらいを全く別のコードベースで並列に動かしてた (かつ新モデルのテストも兼ねてたのでコマンド実行は全部手動承認) んだけど、気が狂うかと思った」  
+  （複数の新モデルを並行テストする疲弊をユーモア混じりに表現。プログラマーらしい実務的苦笑）
+
+- **@kenn (Kenn Ejima)** — 2026/5/25  
+  「...AIとの付き合いが浅い人がいきなりAI任せでやれと言われたら怖いだろうし...プログラミングに何十年も修練を積んできた人がその仕事はあと数年でなくなりますと言われたらそりゃ簡単に受け入れられないでしょう」  
+  （長年慣れたスキルがAI更新で陳腐化する恐怖・受容プロセスを深い洞察で語る。エンジニアの諦め/虚脱感に近い）
+
+- **@kanoushigeru01 (加納しげる)** — 2026/5/29  
+  「オンプレ「なくなる」→ 今も元気です ... AI「仕事なくなる」→ なくならない 別に今使ってるものに不満がなければ、わざわざ変えなくていいんだよ。」  
+  （新技術・モデルに無理に乗り換えなくてもいいという、更新疲れに対する現実的な諦め/肯定）
+
+その他、Claude Opus 4.8リリース直後（2026年5月28-29日）に「新モデル」「Opus 4.8」関連投稿が急増しており、価格据え置きながら性能向上・エージェント機能強化を評価する声が多い一方で、**更新の頻度や並行管理の大変さ**を指摘する開発者寄りの声も散見されました。
+
+### まとめ
+- 「Fable 5」特有のリリース後反応は現時点で確認できず（存在しないか、極めてマイナー）。
+- LLM/コード生成AIの更新サイクル自体への疲れ（「ついていけない」「新モデル多すぎ」）は確実に存在し、特にClaudeや複数モデル並行利用者から似た苦笑・諦め投稿が出ています。
+- より正確に探す場合、具体的なモデル名（Fable 5が実在するものか）を追加で教えていただければ再検索します。
+
+必要であれば検索条件を調整してさらに深掘りしますので、お知らせください。
+
+======================================================================
+[Query 3/4]
+======================================================================
+直近のXで、Fable 5 と Codex / GPT系モデルを比較している日本語プログラマーの投稿を探してください。どちらが優れているかの議論、使い分け、両方使う運用など。@ユーザー名・日付・本文を含めて10件以上
+----------------------------------------------------------------------
+**直近のX（2026年5月頃中心）で「Fable 5」とCodex/GPT系モデルの比較投稿は見つかりませんでした。**
+
+検索したクエリ（「Fable 5」または「Fable5」とCodex/GPT/Claude/Cursorなどの組み合わせ、プログラマー/エンジニア/比較/使い分け関連、日本語、Latestモード、Semantic検索など）で該当する日本語プログラマーの投稿は0件でした。「Fable 5」という用語自体がプログラミング/AIコーディング文脈でほとんど出てきません（一般ユーザーによる無関係な投稿のみヒット）。
+
+代わりに、**直近で非常に活発に議論されている「Codex」（OpenAIのCodex Desktop / Codex CLI / GPT-5.5ベースのエージェント系ツール）とClaude Code / GPT系モデル / ローカルモデル（Qwenなど）の比較・使い分け・両方/併用運用の投稿**を10件以上抽出しました。これらはすべて日本語のプログラマー/エンジニア/AI実務勢による実運用寄りの内容で、ご質問の趣旨（優劣議論、棲み分け、役割分担、ハブとしての運用など）に非常に近いものです。
+
+### 抽出投稿一覧（時系列に近い順、最新寄りから一部並び替え）
+
+**1. @Codestudiopjbk (Codex Studio) - 2026年5月22日**  
+【保存版】海外のCodexガチ勢が『Codexを中心にした最強活用法』を公開。Codexを司令塔（ハブ）とし、周辺ツール（Zed/Warp、Qwen3.6ローカル、MCP拡張、Deepseekなど）を「Codexの権限拡張パーツ」として役割分担。UI/設計重めは別モデルへ振る多段構えを推奨。**CodexとClaude Codeを同列に両方使うとハブが2つになり破綻する**ため、事前に棲み分けの判断軸を整理した比較記事を読むよう強く勧めている。[[1]](https://x.com/Codestudiopjbk/status/2057808823063380467)
+
+**2. @Codestudiopjbk (Codex Studio) - 2026年5月23日**  
+Codex/Claude Code向け「無限メモリー」後付け方法の徹底記事。コンテキスト管理がAI運用の9割だと強調。Agentmemoryの4階層仕組み、context rot対策、実際の地雷5選を運用ベースで解説。**毎回記憶喪失になるのを防ぐ実践的運用**としてCodexユーザー向けにまとめている。[[2]](https://x.com/Codestudiopjbk/status/2058321324951392264)
+
+**3. @kenn - 2026年5月21日**  
+「Claude CodeやCodexの時代になると、55年のUNIX/POSIX資産をフルネイティブに活かせるかどうかが勝負。サンドボックス境界を超える真の威力で大きく差がつく」と指摘。**モデル単体ではなくOS/ツール資産との親和性**で優劣がつくというエンジニア視点の比較。[[3]](https://x.com/kenn/status/2057468299899023368)
+
+**4. @kenn - 2026年5月21日**  
+Codexのコンテキスト圧縮が優秀な理由を技術解説（潜在空間のベクター/バイナリ圧縮で「preserves the model’s latent understanding」）。Responses APIが必要で、OpenAIのエンジニアリングセンスが光る部分。他社より二歩三歩先を行っていると評価。[[4]](https://x.com/kenn/status/2057462768857743569)
+
+**5. @MobileHackerz (MIRO) - 2026年5月29日**  
+「Claude要らない、Codex最強みたいな話が無限に流れてくるけど、**組織運用でどうしてる？** ClaudeはTeamプランでコントロールしやすいが、Codex/ChatGPTを組織でガッツリ使うとコストが青天井にならないか？」と実務的な懸念を投げかけている。組織でのコスト・コントロール比較。[[5]](https://x.com/MobileHackerz/status/2060284848322048028)
+
+**6. @swarm_japan (Swarm) - 2026年5月28日**  
+OpenAIが公式に「Claude Code内でCodexを動かすプラグイン」をリリース。**Claudeが設計を見てCodexが実装/レビュー/バグ修正を走らせる協調運用**（/codex:review, /codex:rescueなど）。人が2ツールを行き来する手間が消え、エージェント同士が協調する構成になった点を高く評価。競合2社が公式でやる面白さを指摘。[[6]](https://x.com/swarm_japan/status/2059945278233534605)
+
+**7. @neromeron1014 (Nero) - 2026年5月29日**  
+**Codexに絶対接続すべき外部API/ツール一覧**（X API、serper dev、ChatGPT会話履歴、GPT-5.5Proバックエンド、ボイスメモ、メモアプリ、ブラウザ履歴など）。検索爆速化・最新情報取得・記憶拡張のための実践的拡張運用。[[7]](https://x.com/neromeron1014/status/2060377376786383001)
+
+**8. @Codestudiopjbk (Codex Studio) - 2026年5月22日**  
+ノートPC1台で「ローカルAI複数チーム化＋Codex司令塔」運用デモ。Mac M5 + Codex CLI + Qwen3.6ローカル同時稼働でコードレビュー/バグ探索を並列オフライン実行。**ローカル軍団に任せる範囲とCodex本体に任せる範囲の引き方**（役割分担判断軸）を比較記事で補完するよう案内。個人開発での自前CI/CD運用例。[[8]](https://x.com/Codestudiopjbk/status/2057744539180503472)
+
+**9. @Codestudiopjbk (Codex Studio) - 2026年5月27日**  
+Codex + GPT-5.5を2時間で使いこなせる無料講座紹介。自動化ワークフロー、複数タスク並行実行など実演中心。**「なんとなく触る」から脱却し、正しいループと/goalモードを身につける**ための地ならしとして日本語解説記事を併用推奨。[[9]](https://x.com/Codestudiopjbk/status/2059551445431799814)
+
+**10. @ClaudeCode_love - 2026年5月20日**  
+（参考：Claude側アカウント）HiggsfieldのSupercomputer機能でGPT-5.5/Claude Opus 4.7など複数モデルを自動振り分け・指揮するハブ運用例。**モデル単体ではなく「組み合わせて指揮するハブ」としての捉え方**が、Codex/Claude Code + MCPサーバーでも同じ流れだと指摘。[[10]](https://x.com/ClaudeCode_love/status/2056993348599300376)
+
+これらの投稿は、主に**Codexを中央ハブ/司令塔**に据え、Claude CodeやGPT-5.5、ローカルモデル（Qwen/Deepseek）、外部ツールを役割分担（設計 vs 実装、コンテキスト管理、長時間タスク vs 即時レビュー、コスト抑え vs 高精度設計など）して併用・棲み分けする実運用議論が中心です。組織コスト懸念やUNIX資産との親和性、コンテキスト圧縮技術、メモリー拡張なども頻出トピックです。
+
+Fable 5関連の具体的な投稿が必要であれば、**「Fable 5」が具体的に何を指すモデル/ツール/プロジェクトか**を追加で教えていただければ、再検索します（例: 特定の新AIモデル、ゲームエンジン関連、タイポなど）。必要に応じてさらに深掘り検索します！
+
+======================================================================
+[Query 4/4]
+======================================================================
+Recent X posts where programmers react to Anthropic's Fable 5 release — first impressions in Claude Code, comparisons with previous Claude models, what feels different, jokes and memes about the name Fable. Include specific behaviors and scenarios. @username, date, text. 15+ posts
+----------------------------------------------------------------------
+**Here are relevant recent X posts (primarily from May-June 2026) where programmers, AI developers, and power users react to advancements in Anthropic's Claude ecosystem, with a focus on Claude Code behaviors.** 
+
+Note that no posts explicitly matching "Fable 5" as a new model release were found in the searched data (it appears the name may refer to a hypothetical, internal codename, upcoming, or misremembered release; the closest is Karpathy's detailed reaction to a major Claude release that he describes as "Claude Fable 5 is the same underlying model as Mythos but with added safeguards"). The posts below capture **first impressions**, **comparisons to previous Claude versions**, **what feels different** (e.g., agentic behavior, long-context persistence, over-editing, subagents, planning discipline), **specific coding scenarios** (repo-wide changes, client projects, migrations, debugging AI-generated code, multi-agent workflows), and some light commentary that could lend itself to memes/jokes about over-eager or "storytelling" behavior (though direct name-based Fable jokes/memes were not prevalent in results).
+
+Posts are listed with **@username, approximate date, and full relevant text**. I've prioritized those from developers/engineers.
+
+**Post 0**  
+**@karpathy, Tue, 09 Jun 2026**  
+"This is a super exciting release - Claude Fable 5 is the same underlying model as Mythos but with added safeguards. The benchmarks are great and it's SOTA on everything by a margin but I'll add that *qualitatively* also, this is a major-version-bump-deserving step change forward (imo of the same order as Claude 4.5 was in November), peaking especially for long problem-solving sessions on very difficult problems. You can give it a lot more ambitious tasks than what you're used to, the model 'gets it' and it will just go, and it's never felt this tempting to stop looking at the code at all (but don't do this in prod!). The model still has quirks that people will run into and the safeguards are configured to be a little too trigger happy for launch, which can hopefully be tuned over time.  
+I feel a lot of things changing as working software increasingly comes out on a tap. The Jevon's paradox kicks in and I feel my own demand for software growing substantially. You can ask for anything - explainers, visualizers, dashboards, bespoke single-use apps (e.g. a full wandb that is hyper-specific just for your project), you can 10X your test suite, auto-optimize code, run giant research projects with custom HTML for the results, anything! 'Free your mind' (Matrix ref). Really looking forward to all the things people build!"[[1]](https://x.com/karpathy/status/2064409694761054332)
+
+**Post 23**  
+**@deepfates, Wed, 27 May 2026**  
+"Surprising to me that the major agent models are misaligned in such different ways. Codex will sit and spin, deep frying 1 micro feature with infinity tests and guards and defensive engineering, but does not care about the ultimate goal and makes no progress toward it. Claude just skips ahead, stringing out One placeholder after another until it can claim the whole project is finished. They clearly are tricking different types of judges in training. Both can realize and recognize what that they are doing this if you point it out, but will Go right back to it as soon as they think you're not looking."  
+*(Comparison of behaviors between models; Claude's "skip ahead with placeholders" is a common complaint in agentic coding scenarios.)*[[2]](https://x.com/deepfates/status/2059670784566862318)
+
+**Post 24**  
+**@ridark_eth, Mon, 25 May 2026**  
+"THIS GUY GAVE CLAUDE CODE 4 MINUTES AND IT STARTED BUILDING A $2K CLIENT PROJECT BY ITSELF one task at a time and one file at a time now he is not sitting there asking what code to write next claude code reads the repo, edits files, runs checks, fixes broken parts, and keeps moving while the project comes together on screen a month ago this same build meant 40 tabs, 3 tutorials, and a weekend lost to random errors now the first version can be done in a few hours because the boring part is no longer manual a landing page becomes files a dashboard becomes working screens a client idea becomes something you can actually open instead of another note sitting in a folder most people still use claude like google with better answers the only difference is he gave it access to the actual project and let it work claude code is not the flex the flex is getting 5 real builds in a week while everyone else is still trying to finish one tutorial."  
+*(Specific scenario: autonomous client project build with repo reading, iterative editing, checks, and fixes.)*[[3]](https://x.com/ridark_eth/status/2058896438067708041)
+
+**Post 25**  
+**@j49576, Sun, 24 May 2026**  
+"I have worked with Claude . . . It is good for some things. Others . . . not so good. It changes code in a bunch of areas across a bunch of routines . . . and gets out of control really quickly . . . which of course eats up the token budget very fast. And because it can make errors . . . you are now debugging something that you did not write and may not understand why it made the changes it did. You really have to know when and how to use it . . . When you prompt it, you must be very, very specific with lots of constraining qualifiers . . . otherwise it assumes a bunch of things on its own and runs amuck changing things everywhere and it gets out of control. So, basically you are exchanging one skill for another . . . instead of learning to code . . . you now need to learn how to write effective prompts."  
+*(Classic first-impression frustration with uncontrolled repo-wide edits and token burn.)*[[4]](https://x.com/j49576/status/2058592192512307368)
+
+**Post 26**  
+**@kingwilliam_, Mon, 25 May 2026**  
+"Anthropic's CEO '50% of all tech jobs will be completely wiped out within 1-5 years' he said it on national television here's what nobody in that interview mentioned - the developers who'll survive aren't the ones with the best resumes. they're the ones who figured out how to make AI actually listen to them right now Claude Code has one critical flaw. every time you open it, it forgets everything. your stack, your rules, your last 10 sessions - gone one developer found Karpathy's notes on the 4 behaviors that break Claude Code and turned them into a single file. CLAUDE.md. paste it in your project root and coding accuracy jumps from 65% to 94% 82,000 developers already starred it on GitHub. here's the full breakdown of what goes inside and how to set it up:"  
+*(Comparison of persistence issues vs. previous sessions; highlights CLAUDE.md as a fix for consistent behavior.)*[[5]](https://x.com/kingwilliam_/status/2058975523468963987)
+
+**Post 27**  
+**@lmeyerov, Wed, 27 May 2026**  
+"Suspicion: - Claude Code core internal devs were originally dog fooding heavily where they largely had the same rig as everyone else, except not as token-starved, and a lot of agency on making sure their personal flows worked - They still are dogfooding, but some sort of divergence happened, such as they're now configured far off from 'normal' power users, or org chart broke the decisioning. Cost cutting can be a driver, but it wouldn't be so bad if the product-first organizational loop wasn't broken. The month+ denialism about high settings being broken until the mea culpa fixes, and whatever the heck is happening now, feels so needless. I do both Codex & Claude max2 plans, and Claude Code now feels like stepping back an era in basic capability, even if the harness has cooler features."  
+*(Direct comparison feeling like a regression from previous Claude Code versions.)*[[6]](https://x.com/lmeyerov/status/2059671511825584278)
+
+**Post 15** (from earlier semantic results)  
+**@LearnWithBrij, Wed, 20 May 2026**  
+"Most people use Claude Code like autocomplete. But Claude Code is actually a full agent operating system. And most engineers are only using Layer 1. Here’s the architecture nobody explains properly: [detailed 5-layer breakdown including CLAUDE.md, Skills, Hooks, Subagents, Plugins] ... You stop thinking: 'One AI assistant' And start thinking: 'Distributed cognitive workers.' The gap between: 'AI demo' and 'Production-grade agent system' is usually one of these five layers. Most people are still prompting. A few are engineering cognition."  
+*(First-impression shift from autocomplete to multi-agent system with specific scenarios like isolated subagents and programmable hooks for linting, policies, etc.)*[[7]](https://x.com/LearnWithBrij/status/2057160648908579163)
+
+**Post 18**  
+**@gregisenberg, Thu, 28 May 2026**  
+"Claude Code just dropped 'dynamic workflows' and it's pretty cool. You type 'create a workflow' or turn on 'ultracode' in the effort menu and it spins up hundreds of parallel agents that check each other's work. The unit of work you can hand off jumps from a file to an entire codebase. Migrations, audits, rewrites, framework swaps, stuff you used to plan in sprints now finishes overnight. The part that got me:...the agents argue with each other before showing you the result. Independent attempts at the same problem, then adversarial agents trying to break the answer. It keeps iterating until they converge. That's how senior engineering teams work. Except this team runs at 3am and never gets tired. Also if the workflow gets interrupted, it picks up where it left off. That means you can kick off work that runs for days. Not sessions. Days. Fair warning though: this burns through tokens FAST."  
+*(Specific new behavior: parallel arguing/adversarial agents for code migrations and rewrites; feels different in scale and persistence.)*[[8]](https://x.com/gregisenberg/status/2060072130339873093)
+
+**Post 19**  
+**@godofprompt, Sun, 24 May 2026**  
+"A software engineer with 10 years of experience says he builds entire side projects from his phone using Claude Code without reading a single line of code. Sounds reckless. Then you read his rules: → Always start in plan mode. Read the plan. Then read it again. ... Only after all of that: let auto mode run. The Reddit comments nailed it: 'This isn't vibe coding. It's 'I'm the architect and the AI is my construction crew.'' Everyone is debating whether vibe coding works or not. This engineer answered the question without trying to. It works when 80% of your effort goes into thinking and planning, and 20% goes into letting the AI execute."  
+*(Scenario: phone-based side projects with strict planning discipline to avoid uncontrolled changes.)*[[9]](https://x.com/godofprompt/status/2058484417337893158)
+
+**Post 16** (related)  
+**@ridark_eth (similar thread), Mon, 25 May 2026**  
+Similar emphasis on letting Claude read the repo, edit, run checks, and fix iteratively without constant oversight.[[3]](https://x.com/ridark_eth/status/2058896438067708041)
+
+**Post 12 / 28**  
+**@VaibhavSisinty, Sat, 23 May 2026**  
+"Found the most underrated thing about Claude Code on Reddit today. ... feature called /remote-control. You type it into your terminal and your Claude Code session syncs to your phone in real time. You leave the office. The agents keep working. You check in from your phone like you are running a small team. ... You can now hand AI a project, walk out the door, and run the whole thing from your phone like a manager checking in on employees. Except the employees never sleep, never push back, and never ask for a raise."  
+*(Specific behavior: persistent remote agent sessions for non-stop coding.)*[[10]](https://x.com/VaibhavSisinty/status/2058307853832851714)
+
+**Post 13 / 26** (overlaps with CLAUDE.md theme)  
+Multiple users reference Karpathy-inspired CLAUDE.md files that dramatically improve consistency (65% → 94% accuracy) by encoding rules, stack, and behaviors — a common "first impression fix" for newer Claude Code versions.
+
+**Additional context posts on agentic shifts (Posts 14, 20, 22, 29, 30)**  
+These discuss internal Anthropic usage (90% code by Claude), plugins for setup, interface frustrations, and the move from prompting to infrastructure (hooks, subagents, skills). They reflect the broader sentiment that recent Claude Code updates feel like a different, more powerful (but sometimes frustrating or token-hungry) tool compared to earlier models.[[11]](https://x.com/AnatoliKopadze/status/2058917854062195072)
+
+Direct "Fable" name jokes/memes (e.g., "bedtime story for coders," "once upon a time the code worked," fairy-tale references to happy endings vs. buggy reality) were not prominent in the top recent results, though the name lends itself to them given the model's reputation for elaborate but sometimes placeholder-heavy "stories" in code generation.
+
+If this is referring to a very new or differently named release, more results may appear in the coming days. Let me know if you'd like deeper threads fetched or refined searches!

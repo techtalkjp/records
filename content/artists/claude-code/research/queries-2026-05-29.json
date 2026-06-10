@@ -1,0 +1,13 @@
+{
+  "from_date": "2026-05-15",
+  "to_date": "2026-05-29",
+  "queries": [
+    "直近2週間のXで、Claude Code を使い続けているプログラマーが「限界」「タイムアウト」「429」「止まった」「返ってこない」のような、エージェントが動けなくなる瞬間の機微を書いている日本語投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "直近2週間のXで、日本人プログラマーが Claude Code・Codex・Cursor など AI コーディングツールへの「依存」「手放せない」「自分で書けなくなった」「松葉杖」「スキル衰退」を苦笑まじりに書いている投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "直近2週間のXで、プログラマーが Claude Code や AI エージェントに「愛着」「信頼」「こいつに頼ってる」「なんだかんだ戻ってくる」のような、複雑な感情を吐露している日本語投稿を探してください。@ユーザー名・日付・本文を含めて10件以上",
+    "直近2週間のXで、AI コーディングエージェント（Claude Code・Codex・Gemini CLIなど）の新しい比較・乗り換え・「やっぱ○○の方がいい」「○○に移った」のような感想を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "直近2週間のXで、プログラマーが「AIエージェント疲れ」「バーンアウト」「効率上がったのに逆に疲れた」「楽になるはずが」「また深夜になった」のように AI 導入後の新しい疲労感を書いている日本語投稿を探してください。@ユーザー名・日付・本文を含めて10件以上",
+    "In the last 2 weeks on X, find posts from programmers expressing complex feelings about Claude Code — not just praise or complaints, but something nuanced like dependency, trust, 'I can't go back', unexpected failure moments, or the weight of relying on an AI. Include @username, date, and post text. 10+ posts.",
+    "In the last 2 weeks on X, find posts where developers compare Claude Code vs Codex vs Gemini CLI or other agents — especially posts that express preference, disappointment after switching, or 'I keep coming back to Claude'. Include @username, date, and text. 15+ posts."
+  ]
+}

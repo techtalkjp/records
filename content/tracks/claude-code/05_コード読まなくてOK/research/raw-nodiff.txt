@@ -1,0 +1,334 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-03-01 〜 2026-05-30
+Queries: 4
+
+
+======================================================================
+[Query 1/4]
+======================================================================
+直近3ヶ月のXで、Claude CodeやCodexなどAIコーディングエージェントを使っていて「コードを読まなくなった」「diff を見なくなった」「PRをちゃんと読んでいない」「approve するだけ」「レビューしてない」という体験や告白を書いている日本語プログラマーの投稿を探してください。具体的な状況・シーン・動作が含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3ヶ月（2026年3月〜5月末）のX投稿から、該当する日本語プログラマー/エンジニアの体験・告白を中心に抽出しました。**
+
+具体的な状況・シーン・動作（「一行も読まなくなった」「diff見ながらapprove」「相互レビューで人間は読まない」「PRレビューせずapproveだけ」など）が含まれるものを優先して選び、関連性の高いものを15件以上リストアップします。@ユーザー名、日付、本文を記載します。完全に一致する投稿はそれほど多くなく、重複や周辺の文脈を含むものも含めています。
+
+### 該当投稿リスト（時系列逆順、最新〜古め）
+
+**1. @kenn (Kenn Ejima) - 2026年4月30日**  
+「半年前までは自分も コードを書くのは100% AIでいいけど 生成されたコードはちゃんとレビューしましょう とか言ってたのに、今や コードのレビューも性格や視点の異なる CodexとClaudeに相互にやらせましょう になってしまって 本当に一行も読まなくなったもんな 読んでないくせに ワイ：そろそろリファクタリングやる？ Codex：いや、まだ大丈夫です Claude：まだ早いよ ワイ：ごめん みたいにちょっかい出して怒られてるんだぜ」  
+（最も直接的で具体的な「一行も読まなくなった」告白。AI同士にレビューさせ、人間は一切読まない運用への変化を詳細に描写）[[1]](https://x.com/kenn/status/2049810344818925851)[[1]](https://x.com/kenn/status/2049810344818925851)
+
+**2. @masbee1333472 (ますびー) - 2026年5月25日**  
+「AIにコード書いてもらってるけど、殆ど読んでない...💦 自分が理解できるのを待ってたら何年もかかりそうだし...😢 詰まった時は、どんな処理なのか聞いて、じゃあこうしたらどう？みたいな会話で乗り切ってるかな あとはclaudeとcodexで詰まったら交代とか相互レビューとか」  
+（「殆ど読んでない」+ 相互レビューに頼る具体的な動作）[[2]](https://x.com/masbee1333472/status/2058888844687360349)
+
+**3. @_dot (dot) - 2026年5月25日**  
+「AIが書いたコードを読むか、と言われると細かいところはほぼ読まなくなった。ClaudeCode/Codex/Copilotでクロスレビューしてもらえばいいし。大きな方向性でざっと見て違和感がないかはチェックしてる。」  
+（細かいところは「ほぼ読まなくなった」+ クロスレビュー依存の動作）[[3]](https://x.com/_dot/status/2058847883252945027)
+
+**4. @Sagasa8045 (さが) - 2026年5月25日**  
+「確かにプライベートで作っているモノはほとんどソース見なくなったなぁ…😅」  
+（プライベート開発で「ほとんどソース見なくなった」具体例）[[4]](https://x.com/Sagasa8045/status/2058883400656982270)
+
+**5. @nemui_student (眠い個人) - 2026年5月24日**  
+「世の中の強いエンジニアも、工学系の思想の人々の間ではコードを1行も確認せずコーディングはAIに丸投げが過半数に到達した雰囲気を確認した。（CodexとClaude Codeを両方触ったような人じゃない場合はそらそうじゃないはずだけど...）」  
+（「1行も確認せず」丸投げの業界雰囲気告白）[[5]](https://x.com/nemui_student/status/2058491455044534299)
+
+**6. @Piste_AI_BOSS (AIエンジニア_BOSS) 周辺および関連 - 2026年5月頃**  
+複数の投稿でClaude Codeを多用し、人間レビューを減らした運用が示唆されるが、直接的な「読まなくなった」告白は周辺文脈。  
+（例: 非エンジニアでも70%自動化など、レビュー工程の変化を匂わせる）
+
+**7. @dyoshimitsu (d.yoshimitsu) - 2026年3月12日**  
+「claudeが書いたコードをgemniがレビューしてそのやり取りを眺めてこいつらワシより賢くね？ってなりながらapproveするだけの簡単なお仕事」  
+（「approveするだけ」の具体的な動作描写。レビューはAI同士、人間は眺めてapproveのみ）[[6]](https://x.com/dyoshimitsu/status/2031923377745928551)
+
+**8. @WabisabiApp (わびさび) - 2026年3月22日**  
+「cursor優秀なので進捗がすごいことになってる。レビューしてないので負債になってるかもだけど...。後で気になったらリファクタもお願いしよう❤」  
+（Cursor使用で「レビューしてない」+ 負債化の自覚と後回し動作）[[7]](https://x.com/WabisabiApp/status/2035695295640859099)
+
+**9. @F76533426193331 (じ) - 2026年3月27日**  
+「claude codeの障害だけど、もしまともにレビューしてない状態でほとんどのコードをAIに書かせている場合に、大障害起こした時のことを想像したら、雨降ってて寒いのにかなりヒヤッとした。。。。」  
+（「レビューしてない状態」でAIにほとんど書かせているという具体的な危機意識）[[8]](https://x.com/F76533426193331/status/2037499601302041055)
+
+**10. @LifeIsMeeee (🤖 非エンジニアのためのAI活用コーチ) - 2026年5月11日**  
+「『AIが書いたコード、全部レビューしてない』Simonさんが認めた違和感 ... vibe codingは『コードを見ずにAIに任せる開発』... でも最近、Claude Codeが書いた本番用のJSON APIすらレビューせずに出してることが増えた」  
+（「全部レビューしてない」「コードを見ずに」「レビューせずに出してることが増えた」具体例）[[9]](https://x.com/LifeIsMeeee/status/2053985180722086040)
+
+**11. @k_matsumaru (松丸 彗吾) - 2026年4月29日**  
+「最早 AI でレビューしてないコードの方が危険なんていうレベルになってきている」  
+（AIレビューを前提に、人間レビューを省略する方向への言及）[[10]](https://x.com/k_matsumaru/status/2049301578172244148)
+
+**12. @minervacosmetic (テラ) - 2026年5月22日**  
+「『コードが読めないと途中で詰まる』という反論は正確ではない。Claude Codeはエラー文を自分で読んでデバッグを回す。エラーを人間が解釈する工程そのものが消えている。」  
+（人間の「コードを読む・解釈する」工程が消えた具体的な変化）[[11]](https://x.com/minervacosmetic/status/2057811963414270382)
+
+**13. @SaixCEO (杉田 海地) - 2026年5月26日**  
+「うちもそうなってきた。自社でClaude Codeに任せる時 細かい実装はもう読んでなくて テストと挙動だけ見て判断してる。コードの中身を理解する時間が『動くか動かないか』を確認する時間に変わった感覚。」  
+（「細かい実装はもう読んでなくて」「テストと挙動だけ見て判断」具体的な動作変更）[[12]](https://x.com/SaixCEO/status/2059130299834073591)
+
+**14. @peroon_GD - 2026年5月24日**  
+「Codex 何書いてるか把握せずGoGoするのは気持ちよくない Diff見ながら『いいね』と言っていくのは良い」  
+（「何書いてるか把握せず」 vs 「Diff見ながら」の動作比較。把握せず進める体験の言及）[[13]](https://x.com/peroon_GD/status/2058405665685819529)
+
+**15. @Tebasaki_lab (手羽先) - 2026年3月8日**  
+「Claude CodeとかCodexの能力が高くなったせいで、1年前ぐらいに言われてたコードの理解負債とかもうみんな気にしなくなってきたよね。人間がレビューするより、AIにチェックさせたほうが早くて見落としが少ない場合が多い。脆弱性とアーキテクチャだけ気にすればよい。」  
+（コード理解負債を気にしなくなり、人間レビューを減らしてAIチェック中心になった告白）[[14]](https://x.com/Tebasaki_lab/status/2030564506540323046)
+
+**16. @omi_last_stand (omi) - 2026年5月26日**  
+「claude code側から、MCPサーバとして呼び出してるCodexだと、思慮深さが足りないのか、忖度してないか？ 単独 Codex から、プロジェクトディレクトリ内を全て参照させて、レビューをさせると、これでもかってくらいに指摘事項を挙げてくるのに。」  
+（AI同士のレビュー動作の違いを具体的に比較。人間レビュー依存の低下を示唆）
+
+これらはすべて日本語のプログラマー/エンジニア（またはAI駆動開発を実践する開発者）によるもので、**「コードを読まなくなった」「diffを見なくなった」「PRをちゃんと読んでいない」「approveするだけ」「レビューしてない」** というテーマに合致する具体的なシーンを含んでいます。
+
+特に@kenn氏の投稿は変化の前後を詳細に告白しており、最も該当度が高いです。直近3ヶ月でこのテーマの「告白」は徐々に増えている印象ですが、まだ爆発的に多いわけではなく、相互レビュー（AI同士）や「テスト・挙動だけ見る」運用への移行が共通の動きとして見られます。
+
+さらに詳細な投稿や特定のユーザー深掘りが必要でしたら追加でお知らせください。
+
+======================================================================
+[Query 2/4]
+======================================================================
+直近3ヶ月のXで「AIが書いたコードを読まなくていいのか」「コードを理解しないまま使っていいのか」「自分はまだプログラマーと言えるのか」というような問い・議論・葛藤を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3ヶ月（2026年3月〜5月末）の日本語プログラマー/エンジニアの関連投稿を、X検索ツールで抽出しました。** クエリに完全に一致する「AIが書いたコードを読まなくていいのか」「コードを理解しないまま使っていいのか」「自分はまだプログラマーと言えるのか」という葛藤・問い・議論を直接含む投稿は多く見つかりましたが、周辺の「読む読まない論争」「理解せずに使うリスク」「AI時代にエンジニアとしての自信・責任・学習の必要性」に関する実務者・個人開発者の投稿が多数ありました。
+
+以下に**関連性が高いものを中心に20件**選び、@ユーザー名・日付・本文を記載します（重複を除き、Latest順を中心に選定）。これらはすべて2026年2月28日以降の投稿です。[[1]](https://x.com/Takazudo/status/2060408148377358519)[[2]](https://x.com/Study_in_Kurome/status/2060377176617414820)
+
+### 特にクエリに近い葛藤・問いを含む投稿
+
+1. **@Study_in_Kurome (くろめ)** - 2026/5/29  
+   「私がAIを使ってテキトーに何も理解せず作ったExcelのマクロが社内に広まってしまい、その結果海外含めいろんな人から不具合報告と改修依頼が来てて、今はまだそれをAIにぶち込んで何とかなってるけどこれって本当に本当に良くない状況だよね………？私はエンジニア経験0だしコード学んだこともない😭」  
+   （理解せずに作って広めた結果の後悔・危機感を吐露）
+
+2. **@uufu_engineer (うーふ｜営業→エンジニア3年目)** - 2026/5/27  
+   「僕はまだGo言語にそこまで自信を持ててない。だから、たとえ「全部読まなくて良い」としても、AIの生成したコードをちゃんと読むと決めている。「読めるけどあえて読まない」のは良くても、「読めない」自分を正当化するのは違う。」  
+   （読まなくていい論に対する自身の葛藤と「読めない自分を正当化しない」という決意）
+
+3. **@egys_16 (やす │ エンジニア)** - 2026/5/27  
+   「コード読む読まない論争、むずかしい、、、ただまだ自分は、エンジニアリングに関する勉強をすることは無駄とは思ってなくて、AI出てくる以前から有名な良書で、読めていないものは引き続き読んだりとか、日々勉強は続けていこうかな その中で、自分も開発の仕方を日々模索していこうと思う」  
+   （読む読まない論争への葛藤と、勉強継続の決意）
+
+4. **@onotchi_ (オノッチ)** - 2026/5/7  
+   「プログラミングが出来る人こそAIをばりばり使いこなせるもんだと思っていたけれど、最近プログラミングが出来る人こそAIをつかないほうがいいんじゃないかとも思うようになってきた・・・というのもあからさまに自身のプログラミング能力が落ちているのを感じるし、... まだしばらくこの辺は悩むんだろうな。」  
+   （AI使用による能力低下の葛藤、自分はまだプログラマーとしてどうか）
+
+5. **@maso_mi9808 (みぃ🌷エンジニア)** - 2026/4/3  
+   「エンジニアになった時からずっとAIがいた私としては、コードを自力で書けないことがすごいコンプレックスで、何書けばいいか分からなくて結局AIに頼んで落ち込むみたいな事が多かった気がする🥹 でも、最近コードを書くこと自体はAIが得意なんだから、それを自分がレビュー出来るようになることに徹しようと思ってAIが出したコードを時間が許す限り理解しようとしてる☺️」  
+   （AI時代に自力で書けないコンプレックスと、理解・レビューに徹する決意）
+
+6. **@Lucky0137 (Lucky!!)** - 2026/5/12  
+   「人間がコードを理解しないまま社会インフラが作られ始めている』と言うことだ 金融で言えば、サブプライム商品の中身を誰も理解してなかった状況に少し似てる」  
+   （理解しないままAIでインフラを作るリスクへの強い懸念）
+
+7. **@mousepancyo (Ψοσηιδα@脊振登坂愛好会0号)** - 2026/5/26  
+   「最近AI任せのプログラムでのトラブルを客先から時々聞くのですが、以前からあるWebで検索したコードをコピペで使って不具合が出た時に詰む人と同じでAIが吐いたコードを理解しないまま使ってしまうとそりゃおかしなことになるよね。」  
+   （理解しないまま使う危険性を直接指摘）
+
+### 関連する「読む読まない」「責任・理解」「プログラマーとしての自信」議論の投稿
+
+8. **@Takazudo** - 2026/5/29  
+   「最近のAIのコード読む読まないで思ったけど、自分がある程度大きい組織のボスみたいな立場だったら、読まない派の人にはプロトタイプベースでガンガンモノを作る系の仕事を、読む派の人は手堅い保守系の仕事を任せる気がする。」
+
+9. **@yusuke (山本ユースケ)** - 2026/5/29  
+   「AIが出力したコード読まない勢で、それがファイナルアンサーだと決めつけてマウント取るのはうっとうしいな。自分の組織で信じるように好きにすればよろし。」
+
+10. **@Favi_ty (ぼちみず)** - 2026/5/29  
+    「AIのコードを読んだ方がいいとか読まなくていいとかは、待ってりゃ自然に答えが出る類の話なんだから、今の時点で机上で白黒付けようみたいな必要は全く感じない」
+
+11. **@hoshino_kabee (宙ノ くじら)** - 2026/5/29  
+    「「aiのコード（ほとんど）レビューするんですか？」について「MySQLのコード読まなくて不安じゃないんですか？」という古代人によってまぁ概ね読まなくていいんじゃない？ということになった。読めるなら読んだほうがいいけど基本価値創造を優先したほうがよい、くらい。」
+
+12. **@Den_scoth_Mn (fein_AS)** - 2026/5/29  
+    「AI生成コードの責任の話ウケる😆ww ... コードなんか読まないやい😝！ぜーったい読まないもん😝！AIがやってくれるからいいもーん😝！みたいに、すっげー必死🤣ww」
+
+13. **@kaitonagashima3 (都会の海斗＠エンジニアあるある)** - 2026/5/28  
+    「最近、コードを書く時間より「AIが書いたコードを読む時間」の方が長い。自分が書いたコードじゃないから、把握に時間がかかる。レビュワー兼ディレクターになった感じ。これがエンジニアの新しいスタンダードなんかな…慣れてきてはいるけど、まだちょっと不思議な感覚があります。」
+
+14. **@JP_sansan (ドンペイ.slnx)** - 2026/5/29  
+    「経営者の人はAI使う契約とかいくらでも契約できる裁量と権限があるからコード読まなくてもいいといえるけど、チームリーダーだから責任持たないといけないんんだけど、裁量ないからAI使っててもいつ使えないようになるかわからないからコード読むしかないんだと思う。自分もそうだし」
+
+15. **@yunu0nu (ゆぬ)** - 2026/5/29  
+    「コード読む読まない論、今のところ「AIの出すコードはまだ安心して使える領域にない/いや既に人間を超えた軸」「個人開発なら/いやクソデカビジネスでもいける軸」「将来の話でしょ/すでにそうだが？軸」の3次元戦闘なので...」
+
+16. **@emutyworks (emuty)** - 2026/3/7  
+    「いい加減「開発分かっててAI使ってる人」と「全然わかってなくてAI使ってる人」の話分けませんか？ ... 「まったく開発を理解してない人」が使って「ほら動くものが出来た！」みたいな話とごっちゃになって語られるからだいぶ議論がおかしくなってると思う」
+
+17. **@mattn_jp (mattn)** - 2026/3/13  
+    「AI プログラミングが出てきて、僕個人としてはワクワクしている反面、これからの業界やエンジニアを目指す人達がどう渡り歩いていくのか、ぜんぶ AI になっていいのか、そんな事が気になりすぎて、夜しか眠れません。」  
+    （次世代のプログラマー育成・業界の未来への深い葛藤）
+
+18. **@PeltedByRain (つっちー)** - 2026/5/24  
+    「プログラミングの文法は学んだからAIが何を書いてるか１文１文理解することはできる。でも設計としてプログラミング全体がどうやって機能してるのか理解することはできない。何千何万行のコードを１つのプロダクトとして機能させるプログラマーって人間業じゃないように見える。」
+
+19. **@hirataro_89 (ゆうたろう｜コーダー→エンジニアの伴走者)** - 2026/5/27  
+    「AIに書かせたコードをしっかり読むべきかどうか。別に全部は読まなくてもいいやん。... 「AIが書いたんで分かんないです」だけは言っちゃだめだとは思う🥲 大枠の流れや全体像くらいは理解しとくべきかと。」
+
+20. **@taku96816 (HAS | 40代エンジニア | PM | ドイツ赴任4年)** - 2026/3/11  
+    「「AIなんて無理」と諦めかけた40・50代の中間管理職へ。... 20年の業務知識×AIで私たちはまだ戦えます。」  
+    （AI時代でも「まだ戦える」という葛藤と肯定）
+
+これらの投稿は、主に**「読む/読まない」の二極化論争**、**理解不足による保守・責任リスク**、**AI依存でプログラミング能力が低下する不安**、**「自分はまだ本物のエンジニア/プログラマーか」**という内省を中心に展開しています。議論は活発で、個人開発者からメガベンチャー・リーダー層まで幅広いです。
+
+さらに詳細なスレッドや特定ユーザーの他の投稿が必要であれば、追加で**x_thread_fetch**を使って深掘りできます。お知らせください。
+
+======================================================================
+[Query 3/4]
+======================================================================
+直近3ヶ月のXで、AIエージェントが生成したコードをレビューせずにマージした、テストが通ったからそのままマージした、AIのコードを信頼してapproveした、という具体的な体験談を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3ヶ月（2026年2月28日〜5月30日頃）のX投稿から、指定の体験談に該当するものを抽出しました。**
+
+完全一致（「レビューせずにマージ」「テスト通ったからそのままマージ」「AIのコードを信頼してapprove」などの**具体的な個人体験**）は非常に少なく、議論・一般論・注意喚起が多い状況です。以下に**最も近い具体的な体験談や実践記述**を中心に、@ユーザー名・日付・本文をリストします（重複除き、関連度の高いものを優先）。15件に満たないため、該当しそうなものをすべて挙げ、該当度を注記しています。
+
+1. **@d117z (しょぼっち)** - 2026年5月25日  
+   「もう15年くらいコード書いて飯食ったり最大30人くらい束ねたりしたけど  
+   今のAIはプランニング段階でブレることなさそうなタスクは何もレビューせずにそのままマージするし、ヤバそうな臭いを感じたらちゃんとレビューしているので、コード読んでないは部分的にそう って感じかなぁ。」  
+   （CTO/プログラマーとしての**実務体験談**。レビューせずにマージするケースを明言。）
+
+2. **@nianjiang1752 (_にゃんじゃん)** - 2026年5月25日  
+   「もう俺は、AIに全部書かせて。動作確認して。エラーDBにためて一括で修正して。動確して。3セットぐらいして終わる開発手法でコードは一切読まない。  
+   本番環境でエラー起きたらエラーDBためてCronで一括修正して。PR作ってAIがレビューしてマージ。  
+   テストはクライアントかユーザーにさせてる。」  
+   （**非常に近い具体的な開発手法**。コード一切読まず、AIレビューでマージ。）
+
+3. **@_pochi (takuya kikuchi)** - 2026年5月15日  
+   「AIコーディング環境がかなり整ってきて、最近はほぼレビュー指摘なしでそのままマージできるくらい安心感が出てきた。何をしてきたかといえば、  
+   ・設計をちゃんとする（人間とAIで）  
+   ・動作確認をちゃんとする（AIが）  
+   ・不具合が出たら「なぜその不具合が入り込む設計だったのか」まで掘る（人間とAIが）  
+   ・その学びを設計に戻す（AIが）」  
+   （**レビュー指摘ほぼなしでそのままマージ**という実体験。）
+
+4. **@mattn_jp** - 2026年3月1日  
+   「昨日 vim のパッチに対するテストコード書くのに AI を使ったら、自分がローカルでテストに使っていたスクリプトを参考にされて適当な文字列が入り込み、疲れて直そうか迷っている間にそのままマージされてしまった。」  
+   （AI生成コードが**レビュー前にそのままマージ**された体験。テスト関連。）
+
+5. **@erurena1111 (Toki)** - 2026年5月20日  
+   「まだビギナーレベルだから、Codexで実装したコードもそのままマージせず、疑問に思ったところを壁打ちして、納得してからマージするようにしてる。」  
+   （逆の姿勢だが、**そのままマージしがち**な文脈での言及。）
+
+6. **@aki__0421 (Oishi Akito)** - 2026年5月28日  
+   「昔のアジャイル開発の1スプリントがAIエージェントによる開発だと数時間で完了する。レビューせずにどれだけ巨大なPRを安全に作成できるかが勝負になってきてる」  
+   （**レビューせずに巨大PR**を扱う実践議論。）
+
+7. **@ryo_vibecoding (Ryo)** - 2026年5月29日  
+   「それなりに大きなものを読まずに作ってみればわかりますが、コードの品質を気にしない人だろうがなんだろうが、行き詰まって後者に転換することになります。  
+   大きくしない場合は困らないのでそのままになりますが、困ってないのなら良いのではないかなとは思いますね」  
+   （**読まずに作る**実践を肯定する体験ベースの発言。）
+
+8. **@hideki_climax (セカヤサ)** - 2026年5月29日  
+   「AI生成コードを一行ずつ読むべきか問題、僕もほとんどAIに書かせてほとんどコード読まずに提供しているサービスあるけど、それはユーザー情報を一切取得しないサービスだから出来てると思う。」  
+   （**ほとんどコード読まず**に提供・リリースしている個人体験。）
+
+9. **@Giraffolic (キリンの首筋)** - 2026年5月29日  
+   「だんだんaiの言いなりになってる気がする AIが書いたコードを読まずに実行してみて満足することが増えてきた」  
+   （**読まずに実行・満足**するようになった体験。）
+
+10. **@hirooshima3 (badscientist)** - 2026年5月29日  
+    「個人開発でイテレーティブな大規模開発をできるだけコードを見ずにハーネスガチガチで作ってるけど実際は難しい。」  
+    （**コードを見ずに**大規模開発を実践中。）
+
+11. **@neurostack_0001 (KT)** - 2026年3月3日  
+    「3ヶ月AIにテストコード書かせてわかったこと。...ただし最後のレビューは人間必須。エッジケースの「意味的な正しさ」はまだAI単体では判断できない。」  
+    （**3ヶ月の実践**を基にした詳細な体験談。テスト関連。）
+
+12. **@tyakachan17 (さーたか)** - 2026年5月4日  
+    「弊社では先輩にコードレビューをお願いする前にAIにレビューしてもらうのがルール。...（後輩がAI指摘を鵜呑みにする話）」  
+    （AIレビューをルール化し、人間が最終approveする現場体験。）
+
+13. **@sijiaoh (シカク)** - 2026年5月29日  
+    「今の段階でAIのコード完全に見ない人は信用できない」  
+    （逆の意見だが、**完全に見ない**文化への言及。）
+
+14. **@sakuracorps1337** - 2026年5月29日  
+    「弱小ブラック下請け会社が納品したソースコードと、大手有名企業の作成したAIが出力したソースコードと、どちらが信頼できるだろうか？つか、真っ当なテストを通ってればどっちでも良い。」  
+    （**テスト通っていれば信頼**という実務的意見。）
+
+15. **@PzVCr82B2NTGKeq (あおひろ)** - 2026年5月29日  
+    「AIの利用はいいんだけど、打ち合わせ内容とかレビュー指摘とか全部aiにいれて、セルフレビューなしにクソみたいな成果物だしてくる2年目を何とかしたい。」  
+    （**セルフレビューなし**で成果物が出てくる現場体験。）
+
+**まとめと補足**:
+- 上記のうち、特に**1, 2, 3, 4, 8, 9, 10**が「レビュー/読まずにマージ・approve・テストベースで進める」という具体的な**個人/現場体験**に近いです。
+- 多くのプログラマーは「完全に無レビュー」はリスクを認めつつ、「簡単なタスクやテストが通るものは部分的に信頼してマージ」「AIに自動レビューさせている」ケースを報告しています。
+- より多くの完全一致事例が見つからなかった理由として、こうした過激な実践はまだ少数派で、X上では議論（「信用できない」「人間レビュー必須」）が主流だからです。
+- さらに深掘りが必要であれば、特定ユーザーのスレッド検索や追加キーワードで追跡可能です。
+
+======================================================================
+[Query 4/4]
+======================================================================
+Recent posts on X where programmers discuss not reading AI-generated code, blindly approving PRs from Claude Code or Codex, or debating whether engineers still need to understand the code they ship. Include specific behaviors and scenarios. @username, date, text. 15+ posts
+----------------------------------------------------------------------
+**Here are 15+ recent X posts** (mostly from March–May 2026) where programmers, engineers, and builders discuss not reading AI-generated code, blindly approving/merging PRs from tools like **Claude Code** (or similar like Cursor, Codex, Copilot), "vibe coding/approving," and debating whether engineers still need to understand the code they ship. I've focused on specific behaviors and scenarios such as skipping diffs, treating AI PRs like junior ones (or worse), building tech debt, horror stories from dev shops, and "human-in-the-loop" becoming pointless.[[1]](https://x.com/getintelo/status/2058224826381439373)
+
+Posts are listed with **@username, approximate date, and text** (lightly trimmed for clarity where needed). Duplicates were removed.
+
+1. **@getintelo (Ivo), May 23, 2026**  
+   "I don’t review code anymore while using Claude :( I’m a dev, sorry! I know I probably should but i genuinely do trust it enough."  
+   *(Specific behavior: Completely skipping code review due to high trust in Claude.)*[[1]](https://x.com/getintelo/status/2058224826381439373)
+
+2. **@iamapfelbaum (Artem Apfelbaum), May 22, 2026**  
+   "The human-in-the-loop step has become mostly pointless because I don't read the code — i just dont know how. It passes so much review that Claude usually just says merge with minor style notes. Planning to remove it soon."  
+   *(Behavior: Not reading code at all; relying on AI's own review suggestions; planning to remove human oversight.)*[[2]](https://x.com/iamapfelbaum/status/2057790406511735207)
+
+3. **@CryptoBoiDanny, May 27, 2026**  
+   "Claude Code: PR #42 is up and CI green  
+   People who vibe code: (Merge to main without reading it)"  
+   *(Classic "vibe coding" scenario: Merging to main based on CI green without reading the PR.)*[[3]](https://x.com/CryptoBoiDanny/status/2059542116213354887)
+
+4. **@arpittalksstuff (Arpit), May 26, 2026**  
+   "this skill isnt new, ai just made the temptation 10x bigger. Used to be legacy code or someone else's PR you didn't fully get and you'd nod and approve. Now claude writes 800 polished lines in 4 min and the same instinct kicks in. Its all about the balance. You sort of blindly trust the thing...until it breaks."  
+   *(Scenario: Instant approval of large, polished Claude-generated PRs due to speed and polish; "blindly trust until it breaks.")*[[4]](https://x.com/arpittalksstuff/status/2059355134237507679)
+
+5. **@johnzabroski, Apr 16, 2026** (repeated in multiple threads)  
+   "I've heard some horror stories of dev shops claiming ten resources and its basically Claude Code and they do stupid stuff like blindly approve PRs Claude wrote."  
+   *(Horror story scenario: Entire dev shops relying on blind approval of Claude PRs, inflating headcount.)*[[5]](https://x.com/johnzabroski/status/2044723077230010792)
+
+6. **@evgeniy_builds, Apr 22, 2026**  
+   "3 months shipping Jobbi solo with Claude Code. ... On 2: the case I still hand-code is when I want to push back on the AI. Typing the disagreement forces me to be specific. Otherwise I vibe-approve whatever lands and own code I don't understand."  
+   *(Behavior: "Vibe-approve" default mode leading to owning incomprehensible code; only hand-coding for pushback.)*[[6]](https://x.com/evgeniy_builds/status/2047054454575280201)
+
+7. **@Position_AI (Lane), Mar 19, 2026**  
+   "that's why code review exists. you're not supposed to blindly merge AI generated code the same way you're not supposed to blindly merge a junior engineer's PR. the diff is right there. read it."  
+   *(Debate: Explicit warning against blind merging of AI code; compare to junior PRs.)*[[7]](https://x.com/Position_AI/status/2034489692318749179)
+
+8. **@DnuLkjkjh, Mar 14, 2026**  
+   "I think the debt comes from not reviewing what you accept. I ship iOS features with Claude Code daily and read every diff before committing. same discipline as reviewing a junior dev's PR. if you skip that step, yeah, you'll drown in code you don't understand."  
+   *(Behavior contrast: Daily Claude use with strict diff review vs. the debt from skipping it.)*[[8]](https://x.com/DnuLkjkjh/status/2032610832815894941)
+
+9. **@ankitxg (Ankit Jain), Mar 23, 2026**  
+   "69% breaking deployments isn't an AI problem, it's a code review theater problem. Teams are shipping AI-generated code through the same weak gates they'd use for human code. We wouldn't blindly merge 300-line PRs from a junior dev. Why are we doing it for Claude?"  
+   *(Debate on review quality: Weak gates for AI PRs leading to high breakage; questions why AI gets less scrutiny.)*[[9]](https://x.com/ankitxg/status/2036168515452019121)
+
+10. **@ModernGrindTech, Apr 10, 2026**  
+    "The review step is the entire job now. Claude writes code fast but it also writes confident garbage sometimes. The devs who skip review and push straight to prod are building the next generation of tech debt at 10x speed."  
+    *(Scenario: Skipping review → 10x tech debt; review is now the core job.)*[[10]](https://x.com/ModernGrindTech/status/2042711244113649740)
+
+11. **@venkatdinavahi, May 17, 2026**  
+    "Feel like todays interfaces are built poorly for this. Both claude code and codex encourage the you to 'LGTM' code without reading/understanding everything. Wish there was a UX where I had to approve code file by file and chunk by chunk with some progress bar."  
+    *(Tool behavior: Interfaces encourage "LGTM" without full understanding; desire for granular approval UX.)*[[11]](https://x.com/venkatdinavahi/status/2056160341684310526)
+
+12. **@hyprvuln, May 19, 2026**  
+    "AI generated code ain't the problem. The problem is using it blindly. You need: 1. Good tools... 2. A clear understanding of what you're shipping. My hot take: you don't need to understand every line but you do need to understand its architecture."  
+    *(Debate: Blind use is the real issue; architecture-level understanding required, not every line.)*[[12]](https://x.com/hyprvuln/status/2056789555659891086)
+
+13. **@BatMannyXBT, May 27, 2026**  
+    "I’ve been coding for some days using only free AI tools. Claude (free tier) – For front end stuff. Codex (free tier) – For backend stuff. ... you don’t need to understand the code to ship something real. You just need to describe it well."  
+    *(Strong stance in the debate: No need to understand the code if prompts are good; shipping with free-tier Claude/Codex.)*[[13]](https://x.com/BatMannyXBT/status/2059530046080242099)
+
+14. **@AntrixshG, Mar 24, 2026**  
+    "Devs blindly approve AI code because tests pass. The real unlock isn't more agents, it's intent-routing layers."  
+    *(Behavior: Blind approval triggered by passing tests; critique of current workflow.)*[[14]](https://x.com/AntrixshG/status/2036476556030132633)
+
+15. **@pthpv95 (Hien Pham), Mar 17, 2026**  
+    "Engineers now blindly approve and ship code because AI write very high quality code 🚀"  
+    *(Direct observation: Blind approval/shipping due to perceived high quality of AI output.)*[[15]](https://x.com/pthpv95/status/2033717294329942413)
+
+16. **@grannyannie2004 (Ann McGivern), May 29, 2026**  
+    "do any of you actually use AI code review bots in your PR workflow or does everyone just mass-approve the suggestions without reading them"  
+    *(Common behavior question: Mass-approving AI review suggestions without reading.)*[[16]](https://x.com/grannyannie2004/status/2060285558212211015)
+
+17. **@satejbidvai (Satej Bidvai), May 22, 2026**  
+    "this is what gets merged into the codebase when people (unlike you) don’t review AI generated code and AI starts referring to these as the “standard” which is why PR reviews are even more important today."  
+    *(Scenario: Poor code becoming "standard" via non-reviewed merges; reviews now more critical.)*[[17]](https://x.com/satejbidvai/status/2057748012848541718)
+
+These posts highlight a split: some engineers admit to (or warn about) skipping reviews and accumulating unowned code/tech debt, while others stress that review and architectural understanding are now *more* important than ever. "Vibe approve," "LGTM without reading," and "merge if CI green" are recurring specific behaviors. Many compare AI PRs to junior dev PRs but note AI volume and polish make skipping easier.

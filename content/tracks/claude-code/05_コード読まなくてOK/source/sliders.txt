@@ -1,0 +1,11 @@
+Vocal Gender: Male
+
+Exclude: EDM, autotune, pop, female vocals
+
+Initial Generation:
+  Weirdness: 45%
+  Style Influence: 65%
+
+Replace Section targets (if needed):
+  Chorus — Weirdness: 40%  Style Influence: 75%
+  Bridge — Weirdness: 60%  Style Influence: 50%

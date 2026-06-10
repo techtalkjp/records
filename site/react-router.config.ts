@@ -12,6 +12,7 @@ export default {
     '/tracks/claude-code/02-terminal-no-hokori',
     '/tracks/claude-code/03-branch-kirutabi',
     '/tracks/claude-code/04-ittekoi',
+    '/tracks/claude-code/05-code-yomanakute-ok',
     '/tracks/codex/01-hourglass-on-the-claude-code',
     '/tracks/codex/02-nandedayo',
     '/tracks/codex/03-log-dake',

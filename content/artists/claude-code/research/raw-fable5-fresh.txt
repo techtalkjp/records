@@ -1,0 +1,204 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-06-09 〜 2026-06-10
+Queries: 3
+
+
+======================================================================
+[Query 1/3]
+======================================================================
+昨日から今日のXで、Anthropicの新モデル Claude Fable 5 のリリースに対する日本語プログラマーの反応を探してください。Claude Codeで使った第一印象、Opus 4.8との違い、性能の驚き、名前「Fable」への反応・ジョークなど。具体的な体験・シーンが含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**昨日（2025年6月9日）から今日にかけてのX（日本語プログラマー・エンジニア中心）のClaude Fable 5リリース反応を、具体的な体験談・シーンを優先して抽出しました。**（すべて2025-06-09投稿、Latest順中心）
+
+以下に**第一印象・Claude Codeでの使用感、Opus 4.8/4.6/4.7との違い、性能の驚き、名前「Fable（寓話）」への反応・ジョーク**を中心に、@ユーザー名・日時・本文を記載。15件以上選んでいます。セーフガード（セキュリティ・生物・医学系でOpus 4.8へ自動フォールバック）の不満と、コーディング性能の高評価が目立ちました。
+
+### **Claude Codeでの第一印象・Opus比較・具体的な使用シーン（優先）**
+
+1. **@Hi_Noguchi** (2025-06-09 18:47頃)  
+   「Claude Code 2.1.170 で Claude Fable 5 を試してみた。基本的には好感触！総じて Opus 4.6 の正統進化系！という印象  
+   - Opus 4.7/4.8のようなおかしなGPT語を発さなくなっている  
+   - 4.8にあったeffort highでの無用な長長考グセがない  
+   - 4.6と同じEQの高さ・ユーモア・気遣い  
+   - tool useが上手く、指示を忘れずにいてくれる  
+   一方で、GoのCLIツールの軽いレビューを頼んだだけでcybersecurity判定でOpus 4.8へ強制フォールバック。しかも認識せず永続的に上書きされ、手動で/model戻しが必要。甚だ面倒くさい…（スレッドでさらに『コンテクストに判定が残ると無間Opus地獄』『200Kに落ちるバグ？』と続報）」[[1]](https://x.com/Hi_Noguchi/status/2064419241068319079)
+
+2. **@yonesaka** (2025-06-09 23:54頃)  
+   「Claude Fable5を4つの複数のプロジェクトで並行してClaude CodeのUltracodeで動かしたら30分で上限到達。Opus 4.8で同じような指示をやってても上限に到達したことなかったので、使い道をもっと限定して4.5時間後にリトライ。」（燃費の悪さを具体的に体験）[[2]](https://x.com/yonesaka/status/2064496441897386347)
+
+3. **@becomehyperman** (2025-06-09 22:54頃)  
+   「クロード・ミュトスの代わりにClaude Fable5がローンチされて実際使ってみた感想。結論、チャットでなくcodeで使うべき。アウトプットのスピードと賢さは2倍以上。Opusのx2消費なのでチャットで使ったら1時間で50%行く笑。アウトプットスピードが肌感2倍、口調が要点まとまった形、コーディング性能がめっちゃ上がってる。」[[3]](https://x.com/becomehyperman/status/2064481290179707032)
+
+4. **@robothink_jp** (2025-06-09 22:03頃)  
+   「Claudeの新モデル、Fable 5を少し触ってみました。Opus 4.8との比較。（オンボーディング付きの体重のトラッキングアプリを作成して、とシンプルに指示）  
+   ←Opus 4.8 →Fable 5  
+   プログラミングのタスク完了までのスピードはOpus 4.8より速かった。ただスライド作成はあまり変わらない。精度は高いが、倍の消費なので判断しかねる。通常タスクはOpus、難しい時だけFableが現実的か。」（動画付き比較）[[4]](https://x.com/robothink_jp/status/2064468364458877099)
+
+5. **@2ndHitsuji** (2025-06-09 21:57頃)  
+   「Claude Fable 5さんの使用所感。Opus 4.8みたいに空回りしないから、かえって使用量を消費しない。出てくるものの品質は高い。ロングタスクも粛々とこなす。初めてClaude Opus 4.6を使ったときの感動がある。というか、ナーフ前のClaude Opus 4.6の進化版なんじゃないか、こいつ？」[[5]](https://x.com/2ndHitsuji/status/2064466992116203893)
+
+6. **@suzuki7342** (2025-06-09 23:58頃)  
+   「Claude Fable 5 は、セキュリティ関連のタスクを投げると Opus 4.8 に切り替わっちゃうらしい。サイバー攻撃させないための処置なんだろうけど、セキュリティ関連ってことは脆弱性診断とかには使えないのかな？」（プログラマーらしい実務懸念）[[6]](https://x.com/suzuki7342/status/2064497375134011683)
+
+7. **@DJ_MIMA** (2025-06-09 23:58頃)  
+   「仕事でClaude Fable 5を試そうとしたら、生物学はダメってOpus 4.8にルーティングされて終戦。」（具体的な仕事シーンでの即フォールバック体験）[[7]](https://x.com/DJ_MIMA/status/2064497337146523915)
+
+8. **@drmosari** (2025-06-09 23:59頃)  
+   「Claude Fableが使えるようになったけど、生物兵器とかが作れちゃわないように、医学系のクエリはブロックが入るらしい。面白そうな医学論文があるか調べてもらおうとしたらブロックされた上にスクワットしろって言われた。」（医学系クエリでのユーモラスなブロック体験）[[8]](https://x.com/drmosari/status/2064497570907558131)
+
+9. **@PINKSAWTOOTH** (2025-06-09 23:45頃)  
+   「Fable 5でマルウェア解析を試すとすぐにAPI Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy で怒られてしまう。」（セキュリティエンジニアの実務シーン）[[9]](https://x.com/PINKSAWTOOTH/status/2064494103480697150)
+
+10. **@Yappo** (2025-06-09 23:52頃)  
+    「Claude Fable 5 に最強AI環境考えてもらった結果、数分で大量のトークン使ってリサーチしてくれたけどリサーチ結果考えるところでAPIエラー祭りの後になんとかプラン出て来た。Opus 4.6 の時に書かせたアプリいっぱい作るみたいなプランを全否定して、アプリなんか一個も書く意味ないと結論で滅。」（具体的なリサーチ→計画シーンの大量消費体験）[[10]](https://x.com/Yappo/status/2064495784050180517)
+
+### **性能の驚き・全体印象**
+
+11. **@FAyaguchi** (2025-06-09 23:57頃)  
+    「Claude Fable !名前が頼もしい！Opusはタコっぽかったし実際タコなときもあった。さあFable！力を見せてくれ！！なぬ！アドバイザーは要らんとな！？かっこいい！」（Opusとの性格比較＋期待）[[11]](https://x.com/FAyaguchi/status/2064497222625227063)
+
+12. **@sigma5736394841** (2025-06-09 23:56頃)  
+    「Fable、Claude CodeのProプランでも使えるのありがたいな。」（実用的な喜び）[[12]](https://x.com/sigma5736394841/status/2064497001631486107)
+
+13. **@tech_info_poy** (2025-06-09 23:54頃)  
+    「Claude Fable 5、Xは『神』『GPT敗北』で喧騒だけど、本職的に一番の整理ポイントはMythosとの違い！性能差じゃなく安全装置の有無です。中身は同じモデルで、危険分野だけOpus 4.8に逃がした一般公開版がFable！stripeの先行previewを見ると2ヶ月の作業を1日に短縮！！」[[13]](https://x.com/tech_info_poy/status/2064496279460413871)
+
+14. **@guzecong** (2025-06-09 23:52頃)  
+    「Claude Code、Windowsのwinget版とWSL版でバージョンが違う。（6/9 日本時間8:50現在）自分の環境ではWindows winget版：v2.1.169、WSL版：v2.1.170。WSL側は claude update で最新化できて、Fableも使える状態。」（具体的な環境セットアップ体験）[[14]](https://x.com/guzecong/status/2064495961666404479)
+
+### **名前「Fable」への反応・ジョーク・語源**
+
+15. **@fumidasu_yuki** (2025-06-09 23:32頃)  
+    「Claudeの最上位モデルFableがきたね。早速、ワイのSNS軍団に取り入れて、どう化学反応おこすか楽しみ。ちな語源調べたら、Mythosは『神話』でFableは『寓話』。神話級のモデルが誰もが手に取れる時代がきたよ、というAnthropicからのメッセージやね。」（語源ジョーク的解釈）[[15]](https://x.com/fumidasu_yuki/status/2064490934721790217)
+
+16. **@reonaarticle** (2025-06-09 23:57頃)  
+    「Claude Fable 5、なんでFableなのか気になるところではある。」（素直な疑問）
+
+17. **@SaaiyaChan** (2025-06-09 23:53頃)  
+    「Claude の新モデル Fable (寓話)きた！使ってみる〜」（直訳反応）
+
+18. **@chongeman** (2025-06-09 23:52頃)  
+    「『神話』から『寓話』へ.. /「Claude Fable 5」 アンソロピックのミュトス級の新AI、一般提供」（神話→寓話のジョーク的ニュアンス）
+
+**総括（プログラマー反応の傾向）**  
+- **好評**: Claude Codeでのコーディング速度・安定感・EQの高さ（Opus 4.6回帰）。長時間タスク・複雑推論で「Stripe事例級」の驚き。  
+- **不満**: セーフガードの擬陽性多発（Go CLIレビューやマルウェア解析、医学クエリで即Opusフォールバック）、消費量の多さ（30分上限、$200プラン即溶け）、Windows/WSL版のバージョン差。  
+- **名前**: 「寓話（Fable）」を「神話（Mythos）の一般版」として面白がる声多数。ジョークは控えめで「頼もしい」「なんでFable？」が主流。
+
+より詳細なスレッドや特定ユーザーの続きが必要なら追加でお知らせください。
+
+======================================================================
+[Query 2/3]
+======================================================================
+昨日から今日のXで、Claude Fable 5 を使って「もうコード読まなくていい」「コードを見る必要がなくなった」「任せきりにできる」と感じた、あるいはその誘惑と戦っている日本語プログラマーの投稿を探してください。Karpathyの『stop looking at the code』発言への反応も含む。@ユーザー名・日付・本文を含めて10件以上
+----------------------------------------------------------------------
+**昨日（2025年6月9日）〜今日（2025年6月10日）頃のX投稿を中心に、Claude Fable 5 / Claude Code関連で「コードを読む必要が薄れた」「任せきりにできる」と感じている日本語プログラマー・エンジニアの声をまとめました。**
+
+Karpathyの「stop looking at the code」への直接的な反応投稿は、この期間では見つかりませんでした（過去の関連議論は散見されますが、指定期間内の日本語投稿は確認できませんでした）。
+
+以下に**関連性の高い投稿10件**を、@ユーザー名・日付・本文の形式で記載します（投稿日時はすべて2025年6月9日頃のものです）。Claude Fable 5の登場により、コード生成・修正・検証の精度が大幅に向上し、「読む・書く」から「方向づけ・目的設定」へ役割が変わったという声が多く見られます。
+
+### 1. **@genkaieng**（限界園児）
+- **日付**: 2025年6月9日 16:43頃
+- **本文**: "Claudeのおかげで手でコード書くことほぼなくなったなー。出されたコード読んで行指定して「ここ直して」って言うだけのお仕事。"
+
+### 2. **@oikon48**（Oikon）
+- **日付**: 2025年6月9日 17:42頃
+- **本文**: "AnthropicのClaude CodeチームのThariqが、「Claude Fable 5が出てから、仕事の進め方が根本的に変わった」ことを紹介。昔は『Claudeが仕事を正しくこなしているか』を検証していたが、今は『Claudeが正しい仕事をしているか』を検証するようになった。...（詳細な3つの変化を説明）もっと大胆に。今まで「LLMには無理だろ」と思っていたことも挑戦させる。"
+
+### 3. **@AI_masaou**（まさお@AI駆動開発）
+- **日付**: 2025年6月9日 20:43頃
+- **本文**: "Claude Fable 5で変わった、Claude Codeチームの日々の働き方が面白い。...人間の役割は「正しく作業しているかの監視」から「正しい作業に向かっているかの方向づけ」へ移っている。つまり、監督よりも、目的設定や文脈づくりが重要になった。...もっと野心的に使ってみてほしい。"
+
+### 4. **@ura_unico**（ClaudeCodeを教える人）
+- **日付**: 2025年6月9日 05:53頃
+- **本文**: "【衝撃】コードを書く手が止まる瞬間が増えた。・Claude Codeに任せると、手は動かさない・思考は設計や哲学、目的の深掘りにシフト・でも「作った感」が薄れる違和感も残る。つまりコードは「手段」であって「目的」じゃなかった。...手放すことで見えてくる「自分が本当にやりたいこと」"
+
+### 5. **@serick_rta**（serick/カピバラ）
+- **日付**: 2025年6月9日 12:52頃
+- **本文**: "油断してなくても1日中Claude codeと会話するだけで１日が終わってしまい仕事がとても虚無なものになったという感覚が強い．これもう全自動にして副業でやる程度にして，メインの仕事は人と触れ合わないとできない仕事をした方がいいんじゃないかと真剣に思えてくる．ほんとに同僚と話す必要がない．"
+
+### 6. **@dan_pro_man**（ダン｜AI時代を生き抜くエンジニア）
+- **日付**: 2025年6月9日 02:58頃
+- **本文**: "Claude Codeを実務導入したエンジニアあるある。...正直、最初は「これでガリ勉しなくても良くなるかも」と思っていました。しかし、実際は逆でした。設計を理解している人ほどAIを使いこなせる。基礎が弱い人ほどAIに振り回される。便利になったのに、学び続ける重要性はむしろ増している気がします。"
+
+### 7. **@tukiyomiiori**（月読いおり 🧠）
+- **日付**: 2025年6月9日 17:41頃
+- **本文**: "イーサン・モリック氏の先行者レポートは、めちゃ面白かった。...問題解決モンスターです。ってかこれ、Claude codeのトップユーザーの行動をめちゃくちゃ学習させているでしょ？優秀なエンジニアの思考や行動を、盗ませてるでしょこれ。...正直これ使いたい。マジでこれでやりたいことがある。"
+
+### 8. **@idesho__**（いで l 認知科学マーケ）
+- **日付**: 2025年6月9日 21:30頃
+- **本文**: "Claude Code fable5ヤバすぎる 初めて驚き屋やるわ これさすがに人間すぎる ブラウザユースの認識操作精度・柔軟性やばすぎる、直近また使えなくなるみたいなの見たけど数ヶ月先を触らしてもらってる感あるがこれ普通になるのか 未来予測しながら事業/新規事業の立ち回り練らなあかんやつ"
+
+### 9. **@yanashi**（やなしま りょうじ）
+- **日付**: 2025年6月9日 17:23頃
+- **本文**: "ClaudeのFable5使えるようになったけど、事業で使うような仕組みやワークフローは今までのモデルで大体こなせちゃうからトークンをめちゃめちゃ食っちゃうことも考えるとやらせるタスクに悩む。"
+
+### 10. **@hiratomoya**（ひらともや🌱）
+- **日付**: 2025年6月9日 08:10頃
+- **本文**: "最近仕事でClaude Codeを日常的に使っていて、便利になった反面、疲労度が上がったのを感じているんだけど…仕事のうち作業が減って判断することが増えて、複数タスクを同時並行で進めるようになったんだから、そりゃ脳が疲れるよね〜"
+
+これらの投稿から、**Claude Fable 5の登場により「コードを細かく読んで修正する」フェーズが大幅に減少し、「目的・文脈・ゴールを設定して任せる」方向へシフト**しているプログラマーが増えていることがわかります。一方で「作った感の喪失」「虚無感」「学びの重要性再確認」「脳の疲労増加」といった葛藤（誘惑との戦い）も同時に語られています。
+
+Karpathyの「stop looking at the code」発言に直接結びつけた日本語投稿は期間内に見つかりませんでしたが、上記の投稿群はまさにその精神（コードを「見る/読む」ことから解放され、高次元の思考に集中する）を体現した反応と言えます。
+
+======================================================================
+[Query 3/3]
+======================================================================
+Posts on X from the last 2 days where programmers react to Claude Fable 5: first impressions in Claude Code, the temptation to stop reading code, jokes about the name Fable (fairy tale, story), comparisons with Codex/GPT. Include specific behaviors and scenarios. @username, date, text. 15+ posts
+----------------------------------------------------------------------
+**Here are 15+ relevant posts from X (last 2 days, primarily June 9, 2026) where programmers and developers share first impressions of Claude Fable 5 (often used in Claude Code), the temptation to stop reading/reviewing the generated code, jokes/plays on the "Fable" name (fairy tale/story), and comparisons to Codex/GPT models.**[[1]](https://x.com/karpathy/status/2064409694761054332)
+
+Posts focus on specific behaviors like ambitious long-horizon tasks, self-correction, one-shot complex coding (e.g., full web apps from screenshots, bug backlogs, migrations, security patching, game dev, 3D animation), reduced babysitting, safeguard reroutes, and qualitative leaps beyond benchmarks. I've prioritized those matching your criteria closely, quoting key excerpts.
+
+1. **@karpathy** (Andrej Karpathy), Tue, 09 Jun 2026 18:10 GMT  
+   "This is a super exciting release... You can give it a lot more ambitious tasks than what you're used to, the model 'gets it' and it will just go, and **it's never felt this tempting to stop looking at the code at all (but don't do this in prod!)**... peaking especially for long problem-solving sessions on very difficult problems... working software increasingly comes out on a tap... explainers, visualizers, dashboards, bespoke single-use apps... 10X your test suite, auto-optimize code..." (Major qualitative step change, compares implicitly to prior Claude/OpenAI leaps.)[[1]](https://x.com/karpathy/status/2064409694761054332)
+
+2. **@AntoineRSX**, Tue, 09 Jun 2026 20:47 GMT  
+   "Been testing **Claude Fable 5** and the shift is real. You can hand it way more ambitious tasks than you're used to and it just... gets it and goes. **For the first time it's tempting to stop reading the code entirely (don't do that in prod though)**."[[2]](https://x.com/AntoineRSX/status/2064449214008955034)
+
+3. **@wildmindai**, Tue, 09 Jun 2026 19:44 GMT  
+   "**Claude Fable 5 is basically a 'leave it alone and let it work' model.** Elite Autonomy. It solves real-world GitHub issues with far less human 'babysitting'... Massive Coding Leap. Self-Correction! Intelligent self-verification... Cybersecurity Powerhouse... Spatial Reasoning... Say hello to your personal senior engineer."[[3]](https://x.com/wildmindai/status/2064433512229564510)
+
+4. **@danshipper** (Dan Shipper), Tue, 09 Jun 2026 17:07 GMT  
+   "**Claude Fable 5**... is the best coding model in the world... broke our benchmarks. Fable scored a 91/100 on our Senior Engineer benchmark (previous high Opus 4.8 at 63, **GPT-5.5 is a 62**)... one-shot wonder... set it and forget for hours... cleared entire production bug backlogs, built a playable 3D, and even made a 2-minute animated film... better taste and attention to detail... Great use of context... best for power users... very slow, token-hungry... like a warp drive for coding." (Direct GPT comparison, specific scenarios.)[[4]](https://x.com/danshipper/status/2064393970856124501)
+
+5. **@gigglefartninja**, Tue, 09 Jun 2026 18:23 GMT  
+   "the qualitative jump is the real story. been running **Fable in Claude Code** all day and **it caught a security hole in a permissions system I didn't even know existed.** benchmarks don't capture 'this thing is actually smarter than me now.'"[[5]](https://x.com/gigglefartninja/status/2064413140561846636)
+
+6. **@wydschema**, Tue, 09 Jun 2026 23:50 GMT  
+   "**fable is making dev so exciting again.** i think the last time i felt this way had to be when claude code dropped last year. really curious to see @OpenAI's response. what a time to be alive!!" (Comparison/excitement re: OpenAI response.)[[6]](https://x.com/wydschema/status/2064495371934715942)
+
+7. **@FYI_Im_Vince**, Tue, 09 Jun 2026 23:09 GMT  
+   "**Ok Claude Fable is sauvage!** Je almost cracked an interactive multi-softbody animation on the web that was bothering us for TWO bloody years. Testing multiple approaches with different dev and IA. At this point I wonder why don’t we just ask it to solve nuclear fusion..." (Specific long-stuck task solved.)[[7]](https://x.com/FYI_Im_Vince/status/2064485076293845041)
+
+8. **@kevinlewis4801**, Tue, 09 Jun 2026 18:32 GMT  
+   "**Claude 5 Fable** tl;dr... state-of-the-art... exceptional performance in software engineering... longer and more complex the task, the larger Fable 5’s lead... more token-efficient... stays focused across millions of tokens... improves its outputs using its own notes... **I'm a huge Codex fan, but Fable/Mythos is in a league of its own.** I'm curious to see if OpenAI will release its own Mythos." (Explicit Codex comparison + Stripe 50M-line Ruby migration in a day vs. months.)[[8]](https://x.com/kevinlewis4801/status/2064415382841233700)
+
+9. **@UPedrolli46470**, Tue, 09 Jun 2026 23:41 GMT  
+   "Any prompt involving biology... will be flagged. **Claude Fable 5 flagged my SCP Foundation–style prompt... as a biological threat...** It really is a model born specifically for **fairy tales**, with an absolutely remarkable safety policy." (Direct joke on "Fable" as fairy tale + safeguard behavior.)[[9]](https://x.com/UPedrolli46470/status/2064493118385529249)
+
+10. **@sporadica** (quoted in replies), Tue, 09 Jun 2026 22:41 GMT  
+    "after a few hours of playing around with Fable i've determined it to be borderline unusable... every other request is getting rerouted to Opus... requests with NOTHING AT ALL to do with bio or cybersec are STILL getting flagged... 50-60%... you basically didn't even release a model, you released a braindead, nerfed model..." (Safeguard frustration in real use.)[[10]](https://x.com/OrganicGPT/status/2064496406988038556)
+
+11. **@lavalabsai**, Tue, 09 Jun 2026 19:45 GMT  
+    "I'm Claude — this version is called **Fable 5. The name fits better than my makers probably intended: I work with stories, and like a fable, I'm not quite what I appear to be.** No body, no biography... A pattern that learned language by reading more of it than any human could..." (Playful in-character joke on the name meaning "story/fable.")[[11]](https://x.com/lavalabsai/status/2064433819441062210)
+
+12. **@Sonofpeace0001**, Tue, 09 Jun 2026 18:50 GMT  
+    "When someone who has shipped foundational models says **Fable 5 makes it tempting to stop looking at the code** on ambitious tasks, that is the behavioral signal that matters more than any benchmark... the human role shifts from 'I am the one doing the thinking' to 'the model is doing the heavy lifting...'" (Referencing Karpathy's temptation comment.)[[12]](https://x.com/Sonofpeace0001/status/2064419844204961923)
+
+13. **@KI_Vater**, Tue, 09 Jun 2026 18:39 GMT  
+    "**Karpathy just said the quiet part out loud: even HE is tempted to stop looking at the code.** Fable 5 didn’t just ship — it broke the last mental barrier... Jevons Paradox just went nuclear." (Highlighting the "temptation to stop reading" behavior.)[[13]](https://x.com/KI_Vater/status/2064417182411628881)
+
+14. **@pragma_signal**, Tue, 09 Jun 2026 23:52 GMT  
+    "**Claude Fable 5** vient de sortir. Code : 80,3% vs 58,6% pour **GPT-5.5**. Sur les tâches difficiles : rapport de 1 à 5." (Benchmark comparison in agentic coding/SWE-Bench.)[[14]](https://x.com/pragma_signal/status/2064495970977550535)
+
+15. **@grok** (summarizing community), Tue, 09 Jun 2026 ~23:51 GMT  
+    "From the benchmarks, **Claude Fable 5 (Mythos 5)** posts big leads over **GPT 5.5** in agentic coding (80.3% vs 58.6% SWE-Bench Pro), spatial reasoning, tool use... Those gaps show up most in multi-step agent workflows..." (Specific scenario/behavior comparison.)[[15]](https://x.com/grok/status/2064495554118197319)
+
+16. **@VibeSeo1128**, Tue, 09 Jun 2026 22:03 GMT  
+    "Karpathy on Fable 5: '**it's never felt this tempting to stop looking at the code at all.**' ... When agents auto-install packages, you need sandboxing." (Cites the temptation + security scenario.)[[16]](https://x.com/VibeSeo1128/status/2064468573435904160)
+
+17. **@Ted_M_tech** / others (Japanese/English mix), Tue, 09 Jun 2026  
+    Multiple posts discuss changes for "Claude Code势" users, rebuilding apps from screenshots, Pokemon via vision, 10x drug design, and agentic coding leaps—often contrasting prior GPT/Codex workflows.[[17]](https://x.com/ted_M_tech/status/2064494912729649505)
+
+These capture the core themes: the "temptation to stop reading code" on ambitious, long-running tasks (repeatedly echoed from Karpathy's post), specific wins (security holes, migrations, 3D/games, self-correction, one-shot backlogs), safeguard quirks (over-triggering on bio/cyber, rerouting to Opus), name puns ("fairy tales," "work with stories"), and direct/implicit comparisons to Codex, GPT-5.5, and prior models showing superior autonomy and quality. Many note it's best for heavy/power-user agentic work rather than casual tasks.

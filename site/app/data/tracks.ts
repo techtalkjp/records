@@ -105,6 +105,23 @@ const claudeCodeTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/claude-code/04-ittekoi.m4a`,
   },
+  {
+    slug: '05-code-yomanakute-ok',
+    title: 'コード読まなくてOK',
+    artist: 'claude-code',
+    artistName: 'Claude Code',
+    coverImage: '/images/claude-code/05-code-yomanakute-ok.webp',
+    coverImageWide: '/images/claude-code/05-code-yomanakute-ok-wide.webp',
+    lyricsDir: 'content/tracks/claude-code/05_コード読まなくてOK',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-009',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/64B5yDBMDEg',
+    },
+    audioUrl: `${AUDIO_BASE}/claude-code/05-code-yomanakute-ok.m4a`,
+  },
 ]
 
 const codexTracks: Track[] = [

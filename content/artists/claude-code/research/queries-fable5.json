@@ -1,0 +1,10 @@
+{
+  "from_date": "2026-05-20",
+  "to_date": "2026-05-30",
+  "queries": [
+    "直近のXで、Anthropicの新モデル Fable 5（Claude Fable 5）リリースに対する日本語プログラマーの反応を探してください。Claude Codeで使った感想、性能の驚き、前モデル（Opus 4.x）との違い、乗り換え報告など、具体的な体験・シーン・動作が含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上",
+    "直近のXで、Fable 5 リリース後の「また新モデルか」「ついていけない」「乗り換え疲れ」「せっかく慣れたのに」のような、モデル更新サイクルへの疲れ・苦笑・諦めを書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "直近のXで、Fable 5 と Codex / GPT系モデルを比較している日本語プログラマーの投稿を探してください。どちらが優れているかの議論、使い分け、両方使う運用など。@ユーザー名・日付・本文を含めて10件以上",
+    "Recent X posts where programmers react to Anthropic's Fable 5 release — first impressions in Claude Code, comparisons with previous Claude models, what feels different, jokes and memes about the name Fable. Include specific behaviors and scenarios. @username, date, text. 15+ posts"
+  ]
+}
