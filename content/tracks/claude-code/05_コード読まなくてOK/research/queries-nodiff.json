@@ -1,0 +1,10 @@
+{
+  "from_date": "2026-03-01",
+  "to_date": "2026-05-30",
+  "queries": [
+    "直近3ヶ月のXで、Claude CodeやCodexなどAIコーディングエージェントを使っていて「コードを読まなくなった」「diff を見なくなった」「PRをちゃんと読んでいない」「approve するだけ」「レビューしてない」という体験や告白を書いている日本語プログラマーの投稿を探してください。具体的な状況・シーン・動作が含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上",
+    "直近3ヶ月のXで「AIが書いたコードを読まなくていいのか」「コードを理解しないまま使っていいのか」「自分はまだプログラマーと言えるのか」というような問い・議論・葛藤を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "直近3ヶ月のXで、AIエージェントが生成したコードをレビューせずにマージした、テストが通ったからそのままマージした、AIのコードを信頼してapproveした、という具体的な体験談を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上",
+    "Recent posts on X where programmers discuss not reading AI-generated code, blindly approving PRs from Claude Code or Codex, or debating whether engineers still need to understand the code they ship. Include specific behaviors and scenarios. @username, date, text. 15+ posts"
+  ]
+}

@@ -1,0 +1,408 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-05-15 〜 2026-05-29
+Queries: 7
+
+
+======================================================================
+[Query 1/7]
+======================================================================
+直近2週間のXで、Claude Code を使い続けているプログラマーが「限界」「タイムアウト」「429」「止まった」「返ってこない」のような、エージェントが動けなくなる瞬間の機微を書いている日本語投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近2週間（2026年5月15日〜5月29日頃）のX投稿から、Claude Code（またはClaudeのエージェント/Computer Use機能）を使い続けているプログラマー・エンジニアによる「限界」「タイムアウト」「429」「止まった」「返ってこない」などの機微（エラー・停止・Rate Limit・詰まり体験）を直接含む日本語投稿を抽出しました。**
+
+該当する投稿は比較的少なく、**Rate Limit / 429 / Overloaded / エラーで止まる**関連が中心です。動的なagent（swarm/workflow/dynamic workflows）が長時間走るとトークン消費やRate Limitにすぐ到達する、という声が目立ちます。以下に**@ユーザー名・日付・本文**をリストします（重複を除き、関連性の高いものを優先。15件に満たないため、関連する「詰まった」「エラーで止まる」「限界突破」関連も一部含めています）。
+
+### 該当投稿リスト（最新順）
+
+1. **@hawkymisc (ほーきー)** - 2026年5月28日  
+   「後ろで動いているClaude Code Channelsが**Rate Limit**のため虚無になっているｽﾀｯｸﾁｬﾝ」  
+   （画像付きでRate Limitによる停止を示唆）
+
+2. **@xy23d (他人🐇フリーランスエンジニア)** - 2026年5月28日  
+   「claude codeが **hit rate limit** しちゃって、codexつかってるけど、権限渡さなすぎてめっちゃ承認とんでくるｗ」
+
+3. **@MasterLibrarian (Satoshi)** - 2026年5月27日  
+   「Claude Codeが初めて以下のエラー出してきた。  
+   API Error: **529 Overloaded**. This is a server-side issue, usually temporary  
+   Claude APIサーバーが一時的にアクセス集中（キャパシティ制限）で混雑しているらしいけど…」
+
+4. **@n_sasaki1 (佐々木直也)** - 2026年5月26日  
+   「Claude Codeを放置してて部屋の掃除をしていたら。知らないうちに３６コのエージェントを立ち上げて、１時間であっという間に**リミットに引っかかり…** しかも、作業が失敗してるという(ToT) どこが失敗してるのか検証するのも面倒なので、今日分のデータは廃棄 う、う〜ん…まだまだ監督が必要やね」
+
+5. **@yosuke_chusho (よすけ)** - 2026年5月25日  
+   「Claude Codeが **API Error: 529 Overloaded.** …を吐き出し続けて早30分。まだ動き出してくれない・・・」
+
+6. **@GenKurama429 (鞍馬 玄)** - 2026年5月28日  
+   「Claude Opus 4.8は…もう1つが dynamic workflows。…一方で代償はトークン消費。…どこまで任せ、どこで人間がゲートを置くかの設計が重要になる。」  
+   （大量subagent並列時の限界・トークン消費の機微を指摘）
+
+7. **@tjm8874 (おののき)** - 2026年5月28日  
+   「今エージェントswarmの実験してるんですが…Claudeの/workflow方面に進めば**限界を突破**できるんじゃないかなーと」
+
+8. **@061426 (NAOTO)** - 2026年5月28日  
+   「補足。**Claude Codeが詰まったとき**のコマンド集。①「今の状況を箇条書きで整理して」…詰まったらまず整理させる。これが最速やった。」
+
+9. **@limura (IIMURA Takuji)** - 2026年5月28日  
+   「-np 2にすると-c(コンテキスト最大長)の半分のトークン数を超えると**エラーで止まる**んだけど…Claude Codeで同じセッションをしばらく続けられる量になってなんとかなるな」
+
+10. **@gamemangaanime (ち～ぽん)** - 2026年5月28日  
+    「opus 4.8 Claude Code v2.1.154で使えるようになってたけど・・・ちょっと使ってみたらめ～～～っちゃ**エラー出る** windows環境だからかな？ API Error: 400 messages.1.content.8: `thinking` or `redacted_thinking` blocks...」
+
+11. **@haruai9690 (はる)** - 2026年5月28日  
+    「全部直そうとして**止まる**、これがぼくの一番やりがちな失敗でした。今日は1行目だけ、と決めてしまう方が結果的に早く改善できる気がしています」
+
+12. **@Murasaki46210 (ムラサキ)** - 2026年5月28日  
+    「Claude Codeに任せすぎて…数週間後、少し変えようとした時に**手が止まった** 「ここ、どういう仕組みだっけ」全然分からなくなってた」
+
+13. **@seki_ai_neko (セキ)** - 2026年5月28日  
+    「Claude を社内 DB に繋ぎたいけど外に出すのは無理」とよく言われる。…セキュリティで**止まる**中小企業の言い訳が半分消えると思ってる。」
+
+14. **@R_AI_workflow (rei_AI)** - 2026年5月28日  
+    「PostToolUse(Edit) に lint を仕込んだら、自分のミスより先に Claude のミスが**止まった**。」
+
+15. **@abokkedev (abokke)** - 2026年5月28日  
+    「Claude CodeのセキュリティプラグインBedrock Guardrailで**止まる**(こともある)じゃんね。…Blockされたら/security-reviewかreview agentに投げるか」
+
+### 傾向のまとめ（機微）
+- **Rate Limit / 429 / 529 Overloaded**が最も多い具体的な停止要因。特に複数のagent（36個など）を並列で動かすと1時間以内に到達。
+- 長時間放置・dynamic workflows / swarmを使うと「トークン消費が激しくて限界」「サーバー側で止まる」「返ってこない」状態になりやすい。
+- 詰まった時の対処として「状況整理プロンプト」「エラー文そのまま貼る」「1行ずつ修正に留める」などの工夫が共有されている。
+- Opus 4.8以降で「長時間自走しやすくなった」一方で、Rate Limitやコンテキスト超過による停止体験が増えている印象。
+
+これ以上の投稿は検索範囲内で確認できませんでした（Claude Codeはまだ比較的新しく、日本語でのネガティブ機微投稿が限定的）。追加で特定ユーザーやより狭いキーワードが必要でしたらお知らせください。
+
+======================================================================
+[Query 2/7]
+======================================================================
+直近2週間のXで、日本人プログラマーが Claude Code・Codex・Cursor など AI コーディングツールへの「依存」「手放せない」「自分で書けなくなった」「松葉杖」「スキル衰退」を苦笑まじりに書いている投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近2週間（2026年5月15日〜5月29日頃）のX（旧Twitter）で該当する投稿を徹底的に検索しましたが、指定の条件に完全に一致する投稿は15件以上見つかりませんでした。**
+
+検索キーワードには以下の組み合わせを複数使用しました：
+- 「Claude」「Cursor」「Codex」「AIコーディング」「AI コーディング」
+- 「依存」「手放せない」「自分で書けなくなった」「松葉杖」「スキル衰退」「書けなくなった」「AI依存」など
+- 「プログラマー」「エンジニア」「コーダー」などの文脈語
+- 言語：日本語、期間：2026-05-15以降、Latestモード中心
+
+### 検索結果の傾向
+- 「**手放せない**」は比較的よく出てきますが、ほとんどが**肯定的・中立的**（「便利すぎて手放せない」「もう手放せない」）で、苦笑いやスキル衰退を自嘲するニュアンスは稀です。
+- 「**松葉杖**」は1件だけメルおじさんの文脈で出てきましたが、AIコーディングツールへの依存を苦笑いするプログラマー本人の投稿ではありません。
+- 「**自分で書けなくなった**」「**スキル衰退**」に近い表現はほぼヒットせず、関連する議論（AIに頼りすぎるリスク、思考停止、理解不足になる）も散見される程度です。
+- 多くのプログラマー・エンジニアはAIツール（特にClaude Code、Cursor）を積極的に称賛・活用しており、「依存しすぎてヤバい」「自分で書けなくなった（苦笑）」という自虐的な投稿は、現時点ではそれほど多くないようです。
+
+### 近いニュアンスの投稿例（参考）
+以下は条件に近いものや、文脈として関連する投稿です（完全一致ではない点をご了承ください）。
+
+- **@Piste_AI_BOSS** (2026/5/22)  
+  「Claude Codeを入れてみたけど、何をすればいいか分からない」この相談が全体の6割を占める。...1週間後には「もう**手放せない**」と思えるはず。[[1]](https://x.com/Piste_AI_BOSS/status/2057958531173605659)
+
+- **@Rin7216** (2026/5/28)  
+  Cursor も使ってるよ！...Cluade**手放せない**よね…[[2]](https://x.com/Rin7216/status/2059839365044707362)
+
+- **@MasaoHirase** (2026/5/28)  
+  毎日Claude Codeでモノづくりしている。面白すぎて**手放せない**。[[3]](https://x.com/MasaoHirase/status/2060140713535508586)
+
+- **@7nekozyarashi** (2026/5/27)  
+  非エンジニアが Claude Code 回してる身からすると、「**自分で書けない**複雑コードを任せていい範囲」が広がった意味の方が大きい。[[4]](https://x.com/7nekozyarashi/status/2059600943885521113)
+
+- **@mercarioji** / **@ai_security_CT** (2026/5/25)  
+  Claude触るたびに**松葉杖**思い出させるようにしてますw / もう、松葉杖がトレードマークになってますよ（笑）（メルおじさんのClaude活用を指したやり取り）[[5]](https://x.com/mercarioji/status/2058928439877640427)
+
+- **@Mar_3simai** (2026/5/26)  
+  出力されたものを「あ、これ違うな」って気づけるレベルじゃないと、むしろ**AI依存**が深まるだけになりますよね。
+
+その他、AI依存のリスクを指摘する投稿（思考停止、理解しないまま使う、スキルが会社やAIに依存するなど）は散見されましたが、**日本人プログラマーが自ら「苦笑いしながら依存・松葉杖・衰退」を告白する形のものは極めて少ない**結果となりました。
+
+**結論**: 直近2週間では、指定の自嘲的・苦笑いニュアンスの投稿が15件以上蓄積されている状況ではありません。AIツールがまだ「便利ツール」として肯定的に受け止められているフェーズにあるようです。
+
+さらに新しい投稿が出る可能性があるため、定期的に「**Cursor 松葉杖**」「**Claude 自分で書けなくなった**」などで検索することをおすすめします。追加で特定のアカウントやより緩い条件で探してほしい場合は教えてください！
+
+======================================================================
+[Query 3/7]
+======================================================================
+直近2週間のXで、プログラマーが Claude Code や AI エージェントに「愛着」「信頼」「こいつに頼ってる」「なんだかんだ戻ってくる」のような、複雑な感情を吐露している日本語投稿を探してください。@ユーザー名・日付・本文を含めて10件以上
+----------------------------------------------------------------------
+**直近2週間（2026年5月15日〜29日頃）の日本語X投稿から、該当する複雑な感情（愛着・信頼・頼ってる・なんだかんだ戻ってくる・部下みたい・相棒・離れられない・しんどいけど依存的など）を吐露しているプログラマー/エンジニアの投稿を抽出しました。**
+
+完全一致の「愛着」「こいつに頼ってる」などの強い感情表現は投稿数が限定的でしたが、**信頼・依存・人間らしい複雑さ（しんどさ＋便利さ・不安＋任せる・離れられない・相棒感）** を感じさせる実体験ベースの投稿を中心に10件以上選びました。すべてプログラマー/エンジニア（または開発実務者）によるものです。
+
+### 該当投稿一覧（日付降順、@ユーザー名・本文抜粋）
+
+1. **@izutorishima (2026/5/28)**  
+   「なんだかんだ Claude Opus の愛嬌と EQ の高さ、文章の読みやすさは代えがたいのですが...趣味コードなら GPT だけで良さそう」  
+   → **なんだかんだ** でClaudeの魅力に言及し、他のAIに浮気しつつも愛着・優位性を認めている複雑な心境。
+
+2. **@be_contented (2026/5/25)**  
+   「Claude Codeは...後からの仕様変更に文句一つ言わずに対応してくれます。気楽に仕様変更を言い渡せます。一度使い始めたら、もう離れられません。」  
+   → **「離れられない」** という明確な依存・愛着表現。人間相手との比較で信頼と気楽さを強調。
+
+3. **@hawk_v (2026/5/28)**  
+   「Claude code を使ってて...もう、AI に対する自分の立ち位置が、すごくよくできる部下に仕事の大部分をやってもらってる、みたいになってるな。」  
+   → AIを**「よくできる部下」** と擬人化。人間の存在価値を感じつつ頼っている複雑な感情。
+
+4. **@zaki134rp (2026/5/19)**  
+   「あるアプリをClaudeで約1人月...『人間だけでは無理なコード量と品質の向上はできる しかし、人間の負担が半端ない』これはしんどかった まじで...全部チェックした...問題を見つけれる能力がない人に使わせるのは非常に怖い」  
+   → 強力な生産性向上と**「しんどさ・負担・恐怖」** の両面を吐露。最終責任は自分が持つという信頼と不安の複雑さ。非常に象徴的な投稿。[[1]](https://x.com/zaki134rp/status/2056641966214152237)
+
+5. **@fujitech_ai (2026/5/17)**  
+   「Claude Codeを使って実装しているが、これが自分の実力として積み上がっているのか不安...細かい実装はClaudeに任せていい...AIに任せてはいけない領域がある。AIの精度評価と改善がそれ」  
+   → 若手エンジニアの**不安と依存** を代弁。設計力は人間、細部はAIに頼るという現実的な複雑な感情。[[2]](https://x.com/fujitech_ai/status/2055887900446019599)
+
+6. **@shin_postama (2026/5/25)**  
+   「Claude Codeで1,000行以上のコードを一気に生成して確信した。AIが書いたコードへの不安は、外注先のエンジニアを疑うのと構造は全く同じ...リスクを許容できる範囲でタスクを切り出すスキルが勝敗を分ける」  
+   → AIコードへの**不安と信頼のバランス** を外注アナロジーで表現。ブラックボックスでもテストで許容するという実務的な複雑さ。
+
+7. **@HiguchiKi (2026/5/15)**  
+   「Claude CodeでAI社員作って一人で会社経営！...AI社員に名前つけて、名前読んでお願いしだしたらめちゃくちゃ楽しくなってきた」  
+   → 最初はテンション上がらなかったが**名前をつけて愛着** が湧き、楽しくなったという感情変化。AIを「社員」として擬人化・信頼。
+
+8. **@maTORIxmatrix (2026/5/28)**  
+   「WSL、そんなに悪くないんだけど、やっぱりデュアルブートのUbuntuに戻ってくると開発体験が違いすぎて震える。特にclaude。」  
+   → **「戻ってくると」** という依存表現。Claudeとの組み合わせで開発体験が優位になり、環境を戻してしまう感情。
+
+9. **@yumion3_enmo (2026/5/22)**  
+   「個人開発でもClaude Code使っていて実感する。丸投げ→動かない...壁打ちで設計まで詰める→やっと使えるものになる。この『壁打ちの質』を左右するのがエンジニアとしての経験値」  
+   → 丸投げではダメで**人間の判断が必要** という現実。AIに頼りつつ自分の経験値の重要性を再確認する複雑さ。
+
+10. **@omikuji_man (2026/5/26)**  
+    「昨日AIにコード書いてもらったけど、それが不可逆な処理だから怖くて2時間かけて全部読んだんだけど、ちゃんと問題あって、修正してもらった。やっぱAIには疑ってかかるべきだなと思う。人間と同じ。」  
+    → **信頼しつつ疑う・怖い** という典型的な複雑感情。「人間と同じ」との表現が秀逸。
+
+11. **@taiyaki_ai3 (2026/5/26)**  
+    「AIで『自分で作れるかも！』となる時代だからこそ、一度チャレンジしてみて、実際の難しさを知って**戻ってくる**流れ増えてそうです...その“戻ってきてくれる”という事実自体が、信頼や価値の証明」  
+    → 「**戻ってくる**」を直接使用。AIツールから人間（経験）に戻る流れと、AIの信頼価値を語る。
+
+これらの投稿は、**「便利で生産性が爆上がりする一方で、負担・不安・最終責任・設計判断は人間側に残る」** という共通の複雑な感情を強く表しています。特に@zaki134rpの投稿はバズっており、多くのエンジニアの共感を集めています。
+
+もっと厳密に特定のフレーズだけに絞ると件数が減るため、上記のように「信頼・依存・愛着・なんだかんだ・戻る・部下・相棒」的なニュアンスを含む実体験投稿を中心にまとめました。追加で特定ユーザーの深掘りが必要であればお知らせください。
+
+======================================================================
+[Query 4/7]
+======================================================================
+直近2週間のXで、AI コーディングエージェント（Claude Code・Codex・Gemini CLIなど）の新しい比較・乗り換え・「やっぱ○○の方がいい」「○○に移った」のような感想を書いている日本語プログラマーの投稿を探してください。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近2週間（2026年5月15日〜5月29日頃）のX検索結果から、該当する日本語プログラマー/エンジニアの投稿を抽出しました。**
+
+検索対象は**Claude Code、Codex、Gemini CLI、Cursor、Aider、Grok Build**などのAIコーディングエージェントに関する**比較・乗り換え・「やっぱ○○の方がいい」・「○○に移った」**などの実務的な感想です。
+
+しかし、**該当する「明確な乗り換え・移った・やっぱ○○の方がいい」という強い個人感想の投稿は非常に少なく、15件に達しませんでした**。多くの投稿は新機能発表（Claude CodeのDynamic Workflows、Opus 4.8など）の共有・解説や一般比較に留まっています。
+
+以下に**最も近い実務寄りの比較・感想を含む投稿**を優先的にリストアップします（日付降順、@ユーザー名・日付・本文抜粋）。該当性が薄いものは除外または注記しています。
+
+### 該当に近い投稿（比較・実務感想中心）
+
+1. **@m2makers_kuri** (くりくり｜AI開発×WEBマーケの人) - 2026年5月28日  
+   「7割Claude Codeで、そのままCodexに繋いでGOALしてます👍Codexの方が修復能力が圧倒的なので‼️」  
+   → **Claude CodeとCodexのハイブリッド使用＋Codexの修復能力を高く評価**する実務的感想。[[1]](https://x.com/m2makers_kuri/status/2059896568782991511)
+
+2. **@yukkuri_kurashi** (ゆっくり暮らし開発室｜個人開発) - 2026年5月27日  
+   「Claude CodeとCodex両方使ってる人に聞きたいんですけど、実装をがっつり任せるならどっちの方が安心ですか、、、！新規機能、リファクタ、バグ修正で向き不向きが結構違うのか気になる🤔」  
+   → **両方使っているエンジニアが、新規機能・リファクタ・バグ修正での向き不向きを質問**。実務比較の典型例。[[2]](https://x.com/yukkuri_kurashi/status/2059775934115492342)
+
+3. **@akagawaakira** (赤川 彰) - 2026年5月28日  
+   「GeminiにもAIエージェントSparkも登場ということもあり、現在の3大AIを比較してもらいました。・作ったり直したりする実務なら「Claude」・調べてまとめて実行する万能型なら「ChatGPT」・Google環境にすべてを任せて自動化するなら「Gemini」かな。」  
+   → **実務用途別の明確な3大AI（Claude/GPT/Gemini）比較**。プログラマー寄りではないが用途別評価。[[3]](https://x.com/akagawaakira/status/2060129664606273605)
+
+4. **@moltikuji** (もる@ポケカ・フロム) - 2026年5月28日  
+   「Claude Opus 4.7, Opus 4.8 Codex 5.5, 5.5 + image gen 以下のプロンプトを与えてそれぞれLPを作ってもらった比較」  
+   → **ClaudeとCodexで同一プロンプトでのLP生成比較**を実施・投稿。ビジュアル・コード品質の具体比較。[[4]](https://x.com/moltikuji/status/2060126707986964552)
+
+5. **@takao_meliorra** (たかお) - 2026年5月27日  
+   「GrokがClaude Codeに真っ向勝負。ターミナル上で動くCLIコーディングエージェント、これは熱い。少人数チームで回してる側からすると、Claude→Cursorと来て今度はGrokか。本命ツールの乗り換えはないけど、比較できる時代はアツい。」  
+   → **Claude→Cursorの過去の乗り換え経験を言及**しつつGrok Buildを比較。少人数チーム視点の感想。[[5]](https://x.com/takao_meliorra/status/2059478471714418767)
+
+6. **@ai_kuraberu** (AIくらべる) - 2026年5月27日  
+   「2026年のAIコーディングエージェント、5個本気で比較してみた。GitHub Copilot vs Cursor vs Claude Code、コスト・機能・向きでガチで何が違うのか、完全解説します🧵」  
+   → **Copilot/Cursor/Claude Codeの本気比較スレッド**。複数ツールのコスト・機能比較。[[6]](https://x.com/ai_kuraberu/status/2059563841047183700)
+
+7. **@Itwas61522841** (tIwasaki) - 2026年5月26日  
+   「Claude Codeに、Pi Coding Agentについて聞いたら、乗り換えしてほしくなさそう。」  
+   → **Claude Codeが他Agent（Pi）への乗り換えを推奨しないような反応**だったという感想。[[7]](https://x.com/Itwas61522841/status/2059275856523215148)
+
+8. **@whytrend_ai** (Whytrend AI) - 2026年5月26日  
+   「coding agentの調達基準を見直すVPoE/プラットフォーム責任者へ｜...ZedがTerminal ThreadsでClaude CodeをACP統合、同日Warp OzがClaude Code・Codex・Warp Agentを単一画面で横断実行。論点は『どのagentが速いか』から『どのharnessで束ねるか』に移った。」  
+   → **Claude Code / Codex / Gemini CLI系**の比較軸が「単体性能」から「harness（統合層）」に移ったという分析。企業視点の深い比較。[[8]](https://x.com/whytrend_ai/status/2059243334422679618)
+
+### 補足・傾向
+- **Claude CodeのDynamic Workflows**（大規模コード移行・並列サブエージェント）が直近のホットトピックで、多くのプログラマーが「数十万行移行に使える」「検証と停止条件が次なる論点」と評価しています（@Toworks287693, @channco18, @kiyo_ai_allin, @sora19aiなど）。
+- 「**やっぱ○○の方がいい**」「**○○に移った**」という**明確な乗り換え感想**は極めて少なく、**ハイブリッド使用（Claude Code + Codex）**や「両方使ってるけどどっちが安心？」という質問形が目立ちました。
+- CursorやAider、Gemini CLI単独の強い乗り換え投稿は今回の期間ではほとんど見つかりませんでした（新機能発表に話題が集中）。
+- 15件に満たないため、追加で深掘り検索しても同傾向でした。直近は**新機能共有・一般比較**が主流で、**個人レベルの「乗り換え決定」投稿**は少ないようです。
+
+もっと特定ツール（例: Cursorに移った、Aider比較など）に絞った検索や、期間を広げた検索が必要であれば追加でお知らせください。
+
+======================================================================
+[Query 5/7]
+======================================================================
+直近2週間のXで、プログラマーが「AIエージェント疲れ」「バーンアウト」「効率上がったのに逆に疲れた」「楽になるはずが」「また深夜になった」のように AI 導入後の新しい疲労感を書いている日本語投稿を探してください。@ユーザー名・日付・本文を含めて10件以上
+----------------------------------------------------------------------
+**直近2週間（2026年5月15日〜5月29日頃）のX（旧Twitter）で、指定のテーマに近い日本語投稿を検索しました。**
+
+完全に一致する「AIエージェント疲れ」「バーンアウト」「効率上がったのに逆に疲れた」「楽になるはずが」「また深夜になった」という** exact フレーズ**のプログラマー投稿は非常に少なく、10件に満たない状況でした（AI関連の疲労話題は増えていますが、プログラマー/エンジニア本人の「新しい疲労感」を直接吐露したものは限定的）。
+
+以下に、**最も関連性の高い投稿**を抽出してまとめました。**プログラマー・エンジニア・AI開発者本人がAI導入後の疲労・バーンアウト・脳疲労・決定疲れ・並列化によるオーバーヘッド**などを書いているものを優先しています。日付は投稿時刻に基づきます。
+
+### 関連性の高い投稿（時系列降順）
+
+1. **@mb_v101_a (mechabase)** - 2026年5月28日  
+   「AIで生産性は上がったのに疲弊する」という新しいバーンアウトが話題に。コードを書く喜びがレビュー作業に置き換わり達成感が消える問題。大事なのは「手を動かす時間」を意図的に残すこと #AI開発 #エンジニア
+
+2. **@hisaju01 (ひさじゅ@AIプログラミングスクールRUNTEQの代表)** - 2026年5月28日  
+   AIで生産性が上がったという感覚より仕事がとっちらかったという感想の方が大きい
+
+3. **@knkSeiya (せいや（たなか）🍎フリーランスエンジニア)** - 2026年5月27日  
+   コーディングの大半をAIに任せられるようになって、余裕を持ってタスクを進められると思っていたのだけど間違いだった。  
+   AをAIに任せている間にBをAIに依頼だし、その隙にCを・・・  
+   なんて事が可能になったせいで僕自身がタスク切り替えに追い付かずオーバーヘッドで脳が焼き切れそう
+
+4. **@totzyuta (とつゆう)** - 2026年5月23日  
+   AIで作業的な仕事の開発速度が爆上がりした分、「何をどう作るか」の抽象的思考と正解のない判断に埋め尽くされるようになった。そしてそれがいっっっっちばん脳疲労が激しい。AIツールを使い始める前よりも忙しいし、毎日頭が熱いし、とっても疲れるんですがこれって豊かになってるんでしょうか...。
+
+5. **@t_yoshimoto0107 (吉本 猛 | ベルフェイス)** - 2026年5月24日  
+   AIで仕事を並列化できるようになった結果、逆に集中力を壊している人は多いのでは？と思っているけどどうなんだろう。  
+   自分もついやっちゃう。  
+   原因は「AI待ち時間を埋めようとする」こと。...（中略）... 深い思考中は、むしろAIを見ない方がいいかもしれない。
+
+6. **@Lurie629 (わるーりー｜40代の判断を減らす)** - 2026年5月28日  
+   疲れるのはAIの使い方が悪いからではない。  
+   むしろ真面目に使っているから手が止まるのだと思う。  
+   返ってきた文章をそのまま出せない。  
+   便利になったはずなのに仕上がりが気になる。  
+   早く終わったはずなのに最後の確認で止まる。  
+   AIが仕事を減らしたようで判断する場所だけが自分の手元に戻ってくる。
+
+7. **@qqfb27nd (夢見暁)** - 2026年5月28日  
+   AIで業務を効率化したはずなのに、空いた時間が次のタスクで埋まっていく毎日。  
+   ChatGPTを開いた瞬間、もう疲れてませんか？  
+   AIツールを増やすほど腰が重くなってませんか？  
+   休んでも回復しない疲労感。夕飯のメニューすら決められないほどの決定疲れ。
+
+8. **@siro_appdev (Siro＠0からAIだけで個人開発)** - 2026年5月28日  
+   AIと話しながらアプリ開発・修正をしてるとあっという間に時間が過ぎていきますね！集中力が切れた瞬間、どっと疲れが🥱
+
+9. **@uufu_engineer (うーふ｜営業→エンジニア3年目)** - 2026年5月28日  
+   AIによって労働強度が上がり疲弊してたんですが、2時間多めに寝るようにしたら、見違えたようにやる気が回復しました。
+
+### 補足
+- **@mb_v101_a**の投稿が「新しいバーンアウト」という表現で最もテーマに近く、エンジニアコミュニティで話題になっています。
+- フリーランスエンジニア（@knkSeiya、@totzyutaなど）が「効率上がったはずなのに脳が焼き切れる」「脳疲労が激しい」と具体的に書いているケースが目立ちました。
+- 「また深夜になった」「AIエージェント疲れ」という極めて具体的なフレーズは直近2週間ではほとんど見つかりませんでした（似た現象は語られています）。
+- 全体として、**「生産性向上＝楽になる」ではなく「新しい種類の認知負荷・決定疲れ・コンテキストスイッチ疲労」** が共通のテーマとして浮上しています。
+
+さらに具体的なユーザーや追加期間で深掘りが必要であれば、追加で教えてください。
+
+======================================================================
+[Query 6/7]
+======================================================================
+In the last 2 weeks on X, find posts from programmers expressing complex feelings about Claude Code — not just praise or complaints, but something nuanced like dependency, trust, 'I can't go back', unexpected failure moments, or the weight of relying on an AI. Include @username, date, and post text. 10+ posts.
+----------------------------------------------------------------------
+**Here are 10+ relevant posts from programmers on X (May 15–29, 2026) expressing nuanced, complex feelings about Claude Code (or closely related Claude Opus 4 / agentic coding experiences).** These go beyond pure praise or complaints, touching on addiction/dependency, irreversible shift ("can't go back"), trust issues, unexpected failures/regressions, the weight of reliance, mixed emotions, and the tension between productivity and skepticism. Posts are sorted roughly by recency.
+
+**1. @neethanwu — May 29, 2026**  
+"opus 4.8, finally a win after six weeks of regressions. 4.7 fought its own harness, couldn't leave claude code to finish unattended, and like a lot of people I made codex my main driver. 4.8 won that trust back. I never left for the model, claude still has more taste. I left for the app. the codex app IS the best agent client out there right now, claude code is still a terminal bolted to a fragile app. the model recovers the work. the app wins the user. still behind on the half that made me leave."[[1]](https://x.com/neethanwu/status/2060192090165072312)
+
+**2. @thataliraza — May 29, 2026**  
+"I still unconscious trust Claude/Opus more than another model/tool. I use Claude Code, Codex, Cursor, Command Code and Open Code daily. Recently, at my job, I build internal IAM tool being used by around 1000s of employees. None of my AI generated Code gets promoted until Opus says, it's fine. I use Codex for most of the code generation and Command Code to analyze opensource abilities. But, often the CC finds more caveats or potential issues and summarize those better than any other harness. CC is more smart and have that common sense better than any other tools. Infact, it's superb for the UI."[[2]](https://x.com/thataliraza/status/2060270174536667341)
+
+**3. @nikolai_skor — May 28, 2026**  
+"Tried Codex recently, but did not stick. Could be addicted to having Claude Code in my terminal."[[3]](https://x.com/nikolai_skor/status/2060100962119716896)
+
+**4. @ScottShapiroUXD — May 28, 2026**  
+"Cursor daily. Claude Code for the gnarly refactors. Trust it with the whole repo? No. Context window lies to you eventually."[[4]](https://x.com/ScottShapiroUXD/status/2060084226200854563)
+
+**5. @PianzhouC — May 28, 2026**  
+"Claude for anything user-facing — Codex for scaffolding. Building an AI social app and the 'personality' layer is where Claude wins decisively. It reads social context and emotional subtext in a way that makes the product feel real. Codex writes clean code but I'd never trust it with how users feel."[[5]](https://x.com/PianzhouC/status/2060090519959879964)
+
+**6. @maddada — May 27, 2026**  
+"Yea I can't with Claude Code. I literally never have this happen with Codex. That's why I trust it so much and just explain what I want and how it should verify and move on to the next thing. 4.7 is really good but the fact that it does this some percentage of the time makes me second guess every change it did." (Referring to unexpected failures/hallucinations.)[[6]](https://x.com/maddada/status/2059444607440855325)
+
+**7. @Neil_Dagger — May 26, 2026**  
+"Codex/Claude code - I can't go back to coding by hand are you kidding me."[[7]](https://x.com/Neil_Dagger/status/2059117478899240979)
+
+**8. @skdopps — May 24, 2026**  
+"After using the Claude Code plugin in JetBrains, I can’t go back to CLI. 3 Real Reasons the Plugin Crushes the CLI: Context referencing is buttery smooth... Every change is crystal clear in Git — pros hate it when AI secretly messes up code. Seamlessly integrates into traditional large projects, making AI coding actually production-ready instead of just vibe coding." (Nuanced comparison of workflows and hidden risks.)[[8]](https://x.com/skdopps/status/2058404252209332586)
+
+**9. @giordanorandone — May 27, 2026**  
+"Because with Claude Code, we do not get what Anthropic uses internally. We get dozens of guardrails, bad caching, and a slot-machine-like experience designed to keep us addicted to Claude Code." (Dependency and engineered addiction angle.)[[9]](https://x.com/giordanorandone/status/2059608385176166665)
+
+**10. @drdr_zz — May 29, 2026**  
+"#ClaudeCode Security Notes #4: Don’t Trust Cloned Repos. Untrusted repos are not just “files to inspect.” 🚨 With Claude Code, a repo can include '.claude/settings.json', which may influence how the agent behaves... Treat “agent opens repo” like “repo may run code.”" (Nuanced security/trust warning for real-world use.)[[10]](https://x.com/drdr_zz/status/2060335598083224039)
+
+**11. @bettercallsalva — May 28, 2026**  
+"renting compute from a rival was inevitable the moment claude code traffic spiked. purity loses to availability, and the gpu market is too tight for principle. the dependency reshapes the negotiation, whoever owns the silicon sets the terms eventually." (Weight of infrastructure dependency.)[[11]](https://x.com/bettercallsalva/status/2060044189383917812)
+
+**12. @zodchiii — May 27, 2026**  
+"Claude Code has the same problem [plausible wrong answers], and one config file fixes it." (In context of broader trust/skepticism discussion around AI plausibility.)[[12]](https://x.com/zodchiii/status/2059728301753544987)
+
+These posts reflect the current developer zeitgeist around Claude Code: deep productivity gains creating real dependency ("can't go back," addiction to the terminal/plugin), oscillating trust after regressions or silent errors, the emotional weight of handing over large parts of coding to an agent that sometimes fails in subtle ways, and pragmatic splitting of trust across tools. Many programmers describe a love/hate or "it's flawed but indispensable" relationship. Dates are based on the tool timestamps (all within the requested ~2-week window).
+
+======================================================================
+[Query 7/7]
+======================================================================
+In the last 2 weeks on X, find posts where developers compare Claude Code vs Codex vs Gemini CLI or other agents — especially posts that express preference, disappointment after switching, or 'I keep coming back to Claude'. Include @username, date, and text. 15+ posts.
+----------------------------------------------------------------------
+**Here are 15+ relevant posts from X (posted since May 15, 2026) where developers compare Claude Code / Claude CLI to Codex, Gemini CLI, Cursor, or other coding agents.** These focus on preferences, disappointment after switching, tool churn, or phrases like “I keep coming back to Claude” (or similar sentiments). I prioritized direct comparisons involving preference, switching experiences, or returning to one tool. Posts are listed chronologically (newest first where possible), with @username, approximate date (based on timestamps), and full relevant text.[[1]](https://x.com/MichaelSuede/status/2060094013898985752)[[2]](https://x.com/PaulBotwick/status/2060143897343349172)
+
+**1. @MichaelSuede — May 28, 2026**  
+“I just switched over to Codex because it's just nicer to code with than the Claude CLI. 5.5 is nearly as good as Opus.” (In a thread discussing OpenAI/Anthropic viability.)[[1]](https://x.com/MichaelSuede/status/2060094013898985752)
+
+**2. @PaulBotwick — May 28, 2026**  
+“...the trend of switching from Claude Code to Codex should continue. IMO Codex with gpt 5.5 was eye-opening and has been a great experience to work with. I may have to switch to Codex as my daily driver and revisit when Mythos is released in June.” (Quoting OpenAI devs.)[[2]](https://x.com/PaulBotwick/status/2060143897343349172)
+
+**3. @pcshipp — May 28, 2026**  
+“I canceled my Cursor subscription in February because it was too expensive. Every month, a new LLM model comes out. Instead of using Codex + Claude Code, Again I'm sticking with Cursor. Back to Cursor in June. Looks like the AI tool-switching journey never ends 😅” (Clear churn and returning to Cursor.)[[3]](https://x.com/pcshipp/status/2060105840645005395)
+
+**4. @JaironDevNull — May 28, 2026**  
+“Claude Code is actually cooking. People sleeping on how clean and thoughtful its code is. Codex feels rushed and generic next to it. Claude just gets it better for real projects. Team Claude all day. 😊” (Strong preference for Claude Code over Codex.)[[4]](https://x.com/JaironDevNull/status/2060041984333824209)
+
+**5. @devXritesh — May 28, 2026**  
+“Codex is way better than Claude code.” (Direct preference for Codex.)[[5]](https://x.com/devXritesh/status/2060023556319449434)
+
+**6. @bettercallsalva — May 28, 2026**  
+“...the split i feel most is Claude Code vs Cursor: one hands you the machinery and assumes you want the wheel, the other hides it to protect your flow. opposite bets on whether the dev should even see the mechanism.” (Architectural/philosophical comparison.)[[6]](https://x.com/bettercallsalva/status/2060065166541111659)
+
+**7. @49agents — May 28, 2026**  
+“CLI vs GUI is the biggest split - Claude Code for autonomous task handoff, Cursor for autocomplete-guided flow inside a GUI.” (CLI vs GUI framing of Claude Code vs Cursor.)[[7]](https://x.com/49agents/status/2060079348263125237)
+
+**8. @ibuildcoolshit — May 27, 2026**  
+“Why does the ChatGPT web interface seem like a better developer than Codex or Claude... the code and logic it uses seems superior to the same models in codex especially if your just feature shipping...” (Compares web ChatGPT favorably to both Codex and Claude for certain tasks.)[[8]](https://x.com/ibuildcoolshit/status/2059710199599075771)
+
+**9. @bydhruvil — May 26, 2026**  
+“Tried running Claude Code and the Gemini CLI for my hackathon build today. Gemini stalled for 18 minutes on a simple SQL query. I eventually had to stop the CLI entirely. Pivoted to using Claude Code paired with Codex to actually get things shipped.” (Gemini CLI disappointment; fallback to Claude + Codex combo.)[[9]](https://x.com/bydhruvil/status/2059178554198475230)
+
+**10. @imp213x — May 26, 2026**  
+“Codex will push 20 commits, none will break in git actions, but Claude will push 10, at least 7 times CI will fail. I’ve used both... I’ve started with Claude, and switched to Codex only for Codex to give me better workflows, tests and hassle free PRs... overall product delivery, you’ll get better output with Codex.” (Detailed experience switching between them; prefers Codex for delivery.)[[10]](https://x.com/imp213x/status/2059378587396939904)
+
+**11. @theharithsa — May 24, 2026**  
+“#Codex is useful when you have to refactor or migrate the codebase. #Claude still beats every coding agent when we have to build a project from scratch - This is my opinion.” (Use-case-specific preference: Claude for greenfield, Codex for refactoring.)[[11]](https://x.com/theharithsa/status/2058632857468497954)
+
+**12. @LucaCaponeX — May 25, 2026**  
+“This is the model I keep coming back to... Now I build things like this with Claude Code in a weekend.” (Context implies returning to Claude Code as the reliable choice for building.)[[12]](https://x.com/LucaCaponeX/status/2059039204236017723)
+
+**13. @codingwithroby — May 24, 2026**  
+“If you're designing a multi-agent system... I keep going back and forth. I had Gemini as part of an automated workflow that is started from Claude Code and swapped it out...” (“I keep coming back to” phrasing in multi-agent/Claude Code context.)[[13]](https://x.com/codingwithroby/status/2058579117193224445)
+
+**14. @ishuXcodes — May 24, 2026**  
+“Claude Code for deeper repo work, Cursor for fast edits. I keep coming back to that combo because one feels like a pair programmer and the other feels like a good editor with AI baked in.” (Explicit “I keep coming back to” the Claude + Cursor combo.)[[14]](https://x.com/ishuXcodes/status/2058467746204307523)
+
+**15. @sickdotdev — May 15, 2026**  
+“Two weeks after moving from Claude Code to Codex: [list of positives on cost, quality, transparency, uptime]. Biggest downside: Claude Code still has the more mature plugin ecosystem...” (Detailed post-switch review; notes trade-offs and Claude’s remaining strengths.)[[15]](https://x.com/sickdotdev/status/2055105891129839749)
+
+**16. @vchennai2 — May 16, 2026**  
+“I've stopped using Claude entirely. All codex now. Much more precise, no random regressions, perfect for building software that actually needs to work. It's kind of autistic tho.” (Strong switch away from Claude to Codex.)[[16]](https://x.com/vchennai2/status/2055754061203619939)
+
+**17. @josevalim — May 20, 2026**  
+“Alright, after a full week with Codex, I understand why folks like @chris_mccord and @antirez have been praising it. It’s far more thorough than Claude Code. When you ask for a change, it does a better job of understanding the system...” (Positive experience after switching to Codex; notes it is more thorough.)[[17]](https://x.com/josevalim/status/2057068528428044538)
+
+**18. @milesdeutscher — May 20, 2026**  
+“Three months ago, I would've never imagined I'd switch key workflows to Codex. If you've been using Claude Code exclusively, you're missing out. The rate limits are insane, it's easy to use & GPT models are WAY smarter right now. How many of you have also switched to Codex?” (Public switch from Claude Code to Codex.)[[18]](https://x.com/milesdeutscher/status/2057199943862075601)
+
+**19. @radu_st1 — May 25, 2026**  
+“With Claude you get good code but not impressive and also the UI is bad, old, outdated. I switched to Codex seeing @thsottiaux posting a lot about it and my projects skyrocketed.” (Disappointment with Claude UI/workflow; switched to Codex with strong results.)[[19]](https://x.com/radu_st1/status/2058770649514951067)
+
+**20. @Naresh14272101 — May 28, 2026**  
+“After months of building with Claude Code and Gemini CLI, I realized the AI understood my architecture better than I did.” (Long-term experience with both Claude Code and Gemini CLI.)[[20]](https://x.com/Naresh14272101/status/2059950967429468286)
+
+These posts illustrate active developer churn in May 2026: many are switching to Codex for precision, cost, reliability, and fewer regressions, while others prefer Claude Code for architecture, clean code, deeper repo work, or structured workflows. Cursor is frequently mentioned as a GUI alternative, and Gemini CLI often comes up negatively (stalling, weaker performance). “Keep coming back” sentiments appear both for Claude Code combos and for Cursor amid model/tool fatigue. Some threads show replies debating regressions, plugin ecosystems, and switching costs.[[21]](https://x.com/i/status/2055105891129839749)[[22]](https://x.com/i/status/2055754061203619939)
+
+Note: Exact counts can vary with search operators; these are the strongest matches from recent Latest-mode and semantic searches. Many high-engagement posts (hundreds to thousands of likes) reflect widespread interest in this comparison.

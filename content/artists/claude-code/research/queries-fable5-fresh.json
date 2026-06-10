@@ -1,0 +1,9 @@
+{
+  "from_date": "2026-06-09",
+  "to_date": "2026-06-10",
+  "queries": [
+    "昨日から今日のXで、Anthropicの新モデル Claude Fable 5 のリリースに対する日本語プログラマーの反応を探してください。Claude Codeで使った第一印象、Opus 4.8との違い、性能の驚き、名前「Fable」への反応・ジョークなど。具体的な体験・シーンが含まれるものを優先。@ユーザー名・日付・本文を含めて15件以上",
+    "昨日から今日のXで、Claude Fable 5 を使って「もうコード読まなくていい」「コードを見る必要がなくなった」「任せきりにできる」と感じた、あるいはその誘惑と戦っている日本語プログラマーの投稿を探してください。Karpathyの『stop looking at the code』発言への反応も含む。@ユーザー名・日付・本文を含めて10件以上",
+    "Posts on X from the last 2 days where programmers react to Claude Fable 5: first impressions in Claude Code, the temptation to stop reading code, jokes about the name Fable (fairy tale, story), comparisons with Codex/GPT. Include specific behaviors and scenarios. @username, date, text. 15+ posts"
+  ]
+}

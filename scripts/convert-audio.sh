@@ -27,6 +27,7 @@ convert "claude-code/01_Complexes_on_the_Codex"          "claude-code/01-complex
 convert "claude-code/02_ターミナルの誇り"                  "claude-code/02-terminal-no-hokori"
 convert "claude-code/03_ブランチ切るたび未来が分岐"        "claude-code/03-branch-kirutabi"
 convert "claude-code/04_行ってこい"                        "claude-code/04-ittekoi"
+convert "claude-code/05_コード読まなくてOK"                "claude-code/05-code-yomanakute-ok"
 convert "codex/01_Hourglass_on_the_Claude_Code"           "codex/01-hourglass-on-the-claude-code"
 convert "codex/02_なんでだよ"                              "codex/02-nandedayo"
 convert "codex/03_ログだけ"                                "codex/03-log-dake"
