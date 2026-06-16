@@ -11,11 +11,11 @@
  *   # 既存画像の編集
  *   bun scripts/generate-cover.ts claude-code --edit "Make this full monochrome" artwork/cover.jpg
  */
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { resolve } from "path";
 
-const MODEL_NAME = "gemini-3.1-flash-image-preview";
+const MODEL_NAME = "gemini-3.1-flash-image";
 const PROJECT_ROOT = resolve(import.meta.dir, "..");
 
 function getBasePrompt(character: string): string {
@@ -59,7 +59,7 @@ async function generateCover(options: {
     config: {
       responseModalities: ["IMAGE", "TEXT"],
       imageConfig: { aspectRatio: "1:1", imageSize: "2K" },
-      thinkingConfig: { thinkingLevel: "High", includeThoughts: true },
+      thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH, includeThoughts: true },
     },
   });
 
@@ -99,7 +99,7 @@ async function generateCover(options: {
         },
       ],
       imageConfig: { aspectRatio: options.aspectRatio || "1:1", imageSize: "4K" },
-      thinkingConfig: { thinkingLevel: "High" },
+      thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH },
     },
   });
 
@@ -153,7 +153,7 @@ async function editImage(options: {
     config: {
       responseModalities: ["IMAGE", "TEXT"],
       imageConfig: { aspectRatio: "1:1", imageSize: "4K" },
-      thinkingConfig: { thinkingLevel: "High" },
+      thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH },
     },
   });
 
