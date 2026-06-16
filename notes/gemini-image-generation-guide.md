@@ -1,8 +1,8 @@
-# Gemini 3.1 Flash Image Preview 画像生成ガイド
+# Gemini 3.1 Flash Image 画像生成ガイド
 
 ## モデル情報
 
-- **Model ID**: `gemini-3.1-flash-image-preview`
+- **Model ID**: `gemini-3.1-flash-image`
 - **別名**: Nano Banana 2
 - **特徴**: 高速・高効率な画像生成。速度と大量処理に最適化
 - **出力解像度**: 0.5K, 1K（デフォルト）, 2K, 4K
@@ -101,7 +101,7 @@ Google画像検索で取得したWeb画像を視覚的コンテキストとし�
 ### テキストから画像
 ```javascript
 const response = await ai.models.generateContent({
-    model: "gemini-3.1-flash-image-preview",
+    model: "gemini-3.1-flash-image",
     contents: "プロンプト",
 });
 
@@ -144,5 +144,5 @@ config: {
 - **Google Image Search グラウンディングが背景に効く** — `tools: [{ googleSearch: { searchTypes: { webSearch: {}, imageSearch: {} } } }]` で実際のWeb画像を参照させるとリアルな東京の路地裏が出る
 
 ## 参考
-- [Gemini 3.1 Flash Image Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image-preview)
+- [Gemini 3.1 Flash Image](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image)
 - [Image generation documentation](https://ai.google.dev/gemini-api/docs/image-generation)

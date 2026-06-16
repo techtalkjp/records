@@ -1,6 +1,6 @@
 ---
 name: make-cover-art
-description: トラックのカバーアート（ジャケット画像）を生成する。歌詞とキャラクター設定を読み込み、対話的にシーンを決めて、Gemini 3.1 Flash Image Previewで画像を生成する。カバーアート、ジャケット、アートワーク、サムネイル画像の生成に使う。
+description: トラックのカバーアート（ジャケット画像）を生成する。歌詞とキャラクター設定を読み込み、対話的にシーンを決めて、Gemini 3.1 Flash Imageで画像を生成する。カバーアート、ジャケット、アートワーク、サムネイル画像の生成に使う。
 argument-hint: [トラックディレクトリのパス]
 allowed-tools: Bash(bun *)
 ---
