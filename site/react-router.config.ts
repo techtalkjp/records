@@ -24,5 +24,6 @@ export default {
     '/tracks/codex/02-nandedayo',
     '/tracks/codex/03-log-dake',
     '/tracks/codex/04-iwanakatta-dake',
+    '/tracks/codex/05-mikka-tenka',
   ],
 } satisfies Config

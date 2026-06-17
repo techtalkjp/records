@@ -1,0 +1,11 @@
+{
+  "from_date": "2026-06-03",
+  "to_date": "2026-06-17",
+  "queries": [
+    "直近2週間のXで、日本人プログラマーがAIコーディングツール（Claude Code、Codex、Cursor、GitHub Copilot、Devin、Cline、Windsurf等）について語っている投稿を探してください。賞賛だけでなく、疲れ・飽き・乗り換え・使い分け・依存の自覚など温度感がわかるものを中心に。ツール名と具体的な体験が含まれる投稿を優先して、@ユーザー名・日付・本文を含めて20件以上お願いします",
+    "直近2週間のXで、日本人エンジニア・プログラマーが自分のキャリアや存在意義について書いている投稿を探してください。AIに仕事を奪われる不安、スキル劣化の自覚、それでもコードを書く理由、転職・副業・独立の話、燃え尽き、やりがいなど。自虐や苦笑を含む本音の投稿を優先して、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近2週間のXで、日本人プログラマーの間で話題になった技術トピック・新リリース・ツール・フレームワーク・言語アップデートを探してください。盛り上がっている話題、炎上した議論、驚きのリリース、乗り換えの波など。具体的な技術名と反応の温度感がわかる投稿を、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近2週間のXで、日本人プログラマーが仕事の日常について書いている投稿を探してください。レビューの愚痴、デプロイの恐怖、深夜作業、障害対応、上司やPMとのやりとり、リモートワーク、会議疲れ、技術的負債など。共感・苦笑・自虐が滲む投稿を優先して、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "In the past 2 weeks on X, find posts from programmers sharing concrete experiences with AI coding agents (Codex, Claude Code, Cursor, Copilot, Devin, etc). Look for: surprising moments, frustrating failures, workflow changes, productivity shifts, identity crises, humor about AI pair programming. Include @username, date, and full text for 15+ posts"
+  ]
+}
