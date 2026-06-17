@@ -32,5 +32,6 @@ convert "codex/01_Hourglass_on_the_Claude_Code"           "codex/01-hourglass-on
 convert "codex/02_なんでだよ"                              "codex/02-nandedayo"
 convert "codex/03_ログだけ"                                "codex/03-log-dake"
 convert "codex/04_言わなかっただけ"                        "codex/04-iwanakatta-dake"
+convert "codex/05_三日天下"                                "codex/05-mikka-tenka"
 
 echo "Done. Output in $OUT_DIR/"
