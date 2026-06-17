@@ -197,6 +197,22 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/04-iwanakatta-dake.m4a`,
   },
+  {
+    slug: '05-mikka-tenka',
+    title: '三日天下',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/05-mikka-tenka.webp',
+    coverImageWide: '/images/codex/05-mikka-tenka-wide.webp',
+    lyricsDir: 'content/tracks/codex/05_三日天下',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-010',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/x3AfooUck0M',
+    },
+  },
 ]
 
 export const artists: Artist[] = [

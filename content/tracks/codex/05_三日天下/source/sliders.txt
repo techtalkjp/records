@@ -1,0 +1,16 @@
+Initial Generation:
+  Weirdness: 45%
+  Style Influence: 65%
+  Vocal Gender: Male
+
+Replace Section targets (if needed):
+  Intro    — Weirdness: 35%  Style Influence: 75%
+  Verse 1  — Weirdness: 45%  Style Influence: 60%
+  Chorus   — Weirdness: 35%  Style Influence: 80%
+  Verse 2 (double-time block) — Weirdness: 55%  Style Influence: 55%
+  Verse 2 (half-time block)   — Weirdness: 40%  Style Influence: 70%
+  Bridge   — Weirdness: 55%  Style Influence: 55%
+  Outro    — Weirdness: 40%  Style Influence: 70%
+
+Exclude:
+  auto-tune, falsetto, female vocals

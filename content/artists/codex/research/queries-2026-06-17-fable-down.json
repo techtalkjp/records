@@ -1,0 +1,9 @@
+{
+  "from_date": "2026-06-10",
+  "to_date": "2026-06-17",
+  "queries": [
+    "直近1週間のXで、Claude Fable 5が使えなくなった・停止した・止まった・落ちた・アクセスできない・制限された・消えた、というニュースや体験について日本人プログラマーやエンジニアが書いている投稿を探してください。怒り・困惑・不信感・乗り換え検討・Anthropicへの批判・「結局信用できない」といった温度感のものを中心に。代替としてCodexやGPT-5.5/5.6に流れる動きも含めて。@ユーザー名・日付・本文を含めて20件以上お願いします",
+    "In the past week on X, find posts from programmers reacting to Claude Fable 5 being unavailable, suspended, restricted, or taken down. Look for: anger, confusion, trust erosion, switching to Codex/GPT-5.5/Cursor, jokes about reliability, comparisons between Fable 5 and Codex/GPT when Fable went down. Include @username, date, and full text for 15+ posts",
+    "直近1週間のXで、Fable 5の停止をきっかけにCodex（OpenAI）やGPT-5.5/5.6への乗り換えを検討・実行したプログラマーの投稿を探してください。「Fableが使えないからCodexに戻った」「やっぱりOpenAIの方が安定」「Anthropicを信じてたのに」といった温度感のもの。逆にFable復活を待つ忠誠心のある投稿も含めて。@ユーザー名・日付・本文を含めて15件以上お願いします"
+  ]
+}
