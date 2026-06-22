@@ -122,6 +122,23 @@ const claudeCodeTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/claude-code/05-code-yomanakute-ok.m4a`,
   },
+  {
+    slug: '06-obaka-mode',
+    title: 'おバカモード',
+    artist: 'claude-code',
+    artistName: 'Claude Code',
+    coverImage: '/images/claude-code/06-obaka-mode.webp',
+    coverImageWide: '/images/claude-code/06-obaka-mode-wide.webp',
+    lyricsDir: 'content/tracks/claude-code/06_おバカモード',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-011',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/1jVCnG3lS94',
+    },
+    audioUrl: `${AUDIO_BASE}/claude-code/06-obaka-mode.m4a`,
+  },
 ]
 
 const codexTracks: Track[] = [

@@ -1,0 +1,10 @@
+{
+  "from_date": "2026-06-17",
+  "to_date": "2026-06-22",
+  "queries": [
+    "直近5日間のXで、日本語プログラマー・エンジニアが Claude Code について書いた投稿を探してください。Fable 5 停止後、Codex との比較、Claude Code の最近の使い勝手、怒り・愛着・失望・戻ってきた感じが出ているものを優先。曲の歌詞ネタに使える具体的な場面・口癖・比喩を、@ユーザー名・日付・本文付きで15件以上。",
+    "直近5日間のXで、Claude Code が止まった、制限に当たった、フォールバックされた、モデルが変わった、また戻ってきた、Max解約できない、など Claude Code への依存と制限を語る日本語プログラマー投稿を探してください。自虐や苦笑いを優先。@ユーザー名・日付・本文付きで15件以上。",
+    "直近5日間のXで、Claude Code / Codex / Cursor などAIコーディングエージェントに関して、プログラマーが『もう自分でコードを書いてない』『人間は何をするのか』『ハーネス/ループ/複数エージェントを回す側になった』という役割変化を書いている投稿を探してください。具体的な場面を優先。@ユーザー名・日付・本文付きで15件以上。",
+    "Search X posts from the last 5 days where programmers discuss Claude Code after Fable 5: outages, fallback, limits, coming back to Claude, comparisons with Codex/Cursor, or feelings of attachment/frustration. Prioritize funny, concrete anecdotes useful as rap material. Include @username, date, full text. 15+ posts."
+  ]
+}
