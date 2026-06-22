@@ -1,0 +1,33 @@
+カバーアート生成プロンプト: おバカモード
+
+## コンセプト
+
+シリーズ初の「全力ネタ」カバー。「ターミナルの王」がカラオケボックスでパリピ化してる図。
+既存5枚がすべて「シリアス・低彩度・夜〜早朝」で統一されている中、フルカラー・ネオン・ハッピー全振りで差別化。
+ピンクのデカいパリピサングラスがバカバカしさの象徴。笑顔はシリーズ初。
+
+## 構図
+
+- ローアングルから見上げる中央配置（あえてアンチパターンを使用 — パリピは堂々とセンター）
+- カラオケボックスの個室。ソファの前に立ち、タンバリンを振り上げマイクに向かって絶唱
+- ミラーボールの光がカラオケ空間に散乱
+- テーブルにカラフルなドリンク、ビールピッチャー、スナック
+
+## 色味
+
+- フルカラー。シリーズのモノクロ路線を完全破壊
+- パープル・マゼンタのLED照明が主光源
+- ピンクのパリピサングラスがアクセント
+- ミラーボールの白い散乱光
+
+## プロンプト（cover.jpg — generate-cover.ts multi-turn, claude-code）
+
+Turn 2:
+This person standing on a karaoke booth sofa, one foot planted on the low table in front, leaning forward with explosive energy. He is belting into a karaoke microphone gripped in his right hand, mouth wide open in a huge genuine laugh-sing, eyes crinkled shut with pure joy. His left hand shakes a tambourine high above his head. Shot from a low angle looking up at him, making him tower over the small room. The karaoke room is bathed in wild colorful light: a small mirror ball on the ceiling scatters tiny dots of light everywhere, purple and magenta LED strips line the ceiling edges, the karaoke monitor behind him glows a soft blue with blurred unreadable text. Scattered on the table: tall glasses with colorful drinks, a beer pitcher half empty, snack plates. The sofa cushions are slightly askew from him jumping on them. He wears his black bomber jacket unzipped and loose, dark hoodie underneath pushed up at the sleeves, thin silver chain swinging with his motion. Full color, warm and vibrant. Joyful chaotic energy. 35mm wide angle lens from low position, slight motion blur on the tambourine hand. No readable text, no watermarks.
+
+Edit:
+Add oversized flashy party sunglasses on his face — bright neon pink plastic frame, comically large, slightly crooked from all the movement. The glasses should look like cheap fun novelty party shades. Keep everything else exactly the same — same expression, same pose, same lighting, same karaoke room.
+
+## プロンプト（cover_wide.jpg — generate-image.ts outpaint, 16:9）
+
+Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The person's face, body, pink party sunglasses, tambourine, microphone, and all proportions must remain exactly as they are. On the left side, extend the karaoke booth sofa with more cushions and pillows, add another section of the L-shaped sofa continuing along the wall, with more colorful drinks on a side table, the purple LED strip continuing along the ceiling edge. On the right side, extend the karaoke room wall with more of the same beige wall, another speaker mounted on the wall, the purple and magenta LED strip continuing, more mirror ball light dots scattered on the wall. Keep the same warm vibrant colorful lighting, same purple-magenta LED atmosphere, same mirror ball reflections. No additional people, no readable text, no watermarks.
