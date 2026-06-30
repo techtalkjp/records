@@ -6,7 +6,7 @@ import { GoogleGenAI } from "@google/genai";
 import { writeFile, readFile, mkdir, realpath } from "fs/promises";
 import { dirname, extname, resolve } from "path";
 
-const MODEL_NAME = "gemini-3.1-flash-image";
+const MODEL_NAME = process.env.GENIMG_MODEL || "gemini-3.1-flash-lite-image";
 
 const MIME_TYPES: Record<string, string> = {
   ".png": "image/png",
