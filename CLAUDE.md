@@ -54,14 +54,14 @@ video/
 ### 0. ネタ収集（`/search-x-voices`、必要なら）
 歌詞の方向性が固まりきってない時、X でリアルなプログラマーの声を Grok API 経由で収集。`notes/rap-material-from-x.md` に追記して以降のフローに渡す。
 
-### 1. 歌詞の元を生成（`/make-lyrics`）
-テーマ・キャラクター・ネタ素材から、韻ペアと骨格を対話的に作成。japanese-rap スキルで韻を検証しながらイテレーション。
+### 1. 歌詞を作る（`/make-lyrics`）
+テーマ・キャラクター・ネタ素材から、韻ペアと構成を対話的に作成し、この段階で歌詞を完成させる。japanese-rap スキルで韻を検証しながらイテレーション。**Suno はほぼそのまま歌う**ため、「素材」ではなく最終稿のつもりで詰め切る。
 
 ### 2. Suno 入力を準備（`/make-suno-prompt`）
-歌詞の元を Suno V5.5 用フォーマットに変換。漢字→ひらがな、アノテーションタグ付与、V5.5 タグ形式の styles.txt 生成。sliders.txt に Exclude とスライダー設定を記録。
+完成した歌詞を Suno V5.5 用フォーマットに変換（内容・言葉選びはここでは変えない）。漢字→ひらがな、アノテーションタグ付与、V5.5 タグ形式の styles.txt 生成。sliders.txt に Exclude とスライダー設定を記録。
 
 ### 3. Suno で音声生成（手動）
-suno_prompt.txt を Suno に貼って生成。出力を `source/track.wav` に保存、最終歌詞を `source/lyrics.txt` に漢字表記で記録。
+suno_prompt.txt を Suno に貼って生成（歌詞通りに歌われる想定）。出力を `source/track.wav` に保存、確定済みの歌詞を `source/lyrics.txt` に漢字表記で記録。
 
 ### 4. カバーアート制作（`/make-cover-art`）
 歌詞とキャラクター設定を読み、対話的にシーンを決めて画像を生成。
@@ -85,8 +85,8 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 ## Skills
 
 - `/search-x-voices` — X（旧Twitter）でプログラマーのリアルな声を収集。Grok API の x_search 経由。歌詞のネタ・あるある素材集め用
-- `/make-lyrics` — 歌詞の元を生成。テーマ・キャラ・ネタ素材から韻ペアと骨格を対話的に作成
-- `/make-suno-prompt` — Suno V5.5 用入力セット生成。漢字→ひらがな変換、アノテーションタグ、タグ形式 styles.txt
+- `/make-lyrics` — 歌詞を作成。テーマ・キャラ・ネタ素材から韻ペアと構成を対話的に作り、完成形まで仕上げる（Sunoはほぼそのまま歌うため、ここで決め切る）
+- `/make-suno-prompt` — 完成した歌詞を Suno V5.5 用入力セットに変換。漢字→ひらがな変換、アノテーションタグ、タグ形式 styles.txt（歌詞の内容自体は変えない）
 - `/make-cover-art` — カバーアート生成スキル。歌詞とキャラ設定からシーンを提案し、マルチターン会話で画像生成
 - `/make-lyric-video` — 字幕付き動画生成スキル。Whisperでタイミング取得、SRTバリデーション、ffmpegで動画生成
 - `/make-release-post` — リリース告知文作成スキル。X投稿やYouTube概要欄を対話的に作成。韻パート生成にjapanese-rapスキルを使用

@@ -1,17 +1,17 @@
 ---
 name: make-suno-prompt
-description: 歌詞の元から Suno V5.5 用の入力セット（lyrics.txt, styles.txt, suno_prompt.txt）を生成する。「Suno用」「プロンプト」「styles」「入力を準備」でトリガー。
+description: /make-lyrics で完成させた歌詞を Suno V5.5 用の入力セット（lyrics.txt, styles.txt, suno_prompt.txt）にフォーマット変換する（内容は変えない）。「Suno用」「プロンプト」「styles」「入力を準備」でトリガー。
 argument-hint: [トラックディレクトリのパス]
 ---
 
 # Suno V5.5 入力セットの生成
 
-歌詞の元（`/make-lyrics` の出力）を Suno に渡すフォーマットに変換し、Style プロンプトと合わせて出力する。
+`/make-lyrics` で完成させた歌詞を Suno に渡すフォーマットに変換し、Style プロンプトと合わせて出力する。
 
 ## 設計思想
 
-- 歌詞は「完成品」ではなく「素材」として Suno に渡す
-- Suno が韻ペアを活かしつつ、曲のテンポやメロディに合わせて補完する前提
+- 歌詞は `/make-lyrics` の時点で完成している。ここでは**フォーマット変換のみ**行う（漢字→ひらがな、アノテーション付与）。歌詞の内容・言葉選び自体はここでは変えない
+- Suno V5.5 は渡した歌詞をほぼそのまま歌う（実績で確認済み）。曲の補完・調整を Suno 任せにしない
 - V5.5 のベストプラクティスに従う（詳細: `notes/suno-v55-best-practices.md`）
 
 ## 参照
