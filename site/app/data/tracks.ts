@@ -231,6 +231,23 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/05-mikka-tenka.m4a`,
   },
+  {
+    slug: '06-zaiko',
+    title: '在庫',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/06-zaiko.webp',
+    coverImageWide: '/images/codex/06-zaiko-wide.webp',
+    lyricsDir: 'content/tracks/codex/06_在庫',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-012',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/XhP6EOHGLTo',
+    },
+    audioUrl: `${AUDIO_BASE}/codex/06-zaiko.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [

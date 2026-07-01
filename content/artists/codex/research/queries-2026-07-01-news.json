@@ -1,0 +1,11 @@
+{
+  "from_date": "2026-06-17",
+  "to_date": "2026-07-01",
+  "queries": [
+    "直近2週間のXで、OpenAIまたはCodex（コーディングエージェント）に関する公式発表・製品アップデート・新機能・提携・利用制限についてのニュースや投稿を探してください。プログラマー個人の感想ではなく、メディア・公式アカウント・アナリストなど一次情報に近いものを優先し、具体的な日付・内容・出典がわかる投稿を、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近2週間のXで、OpenAIの企業動向（資金調達、人事・経営陣の異動、訴訟、規制当局との関係、競合（Anthropic、Google等）との比較・対立）に関するニュースや投稿を探してください。具体的な固有名詞・数字・出来事が含まれる投稿を、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "「米国政府の要請でCodex/APIが信頼できる少数のパートナー向け限定プレビューから開始された」という話題について、直近2週間のXでの言及・詳細・背景・反応を探してください。なぜ政府が関与したのか、どんな制限なのか、ユーザーやメディアの反応も含めて、@ユーザー名・日付・本文を含めて10件以上お願いします",
+    "In the past 2 weeks on X, find news and posts about OpenAI and Codex (coding agent) covering: product announcements, government scrutiny or restrictions, leadership changes, funding, lawsuits, or controversies. Prioritize posts from media accounts, analysts, or official sources over personal anecdotes. Include @username, date, and full text for 15+ posts",
+    "In the past 2 weeks on X, find posts about the competitive dynamic between OpenAI/Codex and Anthropic/Claude — market share shifts, user migration, executive commentary, or notable incidents that became talking points in the AI industry. Include @username, date, and full text for 10+ posts"
+  ]
+}

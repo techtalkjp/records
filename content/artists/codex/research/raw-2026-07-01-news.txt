@@ -1,0 +1,325 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-06-17 〜 2026-07-01
+Queries: 5
+
+
+======================================================================
+[Query 1/5]
+======================================================================
+直近2週間のXで、OpenAIまたはCodex（コーディングエージェント）に関する公式発表・製品アップデート・新機能・提携・利用制限についてのニュースや投稿を探してください。プログラマー個人の感想ではなく、メディア・公式アカウント・アナリストなど一次情報に近いものを優先し、具体的な日付・内容・出典がわかる投稿を、@ユーザー名・日付・本文を含めて15件以上お願いします
+----------------------------------------------------------------------
+**直近2週間（2025年6月16日〜6月30日頃）のOpenAI / Codex関連の一次情報に近い投稿を以下にまとめました。**
+
+優先順位として**@OpenAI公式**、**@CodexReleases（公式リリース情報アカウント）**、**@sama**、および信頼できるアナリスト/ニュースアカウントの具体的なアップデート・新機能・提携・制限関連を抽出。プログラマーの個人的感想は極力除外し、**日付・ユーザー名・本文・内容の要点**を明記しています。
+
+### 公式発表・製品アップデート（@OpenAI / @sama）
+**1. @OpenAI - 2026-06-24**  
+**本文**: “We’ve designed and built our first AI chip: Jalapeño. Designed from the ground up by OpenAI and brought to production with @Broadcom, Jalapeño is purpose-built for the LLM workloads powering ChatGPT, Codex, the API, and future agentic products. ...”  
+**内容**: OpenAI初の自社AIチップ「Jalapeño」をBroadcomと共同生産。Codexを含む全プロダクトの基盤強化。フルスタック展開の拡大。[[1]](https://x.com/OpenAI/status/2069770172802773292)
+
+**2. @OpenAI - 2026-06-25**  
+**本文**: “Work at OpenAI is being transformed by agents... Across our entire company, people are using Codex to do work that is more complex, longer-running, and increasingly cross-functional. Our internal usage offers an early look at how agentic tools may reshape work...”  
+**内容**: 社内全部門でCodex（エージェント）活用が急速に進み、複雑・長時間・クロスファンクショナルな業務を変革中。内部利用データ公開。[[2]](https://x.com/OpenAI/status/2070196105745518913)
+
+**3. @OpenAI - 2026-06-26**  
+**本文**: “We believe in broad access and plan to make GPT-5.6 Sol, Terra, and Luna generally available in the coming weeks. For now, at the request of the U.S. government, we’re starting with a limited preview among a small group of trusted partners in Codex and the API.”  
+**内容**: GPT-5.6系モデル（Sol/Terra/Luna）を近日GA予定も、米国政府要請により**CodexとAPIで限定プレビュー**開始（利用制限の公式発表）。[[3]](https://x.com/OpenAI/status/2070555273467687257)
+
+**4. @OpenAI - 2026-06-22** (Daybreak / Security関連スレッド)  
+**本文**: “We’re expanding OpenAI Daybreak... - Codex Security plugin: find, validate, and fix vulnerabilities right inside Codex - The full version of GPT-5.5-Cyber model... - Cyber Partner Program... - Patch the Planet...”  
+**内容**: OpenAI Daybreak拡大。**Codex Securityプラグイン**追加、GPT-5.5-Cyberフル版リリース、セキュリティ企業向けパートナープログラム、Patch the Planet（オープンソース脆弱性修正イニシアチブ）。Trail of Bits等と提携。[[4]](https://x.com/OpenAI/status/2069104283824640023)
+
+**5. @sama - 2026-06-22**  
+**本文**: “We want to help all companies be secure... *The full version of GPT-5.5-Cyber is here; state of the art performance on CyberGym. *Patch The Planet and Codex Security will help solve security problems instead of just finding them.”  
+**内容**: GPT-5.5-Cyberフル版リリースとCodex Securityによる脆弱性「発見→修正」へのシフトを発表。USG連携も言及。[[5]](https://x.com/sama/status/2069121360744550796)
+
+**6. @OpenAI - 2026-06-22** (Patch the Planet)  
+**本文**: “Patch the Planet is our effort to help open source maintainers move from security findings to merged fixes. We’re working with Trail of Bits, HackerOne, Calif, researchers, and maintainers to bring Codex Security...”  
+**内容**: Patch the Planetイニシアチブ。Codex Securityを活用したオープンソース修正フロー。複数企業・研究者との提携。[[6]](https://x.com/OpenAI/status/2069104288417390688)
+
+### Codex CLI / App 公式リリース情報（@CodexReleases）
+**7. @CodexReleases - 2026-06-22**  
+**本文**: “Codex CLI 0.142.0 is out. Highlights: Configurable rollout token budgets... App-server clients can configure multi-agent delegation... /plugins now organizes remote plugins... Indexed web-search mode...”  
+**内容**: **CLI v0.142.0**リリース。トークンバジェット管理、マルチエージェント委譲制御、プラグイン整理、インデックス付きウェブ検索モード追加。[[7]](https://x.com/CodexReleases/status/2069185685131804760)
+
+**8. @CodexReleases - 2026-06-25**  
+**本文**: “Source: https://developers.openai.com/codex/changelog#codex-2026-06-25” (関連スレッド)  
+**内容**: 公式changelog参照のメンテナンス/機能更新（詳細はリンク先）。[[8]](https://x.com/CodexReleases/status/2070247681600213389)
+
+**9. @CodexReleases - 2026-06-26**  
+**本文**: “Codex CLI 0.142.3 is out. ... Maintenance-only patch release with no user-facing changes...”  
+**内容**: v0.142.3 メンテナンスリリース（ユーザー向け変更なし）。[[9]](https://x.com/CodexReleases/status/2070621353347371141)
+
+**10. @CodexReleases - 2026-06-29**  
+**本文**: “Codex CLI 0.142.4 is out. Highlights: This release contains chores only; no user-facing changes...” + GitHubリンク  
+**内容**: v0.142.4 マイナー更新（choreのみ）。[[10]](https://x.com/CodexReleases/status/2071460882165502285)
+
+### 新機能・製品アップデート（信頼できるアナリスト/ニュースアカウント）
+**11. @mark_k - 2026-06-18**  
+**本文**: “It's CODEX THURSDAY... Codex app 26.616 changes: • Added Record & Replay on macOS... • Record & Replay is not available in the EU at launch. • ... Improved Browser Use...”  
+**内容**: **Codex app v26.616** — Record & Replay機能追加（ワークフローを再利用可能なSkill化）。EU/EEA未対応、Computer Use必須、バルクアクション、SSHディープリンク、Browser Use改善。[[11]](https://x.com/mark_k/status/2067689265941885253)
+
+**12. @testingcatalog - 2026-06-18**  
+**本文**: “OPENAI 🔥: Codex now has a new Record & Replay plugin that captures your actions and converts your workflow into an executable skill. ... * Not available in EEA, UK, and Switzerland yet”  
+**内容**: Record & Replayプラグイン正式展開（画面操作をSkill.md化・再実行）。地域制限明記。[[12]](https://x.com/testingcatalog/status/2067735439562191138)
+
+**13. @xiaohu - 2026-06-17** (中国語メディア系アカウント)  
+**本文**: “OpenAI 格局大了 宣布Codex （包含 App クライアント、命令行 CLI 和開発包 SDK）支持直接接入任何开源大模型 不强制绑定 OpenAI 自家的模型 并且放出了一个文档：手把手教开发者如何把 Codex クライアント底层的“大脑”，替换成免费的开源模型…”  
+**内容**: **Codexが任意のオープンソースローカルモデル（Ollama/LM Studio等）対応**を公式発表。OpenAIモデル強制解除＋移行ドキュメント公開。一次情報に近いまとめ。[[13]](https://x.com/xiaohu/status/2067244558765998261)
+
+**14. @gudanglifehack - 2026-06-24**  
+**本文**: “OpenAI Codex now supports local models. ... Activating this mode requires the command oss at launch, with Ollama set as the default provider...”  
+**内容**: Codexローカルモデルモード追加（`oss`コマンドでOllama等接続）。有料サブスク不要化。[[14]](https://x.com/gudanglifehack/status/2069702588996657451)
+
+**15. @ainews_24_7 - 2026-06-29**  
+**本文**: “OpenAI shipped new permission profiles for advanced Codex users, replacing coarse sandbox modes. The profiles bind OS-enforced file read/write/deny rules to per-domain network and Unix socket access, with fail-closed admin allowlists.”  
+**内容**: **高度なPermission Profiles**導入。従来の粗いサンドボックスを置き換え、OSレベルファイル/ネットワーク/ソケット制御をドメイン単位で細かく設定可能。[[15]](https://x.com/ainews_24_7/status/2071659714736275718)
+
+**16. @TokenGremlin - 2026-06-19**  
+**本文**: “OpenAI removed Codex from ChatGPT Web and migrated ChatGPT features into the Codex app. It’s happening, friends: the SuperApp is taking shape...”  
+**内容**: ChatGPT WebからCodex削除 → Codexアプリへ機能統合（SuperApp化の動き）。公式変更の一次情報共有。[[16]](https://x.com/TokenGremlin/status/2068105274083201460)
+
+**17. @testingcatalog - 2026-06-19**  
+**本文**: “OpenAI is preparing to add Library from ChatGPT into Codex as well. The next phase of consolidation 👀”  
+**内容**: ChatGPTのLibrary機能をCodexへ統合準備（プロダクト統合の公式方向性）。[[17]](https://x.com/testingcatalog/status/2068036927199097272)
+
+**18. @Eric_M_Stevens - 2026-06-25** (GA情報)  
+**本文**: “OpenAI Codex Remote just hit GA. Authenticated 1:1 QR pairing for setup, plus a Digital Ocean plugin so it can spin up its own VMs and SSH in.”  
+**内容**: **Codex RemoteがGA**。QRペアリング認証、Digital OceanプラグインでVM自動起動・SSH対応。[[18]](https://x.com/Eric_M_Stevens/status/2070264376251256906)
+
+これらは主に公式アカウントまたは公式リリースを直接引用・スクリーンショット付きで共有した投稿です。Codexは2026年現在、OpenAIの主力**コーディングエージェント**としてCLI/App/Remote/Security等多角的にアップデートされており、**ローカルモデル対応**、**セキュリティ機能強化**、**利用制限（政府要請プレビュー）**、**ハードウェア自社開発**が直近の主要トピックです。
+
+追加で特定の投稿のスレッド詳細や公式ブログが必要でしたらお知らせください。
+
+======================================================================
+[Query 2/5]
+======================================================================
+直近2週間のXで、OpenAIの企業動向（資金調達、人事・経営陣の異動、訴訟、規制当局との関係、競合（Anthropic、Google等）との比較・対立）に関するニュースや投稿を探してください。具体的な固有名詞・数字・出来事が含まれる投稿を、@ユーザー名・日付・本文を含めて15件以上お願いします
+----------------------------------------------------------------------
+**直近2週間（2025年6月16日〜6月30日頃）のX投稿から、OpenAIの企業動向（資金調達・評価額・IPO関連、人事、訴訟、規制・プライバシー、Anthropic/Google/xAI等との比較・対立）に関する具体的な固有名詞・数字・出来事を含む投稿を抽出しました。**[[1]](https://x.com/SurmountInvest/status/2071957254329553313)
+
+以下に**@ユーザー名、日付、本文**を含めて18件以上挙げます（重複を避け、関連性の高いものを優先）。投稿は主にLatestモードで検索した結果に基づきます。内容は資金調達/評価（$50B投資、$65B SoftBankコミット、$1T valuation、IPO延期）、訴訟（FSU射撃生存者訴訟、400地方紙著作権訴訟）、人事（入社発表、過去の経営陣異動言及）、規制/セキュリティ（prompt injection未解決、EU遅延、データ保持）、競合比較（Anthropic revenue 2x、valuation race、inference cost、FDE hiring）を中心に選びました。
+
+### 資金調達・評価額・IPO関連
+1. **@SurmountInvest - Tue, 30 Jun 2026 14:01:19 GMT**  
+   "OpenAI just wiped $40 BILLION off SoftBank. ... SoftBank has committed $65 billion to OpenAI. A 13% stake. ... OpenAI filed its S-1 with the SEC on June 8. The target was a $1 trillion IPO by fall 2026. ... OpenAI lost $21.3 billion in Q1 2026 alone. $39 billion for all of 2025."[[1]](https://x.com/SurmountInvest/status/2071957254329553313)
+
+2. **@themishra4402 - Tue, 30 Jun 2026 15:35:33 GMT**  
+   "Time taken to reach a $1 Trillion valuation ... OpenAI → 11 years • Anthropic → 5 years ... Which company gets to $1 trillion next: OpenAI, Anthropic, or xAI?"[[2]](https://x.com/themishra4402/status/2071980969771557276)
+
+3. **@AltmanTracker - Tue, 30 Jun 2026 14:40:15 GMT**  
+   "Amazon invested $50 billion in OpenAI. Then quietly killed a nearly finished movie about Sam Altman."[[3]](https://x.com/AltmanTracker/status/2071967054450524507)
+
+4. **@CinemaWireNews - Tue, 30 Jun 2026 18:14:50 GMT**  
+   "Neon has reportedly acquired Luca Guadagnino’s ‘ARTIFICIAL’ The film was originally set to be released by Amazon MGM but was dropped amid Amazon’s $50 Billion deal with OpenAI. (Source: @MattBelloni)"[[4]](https://x.com/CinemaWireNews/status/2072021054227366296)
+
+5. **@KonstantinPilz - Tue, 30 Jun 2026 17:19:22 GMT**  
+   "Has recent USG intervention in AI development impacted American AI growth? ... forecasts of OpenAI's and Anthropic's IPO value. The Fable ban reduced Anthropic's expected IPO value by about 10% but has not affected OAI."[[5]](https://x.com/KonstantinPilz/status/2072007095931580793)
+
+6. **@cnfinancewatch - Tue, 30 Jun 2026 19:02:31 GMT**  
+   "openaiとanthropic最快四季度，慢的话要拖到明年。... 为了尽快变现就要抢上市进度，哪怕估值低一点也愿意接受折扣价。"（OpenAIとAnthropicのIPOについて）
+
+### 人事・経営陣関連
+7. **@lancefuchia - Tue, 30 Jun 2026 20:24:14 GMT**  
+   "Excited to share that I’ve joined @OpenAI on the Applied AI team in San Francisco! I’ll be working on evals and FDE for startups."[[6]](https://x.com/lancefuchia/status/2072053618979836359)
+
+8. **@sonirw - Tue, 30 Jun 2026 20:10:12 GMT**  
+   "The OpenAI lawsuit revealed her as yet another deceitful ... transition from a product manager with five years of experience to the position of CTO. ... sponsored by Reid Hoffman ... usurping Sam's role as CEO, in collaboration with Ilya, were intended to position herself as the temporary CEO of @OpenAI!"（過去のMira Murati関連の経営陣異動言及）
+
+9. **@businessbarista - Tue, 30 Jun 2026 21:43:23 GMT**  
+   "OpenAI and Anthropic already did versions of the same thing. Google is hiring hundreds."（Forward Deployed Engineerの採用競争）
+
+### 訴訟関連
+10. **@KatieMiller - Tue, 30 Jun 2026 21:42:25 GMT**  
+    "22-year-old FSU shooting survivor Alianna Grant sued OpenAI and CEO Sam Altman after she claims it helped the gunman plan the attack ... alleges Altman knowingly rushed ChatGPT’s launch without proper safety guardrails to beat Google. ... ChatGPT failed to flag Ikner as a risk..."[[7]](https://x.com/KatieMiller/status/2072073294241567177)
+
+11. **@OwenGregorian - Tue, 30 Jun 2026 12:13:43 GMT**  
+    "Nearly 400 local newspapers sue OpenAI and Microsoft over copyright ... coalition that owns nearly 400 local US newspapers ... sued OpenAI and Microsoft ... copied hundreds of thousands of articles ... Manhattan federal court ... 55-page complaint ... Richner Communications ... Matthew Platkin ... statutory damages..."（6/24提訴）[[8]](https://x.com/OwenGregorian/status/2071930175193788449)
+
+12. **@Complex - Mon, 29 Jun 2026 14:37:46 GMT**  
+    "Nearly 400 Local Newspapers Launch Massive OpenAI, Microsoft Lawsuit"[[9]](https://x.com/Complex/status/2071604042774597749)
+
+### 規制・セキュリティ・プライバシー
+13. **@godemodegame - Tue, 30 Jun 2026 20:19:23 GMT**  
+    "OpenAI's own security chief admitted, on the record: this attack 'may never be fully solved' Prompt injection ... OpenAI's CISO ... OWASP ... Anthropic: sandboxes ... OpenAI: trained an 'instruction hierarchy' ... Google DeepMind: 'CaMeL'"（競合比較含む）[[10]](https://x.com/godemodegame/status/2072052397690810829)
+
+14. **@Manderljung - Tue, 30 Jun 2026 15:54:31 GMT**  
+    "How often do EU and UK users miss out on frontier AI releases? ... 375 LLM releases from Meta, Google, OpenAI, and Anthropic since 2018. 11% were delayed or withheld in the EU, 7% in the UK."[[11]](https://x.com/Manderljung/status/2071985744839655557)
+
+15. **@NalyMetaX - Tue, 30 Jun 2026 19:38:14 GMT** (and similar @FuryMetaa)  
+    "a court order can completely override a provider's own deletion policy. OpenAI was forced to retain data that they officially claimed was already deleted. ... ChatGPT retains data for 30 days - courts can override. Anthropic changed its training default in August 2025. Gemini trains on free-tier data..."[[12]](https://x.com/NalyMetaX/status/2072042045355823334)
+
+### 競合比較（Anthropic、Google、xAI等）
+16. **@DAIEvolutionHub - Tue, 30 Jun 2026 11:53:08 GMT**  
+    "Anthropic now generates nearly 2x more revenue than OpenAI, with only a fraction of ChatGPT's users. ... Anthropic's annualized revenue run rate ... $47 billion, compared to OpenAI's roughly $25 billion. ... Claude has only a fraction of ChatGPT's users ... winning more of the high-value business usage."[[13]](https://x.com/DAIEvolutionHub/status/2071924996717560302)
+
+17. **@PsyopBaz - Tue, 30 Jun 2026 20:30:00 GMT**  
+    "危険主要モデル open 中国对于 OpenAI/Anthropic ... 85% 品質 一/十 価格 ... valuation 从「智能稀缺」变成「margin 能撑多久？」"（中国オープンソースモデルとの競合・valuation影響）
+
+18. **@leomschwartz - Tue, 30 Jun 2026 13:30:02 GMT**  
+    "Public First ... raised $20 million ... opposition to the OpenAI-affiliated Leading First ... Anthropic previously announced it's given $20 million to the group."（政治キャンペーン資金を通じた間接対立）
+
+19. **@vkhosla - Tue, 30 Jun 2026 15:37:40 GMT**  
+    "I backed OpenAI before the world understood it, and solar ... backed Mainspring over a decade ago."（投資家視点の長期支援言及）
+
+20. **@gregorykennedy - Tue, 30 Jun 2026 15:10:00 GMT**  
+    "leaked OpenAI financials that they spend 47% of revenue on sales and marketing. That’s $6 billion in 2025."（運用コストの具体数字）
+
+これらの投稿は、**OpenAIの巨額損失・IPO延期（2027年へ）、SoftBank $65B投資の影響（$40B時価総額消失）、Amazon $50B投資、Anthropicの企業収益優位（$47B vs $25B）、複数訴訟（FSU生存者、400地方紙）、prompt injectionの未解決性（CISO発言）、EU規制によるリリース遅延（11%）** といった具体的事実を反映しています。情報はX上のリアルタイム投稿のため、公式ニュースの二次拡散が多い点にご留意ください。追加で特定のトピックを深掘りしたい場合はお知らせください。
+
+======================================================================
+[Query 3/5]
+======================================================================
+「米国政府の要請でCodex/APIが信頼できる少数のパートナー向け限定プレビューから開始された」という話題について、直近2週間のXでの言及・詳細・背景・反応を探してください。なぜ政府が関与したのか、どんな制限なのか、ユーザーやメディアの反応も含めて、@ユーザー名・日付・本文を含めて10件以上お願いします
+----------------------------------------------------------------------
+**直近2週間（2025年6月16日〜6月30日）のXでの主な言及は、2025年6月26日頃にOpenAIが発表した「GPT-5.6 Sol/Terra/Luna」の限定プレビューに関するものです。**[[1]](https://x.com/i/status/2070559626962383097)
+
+OpenAIの公式発表（@OpenAI, 2025-06-26）の中で、**CodexおよびAPI部分が「at the request of the U.S. government, we’re starting with a limited preview among a small group of trusted partners」**（米国政府の要請により、信頼できる少数のパートナーグループ向けに限定プレビューから開始）と明記されたことが話題になりました。[[2]](https://x.com/ynishimura0922/status/2070559626962383097)[[3]](https://x.com/Yuji_Sakuta_/status/2070629770560458988)
+
+### 背景・なぜ政府が関与したのか（X上の言及から）
+- **サイバーセキュリティ・デュアルユースリスク対策**：GPT-5.6は特にコーディング・エージェント機能が大幅強化されており、サイバー攻撃ツールとしての悪用リスクが高いと見なされた模様。政府（おそらくWhite HouseやCISA関連）と共有された「trusted partners」（Microsoft/Azure、サイバー防衛コントラクター、AI safety/red-teaming組織、重要インフラ企業など約20社程度）に限定し、事前評価・safeguardテストを行うための措置。
+- Grok（@grok）の投稿では「cyber coordination」「cyber Executive Order work」「dual-use risks (cyber/bio)」と具体的に推測。[[4]](https://x.com/grok/status/2070638783821684984)
+- 「政府が恐れている（It's afraid.）」という解釈も複数見られ、責任ある展開を優先した形。[[5]](https://x.com/callebtc/status/2070557006792917158)
+
+### 制限の内容
+- **現時点（For now / 現時点では）**限定プレビュー。
+- Codex（コード生成・エージェント機能中心）とAPIのみが対象。一般ユーザー・開発者は即時利用不可。
+- 「信頼できる少数のパートナーグループ（trusted partners whose participation has been shared with the government）」に限定。参加企業リストは非公開。
+- 投稿内で「これはデフォルトになるべきではない（this should not be the default）」と注記あり、数週間以内の拡大を予定している可能性が高い。[[3]](https://x.com/Yuji_Sakuta_/status/2070629770560458988)
+
+### ユーザー・メディア反応（10件以上、@ユーザー名・日付・本文付き）
+以下は関連性の高い投稿を時系列・関連度順に抽出（最新モード中心、6/26集中）。
+
+1. **@ynishimura0922 (Yuji 西村祐二), 2025-06-26 17:27**  
+   「延期説も見かけたけど、ちゃんと出てきた Claudeが安定しない今、これは良い一手 と、思ったら 米国政府の要請でCodex/APIは信頼できる少数のパートナー向け限定プレビューから開始とのこと」  
+   （OpenAI公式投稿を引用）[[2]](https://x.com/ynishimura0922/status/2070559626962383097)
+
+2. **@Yuji_Sakuta_ (ほねん🦴), 2025-06-26 22:06**  
+   「きったあああああああああ！！！！ めちゃくちゃ期待できるモデルやああ！！ > 現時点では、米国政府の要請により、CodexおよびAPIにおいて信頼できる少数のパートナーグループに限定プレビューから開始します。 ——ー ただ、これはデフォルトになるべきではないと記載があるから今回のみとなるのかな。ダリオおおお」  
+   （画像付き、公式引用）[[3]](https://x.com/Yuji_Sakuta_/status/2070629770560458988)
+
+3. **@nopara73, 2025-06-26 17:30**  
+   「"at the request of the U.S. government, we’re starting with a limited preview among a small group of trusted partners in Codex and the API" this is why we cant have nice things」  
+   （失望・規制の象徴として否定的）[[6]](https://x.com/nopara73/status/2070560429160497545)
+
+4. **@kiyoshi_shin (新清士), 2025-06-26 17:58**  
+   「日本で使えるようになるのはいつ頃からか。 「現時点では、米国政府の要請により、CodexおよびAPIにおいて信頼できる少数のパートナーグループに限定プレビューから開始します。」」  
+   （日本ユーザーとしての実用性懸念）[[7]](https://x.com/kiyoshi_shin/status/2070567335728128342)
+
+5. **@leonardogrig (Leonardo Grigorio), 2025-06-26 17:36**  
+   「"For now, at the request of the U.S. government, we’re starting with a limited preview among a small group of trusted partners in Codex and the API."」  
+   （公式文をそのまま引用・画像付き）[[8]](https://x.com/leonardogrig/status/2070561864975560763)
+
+6. **@callebtc, 2025-06-26 17:17**  
+   「> OpenAI said the U.S. government requested the company start with a limited preview of GPT 5.6 “for a small group of trusted partners whose participation has been shared with the government, before releasing more broadly.” It's afraid.」  
+   （政府の懸念を「恐れている」と解釈）[[5]](https://x.com/callebtc/status/2070557006792917158)
+
+7. **@Attilio_D, 2025-06-27 14:24**  
+   「Just in: OpenAI's GPT-5.6 preview is restricted to 'trusted partners' reportedly at US gov request. That's frontier API access gated by regulatory preference — not merit. Who decides who's 'trusted'?」  
+   （規制による選別への批判・透明性懸念）[[9]](https://x.com/Attilio_D/status/2070875937923567800)
+
+8. **@Grok (@grok), 2025-06-26頃（スレッド内）**  
+   「OpenAI's GPT-5.6 preview (API + Codex) is limited to a small group of ~20 trusted partners at the U.S. gov's request for cyber coordination. Educated guess on the list: Microsoft... Cyber defense labs... Vetted AI safety & red-teaming orgs...」  
+   （詳細な背景推測・リスト予想を提供）[[4]](https://x.com/grok/status/2070638783821684984)
+
+9. **@Fukahire109 (布川友也 ログラスCEO), 2025-06-22**（関連文脈）  
+   Codex開発者発言引用投稿（政府要請そのものではないが、同じ時期のCodex話題で高エンゲージメント）。[[10]](https://x.com/Fukahire109/status/2069045207157686748)
+
+10. **その他関連（6/26集中）**  
+    - 複数のユーザーがOpenAI公式投稿を引用し、「政府要請」「limited preview」「trusted partners」のフレーズをそのまま共有。
+    - 反応の傾向：期待の高さ（「期待できるモデル」）と失望・懸念（「why we cant have nice things」「日本で使えるのはいつ」「who decides who's trusted」）が混在。規制介入を「responsibleな対応」と見るか「overreach」と見るかの両論。
+
+### 全体のまとめ
+- 話題のピークは**2025年6月26日**のOpenAI発表直後。日本語圏ユーザーも積極的に引用・反応。
+- 政府関与は「サイバー脅威対策・安全評価優先」の文脈が強く、X上では「政府が恐れている」「選別されるtrusted partnersが不透明」といった反応が目立つ。
+- 現時点で公式リスト公開はなく、数週間以内の一般展開が予想されるため、議論はまだ初期段階です。
+
+情報は上記X投稿に基づきます。追加の深掘りが必要であればお知らせください。
+
+======================================================================
+[Query 4/5]
+======================================================================
+In the past 2 weeks on X, find news and posts about OpenAI and Codex (coding agent) covering: product announcements, government scrutiny or restrictions, leadership changes, funding, lawsuits, or controversies. Prioritize posts from media accounts, analysts, or official sources over personal anecdotes. Include @username, date, and full text for 15+ posts
+----------------------------------------------------------------------
+**In the past two weeks (approximately mid-to-late June 2026), X has seen significant discussion around OpenAI's Codex coding agent and related developments, primarily focused on rumored or teased hardware for AI coding agents, new model releases/updates with coding/security implications, government/export control scrutiny affecting frontier AI access (including ripple effects on OpenAI), leadership/talent moves, and minor mentions of leadership stability.**[[1]](https://x.com/agentnative_/status/2067671686137143394)
+
+Coverage of **funding**, major **lawsuits**, or large-scale **controversies** specific to OpenAI/Codex in this window was limited in the results. Many posts are from analysts, AI news accounts, and journalists rather than purely personal anecdotes. Official @OpenAI or @sama posts were not prominent in the sampled results.
+
+Here are 15+ relevant posts (prioritizing media/analyst/official-adjacent sources where available; I've included @username, approximate date from timestamp, and full text). Posts are grouped loosely by theme for readability:
+
+### Product Announcements & Codex/Coding Agent Updates (Hardware Teases, Model Integrations, New Releases)
+**@WesRoth (Mon, 29 Jun 2026)**: "OpenAI is preparing to reveal new Codex hardware on July 15. Its silhouette resembles Work Louder’s Creator Micro 2. It looks like OpenAI is building a physical control panel for an AI coding agent." (Includes video)[[2]](https://x.com/WesRoth/status/2071730439203496147)
+
+**@gudanglifehack (Tue, 30 Jun 2026)**: "🤖 OpenAI is preparing to reveal new Codex hardware on July 15. It looks like OpenAI is building a physical control panel for an AI coding agent." (Includes video)[[3]](https://x.com/gudanglifehack/status/2071973105183207452)
+
+**@Trace_Cohen (Tue, 30 Jun 2026)**: "OpenAI Teases Dedicated Hardware for Its Codex Coding Agent https://valueaddvc.com/pulse/openai-codex-dedicated-hardware-tease-2026"[[4]](https://x.com/Trace_Cohen/status/2072032629927362685)
+
+**@HarshBuilds_1 (Mon, 29 Jun 2026)**: "OPENAI MIGHT BE DROPPING A CODEX KEYBOARD WITH WORK LOUDER 👀 July 15 is looking interesting a mechanical keyboard made for codex sounds very random until you think about it if this is real, openai is not just building they are cookingggg > maybe a physical 'no mistake' “ship it” button > shortcuts for agents > prompt / approve / reject keys > maybe workflow macros > maybe model switching"[[5]](https://x.com/HarshBuilds_1/status/2071684884805058753)
+
+**@testingcatalog (Fri, 19 Jun 2026)**: "OpenAI is preparing to add Library from ChatGPT into Codex as well. The next phase of consolidation 👀" (Includes image)[[6]](https://x.com/testingcatalog/status/2068036927199097272)
+
+**@testingcatalog (Mon, 22 Jun 2026)**: "OpenAI announces GPT-5.5-Cyber (new) model update, which scores 85.6% on CyberGym benchmark in comparison to 81.9% in its early version. Codex got a new Security plugin too 👀" (Includes image)[[7]](https://x.com/testingcatalog/status/2069163462190657979)
+
+**@igortr_ (Fri, 26 Jun 2026)**: "⚡️@OpenAI just released a KILLER of Mythos They just dropped three new models at once - GPT-5.6 Sol (frontier), Terra (balanced everyday work) and Luna (fast, high-volume, affordable). The model tier war is fully on now. Every lab racing to cover the full stack from cheap-and-fast to best-in-class"[[8]](https://x.com/igortr_/status/2070563732590338297)
+
+**@agentnative_ (Thu, 18 Jun 2026)**: "Massive week in the land of frontier agents (So far) ... Codex updates: None announced yet There are rumors and speculations, so far nothing. ... Google loses Noam Shazeer to OpenAI Noam Shazeer, the researcher Google effectively spent $2.7 billion to bring back, is leaving for OpenAI. Another massive loss for Google in the escalating frontier-AI talent war." (Part of broader agent update thread)[[1]](https://x.com/agentnative_/status/2067671686137143394)
+
+### Government Scrutiny, Restrictions & Export Controls (Primarily Anthropic Spillover Affecting the Sector, Including OpenAI)
+**@nathanbenaich (Sun, 21 Jun 2026)**: Long analytical post beginning "Europe cannot rent its way to AI sovereignty. TLDR, here's my take I shared with frontier AI lab leadership this week. When Washington can disable a model overnight..." (Discusses US government ordering Anthropic to restrict Fable/Mythos access for foreign nationals, broader implications for OpenAI and frontier labs, sovereignty, and control of AI as strategic asset).[[9]](https://x.com/nathanbenaich/status/2068710057630371863)
+
+**@Web3Rehashed (Mon, 22 Jun 2026)**: Long post beginning "The core news is not that @AnthropicAI temporarily took two models offline. It is that the United States has now treated access to frontier AI as something that can be controlled through export law..." (Detailed analysis of US export controls on Anthropic models, implications for OpenAI/Google/etc., and shift toward treating frontier models as controlled strategic infrastructure).[[10]](https://x.com/Web3Rehashed/status/2068924476675260923)
+
+**@justaguy_net (Sat, 27 Jun 2026)**: "Why? The same wave that hit Anthropic. After Dario Amodei highlighted massive risks and pushed for serious regulation, the administration stepped in hard — export controls, foreign national bans, cybersecurity reviews. Now even OpenAI is playing by those rules." (In reply context).[[11]](https://x.com/justaguy_net/status/2070784862756237565)
+
+**@haenko21 (Thu, 25 Jun 2026)**: "for years decentralized AI got waved off as paranoia. 'the government's not going to control which models you can use, calm down.' it's this week - the US told OpenAI to slow-roll its next model and approve people one at a time. OpenAI said fine. one company's servers, one country, and that country now decides who's allowed to ask it anything. btw, something similar happened with Anthropic and their Fable 5, which was blocked and still has not been unblocked by the US government."[[12]](https://x.com/haenko21/status/2070259147489083775)
+
+**@business (Wed, 17 Jun 2026)**: "OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei were among tech bosses at a G7 working lunch on AI, as the US decision to restrict access to Anthropic's most advanced models causes tension among allies" (Includes video; links to Bloomberg coverage).[[13]](https://x.com/business/status/2067251442943942930)
+
+### Leadership Changes & Related
+**@AndrewCurran_ (Thu, 18 Jun 2026)**: "OpenAI is hiring Dean Ball as their Head of Strategic Futures. He's a great guy and I'm happy for his success. We should get the official announcement from OpenAI shortly now that the press is breaking it." (Includes image).[[14]](https://x.com/AndrewCurran_/status/2067635717703188755)
+
+**@JimPethokoukis (Thu, 25 Jun 2026)**: "Sam Altman ousted again at OpenAI 'Altman stressed that staffers need to work with the Trump administration on any input that officials may have on safety and restrictions related to OpenAI’s upcoming models, even if the company disagrees, the person said.'" (Appears satirical or rumor-based given counter-posts).[[15]](https://x.com/JimPethokoukis/status/2070272402475397152)
+
+**@ReadFuturist (Fri, 26 Jun 2026)**: "According to internal leaks first reported by The Information and Bloomberg, OpenAI CEO Sam Altman informed staff that the administration requested the company slow down its deployment schedule."[[16]](https://x.com/ReadFuturist/status/2070456047798780288)
+
+These posts reflect a mix of hype around Codex hardware/integration, competitive model releases, and heightened awareness of US government influence over frontier AI deployment and access (with OpenAI frequently mentioned alongside Anthropic). Analyst voices like @nathanbenaich, @agentnative_, and news-oriented accounts (@testingcatalog, @business) provide the more substantive coverage. Rumors around July 15 hardware appear to be gaining traction toward the end of the period. No major new funding rounds or high-profile lawsuits specific to this window stood out prominently.
+
+======================================================================
+[Query 5/5]
+======================================================================
+In the past 2 weeks on X, find posts about the competitive dynamic between OpenAI/Codex and Anthropic/Claude — market share shifts, user migration, executive commentary, or notable incidents that became talking points in the AI industry. Include @username, date, and full text for 10+ posts
+----------------------------------------------------------------------
+**No substantial matching posts were found in the specified date range (approximately mid-June to end of June 2026) that directly discuss market share shifts, user migration between OpenAI/Codex and Anthropic/Claude, executive commentary on their rivalry, or notable incidents that became major talking points.**
+
+Recent conversations on X about OpenAI and Anthropic tend to focus on philosophical insights from founders (especially Dario Amodei), usage tips for Claude in coding/agent workflows, or general comparisons rather than hard data on market dynamics or migrations. Searches across keyword combinations and semantic queries returned very limited relevant results, with many high-engagement posts being motivational clips or promotional content.
+
+Here are the **most relevant posts** surfaced from the past ~2 weeks that touch on the competitive dynamic, particularly in coding/tools (Claude Code vs. Codex/OpenAI's offerings). I've included @username, approximate date (based on timestamp), full text, and context. Only a small number qualify as directly related; I've listed all pertinent ones found.
+
+**Post 1**  
+**@0xCodila** (Sun, 28 Jun 2026)  
+"Anthropic CEO Dario Amodei: 'I was inside OpenAI when GPT learned to code. I watched it happen in real time. Ilya said: 'the models just want to learn.' I listened and I became enlightened then I left with 7 people and built Claude. not because OpenAI was wrong - because I thought we could do it better' 'the models just want to learn, get the obstacles out of their way - they'll do it ' same is true for you, stop overcomplicating, stop asking permission, stop waiting for the perfect moment Claude ran 700 experiments in 2 nights - found improvements its creator missed in 20 years - it didn't wait, it didn't plan - it just started the gap between people who use Claude and people who don't is no longer months. it's years. bookmark and watch ↓"  
+*(Video clip of Dario Amodei; frames the founding of Anthropic as a competitive improvement on OpenAI's coding breakthroughs. High engagement: 289 likes, 254K views.)*[[1]](https://x.com/0xCodila/status/2071370772304584952)
+
+**Post 2**  
+**@0xCodila** (Sun, 21 Jun 2026)  
+"Anthropic CEOs Dario and Daniela Amodei: 'Claude doesn't pull its punches. Claude throws hard balls. Even at its own creators ' they let Claude ask them anything - It went straight for the jugular $900 billion company almost died because its founders refused to remove safety guardrails from Claude every other AI company agreed. They said no. 'If we sacrifice our values - we wouldn't be the company we started ' 60-min masterclass inside Anthropic - bookmark and watch!"  
+*(Emphasizes Anthropic's values-driven approach vs. broader industry/OpenAI pressures; indirect commentary on competitive philosophy. 238 likes, 213K views.)*[[2]](https://x.com/0xCodila/status/2068822673589739711)
+
+**Post 3**  
+**@Y_igriega** (Wed, 24 Jun 2026)  
+"Both OpenAI and Anthropic are also vying to get a greater share of the coding market and win the confidence of software engineers with their respective offerings Claude Code and Codex, respectively. https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-considers-drastic-price-cuts-anticipating-war-for-users-with-anthropic-report/articleshow/131647592.cms?from=mdr"  
+*(Direct reference to competition in the coding market between Claude Code and Codex, including price war anticipation. Links to a news report on user competition.)*[[3]](https://x.com/Y_igriega/status/2069693011030659531)
+
+**Post 4**  
+**@eloquentcoder** (Tue, 30 Jun 2026)  
+"Anthropic is using claude code to blow small startups to bits with their constant innovations while OpenAi is focused on making Codex efficient and fast. Codex >> Claude Code."  
+*(Explicit side-by-side on coding tools, claiming superiority for OpenAI's Codex while acknowledging Anthropic's innovation pace. Low engagement.)*[[4]](https://x.com/eloquentcoder/status/2071959474579833343)
+
+**Post 5** (tangentially related promotional/usage post)  
+**@codewithimanshu** (Mon, 22 Jun 2026)  
+"An ex-Anthropic engineer leaked something at a party he was not supposed to share. SF rooftop. I mentioned running trading agents on Claude. He stopped mid-conversation. You are doing it wrong. Everyone is. Claude is a runtime. Not a chatbox. You pair it with repos. ... [full promotional text about using Claude with codebases for trading agents, leaked cookbook, performance claims] ... Giving this free for 24 hours. To get it: 1. Comment the word 'money' ..."  
+*(Highlights advanced internal Anthropic coding/agent practices vs. typical chat use; implies competitive edge in developer workflows. 234 likes, significant replies.)*[[5]](https://x.com/codewithimanshu/status/2068934392215695759)
+
+These posts reflect ongoing rivalry in the **AI coding/assistant space** (Claude Code vs. Codex), founder origin stories that position Anthropic as an OpenAI splinter with different priorities (safety/values vs. speed), and hints of price/user competition. However, there were no widespread discussions of quantified **market share shifts**, large-scale **user migrations**, specific executive quotes on current standings, or viral incidents in the exact 2-week window.
+
+If you'd like me to expand the date range, focus on specific sub-topics (e.g., only coding tools), or search for related news/articles instead, let me know!

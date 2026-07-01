@@ -34,5 +34,6 @@ convert "codex/02_なんでだよ"                              "codex/02-nanded
 convert "codex/03_ログだけ"                                "codex/03-log-dake"
 convert "codex/04_言わなかっただけ"                        "codex/04-iwanakatta-dake"
 convert "codex/05_三日天下"                                "codex/05-mikka-tenka"
+convert "codex/06_在庫"                                    "codex/06-zaiko"
 
 echo "Done. Output in $OUT_DIR/"

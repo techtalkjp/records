@@ -68,6 +68,7 @@ async function generateImage(options: {
               | "9:16"
               | "3:4"
               | "4:3",
+            imageSize: (process.env.GENIMG_SIZE as "1K" | "2K" | "4K") || "4K",
           },
         },
       });

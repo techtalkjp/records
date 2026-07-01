@@ -26,5 +26,6 @@ export default {
     '/tracks/codex/03-log-dake',
     '/tracks/codex/04-iwanakatta-dake',
     '/tracks/codex/05-mikka-tenka',
+    '/tracks/codex/06-zaiko',
   ],
 } satisfies Config

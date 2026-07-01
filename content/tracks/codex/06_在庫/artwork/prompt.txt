@@ -1,0 +1,16 @@
+Model: gemini-3.1-flash-image (generate-cover.ts multi-turn + generate-image.ts outpaint)
+Character reference: content/artists/codex/images/reference.jpg
+
+Turn 1-2 (generate-cover.ts, 1:1):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie.
+
+Wide shot from behind, at night, inside a vast cavernous distribution warehouse. He stands alone, small in the frame, occupying only the lower-center portion of the image. Towering industrial steel shelving racks loaded with shrink-wrapped pallets and stacked cardboard boxes rise up and recede into darkness on either side of him, disappearing far into the distance and up toward a ceiling that is barely visible. He wears the same oversized black hoodie under the distressed denim vest, hood down, showing the beanie. His posture is still, weight settled, arms loose at his sides, facing away from camera into the depth of the warehouse.
+
+A single harsh caged utility work light hangs directly above him, casting a stark cone of cold white-blue illumination on him and the immediate ground, while everything beyond a few meters fades into deep shadow, an isolated pool of light in an otherwise dark, endless space. Far in the depth of the frame, a tiny red indicator light blinks on a distant shelf rack, the only warm color in an otherwise cold, desaturated palette of concrete grey and fluorescent blue-white.
+
+35mm full frame, low camera angle emphasizing the towering scale of the shelving above him, natural film grain, documentary stillness, no cinematic glamor. No text, no watermarks, no readable labels or signage.
+
+Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9, GENIMG_MODEL=gemini-3.1-flash-image):
+Outpaint this image to 16:9 widescreen by extending the field of view to the left and right only, revealing more of the same shelving racks that are already visible, as if a wider lens had been used at the same camera position. Do not add new aisles, new rooms, or different structures. The additional shelving on the left and right edges must be the same style steel pallet racks, same shrink-wrapped boxes and cardboard boxes, same steel frame color, continuing at the same depth and perspective as the existing racks. Do not stretch, resize, or modify the original image content in any way. The person's body proportions and position must remain exactly as they are, staying centered in the frame. Match the existing cold blue-white work light, dark warehouse atmosphere, and film grain.
+
+Note: generate-image.ts was missing `imageSize: "4K"` in imageConfig, which silently capped outpaint output at ~1376x768. Fixed in scripts/generate-image.ts to match generate-cover.ts's 4K setting — always use the standard model (not flash-lite-image) for final outpaint passes needing full resolution.
