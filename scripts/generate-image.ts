@@ -68,6 +68,7 @@ async function generateImage(options: {
               | "9:16"
               | "3:4"
               | "4:3",
+            imageSize: "4K",
           },
         },
       });
