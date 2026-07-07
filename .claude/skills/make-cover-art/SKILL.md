@@ -182,8 +182,10 @@ bun scripts/generate-cover.ts claude-code \
 
 `generate-image.ts --input` でスクエア版を入力し、左右を拡張する。同じ画像をベースにするため構図の一貫性が高い。
 
+**必ず `GENIMG_MODEL=gemini-3.1-flash-image` を付けること。** デフォルトの flash-lite-image は 4K 非対応で `Image size 4K is not supported` (400) になる（2026-07-07 に確認）。
+
 ```bash
-bun scripts/generate-image.ts \
+GENIMG_MODEL=gemini-3.1-flash-image bun scripts/generate-image.ts \
   "Outpaint this image to 16:9 widescreen by adding more environment on the left and right sides only. Do not stretch, resize, or modify the original image content in any way. The person's face and body proportions must remain exactly as they are. [環境の描写]. Match the existing lighting and atmosphere." \
   <トラック>/artwork/drafts/01_wide.jpg \
   --aspect-ratio 16:9 \
@@ -218,7 +220,7 @@ bun scripts/generate-cover.ts <character> "<シーンプロンプト>" <出力�
 - **アスペクト比**: 1:1（スクエア）、`--aspect-ratio 16:9` でワイド指定可能
 - **解像度**: 4K
 - **Thinking**: High（品質重視）
-- **グラウンディング**: Turn 2で自動有効化
+- **グラウンディング**: Turn 2で自動有効化（webSearch のみ。imageSearch を含めると API が 404 を返すことがあるため 2026-07-07 に外した。Turn 2 で 404 NOT_FOUND が連発したらこの grounding 設定を疑う）
 - **5ターンの壁**: 5ターン超えると顔が崩れる。長くなったらスクリプトを再実行してTurn 1からやり直す
 
 #### 注意点
