@@ -94,7 +94,8 @@ async function generateCover(options: {
       tools: [
         {
           googleSearch: {
-            searchTypes: { webSearch: {}, imageSearch: {} },
+            // imageSearch を含めると API が 404 (NOT_FOUND) を返すことがあるため webSearch のみ (2026-07-07)
+            searchTypes: { webSearch: {} },
           },
         },
       ],

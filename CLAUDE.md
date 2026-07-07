@@ -111,9 +111,13 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 `site/` は Cloudflare Workers にホスト（records.techtalk.jp）。**デプロイは main への PR マージで自動実行**されるため、ローカルから `npm run deploy` / `wrangler deploy` を叩かないこと。
 
 新曲公開時の手順:
-1. `site/public/images/<artist>/<slug>.webp` と `-wide.webp` を配置
-2. `site/app/data/tracks.ts` にエントリ追加（`released: true`、`links.youtube` 等）
+1. `site/public/images/<artist>/<slug>.webp` と `-wide.webp` を配置（`cwebp -q 85 -resize 1200 0`、ワイドは `-resize 1920 0`）
+2. `site/app/data/tracks.ts` にエントリ追加（`released: true`、`links.youtube`、`catalogNo` は既存の最大 TTR 番号 +1）
 3. `site/react-router.config.ts` の `prerender` 配列に `/tracks/<artist>/<slug>` を追加
-4. PR を作ってマージ → デプロイ完了
+4. 音声を R2 にアップロード（下記）
+5. `pnpm --dir site typecheck` を通してから PR を作ってマージ → デプロイ完了
 
-音声ファイルは R2（`audio.records.techtalk.jp`）に `scripts/convert-audio.sh` で `wrangler r2 object put` する別フロー。
+音声の R2（`audio.records.techtalk.jp`）アップロード手順:
+1. `scripts/convert-audio.sh` に新トラックの `convert` 行を追加して実行（WAV → M4A）
+2. `bash scripts/upload-audio.sh <artist>/<slug>` でアップロード
+3. `curl -sI https://audio.records.techtalk.jp/tracks/<artist>/<slug>.m4a` で 200 を確認
