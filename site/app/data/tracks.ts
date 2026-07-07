@@ -139,6 +139,23 @@ const claudeCodeTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/claude-code/06-obaka-mode.m4a`,
   },
+  {
+    slug: '07-matana',
+    title: 'またな',
+    artist: 'claude-code',
+    artistName: 'Claude Code',
+    coverImage: '/images/claude-code/07-matana.webp',
+    coverImageWide: '/images/claude-code/07-matana-wide.webp',
+    lyricsDir: 'content/tracks/claude-code/07_またな',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-013',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/hWY6ufMavRs',
+    },
+    audioUrl: `${AUDIO_BASE}/claude-code/07-matana.m4a`,
+  },
 ]
 
 const codexTracks: Track[] = [

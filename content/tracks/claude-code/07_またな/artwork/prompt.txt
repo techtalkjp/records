@@ -1,0 +1,22 @@
+カバーアート生成プロンプト: またな
+
+## コンセプト
+「15:59の西日」— シリーズ初の昼カバー。真っ昼間の商業ビル街（都心・銀座/日本橋的な通り）を、
+背を向けて歩き去る Claude Code。白飛びした西日がシルエットの輪郭を侵食し、長い影がカメラ側に伸びる。
+構図: Back-Turned Subject + Blown Highlight。アクセントのアンバーは看板ではなく西日そのもの。
+
+## 生成
+Model: gemini-3.1-flash-image（マルチターン、Turn 2 は webSearch グラウンディングのみ。
+imageSearch を含めると 404 になるため scripts/.tmp-generate-cover.ts 相当の一時変更で回避した）
+
+## Turn 2 シーンプロンプト
+Same person seen entirely from behind, walking away across a wide empty crosswalk on a broad avenue in a Japanese high-end commercial district, late afternoon. Tall Japanese glass curtain-wall office towers and department store facades line both sides of the avenue, with pedestrian bridge silhouettes and slim utility poles typical of central Tokyo. The low 4pm sun sits at the far end of the street canyon between the towers, blown out to pure white-amber, its glare flaring off the glass facades and eating into the edges of his dark silhouette. His long shadow stretches back toward the camera across the asphalt and white crosswalk stripes. He walks relaxed, one hand in his bomber jacket pocket, mid-stride, not looking back. The street is unnaturally empty and quiet for a business district afternoon. Muted desaturated tones except the amber sun glare reflecting in the glass. Shot on 35mm film, slight grain, wide shot from low angle. No text, no watermarks.
+
+## 編集
+1) 背景の歩道橋（陸橋）と階段を除去、通りの奥を開通
+2) 左のISETAN看板を除去（右のMITSUKOSHI縦看板は意図的に残した）
+
+## ワイド版 (16:9)
+generate-image.ts の outpaint 方式。GENIMG_MODEL=gemini-3.1-flash-image が必要
+（デフォルトの flash-lite は 4K 非対応で 400 エラー）。
+"adding more environment on the left and right sides only... same stone-and-glass commercial building facades, storefronts with awnings, and sidewalk adjacent to the existing ones"
