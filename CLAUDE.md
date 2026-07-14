@@ -104,6 +104,7 @@ Whisperでタイミング取得 → SRT作成 → バリデーション（問題
 
 - `scripts/generate-image.ts` — 汎用画像生成（単発、参照画像対応）
 - `scripts/generate-cover.ts` — カバーアート生成（マルチターン会話、ベースプロンプト自動読み込み）
+- `scripts/crop-square.py` — 画像から指定アスペクト（既定1:1）を切り出す（`uv run`）。カバーは「16:9を生成→1:1を切り出す」方式が安定（アウトペイント/部分編集は顔・文字・建築を劣化させる）
 - `scripts/search-x.ts` — X 検索（Grok API の x_search 経由）。引数に渡した JSON のクエリと期間で実行。`/search-x-voices` スキルから呼ばれる
 
 ## サイト公開フロー

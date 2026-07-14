@@ -176,9 +176,41 @@ bun scripts/generate-cover.ts claude-code \
 
 #### ワイド版（16:9）の生成
 
-**まず outpaint を試し、顔が歪んだらマルチターンで再生成する。**
+**顔・読める文字・建築が絡む写真系は「方法0（16:9を先に作って1:1を切り出す）」を第一選択にする。** 情景がシンプルで顔が小さい場合のみ outpaint（方法1）でよい。
 
-##### 方法1: outpaint（推奨・まず試す）
+##### 方法0: 16:9 を先に生成 → 1:1 を切り出す（写真系の推奨・最優先）
+
+cover.jpg を先に作って outpaint で広げる従来手順は、**顔・ポスター等の文字・建築が絡むと破綻しやすい**（07「またかよ」で顕在化）。アウトペイントや部分エディットを重ねると副作用が連鎖する:
+- outpaint/再レンダリングは **ポスター等の文字を化けさせる**（"HELD OVER"→"HELO OVER" 等）
+- 追加した建物が **AI 歪み**（細い三角ビル・溶けた壁面・窓が揃わない）
+- 全画面再レンダリングを繰り返すと **顔が劣化**（猿っぽく崩れる）、質感も HDR/イラスト調に劣化
+
+対策は、**16:9 を一枚ちゃんと作ってから 1:1 を切り出す**こと。同じ一枚から作るので cover と wide で顔・質感・建物が完全一致し、顔もキャラ参照から一発で出る。
+
+```bash
+# 1) 16:9 をマルチターン生成（人物・入口・小物を右中央にまとめ、1:1 に切り出せる構図にする）
+bun scripts/generate-cover.ts <character> "<シーンプロンプト。下記の頑丈化フレーズを含める>" \
+  <トラック>/artwork/drafts/w01.jpg --aspect-ratio 16:9
+# 何枚か生成してベストを選ぶ（編集で直そうとせず、生成ガチャで当てる方が速くて安全）
+
+# 2) 良い 16:9 を cover_wide.jpg にして、そこから 1:1 を切り出す
+cp <トラック>/artwork/drafts/w02.jpg <トラック>/artwork/cover_wide.jpg
+uv run scripts/crop-square.py <トラック>/artwork/cover_wide.jpg <トラック>/artwork/cover.jpg --hpos right
+# --hpos は left/center/right か 0.0〜1.0。被写体が右寄りなら right（右端アンカー）
+```
+
+**プロンプトの頑丈化フレーズ（写真系で毎回入れる）:**
+- 質感: `PHOTOREALISTIC natural photographic look, 35mm, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly`
+- ロゴ/記号の文字化け対策: 記号は「文字ではない」と明示（例: `a pure infinity figure-eight ∞ made of one continuous neon tube — NOT letters, NOT the letters N A O, NOT a wordmark`）
+- 建築の歪み対策: `rectangular BOX shapes with straight vertical walls, flat rooftops, windows in aligned rows. NO thin wedge/triangular sliver buildings, NO tapering, NO melting/warped facades`
+- 車・小物のスケール: `at correct realistic scale`
+- 1:1 兼用: `group the person, entrance and key props in the right-center so it also works as a square crop`
+
+**鉄則: 一度良い顔が出た画像を、文字・建物直しのために全画面再レンダリングしない。** 直すなら生成し直してベストを選ぶ。どうしても部分修正するなら、顔から離れた要素だけを対象にし、直後に顔・文字が劣化してないか必ず見比べる。
+
+##### 方法1: outpaint（情景がシンプル・顔が小さい場合のみ）
+
+`generate-image.ts --input` でスクエア版を入力し、左右を拡張する。同じ画像をベースにするため構図の一貫性が高い。**ただし顔・文字・建築が絡むと破綻するので、その場合は方法0を使う。**
 
 `generate-image.ts --input` でスクエア版を入力し、左右を拡張する。同じ画像をベースにするため構図の一貫性が高い。
 
@@ -220,7 +252,7 @@ bun scripts/generate-cover.ts <character> "<シーンプロンプト>" <出力�
 - **アスペクト比**: 1:1（スクエア）、`--aspect-ratio 16:9` でワイド指定可能
 - **解像度**: 4K
 - **Thinking**: High（品質重視）
-- **グラウンディング**: Turn 2で自動有効化（webSearch のみ。imageSearch を含めると API が 404 を返すことがあるため 2026-07-07 に外した。Turn 2 で 404 NOT_FOUND が連発したらこの grounding 設定を疑う）
+- **グラウンディング**: Turn 2で `googleSearch:{}` を付与。`searchTypes` を含めると API が 404 を返すため外した（2026-07-14）。失敗時は grounding なしで自動リトライするフォールバック入り。**Turn 2 の 404 NOT_FOUND は一時的なことも多く、同じコマンドを再実行すると通る**（2026-07-14）
 - **5ターンの壁**: 5ターン超えると顔が崩れる。長くなったらスクリプトを再実行してTurn 1からやり直す
 
 #### 注意点

@@ -82,27 +82,41 @@ async function generateCover(options: {
   console.log("Turn 2: Generating cover art...");
   console.log(`Scene: ${options.scenePrompt.substring(0, 100)}...`);
 
-  const response2 = await ai.models.generateContent({
-    model: MODEL_NAME,
-    contents: [
-      { role: "user", parts: [{ text: basePrompt }] },
-      { role: "model", parts: modelResponse.parts },
-      { role: "user", parts: [{ text: coverPrompt }] },
-    ],
-    config: {
-      responseModalities: ["IMAGE", "TEXT"],
-      tools: [
-        {
-          googleSearch: {
-            // imageSearch を含めると API が 404 (NOT_FOUND) を返すことがあるため webSearch のみ (2026-07-07)
-            searchTypes: { webSearch: {} },
-          },
-        },
-      ],
-      imageConfig: { aspectRatio: options.aspectRatio || "1:1", imageSize: "4K" },
-      thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH },
-    },
-  });
+  const turn2Contents = [
+    { role: "user", parts: [{ text: basePrompt }] },
+    { role: "model", parts: modelResponse.parts },
+    { role: "user", parts: [{ text: coverPrompt }] },
+  ];
+  const turn2ImageConfig = {
+    aspectRatio: options.aspectRatio || "1:1",
+    imageSize: "4K",
+  };
+  // グラウンディング（googleSearch）は API 仕様変更で 404 (NOT_FOUND) を返すことがある。
+  // まず grounding 付きで試し、失敗したら grounding なしで自動リトライする (2026-07-14)。
+  let response2;
+  try {
+    response2 = await ai.models.generateContent({
+      model: MODEL_NAME,
+      contents: turn2Contents,
+      config: {
+        responseModalities: ["IMAGE", "TEXT"],
+        tools: [{ googleSearch: {} }],
+        imageConfig: turn2ImageConfig,
+        thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH },
+      },
+    });
+  } catch (err) {
+    console.log("Turn 2: grounding failed, retrying without grounding...");
+    response2 = await ai.models.generateContent({
+      model: MODEL_NAME,
+      contents: turn2Contents,
+      config: {
+        responseModalities: ["IMAGE", "TEXT"],
+        imageConfig: turn2ImageConfig,
+        thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH },
+      },
+    });
+  }
 
   const parts2 = response2.candidates![0].content.parts;
   const coverImage = parts2.find((p) => p.inlineData && !p.thought);
