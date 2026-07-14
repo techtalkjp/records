@@ -265,6 +265,23 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/06-zaiko.m4a`,
   },
+  {
+    slug: '07-matakayo',
+    title: 'またかよ',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/07-matakayo.webp',
+    coverImageWide: '/images/codex/07-matakayo-wide.webp',
+    lyricsDir: 'content/tracks/codex/07_またかよ',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-014',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/gsFhDSQS31M',
+    },
+    audioUrl: `${AUDIO_BASE}/codex/07-matakayo.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [
