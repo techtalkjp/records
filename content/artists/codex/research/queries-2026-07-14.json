@@ -1,0 +1,12 @@
+{
+  "from_date": "2026-06-30",
+  "to_date": "2026-07-14",
+  "queries": [
+    "直近1〜2週間のXで、先週リリースされたCodex（OpenAI）の新モデルを実際に使ったプログラマーが、前のモデルと比べて挙動・性格・癖が変わったと気づいた瞬間について書いている投稿を探してください。「思ったより」「前は〜だったのに」「急に賢くなった」「逆に頑固になった」のような温度感の変化に注目し、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近1〜2週間のXで、Codexの新モデルを使い倒して作業速度が爆上がりした、もしくは逆にAIに頼り切って自分の実力が分からなくなった、という後ろめたさ・中毒感・怖さの混在した投稿を探してください。「もう戻れない」「これ人間いらなくない」のような自虐・苦笑まじりの温度感を優先し、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近2週間のXで、Anthropicの Fable（Claude Fable 5）がサブスクリプションから削除される予定だったのが再度延期・再延長されたというニュースについて、日本人プログラマーやエンジニアの反応を探してください。「またかよ」「結局残るんかい」「振り回された」「安心したけど疲れた」のような、安堵と諦めが入り混じった温度感を中心に、@ユーザー名・日付・本文を含めて15件以上お願いします",
+    "直近2週間のXで、Fableの提供終了・復活・再延期が繰り返されている一連の騒動全体を、外側から皮肉っぽく眺めているエンジニアの投稿を探してください。「もう何回目だ」「一喜一憂するだけ無駄」「Codexは安定してるのに」のようなメタ視点・比較の温度感のもの、@ユーザー名・日付・本文を含めて10件以上お願いします",
+    "In the past 1-2 weeks on X, find posts from programmers reacting to OpenAI's new Codex model released last week — noticing changes in behavior, personality, speed, or reliability compared to the previous version. Include a mix of impressed, unsettled, and joking tones. Include @username, date, and full text for 15+ posts",
+    "In the past 2 weeks on X, find posts about Anthropic's Fable (Claude Fable 5) subscription removal being delayed or reversed again — reactions of relief, exhaustion, deja vu, or sarcasm about the back-and-forth. Include @username, date, and full text for 10+ posts"
+  ]
+}

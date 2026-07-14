@@ -1,0 +1,56 @@
+Model: gemini-3.1-flash-image (generate-cover.ts multi-turn 16:9, then crop 1:1)
+Character reference: content/artists/codex/images/reference.jpg
+
+★ 最終手法（2026-07-14 やり直し）:
+16:9 を generate-cover.ts のマルチターンで新規生成し、そこから右寄りで 1:1 を切り出した。
+理由: アウトペイントや部分エディットを重ねると (1) ポスター文字が化ける (2) ビルが AI 歪み
+(3) 顔が劣化、と副作用が連鎖したため。「ワイドを一枚ちゃんと作って 1:1 に切り出す」方式なら
+顔・質感・ビルが cover と wide で完全一致し、顔もキャラ参照から一発で出せる。
+- cover_wide.jpg = 生成した 16:9 (w02)
+- cover.jpg = w02 を右寄り 3072x3072 でクロップ（PIL: crop((2432,0,5504,3072))）
+プロンプト要点: フォトリアル指定（NOT HDR/illustration/oversaturated）、∞ は「pure infinity
+figure-eight, NOT letters」と明示（"NAO" 文字化け対策）、左のビルは「rectangular BOX shapes,
+straight verticals, aligned windows, NO wedge/triangular/melting」と明示。人物・入口・∞・
+ポスターを右中央にまとめて 1:1 クロップ可能な構図にした。
+
+コンセプト:
+Codex 07「またかよ」= Claude Code 07「またな」へのアンサー。ライバル（Fable）の
+「終わらないさよなら公演（延長興行）」を、Codexが呆れ半分・安心半分で眺める。
+舞台は現代の東京のライブハウス／クラブ入口（都心のビル街の角）。
+- 白い金属トラス枠の入口、青紫LEDの通路＋赤カーテン
+- 頭上に白ネオンの ∞（無限大）ロゴ看板（＝終わらない公演の象徴）
+- 脇のバックライト縦ポスター:「FABLE / FINAL SHOW / HELD OVER」（延長告知）
+- Codexは右手前でポスター（延長告知）を見て苦笑
+- 周囲は中〜高層のビル街（居酒屋路地ではない）
+
+Turn 1-2 (generate-cover.ts, 1:1) — ベースのシーン生成:
+Same person, identical face, same hairstyle and beanie. Wide establishing shot at night on a
+narrow Tokyo backstreet. Modern small Tokyo live-house / music club (NOT an old cinema, NOT an
+American marquee). White metal stage-lighting truss entrance, white neon infinity-loop logo sign
+(no letters), open doorway with blue/purple LED corridor and deep-red curtain, warm light spilling
+out. Backlit vertical poster: 'FABLE' / 'FINAL SHOW' / 'HELD OVER'. Red traffic cones. He stands
+lower-right foreground looking directly at the poster with a wry knowing half-smile. No roll-down
+shutters. Cool blue night with warm/LED glow. 35mm, film grain, cinematic.
+
+Edit pass (generate-cover.ts --edit, 1:1) — 背景を都心のビル街に:
+Change ONLY the surrounding background into a central Tokyo mid-to-high-rise BUILDING DISTRICT at
+night — taller modern office/commercial buildings with lit windows, distant signboards, overhead
+wires. NOT izakaya alley, NOT suburb. Keep the club, infinity neon, truss entrance, LED corridor,
+FABLE poster, cones, and the person (identical face/expression/pose) exactly. → cover.jpg
+
+Wide (generate-image.ts --input cover.jpg --aspect-ratio 16:9, GENIMG_MODEL=gemini-3.1-flash-image):
+Outpaint to 16:9 by adding environment on left/right only (do not re-render the center or the face).
+LEFT: continue the same central Tokyo building district (mid/high-rise buildings, lit windows,
+poles, wires). RIGHT: dark quiet pavement + plain building edge. Do not duplicate the entrance,
+truss, infinity sign, or poster.
+Fix pass (generate-image.ts --input --aspect-ratio 16:9): outpaint garbled the poster middle line
+('FINE BOBO'); corrected back to 'FINAL SHOW' while keeping the face and everything else identical.
+→ cover_wide.jpg
+
+メモ:
+- generate-cover.ts の Turn 2 grounding (googleSearch) が API 仕様変更で 404 を返すことがあった。
+  searchTypes を外して googleSearch:{} に修正、さらに失敗時 grounding なしで自動リトライする
+  フォールバックを追加 (2026-07-14)。Turn 2 の 404 は一時的なことも多く、リトライで成功する。
+- アウトペイントはポスター等の文字を再レンダリングして化けさせることがある。顔から離れた
+  文字要素は generate-image.ts --input（16:9維持）で局所修正できる。--edit はアスペクト比が
+  1:1 固定なのでワイドの修正には使えない。
