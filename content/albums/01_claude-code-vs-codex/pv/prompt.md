@@ -1,7 +1,7 @@
 # アルバムPV（10秒）生成プロンプト — Veo用
 
 対象: Google Veo 3.1（Gemini / Flow）
-形式: 16:9, 10秒
+形式: 9:16 縦長, 10秒（X/Shorts/Reels向け）
 コンセプト: ストリートのラップバトル。10秒間ずっとバチバチ。和解は入れない（アルバムのネタバレ禁止）。
 推奨: Flow の ingredients（参照画像）に
 `content/artists/claude-code/images/reference.jpg` と `content/artists/codex/images/reference.jpg`
@@ -21,8 +21,14 @@
 ## メインプロンプト（英語・コピペ用）
 
 ```
-Cinematic 10-second street rap battle at night, 16:9, photorealistic 35mm film look with
-natural grain, handheld camera inside the crowd circle. NOT animation, NOT illustration.
+Cinematic 10-second street rap battle at night, VERTICAL 9:16 portrait format,
+photorealistic 35mm film look with natural grain, handheld camera inside the crowd
+circle. NOT animation, NOT illustration.
+
+VERTICAL FRAMING: tight two-shot in portrait orientation — the two rappers fill the
+frame from mid-thigh up, facing each other in profile at the left and right edges, the
+streetlamp glow at the top of the frame, wet asphalt reflections at the bottom. When one
+rapper takes over, the camera favors him in a tighter chest-up framing.
 
 SETTING: A rain-wet Japanese city street at night. Two Japanese rappers face each other
 under a single streetlamp. Wet asphalt reflections. Breath visible in the cold air.
@@ -58,20 +64,17 @@ The two hold the staredown, neither backing off. Hard cut to black exactly on th
 beat hit.
 
 CAMERA: handheld inside the circle, shoulder height, slow orbit around the two rappers,
-no cuts, subtle whip toward whoever is rapping.
+no cuts, subtle whip toward whoever is rapping. Keep both heads inside the vertical
+frame at all times — never crop above the eyebrows.
 AUDIO: hard 90 BPM boom-bap with vinyl crackle, crowd hype ("oh!", claps), street
 ambience; the crowd roar peaks at the final punchline and everything hard-stops together
 with the cut to black.
 NO on-screen text, no subtitles, no logos, no microphones needed — raw street cypher.
-```
 
-## ネガティブ指定（フィールドがあるUI用）
-
-```
-animation, anime, illustration, CGI look, oversaturated, HDR, text overlays, subtitles,
-watermarks, daylight, stage, concert lighting, microphone stands, fast cuts,
-duplicated people, identical faces, cloned crowd, synchronized crowd movement,
-crowd faces in focus, grinning spectators, people looking at camera
+AVOID: animation or anime or CGI look, oversaturated HDR colors, text overlays,
+subtitles, watermarks, daylight, stage or concert lighting, microphone stands, fast
+cuts, duplicated or cloned spectators, identical faces in the crowd, synchronized crowd
+movement, crowd faces in focus, grinning spectators, anyone looking at the camera.
 ```
 
 ## バリエーション運用
@@ -82,5 +85,6 @@ crowd faces in focus, grinning spectators, people looking at camera
 ## 用途
 
 - アルバム告知ツイートの添付動画
-- YouTubeトレーラー（編集で末尾に cover_wide.jpg のタイトルカード2秒を足すと締まる）
+- YouTube Shorts / Reels
+- 横長16:9が必要になったら FRAMING 行を戻して別生成（縦→横のクロップは不可）
 ```
