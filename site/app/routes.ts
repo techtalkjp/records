@@ -5,5 +5,6 @@ export default [
   route('/artists', 'routes/artists._index.tsx'),
   route('/artists/:slug', 'routes/artists.$slug.tsx'),
   route('/releases', 'routes/releases.tsx'),
+  route('/albums/:slug', 'routes/albums.$slug.tsx'),
   route('/tracks/:artist/:slug', 'routes/tracks.$artist.$slug.tsx'),
 ] satisfies RouteConfig

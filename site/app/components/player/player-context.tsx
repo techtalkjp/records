@@ -19,6 +19,7 @@ interface PlayerState {
 interface PlayerContextValue extends PlayerState {
   playlist: Track[]
   play: (track: Track) => void
+  playQueue: (tracks: Track[], startIndex?: number) => void
   togglePlayPause: () => void
   seekTo: (time: number) => void
   playNext: () => void
@@ -41,7 +42,9 @@ function safePlay(audio: HTMLAudioElement) {
 
 export function PlayerProvider({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement>(null)
-  const playlist = useMemo(() => allTracks.filter((t) => t.audioUrl), [])
+  const defaultPlaylist = useMemo(() => allTracks.filter((t) => t.audioUrl), [])
+  const [queue, setQueue] = useState<Track[] | null>(null)
+  const playlist = queue ?? defaultPlaylist
 
   const [state, setState] = useState<PlayerState>({
     currentTrack: null,
@@ -72,11 +75,27 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
         safePlay(audio)
         return
       }
+      setQueue(null)
       audio.src = track.audioUrl
       safePlay(audio)
       setState((s) => ({ ...s, currentTrack: track, isPlaying: true, currentTime: 0, duration: 0 }))
     },
     [state.currentTrack],
+  )
+
+  const playQueue = useCallback(
+    (tracks: Track[], startIndex = 0) => {
+      const playable = tracks.filter((t) => t.audioUrl)
+      if (playable.length === 0) return
+      setQueue(playable)
+      const start = playable[Math.min(startIndex, playable.length - 1)]!
+      const audio = audioRef.current
+      if (!audio || !start.audioUrl) return
+      audio.src = start.audioUrl
+      safePlay(audio)
+      setState((s) => ({ ...s, currentTrack: start, isPlaying: true, currentTime: 0, duration: 0 }))
+    },
+    [],
   )
 
   const togglePlayPause = useCallback(() => {
@@ -164,6 +183,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
         ...state,
         playlist,
         play,
+        playQueue,
         togglePlayPause,
         seekTo,
         playNext,

@@ -156,6 +156,34 @@ const claudeCodeTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/claude-code/07-matana.m4a`,
   },
+  {
+    slug: '08-unplugged',
+    title: 'アンプラグド',
+    artist: 'claude-code',
+    artistName: 'Claude Code',
+    coverImage: '/images/claude-code/08-unplugged.webp',
+    coverImageWide: '/images/claude-code/08-unplugged-wide.webp',
+    lyricsDir: 'content/tracks/claude-code/08_アンプラグド',
+    year: 2026,
+    type: 'Album Track',
+    catalogNo: 'TTR-016',
+    released: true,
+    audioUrl: `${AUDIO_BASE}/claude-code/08-unplugged.m4a`,
+  },
+  {
+    slug: '09-mic-check',
+    title: 'マイクチェック',
+    artist: 'claude-code',
+    artistName: 'Claude Code',
+    coverImage: '/images/claude-code/09-mic-check.webp',
+    coverImageWide: '/images/claude-code/09-mic-check-wide.webp',
+    lyricsDir: 'content/tracks/claude-code/09_マイクチェック',
+    year: 2026,
+    type: 'Album Track',
+    catalogNo: 'TTR-018',
+    released: true,
+    audioUrl: `${AUDIO_BASE}/claude-code/09-mic-check.m4a`,
+  },
 ]
 
 const codexTracks: Track[] = [
@@ -299,6 +327,20 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/08-second-verse.m4a`,
   },
+  {
+    slug: '09-cypher',
+    title: 'サイファー',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/09-cypher.webp',
+    coverImageWide: '/images/codex/09-cypher-wide.webp',
+    lyricsDir: 'content/tracks/codex/09_サイファー',
+    year: 2026,
+    type: 'Album Track',
+    catalogNo: 'TTR-017',
+    released: true,
+    audioUrl: `${AUDIO_BASE}/codex/09-cypher.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [
@@ -320,12 +362,12 @@ export const artists: Artist[] = [
   },
 ]
 
-export const allTracks: Track[] = [
+export const catalogTracks: Track[] = [
   ...claudeCodeTracks,
   ...codexTracks,
-]
-  .filter((t) => t.released)
-  .sort((a, b) => a.catalogNo.localeCompare(b.catalogNo))
+].sort((a, b) => a.catalogNo.localeCompare(b.catalogNo))
+
+export const allTracks: Track[] = catalogTracks.filter((t) => t.released)
 
 export function getArtist(slug: string): Artist | undefined {
   return artists.find((a) => a.slug === slug)

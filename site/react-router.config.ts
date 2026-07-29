@@ -30,5 +30,9 @@ export default {
     '/tracks/codex/06-zaiko',
     '/tracks/codex/07-matakayo',
     '/tracks/codex/08-second-verse',
+    '/tracks/codex/09-cypher',
+    '/tracks/claude-code/08-unplugged',
+    '/tracks/claude-code/09-mic-check',
+    '/albums/claude-code-vs-codex',
   ],
 } satisfies Config
