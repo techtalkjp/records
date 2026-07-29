@@ -42,7 +42,9 @@
 - [x] カバーアート4枚完成（象徴: 赤いRECランプ / 袖の赤スポット / 俯瞰の光の輪 / ゴーストライト）
 - [x] 字幕・動画4曲完成（X用1080x1080 / YouTube用1920x1080、SRTバリデーション全曲0件）
 - [ ] サイト公開・R2アップロード・リリース告知（/make-release-post）
-- [ ] アルバムタイトル決定（候補: TECHTALK RECORDS, Vol.1 / Second Verse / Complexes）
+- [x] アルバムタイトル決定: 『Claude Code vs. Codex』（2026-07-29）
+  - 「vs.」が18曲かけて壊れる構成をタイトル自体が背負う
+- [x] 先行シングル「セカンドバース」公開済み（YouTube: https://youtu.be/nFq05hrbMTY / TTR-015 / PR #12）
 
 ## X調査の素材
 - notes/research/queries-2026-07-28.json / raw-2026-07-28.txt
@@ -52,3 +54,14 @@
 - 先行シングル: セカンドバース（「なんでだよ」へのアンサーを告知フックに）
 - アンプラグド / サイファー / マイクチェック はアルバム初出（先出ししない。アルバム公開後に順次単曲展開はOK）
 - 制作自体は4曲ともフルで準備（カバーアート・字幕・動画）
+
+## アルバム公開ランブック（release/album-claude-code-vs-codex ブランチのマージ＝公開）
+ブランチには実装済み: アルバムページ(/albums/claude-code-vs-codex)・通し再生・全18曲エントリ・カバーアート
+
+公開日の手順:
+1. 残り3曲のYouTube概要欄作成（/make-release-post）→ ユーザーがYouTubeアップ → URL取得
+2. tracks.ts の3曲に links.youtube を追記（ブランチ上で）
+3. scripts/convert-audio.sh に3曲追加 → 実行 → upload-audio.sh で R2 アップ → 200確認
+   - claude-code/08-unplugged / codex/09-cypher / claude-code/09-mic-check
+4. PR作成 → マージ → デプロイ確認（/albums/claude-code-vs-codex が200）
+5. アルバム告知ツイート（アルバムカバー画像 or 動画添付、休止告知込み）
