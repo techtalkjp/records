@@ -1,0 +1,15 @@
+Model: gemini-3.1-flash-image (generate-cover.ts multi-turn 16:9, then crop 1:1)
+Character reference: content/artists/codex/images/reference.jpg
+
+手法: 16:9 を先に生成し、crop-square.py --hpos 0.42 で 1:1 を切り出し
+
+Turn 2 scene prompt (16:9, 採用テイク w05):
+Same person, identical face, same hairstyle and beanie, same outfit: oversized black hoodie under the distressed blue denim vest, layered silver chains, gold watch.
+A 16:9 aerial photograph taken from DIRECTLY OVERHEAD at 90 degrees — a perfect nadir drone view, camera pointing straight down at the ground. Night. On dark wet asphalt, a single streetlight casts one bright circular pool of warm light. Inside the light circle, five people stand in a loose ring for a freestyle rap cypher. Because the camera looks straight down, ONLY the tops of heads and the shoulders are visible — no faces visible at all. EXACTLY ONE person wears an olive-green knit beanie and a blue denim vest: him. Directly next to him, shoulder to shoulder, the top of a head with a matte dark buzz cut — dense espresso-brown short hair, no shine, clearly hair not bald skin — on a man in a black nylon bomber jacket. The other three show only dark baseball caps and raised hoods. One arm reaches into the center of the ring holding a single microphone; one thick black rubber mic cable runs from the microphone across the asphalt and out of the light circle — the only cable in the image. Outside the light circle, near-black asphalt with faint painted parking lines and a storm drain. Long soft shadows radiate outward from the figures. Ring and light circle near frame center so a square crop also works. PHOTOREALISTIC natural photographic look, 35mm, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. No text, no watermarks.
+
+反省メモ（5テイク）:
+- take1: 構図完璧だがClaude Code不在 → 隣り合わせで追加する方針に（歌詞「隣り合うサイファー」）
+- take2: 坊主頭がスキンヘッドに見える（ハゲすぎ）
+- take3: Codexが2人に複製される事故 →「EXACTLY ONE person wears...」で解消
+- take4: カメラが斜めになり顔が見えて破綻、ケーブル散乱 →「perfect nadir, 90 degrees, no faces visible at all」「the only cable in the image」で解消
+- 俯瞰構図はシリーズ初。2キャラ同時登場は「顔を見せない構図」で参照画像問題を回避するのが正解

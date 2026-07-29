@@ -111,3 +111,21 @@ YouTube用は字幕を動画に焼き込まない。SRTファイルはYouTube側
 2. タイミングや字幕内容に問題があればSRTを修正→validate→再生成
 3. OKが出たらYouTube用（16:9）も生成
 4. 複数曲の場合は1曲ずつこのサイクルを回す
+
+## トラブルシューティング: Whisperの幻覚（2026-07-29 サイファー/マイクチェックで確認）
+
+スクラッチ音・強いビートの曲で、whisper.sh（medium モデル）が全編「me」「Hah」等の幻覚を出すことがある。その場合は large-v3-turbo ＋ `--condition-on-previous-text False` で直接実行する:
+
+```bash
+uvx --from mlx-whisper mlx_whisper "<トラック>/source/track.wav" \
+  --language ja -f json -o "<トラック>/subtitle" \
+  --model mlx-community/whisper-large-v3-turbo \
+  --word-timestamps True --condition-on-previous-text False
+```
+
+- large-v3-turbo 単体でもヴァース間の幻覚が残ることがある。`--condition-on-previous-text False` の併用が効く
+- Suno がフレーズをまたいで歌う場合、セグメント境界が歌詞の行境界とズレる。SRT化の前に該当区間の word timestamps で行境界を確定させる
+
+## 再生確認の注意
+
+同名ファイルを再生成した時は、開きっぱなしのプレイヤーで再生すると途中から無音になる等の壊れた再生になる（上書きのため）。プレイヤーを閉じて開き直してもらう。

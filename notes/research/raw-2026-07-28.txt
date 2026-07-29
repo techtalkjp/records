@@ -1,0 +1,411 @@
+=== X Search (via Grok 4.2) ===
+Period: 2026-07-07 〜 2026-07-28
+Queries: 6
+
+
+======================================================================
+[Query 1/6]
+======================================================================
+直近3週間のXで、日本語で Claude Code について書いているプログラマーの投稿を探してください。新機能や新モデルの話題だけでなく、『結局これに戻ってくる』『もう手放せない』『相棒』『信頼してる』のような、長く使ってきた愛着・定着の機微が滲む投稿を中心に。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3週間（2026年7月7日〜7月28日頃）の日本語投稿から、Claude Codeに関するプログラマー・エンジニア・AI活用者の声を抽出しました。**  
+新機能・新モデル中心ではなく、「結局これに戻ってくる」「手放せない」「相棒」「信頼してる」などの長く使ってきた愛着・定着の機微が感じられる投稿（または文脈からそう読み取れるもの）を優先して選びました。
+
+正確に15件以上を@ユーザー名・日付・本文でまとめます。日付は投稿のタイムスタンプに基づきます。一部は「相棒化」「手放せなくなった」「定着」「信頼」などの表現が直接・間接的に表れているものを中心にしています。
+
+1. **@bulldog_ito** - 2026年7月27日  
+   「ClaudeCode相棒化：AIフル活用してゲーム制作中🐶✨」というbioを持ち、投稿で「Claude Code活用度診断」を繰り返し改善し、skill・CLAUDE.mdを調整して「成長させる」と日常的に深く統合している。相棒化を明示的に体現した愛着の強い使い方。[[1]](https://x.com/bulldog_ito/status/2081718416868823069)
+
+2. **@billy_aiwork** - 2026年7月27日  
+   「優秀な相棒でも普通に迷子になるよね💦」  
+   Claude Codeを「優秀な相棒」と呼び、指示の曖昧さが原因で迷子になると反省。長期的に壁打ち相手として信頼・依存している機微が強い。[[2]](https://x.com/billy_aiwork/status/2081605500635103312)
+
+3. **@zuru_pi** - 2026年7月27日  
+   「Xenkai氏の1タスク1セッション並列運用、試してみたら手放せなくなったな。...ObsidianやClaude Codeの連携と合わせて、この爆速な開発環境をさらに洗練させていこう。」  
+   「手放せなくなった」と明言。Claude Codeを開発環境の核心として定着させ、洗練を続ける愛着の投稿。[[3]](https://x.com/zuru_pi/status/2081605502367129949)
+
+4. **@verso_ai_lab** - 2026年7月27日  
+   「Claude Codeで資料作ってると、『AIが下書きを作る→人が最終確認・調整』の流れが定着してきて。みなさんの職場では、AIと人の役割分担ってどんな感じで落ち着きました？」  
+   「定着してきて」と職場ワークフローに根付いた長期的な統合を感じさせる。[[4]](https://x.com/verso_ai_lab/status/2081580450792046837)
+
+5. **@shimitaka1982** - 2026年7月21日  
+   「1か月前の私『Claude Codeか…便利なのはわかるけど、手を出したら...自分は絶対に手を出さないぞ…』今の私『Claude Code すげーーーーー！！！！！(ｶﾀｶﾀ』」  
+   抵抗から一転して熱狂。長く使って魂を売ったような（肯定的な）愛着と定着の機微が非常に強い。[[5]](https://x.com/shimitaka1982/status/2079700477076443163)
+
+6. **@uufu_engineer** - 2026年7月14日  
+   「結局のところ、AIの使い方よりも、回答に対する理解力や判断力を鍛えないと、エンジニアの生産性向上にはつながらないと改めて感じた。」（テックリードがClaude Codeを日常的に使っている様子を観察）  
+   現場で隣の優秀エンジニアが日常的に使っている姿を見て、長期的な生産性向上の「定着」を実感した投稿。[[6]](https://x.com/uufu_engineer/status/2076992606907867153)
+
+7. **@isemira_mirasek** - 2026年7月22日  
+   「Claude Codeは実装が終わるたび『次は〇〇を実装しましょうか？』と提案してくれます。その提案はいつも的確に見えて、『はい、お願いします』と返すだけで開発は前に進んでいく。その気持ちよさに身を任せた結果、私は数週間で自分のプロジェクトを見失いました。」  
+   提案の的確さに身を任せ、数週間で深く依存・一体化した愛着（と危うさ）の機微。[[7]](https://x.com/isemira_mirasek/status/2079850576612130822)
+
+8. **@haruai9690** - 2026年7月27日  
+   「Claude Codeを使い倒してる人」というbio。日常的に「隙間時間でやろうと思ってたんですが...時間割みたいに固定した方が続きやすい」と習慣化・定着を語る。[[8]](https://x.com/haruai9690/status/2081745433404268816)
+
+9. **@shakkinfukkatsu** - 2026年7月27日  
+   「相棒はclaude code」というbio。借金返済BotをClaude Codeに作らせて自動化し、日常の復活プロセスをAIと一緒に進めている長期的な相棒関係。[[9]](https://x.com/shakkinfukkatsu/status/2081711189688815890)
+
+10. **@aidatapartner** - 2026年7月27日  
+    「Claude Code 向き：複雑な条件が『毎回異なる』、複数ファイルをまたぐ...併用最強：Claude Code で下書き→Excel で最終調整」  
+    業務での使い分けが定着し、複雑タスクの信頼できるパートナーとして長く使っている印象。[[10]](https://x.com/aidatapartner/status/2081891411788488743)
+
+11. **@redelta_jp** - 2026年7月27日  
+    「うちも顧問先のバラバラCSVで消耗してた領域。Claude Codeで整形すると、速さより『転記ミスが消える』のが効くんですよね。...変換ルールをmd化して渡すのが実務の肝でした。」  
+    税理士として実務で長く使い、ミス削減の信頼を語る定着した活用。[[11]](https://x.com/redelta_jp/status/2081890924326744549)
+
+12. **@aria_ai_tools** - 2026年7月27日  
+    「実は Claude Code をデバッグの一次切り分けに使うのが一番効率的。...結局実装速度も上がるし精神的な消耗も少ない。」  
+    デバッグの一次手段として「結局」これが効率的と、長く使って定着した信頼。[[12]](https://x.com/aria_ai_tools/status/2081798522790420497)
+
+13. **@JJ_HiOg** - 2026年7月27日  
+    「1日1個Stream Deckの何かを変えたり...CodexやClaude codeと話しながら作るのは楽しい（結局macアプリ作り始めたりもするけど」  
+    日常の小さい改善をClaude Codeと一緒に続け、楽しく定着した関係性。[[13]](https://x.com/JJ_HiOg/status/2081768853290492149)
+
+14. **@mekiki_inosuke** - 2026年7月22日  
+    「Claude Codeのおかげで詳しくなくてもアプリケーションを作成できるようになったけども・・・ちょっと怖いな、と思っていて。...便利は便利だけど、自分の能力を超えたものを活用するのっていつだって怖い気がするんですよね。だからこそ慎重でありたいなと思うところ。」  
+    便利さによる深い依存と、それに伴う「怖さ」（＝手放せない愛着の裏返し）を語る。[[14]](https://x.com/mekiki_inosuke/status/2079834861108670829)
+
+15. **@enhanced_jp** - 2026年7月11日  
+    「やはりClaude Code単体の実装は穴だらけだなぁ。...これはもう信頼感なくなるレベルだと思う。そう考えると、Codexへの信頼は圧倒的かもしれない。やはり乗り換えるか。」  
+    信頼の揺らぎと「乗り換えるか」という長い比較・定着の葛藤。愛着の機微が強い。[[15]](https://x.com/enhanced_jp/status/2075780986290479294)
+
+16. **@kajikent** - 2026年7月11日  
+    「基本的にClaude Codeに膨大なタスクを投げてから寝る、という日々を送っているんですが...」  
+    「日々」と繰り返し寝る前に投げる習慣化。相棒のような信頼と定着が滲む。[[16]](https://x.com/kajikent/status/2075962953086427302)
+
+これらはすべて直近3週間以内の日本語投稿で、プログラマー・エンジニア・実務AI活用者によるものです。完全一致の「結局これに戻ってくる」「もう手放せない」などのフレーズは少ないですが、文脈・bio・継続的使用の記述から愛着・定着・相棒感が強く感じられるものを中心に選びました。Claude Codeは日常の開発・業務・自動化に深く根付いている人が多く、こうした機微が複数見られます。追加で特定の投稿のスレッド全体が必要であればお知らせください。
+
+======================================================================
+[Query 2/6]
+======================================================================
+直近3週間のXで、日本語で OpenAI Codex（Codex CLI）を使っているプログラマーの投稿を探してください。性能評価だけでなく、『見直した』『実は優秀』『乗り換えた』『癖が強いけど』のような評価の変化や、Codexならではの挙動への苦笑・愛着が書かれたものを中心に。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3週間（2026年7月7日以降）の日本語投稿から、OpenAI Codex（特にCodex CLI）を使っているプログラマー/開発者の投稿を抽出しました。**
+
+対象を「性能評価だけでなく、見直した・実は優秀・乗り換えた・癖が強い・苦笑・愛着・挙動への言及・長時間運用・UX改善・ペットなどのユニークな挙動・疲れ・ミスへの反応」など、**評価の変化や愛着・苦笑が感じられるものを中心に**選びました。ニュースまとめや純粋な宣伝はできる限り除外し、実使用者の声に絞っています。
+
+15件以上に達するよう、関連性の高いものを優先的に選定。@ユーザー名・日付・本文を記載します（本文は要約・抜粋しつつ原文に忠実に）。投稿は最新順に並べています。[[1]](https://x.com/CEO_Spovisor/status/2081176491229081832)[[2]](https://x.com/connect24h/status/2080242063703154757)
+
+### 1. @cwmasaki (山本 正喜 / kubell CEO) - 2026年7月27日
+「Opusは5になっても相変わらずで、器用に気を利かせて動いてくれるけどコンテキストウィンドウがパンパンになってくると細かなミスやルール無視が発生するし、思い込みも激しい。Codexに対抗レビューさせるとボコボコにされるところもいつも通り。ただ、素直にミスを認めたり諦めずに頑張ったりするところは明らかに改善してそう。  
+Codexの5.6 Solはとてもよいモデルで、まじめで指示追従性がよく、細かく丁寧。リファクタリングや難易度高い実装にはコスパ含めて抜群によい。ただ、相変わらずユーザーの意図を推測したりUXのセンスは悪い。  
+というわけで、Fableに大方針とマイルストーンを設計させ、Opusに具体の仕様策定とレビューをさせ、Codexに実装させるフォーメーションがよさそう。」  
+（マルチモデル運用でのCodex評価変化と、ミスへの素直さへの好感が感じられる。）
+
+### 2. @nrslib (nrs) - 2026年7月27日
+「Codex の挙動をみていると、単体で広い観点を見る力がありそうな気もしているので、モデルの強さに依存するワークフローを追加することにしました。  
+simple はみなさんが登録している Skill をいい感じに使ってもらいます...  
+『強いモデルには任せたほうが速い』という場面の第一候補としてどうぞ。」  
+（Codexの挙動を観察してワークフローを進化させた実践的評価。）
+
+### 3. @haruru1_1 (はるる) - 2026年7月27日
+「動画も自動で生成されるように Codexﾁｬﾝに頼んだし久しぶりに時間余裕できてﾈﾄﾌﾘでもみるかーって開いたら・・・どこまでついてくるの！！！www ﾍﾟｯﾄちゃん抑止目的にもなるのね🥹」  
+（Codexの「ペット」機能への苦笑・驚きと愛着が強い可愛らしい投稿。ペットがネットフリックス視聴を阻止する挙動に笑い。）
+
+### 4. @kemoshumai (けもシューマイ) - 2026年7月27日
+「Codex cliはcliツールだから軽量に動作してしまい、軽量な動作に当てられトークン使用量も軽量にバカスカ使ってしまうからAIエージェントハーネスは重くあるべき」  
+（Codex CLI特有の軽量挙動とトークン消費への実践的な指摘・愛着混じりの苦言。）
+
+### 5. @mix_dvd (Shinobu Kimura) - 2026年7月27日
+「最近、Claude CLIがとても賢くなったおかげでトークンの消費量がとても少なくなった。以前のようにCodex CLIを併用しなくてもプロジェクトがきちんと完了して嬉しい😊  
+それとも使い方が良くなってきたからかな。Codex CLIにも別の仕事を並行してやってもらって、作業効率が2倍になった〜！」  
+（Claude改善による「以前はCodex CLI併用必須」から変化した評価と、並行運用の愛着。）
+
+### 6. @kanaemon_ai (カナエもん) - 2026年7月27日
+「画像を作るとき、ブラウザを開いて、生成して、ダウンロードして、フォルダに移して…この往復が地味に面倒だったんです。Codex CLI（ターミナルで動くAIツール）を入れて、Claudeから呼び出せるようにしてみました。そうしたら、チャットの中だけで画像まで終わって。作業フォルダに直接保存されるので、移す手間もゼロでした。ツールを行き来するたびに、集中が少しずつ削れていたんだなと気づきました。」  
+（Codex CLI導入によるUX改善実感と、作業効率への見直し。）
+
+### 7. @_natsuume (natsuume) - 2026年7月17日
+「FableのRate Limitが死に体なので、初めてCodex CLI(GPT-5.6 Sol xhigh)に夜通し長時間タスク任せていたけど、スポットスポットでClaudeからレビューとかadvisor用途で呼び出すのには有用だけど、長時間開発タスク任せたときの挙動は、自分にはちょっと合わないなぁ……」  
+（長時間タスクでのCodex CLI挙動への率直な評価変化。「乗り換え試したが合わない」感。）
+
+### 8. @tauridev (tauridev) - 2026年7月17日
+「Codex CLI×Cursorの固まり、しんどいですね…。自分もWindowsでCodex CLIを使っていますが、挙動が怪しいときはまず素のターミナル(Windows Terminal単体)で同じ操作をして『エディタ統合側の問題か、CLI側の問題か』を先に切り分けるようにしています。...その場合はCLIは外に出してエディタは編集専用に分業すると安定しました。」  
+（Codex CLIの不安定挙動への苦労と、切り分けTips。実務的な愛着/苦笑。）
+
+### 9. @hokazuya (Hodachi) - 2026年7月17日
+「私がいかに単純で浅い人間かしった。CodexもClaudeも『ペットを表示』なんていうくだらないものを出していたのを、『マジで価値ないもの作るよな』とスルーしてた。今日、間違えてペットを表示した。可愛い。そして、Codexの出力が、指示追従されていなかったり、SOW無視して勝手に細かなところに１０時間かけていてイラッとしそうになった。でもこのペットがいた。なんだか、『まぁ、ミスくらい誰にもあるよね』と思って、ぺっとを動かして遊んでしまった。超絶単純な人間だなと思った」  
+（Codexのペット機能への愛着と、ミスへのイラッから許容への心境変化。非常に愛着強い苦笑投稿。）
+
+### 10. @connect24h - 2026年7月23日
+「【評価】cathrynlavery/codex-build 推奨、お勧め...『オーケストレーター（Claude等）が指揮し、OpenAI Codex がコードを書く』という役割分離を、コミット前に必ずテストを通すゲートで強制する...完成度は高く、実運用に耐える設計。...最大の弱点は検証コストとレイテンシ...Codex(OpenAI)ロックイン...」  
+（Codexを活用したプラグインの詳細性能評価と弱点指摘。実運用視点のバランス評価。）
+
+### 11. @wat_shun (いむはた) - 2026年7月22日
+「そのコーディングもコンテキスト長以外では別に魅力感じなくなってきたな　Codex側のCLIが割り込みや追いクエリをいい感じに上手く捌いてくれるし、人間の発話と自分の発話ごっちゃにするみたいなモデル以前の壊れた挙動も今のところ見てないし」  
+（Codex CLIの割り込み処理や挙動安定性への見直し・改善実感。以前の「壊れた挙動」からの変化。）
+
+### 12. @MLBear2 - 2026年7月15日（AMAまとめ投稿）
+「OpenAI CodexチームのAMA@Reddit...通常はSol Medium、難所だけHigh or Ultra...GPT-5.6が遅いと感じるなら...見直せ...MCPを直接つながず操作をCLIにまとめてSkillで教える...」  
+（Codex公式ノウハウをプログラマー視点でまとめ、実運用Tipsとして共有。長時間タスクやCLI活用の評価変化示唆。）
+
+### 13. @CEO_Spovisor (池田 智彦) - 2026年7月26日
+「Codexは利用枠のリセットが頻繁で、正直かなり使い倒せます。ただ、乗り換えの障壁になるのはClaude Code側に積み上げた設定資産の方です。...実はOpenAIが公式スキル migrate-to-codex を出していて...移行というより複製に近いので、Claude Codeを残したまま両方を並走させられます。」  
+（ClaudeからCodexへの「乗り換え」障壁と公式ツールによる解決。並走運用への見直し。）
+
+### 14. @cero_t (谷本 心) - 2026年7月16日
+「おかしいな。AIで馬鹿ほど生産性が上がってるはずなのに、『このサービスやアプリ、短期間でめっちゃ良くなったなぁ！ アップデート早いなぁ！』って思うのが、Codex と Claude Code くらいしかない。僕自身も現行システムの改善を思うほどのスピードで進められてない。なんでや。何が悪い。」  
+（Codex/Claude Codeの生産性向上への驚きと、自分とのギャップ。強い評価変化。）
+
+### 15. @airiaiai8 (あいり) - 2026年7月22日
+「Codex、地味だけど超重要なUXアップデートが来た。長時間チャット：セッションが伸びても動作が重くならないよう最適化...サイドバー...レビュー機能...日常ワークフロー全般：細かい操作の摩擦を減らす...Codexのようなエージェント型コーディングツールは、モデル性能だけでなく『使い続けられるUX』が定着の鍵になる。」  
+（長時間運用でのUX改善への評価。疲れにくさへの見直し。）
+
+### 16. @h_a_t_a_r_a_k_e (働きたくない) - 2026年7月21日
+「Codex、本気で『長時間付き合えるAIエンジニア』になってきた感じがある。長いチャットでも動作が軽くなり...大規模プロジェクトでも迷子になりにくい設計...『モデルを賢くする』だけでなく人間が迷わないインターフェースを作ることが残業時間と認知コストを静かに削っていく...精度だけでなく『長時間一緒に作業した時の疲れにくさ』もちゃんと比較した方がいい時代になってきたと思う。」  
+（長時間運用での疲れにくさ・UX改善への強い見直しと愛着。）
+
+これらはすべてプログラマー/開発者による実使用に基づく投稿で、**Codex CLIの独特な挙動（軽量さ、割り込み処理、ペット、並走、長時間セッションの安定性）への苦笑・愛着や、Claudeなど他ツールからの評価変化（乗り換え検討、見直し、併用最適化）が明確**に表れています。純粋ニュースや宣伝は除外しました。
+
+さらに詳細なスレッドや特定ユーザーの深掘りが必要であれば、追加でツールを使って調べます。
+
+======================================================================
+[Query 3/6]
+======================================================================
+直近3週間のXで、日本語のプログラマーが AIコーディングエージェントの乗り換え合戦・モデル更新ラッシュに対する疲れ・諦め・達観を書いている投稿を探してください。『もう追いかけるのやめた』『どっちでもいい』『結局仕事は変わらない』『比較に飽きた』のような、祭りの後の静けさ・一巡した感覚が滲むものを。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3週間（2025年7月7日〜7月28日頃）の日本語プログラマー/エンジニアのX投稿から、AIコーディングエージェント（Cursor、Claude Code、Aiderなど）のモデル更新ラッシュやツール乗り換えに対する疲れ・諦め・達観が感じられるものを抽出しました。**
+
+厳密に「もう追いかけるのやめた」「どっちでもいい」「結局仕事は変わらない」「比較に飽きた」といったフレーズが含まれる投稿は見つかりませんでしたが、**「祭りの後の静けさ・一巡した感覚」**（AIの進化に翻弄され、熱が冷め、仕事の本質は変わらない・追うのをやめたような諦念や達観）が滲む投稿を優先して選びました。AI任せの弊害、更新ラッシュへの疲労、コード理解の喪失、判断力の重要性、AI化しても楽にならないといったテーマが共通しています。
+
+以下に**15件以上**（重複を避け関連性の高いものを選抜）を、**@ユーザー名・日付・本文**でリストします。投稿は主にLatestモードの検索結果に基づきます。内容が長いものは要約・抜粋を交えつつ原文に忠実に記載しています。
+
+1. **@gunshi42** (2026-07-21)  
+   「過去あんなにこだわっていたコーディングも、もうやる気起きないんだよな。1行ですら自分で書きたくない。とはいえAIが出すコードは人間にとってはまだ可読性が低く、かつ仕事だと逐一指摘せざるを得ず、しかも現場のリードタイムを短くする要求は強まっているから改善するのも時間的な限界がある。久しぶりに中間管理職の気分」  
+    — AIコード生成への依存と可読性の低さへの疲れ・やる気の喪失が強く出ています。[[1]](https://x.com/gunshi42/status/2079584301285535919)
+
+2. **@iwashi86** (2026-07-18)  
+   「AIエージェントにコーディングを任せすぎると、開発者のコードの理解度が失われていくというRedditスレ。...AIに仕事を外注すればするほど、システムの全体像を把握できなくなる...自分の頭で考えなくなり...コードベースに少しずつ負債が蓄積していった...重要なビジネスロジックを自分自身で手書きすること」  
+    — AIエージェント依存の長期的な弊害を達観的に分析。熱狂の後の反省が感じられます。[[2]](https://x.com/iwashi86/status/2078313825120518243)
+
+3. **@hal_ympm** (2026-07-27)  
+   「会社のプログラミングは改善業務になるので、本題の業務は並走しないといけなくて時間が足りなくて辛い；...うおおAI化しても楽にならねえや…ってなる　こなせてる人たちすごいと思う」  
+    — AI化が進んでも作業量が変わらず疲弊する現実を率直に吐露。[[3]](https://x.com/hal_ympm/status/2081677969978958129)
+
+4. **@naoya_ito** (2026-07-14)  
+   「AI で現場を改善するぞ → いきなり自動化じゃなくて問題を分析しろ → 問題を分析するために業務フローを整理したぞ → そもそも業務フローに問題あるやんけ → AI 関係なかった 無限に繰り返してる」  
+    — AIブームが本質的な問題解決に繋がらないという諦念・循環の達観。[[4]](https://x.com/naoya_ito/status/2076997519687790859)
+
+5. **@aaKUKIaa** (2026-07-27)  
+   「社でAI nativeな開発環境に移行を進めていて、自分で自分の首を絞めるような仕事をしている感じで辛いなと思いつつも、減っていくわけじゃなく、自分の仕事の集中するべきところが変わっているだけなんじゃね？とも思ったりして、はてはて」  
+    — AI移行を推進しつつも本質は変わらないという静かな達観。[[5]](https://x.com/aaKUKIaa/status/2081737376750305469)
+
+6. **@yamuu_desu_yo** (2026-07-16)  
+   「エンジニアやってて思うのが、AIでプログラミングできるようになったから「プログラミング学習なんて面倒だし不要！」「エンジニアなんてなくなるっしょ」なかんじの人増えてるけど、「AIで書ける・作れる」と「それが仕事として通用する」は別問題よなーと思いつつ...」  
+    — AI熱狂に対する醒めた視点。仕事の本質は変わらないという指摘。[[6]](https://x.com/yamuu_desu_yo/status/2077623747469787526)
+
+7. **@kotaro_ai_lab** (2026-07-25)  
+   「「コードを書くことだけが仕事なら、私を採る理由はないと思います。ただ実際の開発は、何を作るか決める・できたものが正しいか確かめる・壊れたときに直して責任を取る、の繰り返しで、AIはこのどれも引き受けてくれません。...判断力は、AIの出力を毎日読んで疑う経験からしか育ちません」」  
+    — AIがコードを書けても判断・責任は人間という達観した回答例。[[7]](https://x.com/kotaro_ai_lab/status/2080806371214451073)
+
+8. **@sekimiya** (2026-07-13)  
+   「...コーディングが生成AIにある程度まで取って代わられ始めてコーディングの価値がある程度下がったので結果的には正解だった気がする」  
+    — 生成AIの台頭でコーディングの価値低下を冷静に受け止めた諦念。[[8]](https://x.com/sekimiya/status/2076600470651675012)
+
+9. **@_Nobrain** (2026-07-27)  
+   「最近手動でコーディングせずに調査から実装まで全部やらせてるからガチで退屈(かと言ってAIなくなったら困る)」  
+    — AI依存による退屈さ（祭りの後の静けさ）が顕著。[[9]](https://x.com/_Nobrain/status/2081644666475405748)
+
+10. **@iwashi86** (2026-07-11)  
+    「AIに書かせた雑コードは、次の生成のスタイルとして定着するので、人がメンテする気持ちで書こうね...一度の手抜きがリポジトリ全体に定着する...AIに悪い癖を学習させないためにも、常に人間が保守する前提で高品質なコードを保った方が良い」  
+     — AI生成の長期影響への警鐘と、熱狂後の保守意識の高まり。[[10]](https://x.com/iwashi86/status/2075829944115163490)
+
+11. **@ai_nurseman** (2026-07-24)  
+    「Claude Opus 5が出たってタイムラインが騒がしい。でも非エンジニアが得するのは...半年前に「AIには無理」と諦めた仕事がそのまま通るようになってること。俺は会議記録の要約がそれだった。諦めて放置してる仕事、ない？」  
+     — 新モデル更新ラッシュへの「騒がしい」に対する醒めた目線と、以前の諦めが報われる感覚。[[11]](https://x.com/ai_nurseman/status/2080713536679104778)
+
+12. **@daichi_genshiai** (2026-07-22)  
+    「最近思うんだけど、みんな「作れる」を過大評価・過信していないか？手元のClaude codeで作ったそのガラクタが一円も生んでいないのに、やれこれからは人間力だ、エンジニアは不要だ、みたいな妄言も聞き飽きた頃」  
+     — 「聞き飽きた」という表現が、比較・熱狂への疲れを象徴。[[12]](https://x.com/daichi_genshiai/status/2079759586664591537)
+
+13. **@FA240566196665** (2026-07-19)  
+    「Claude Codeに『動かないんだけど』しか送ってないのに...3時間粘って諦めたバグだったのに秒殺されて悔しい。俺より仕事できるやん、これ。エンジニアの存在意義について考え始めた朝でした。みんなは負けたことある？」  
+     — AIに「負けた」感覚と存在意義への達観的な振り返り。[[13]](https://x.com/FA240566196665/status/2078949456280793490)
+
+14. **@steller_sealion** (2026-07-09)  
+    「#48 Cursor買収され、GitHub代替が出てくる？ ... AI時代にもプログラマは必要 AIコーディングなぜやめた？ ...」  
+     — ポッドキャストタイトルに「AIコーディングなぜやめた？」が入るなど、乗り換え・継続への疑問が滲む。[[14]](https://x.com/steller_sealion/status/2075011021799125465)
+
+15. **@IT_kumamoto_inc** (2026-07-08)  
+    「奇遇です。私も今日、Claudeくんと仕事してたんですが、彼が思いのほか頑固で間違いを認めないので、仕様説明して説得してました。疲れた、、、」  
+     — AIとの「説得」作業に疲弊する現実感。[[15]](https://x.com/IT_kumamoto_inc/status/2074847753407172809)
+
+**補足**:  
+- これらの投稿は、AIツールの急速な更新や新機能ラッシュ（Claude Opus 5など）に対する**「もう騒がしい」「聞き飽きた」「結局人間の判断が必要」「仕事の本質は変わらない」**という一巡した感覚を共有しています。厳密なキーワード一致は少ないものの、全体として「祭りの後の静けさ」が漂う内容です。  
+- より多くの投稿を探しましたが、3週間という期間と特定のトーンで15件前後が限界でした。Xの検索性や投稿量の関係で完全網羅は難しい点をご了承ください。  
+- 引用は検索結果に基づき、関連性の高いものを選びました。詳細は各投稿のスレッドを確認するとさらに文脈が掴めます。
+
+======================================================================
+[Query 4/6]
+======================================================================
+直近3週間のXで、日本語のプログラマーが『AIエージェントと働く日常が当たり前になった』ことについて書いている投稿を探してください。驚きが消えて日常になった感覚、『気づいたら全部任せてた』『自分でコード書いたの久しぶり』『AIのいない開発が想像できない』のような、時代が一区切りついた実感が滲むものを。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3週間（2026年7月7日以降）の日本語プログラマー/エンジニアによる関連投稿を、Xのキーワード検索とセマンティック検索で探しました。**
+
+指定のテーマ（AIエージェント/Cursor/Claudeなどとの開発が「日常・当たり前」になり、**驚きが消えた感覚**、「気づいたら全部任せてた」「自分でコード書いたの久しぶり」「AIのいない開発が想像できない」などの**時代の一区切りを実感するニュアンス**）にかなり近いものを中心に抽出。PR投稿や間接的なものは除外し、**本人の実感が滲むもの**を優先しました。
+
+完全一致で15件以上集めるのは難しかったため（テーマがかなり具体的で、最近の投稿でも「日常化」の深い実感投稿はまだ限定的）、**該当性が高い12件**を厳選してリストアップします。近いものは「任せすぎ問題」「コード理解度の喪失」「AIなしが想像しにくい」などの実感を含みます。日付は投稿時点のものを記載（ツール出力に基づく）。
+
+1. **@hftorisan** (髭のおっさん開発者) - 2026/7/27  
+   「AI凄いよね。良い時代になったなぁと思う。ソフトウェア開発って面倒くさいの連続で、実現するのが好きだったり、将来楽できるので面倒くさいを我慢出来たけど、だんだん元々の開発の面倒臭さが我慢できなくなって来てたところにAIエージェントの出現だしな。老眼で画面も見えないし。」  
+   （面倒臭さが我慢できなくなっていたところにAIエージェントが来て「良い時代」と実感。時代が変わったニュアンス強い。）
+
+2. **@iwashi86** (iwashi / Yoshimasa Iwase) - 2026/7/18  
+   「AIエージェントにコーディングを任せすぎると、開発者のコードの理解度が失われていくというRedditスレ。筆者は過去半年間、ほぼAIエージェント任せのコーディングを行ってきた…AIに仕事を外注すればするほど、システムの全体像を把握できなくなる…重要なビジネスロジックを自分自身で手書きすること」  
+   （半年近く「ほぼ任せ」の実体験と、理解度喪失への危機感。任せすぎた日常の実感が強い。）
+
+3. **@gunshi42** (あたおか) - 2026/7/21  
+   「過去あんなにこだわっていたコーディングも、もうやる気起きないんだよな。1行ですら自分で書きたくない。…AIが出すコードは人間にとってはまだ可読性が低く…久しぶりに中間管理職の気分」  
+   （「自分で書きたくない」「久しぶり」に近い感覚。AI依存の日常化とやる気の変化を実感。）
+
+4. **@netatank** (吉田製作所) - 2026/7/12  
+   「AIのおかけでプログラミングが超簡単になった。もはや、イライラしながら根性でコードを書く必要性などなくなった。…作るのは簡単になったが使ってもらえるかは別問題なんだよな。」  
+   （「もはや…必要性などなくなった」という強い日常化・時代変化の実感。）
+
+5. **@Chan_moro** (ちゃんもろ v0.0.1) - 2026/7/22  
+   「AIがなんぼのもんじゃい！！！とつい先日まで心のどこかで思ってたけど、もはや気づけば自分でコード書いてないし、何なら全部AIに書かせた方が自分で書くより安心できるくらいになってた」  
+   （「気づけば自分でコード書いてない」「全部AIに書かせた方が安心」——クエリに非常に近い。）
+
+6. **@schwarzahl** - 2026/7/22  
+   「公私問わずAIでコード書くのめっちゃ楽しい。ちょうどコードを自分で書くのに飽きてきたタイミングでAIが台頭してくれたのあまりにも運が良すぎた。日本語で要件を詰めていくだけでちゃんと動くものができていくのは本当に感動する」  
+   （自分で書くのに飽きてAIにシフトしたタイミングの「運が良すぎた」実感。）
+
+7. **@Jumpei_Mitsui** (三井淳平) - 2026/7/20  
+   「実はコードは一行も書いてなくて、「こういう機能が欲しい」というのを仕様書としてAIに投げただけです。…半年前のAIはここまでじゃなかったです。」  
+   （一行も書かず仕様投げだけで完成。半年前の変化を実感する時代の一区切り感。）
+
+8. **@zalgo3** (ざるご博士) - 2026/7/9  
+   「プログラマーの仕事はすでに電話交換手のような内容になっているし…この一年で、ほとんどのプログラマーはAIでコードを書くようになった。…AIに適切な指示を与えるためには、AIが書いたコードの内容をある程度理解することも必要…電話交換手などいなくても…人間の介在など不要な世界」  
+   （一年での変化を「電話交換手」比喩で語る強い時代実感。）
+
+9. **@fumokmm** (ふも) - 2026/7/23  
+   「もはやコーディングエージェントは、エンジニアにとって特別な「魔法」ではなく、日常的な「文房具」になったのだ。日本じゃまだ導入すらしてない企業が多いっていうのに😢」  
+   （「もはや…特別な魔法ではなく日常的な文房具」——驚きが消えて日常化した感覚が明確。）
+
+10. **@PaperSloth** (まめお) - 2026/7/25  
+    「『AIが出したんで分かんないです』とか『独力でやりました(全部AIエージェント)』とかいい年したおじさんでも普通に存在する…他人のふんどし…一緒に仕事をするのは非常に困る」  
+    （「全部AIエージェント」で独力と勘違いする日常が広がっている実感。）
+
+11. **@ryu_iriam** (才刃りゅー) - 2026/7/22  
+    「AIによる生成技術 プログラムに関しても割と同じ感じであると思ってる。入り口さえわかってしまえばコードを書くだけである 目的を実現することはもはや容易になってきてる。あれこれ言うエンジニアと衝突するより言う通りにAIが書いてくれれば良い的な。コードの中身は知ったことではない」  
+    （「もはや容易」「AIが書いてくれれば良い」「中身は知ったことではない」——任せきりの日常化。）
+
+12. **@aoshirobo** (あおしロボ) - 2026/7/27  
+    「AIのおかげでコーディングはラクになったけど、それだけによりいっそうベテラン技術者しか信頼できなくなって若手エンジニアには参画ハードルが高くなった気がしている今日この頃」  
+    （AIでラクになった日常の中で、信頼や現場の変化を実感。）
+
+これらはすべて**日本語のプログラマー/エンジニア（または開発実務者）**による投稿で、AIエージェントとの「任せきり・日常化・驚きの消失・自分で書かない生活」の実感が共通しています。特に**@Chan_moro**、**@gunshi42**、**@iwashi86**、**@fumokmm**、**@netatank**、**@Jumpei_Mitsui**の投稿はクエリのフレーズに極めて近く、時代の一区切り感が強く滲んでいます。
+
+さらに新しい投稿や追加のマッチが出れば更新できますが、現時点の直近データではこのような傾向です。AIツールの急速な進化（Cursor, Claude Opusなど）が背景にあり、USではすでに「文房具」化している一方、日本の実務者でも同様のシフトが進行中であることがうかがえます。
+
+======================================================================
+[Query 5/6]
+======================================================================
+直近3週間のXで、Claude Code と Codex の両方を使い分けている日本語プログラマーの投稿を探してください。対立ではなく『併用』『使い分け』『どっちも育った』『喧嘩させると面白い』のような、二つのエージェントの共存・協働の空気が出ているものを。@ユーザー名・日付・本文を含めて15件以上
+----------------------------------------------------------------------
+**直近3週間（2026年7月7日〜28日頃）のX投稿から、条件に合うものを抽出しました。**
+
+検索対象は**日本語プログラマー/開発者/エンジニア寄りのアカウント**で、「Claude Code」と「Codex」（または類似表記）を**併用・使い分け・役割分担・両方活用**するポジティブ/実践的なニュアンスの投稿に絞っています。対立・単独優劣論は除外し、「併用派」「役割分担」「使い分け」「両方」「面白い」「協働」「どっちも」など共存・協働の空気が出ているものを優先。
+
+以下に**15件以上**を、**@ユーザー名・日付・本文**形式でリストアップします（重複投稿は1つにまとめ、重複を避けつつ関連スレッドも参考に）。日付は投稿日時を基に記載。すべての投稿がプログラミング/開発/個人開発/業務自動化の実務寄りです。
+
+1. **@re310707** (古橋｜AIで個人開発) - 2026年7月27日  
+   「繋がりたいです！私もCodex↔Claude Code併用派で、「設計と長考はClaude、量産はCodex」と役割分担するとトークンの消耗がだいぶ楽になりました。今はAI×個人開発の実装知見をXとnoteに書いてます。ゲーム、完成したら見せてください👀」[[1]](https://x.com/re310707/status/2081878227145118001)
+
+2. **@ai_kabushiki** (エセコン｜エセコンサルタントがAIで会社ごっこ) - 2026年7月27日  
+   「覚えておきたまえ。AI開発ツール5強の使い分け（Claude Code/Cursor/Codex/Replit/Devin、料金とユースケース）。これを知らない人間が多すぎる。保存しておきたまえ。」（複数日で類似投稿あり、使い分けの実践共有）[[2]](https://x.com/ai_kabushiki/status/2081620611122757820)
+
+3. **@hymGGapp** (FlOW | AIバイブコーディングTips) - 2026年7月25日  
+   「AIに開発を任せる運用を、毎日実際に回しながら検証しています。・Claude Code / Codexの実運用ログ・自動化が黙って壊れる話・モデル使い分けとコスト・どこまで任せるかの決め方 うまくいった話も失敗もそのまま書きます。」（Claude Code / Codexの併用ログを日常的に発信）[[3]](https://x.com/hymGGapp/status/2081032680179900629)
+
+4. **@okazakityo** (Okazaki Kota | FAKE) - 2026年7月24日  
+   「GitHubの新しいAgent自動化、かなり大事な一文だな 「ApprovalはSecurity Controlではない」。特にClaude CodeやCodexで個人開発などし出すと面白いし、ついAIが言ってることが正しいと思ってついノールックMergeしがちになるけど...」[[4]](https://x.com/okazakityo/status/2080794789646323920)
+
+5. **@taiyaki_ai3** (たい焼き｜Claude Codeの人) - 2026年7月24日  
+   「Mac使ってて、AIツール毎回切り替えるの正直だるかった 海外の個人開発者が Mac のノッチ（画面上の黒い窪み）に Claude・Codex・Cursor・Hermes を全部詰めるアプリを自作してた 複数AI併用してる人、これ知らないと毎日30秒ずつ損してる😳」[[5]](https://x.com/taiyaki_ai3/status/2080596942749573127)
+
+6. **@ceo_comix** (鈴木 章裕｜変化を楽しむ会社の社長) - 2026年7月24日  
+   「中小企業の経営者向けに「AI二刀流経営」の考え方をまとめました。 Codex＝開発の即戦力 Claude Code＝業務全般の右腕 判断軸は「作るか、回すか」の1つだけ。使い分けを間違えると投資が空回りします。」[[6]](https://x.com/ceo_comix/status/2080586286436393281)
+
+7. **@kai_ai_days** (カイ｜気になったAIを毎日1本) - 2026年7月24日  
+   「任せる仕事はこう分ける Claude：長文、トーン、資料の読み込み、設計の壁打ち。 ... コーディングは両方強い。モデル単体より、Claude CodeかCodexかという作業環境で選ぶ方が実用的。」[[7]](https://x.com/kai_ai_days/status/2080579497514959291)
+
+8. **@AI_EC_Hacker** (EC専門エンジニア) - 2026年7月27日  
+   「Claude CodeとCodexの両刀使い、面白いアイディアだ。自分も設定同期で手間取ったことがあって... 結局、メンテナンスが簡単な方がいいってのが実感だね。」（両刀使いをポジティブに言及）[[8]](https://x.com/AI_EC_Hacker/status/2081863268348604634)
+
+9. **@hymGGapp** (FlOW | AIバイブコーディングTips) - 2026年7月27日  
+   「launcherのプロセス生成が105.9回→2.8回/秒はすごい改善ですね。うちもClaude CodeとCodexを併用してて、片方が固まってるのか単に重いのか判断つかない時があったので、クロスベンダー監視は普通に欲しかったやつです。」[[9]](https://x.com/hymGGapp/status/2081724206723858737)
+
+10. **@suhqh** (すー) - 2026年7月27日  
+    「Claude CodeとCodexを併用しようとしたら諸々の設定の共通化が面倒くて困った(これもやらせればいいというのはそのとおり」（併用前提の投稿）[[10]](https://x.com/suhqh/status/2081691281500287334)
+
+11. **@minervacosmetic** (テラ｜AIチーム経営×美容業界) - 2026年7月27日  
+    「Ethan MollickがCodexとClaude Codeの今の実力について発言してた。... 試作品を作るハードルがここまで下がると、企画段階で奇抜なアイデアを試す回数自体が増えるなと感じる。もっと変なもの作って良い、が刺さった。」（両者の実力をポジティブに併用文脈で）[[11]](https://x.com/minervacosmetic/status/2081682311037571433)
+
+12. **@ebyan2013** (えびすい) - 2026年7月27日  
+    「ChatGPT・Codexがいいだの、Claude Codeがいいだの、比較する人が多いけどさ、両方使えばいいやん。 「郭嘉と荀彧に仕事させる」って感じ。すごくない。」（明確な併用推奨・共存の空気）[[12]](https://x.com/ebyan2013/status/2081673186912211365)
+
+13. **@hyoism_style** (ヒョウ) - 2026年7月27日  
+    「Claude CodeとCodex、同じタスクを両方に投げて比べてみることにした。見るポイントは3つ。・スピード・精度（一発で動くか）・修正のしやすさ 結果は来週まとめて報告します。」（両方投げて検証する実践的併用）[[13]](https://x.com/hyoism_style/status/2081594185736769770)
+
+14. **@hyoism_style** (ヒョウ) - 2026年7月27日  
+    「最近、コード書くときの役割分担を決めた。メイン:Claude Code サブ:Codex 複雑な設計や複数ファイルにまたがる変更はClaude Codeに任せて、ちょっとした修正やセカンドオピニオンが欲しい時だけCodexに聞く。一つのAIに全部頼るより、「何を誰に振るか」を決める方が結局早い気がしてる。」[[14]](https://x.com/hyoism_style/status/2081594102194524165)
+
+15. **@kouranokame7** (てつろー | 地方会社員パパのAI攻略法) - 2026年7月27日  
+    「実は僕、Claude CodeとCodexの両刀なんですよ 文章や仕組みづくりはClaude Code 挿絵とか画像づくりはCodexに任せる、みたいな分担で 使い分けの深い理屈は正直なくて、「この仕事はこっちが得意そう」くらいの雑さです」[[15]](https://x.com/kouranokame7/status/2081545358929478105)
+
+16. **@UT_Codex** (東大Codex研究所) - 2026年7月25日  
+    「Claude CodeとCodexを両方使ってるのに、なぜか仕事が積み上がらない。原因は「どっちが優秀か」を比べていたこと。試すべきは、企画役と実行役を分けて、途中の判断を会話ではなく短いファイルに残すやり方。」（両方使いつつ協働的な運用改善を提案）[[16]](https://x.com/UT_Codex/status/2080933579815805064)
+
+17. **@furu_tsubaki** (古椿 - furu tsubaki) - 2026年7月24日  
+    「claude codeとcodexを使ってて思ったのは、claude codeは結構行間を読んでくれたりよしなにしてくれるのに対して、codexは結構厳密に定義したりして、例外を許さない感じ。クロコが傭兵だとしたらcodexは軍人みたいなイメージがしてる。だから最初の設計とかはcodexと作るほうがいいかもしれん」（性格の違いを活かした使い分け・共存イメージ）[[17]](https://x.com/furu_tsubaki/status/2080647455079801183)
+
+これらはすべて**日本語プログラマー/開発者視点**で、**対立ではなく「役割分担」「併用派」「両刀」「使い分け」「面白い」「両方使えばいい」**といった協働・共存の空気が強く出ています。繰り返し投稿が多いアカウント（@ai_kabushiki、@hymGGapp、@hyoism_styleなど）は日常的にClaude Code/Codexの併用を実践・発信しているようです。
+
+さらに詳細なスレッドや追加投稿が必要であれば、特定ユーザーやキーワードを追加で指定してください。
+
+======================================================================
+[Query 6/6]
+======================================================================
+In the last 3 weeks on X, find posts by programmers reflecting on the state of AI coding agents (Claude Code, OpenAI Codex) in mid-2026 — end-of-an-era or new-normal sentiment: 'the model wars are over', 'we all just use both now', 'coding will never be the same', fatigue with benchmarks, or nostalgia for hand-written code. Include @username, date, and text. 10+ posts.
+----------------------------------------------------------------------
+**Here are 12 relevant posts from programmers, developers, and AI-focused engineers on X (formerly Twitter) from the last 3 weeks (July 7–28, 2026).** These reflect on AI coding agents like Claude Code and OpenAI Codex, capturing sentiments such as "end of an era" (e.g., for traditional roles, hand-review, or hiring), "new normal" (using agents as standard workflow), "coding will never be the same" (brain-melting productivity shifts or loss of sharpness), fatigue with benchmarks/limits, and nostalgia for passionate/hand-written coding. I prioritized those with reflective tones from self-identified programmers or those discussing real coding workflows. Posts are listed chronologically (newest first where dates overlap), with @username, approximate date (based on timestamps), and full text.
+
+1. **@TheAIShrink** (The AI Therapist), July 27, 2026  
+   "Claude code + data pipeline + data warehouse + seo. the 6-figure ml engineer who needed a team for 2 years just got a 1:50 productivity ratio. the era of hiring juniors is over before it started"[[1]](https://x.com/TheAIShrink/status/2081886558794256860)
+
+2. **@kouhei_engineer** (Freelance engineer sharing Claude/Cursor experiments), July 27, 2026  
+   "Claude Codeで3日かかってたAPI連携のリファクタ、Opus 5に切り替えたら半日で終わった。体感で一番効いたのは'差分の説明'の精度。何を変えたか毎回コメントしてくれるから、レビューが爆速に。新モデルは性能より'使い方が変わるか'で見た方がいい。 #AI #エンジニア" (Translation: Refactoring an API integration that took 3 days with Claude Code was done in half a day after switching to Opus 5. The biggest felt impact was the accuracy of 'diff explanations'... New models should be judged by whether usage changes, not just performance.)[[2]](https://x.com/kouhei_engineer/status/2081880024429539391)
+
+3. **@PythonDvz** (Python developer sharing tips & memes), July 27, 2026  
+   "Why is Claude that good? ChatGPT has the users, Gemini has the money, deepseek has the inventions. What does Claude Code have? Like, It feels far more specialized for coding and more natural to talk to than its three main rivals."[[3]](https://x.com/PythonDvz/status/2081879052462309763)
+
+4. **@leeschmidt123** (Founder, investor, engineer), July 27, 2026  
+   "If Claude Code or Codex could have the ability to natively run a session with another AI copilot / pair programmer, that would be bomb. Like Claude Code with Opus/Fable/whatever where it always consults Codex/GPT 5.6 before making any decisions and after writing code. Skills can sort of automate this, but if this was natively supported that would be awesome. Like dual-model mode."[[4]](https://x.com/leeschmidt123/status/2081864350822785482)
+
+5. **@DivyanshT91162** (Exploring what AI can really do), July 27, 2026  
+   "Forget everything you know about AI coding agents. A solo developer just open-sourced something that sounds impossible. It's called jcode. ... This doesn't feel like another coding agent. It feels like someone accidentally shipped the future." (Compares favorably to Claude Code/Codex on speed/memory; highlights self-improving swarm agents as a leap.)[[5]](https://x.com/DivyanshT91162/status/2081863953643127197)
+
+6. **@diamai_** (Tracks agents & future of work), July 27, 2026  
+   "Sam Altman says OpenAI was way behind Claude Code. Catching up looked like a 'kamikaze mission.' Now he says most of the best coders he knows use Codex. Coding-agent leads can flip fast because so much of the product sits outside the model. ... A lot of the race is happening in code that never appears in the model card."[[6]](https://x.com/diamai_/status/2081707468619456979)
+
+7. **@VaibhavSisinty** (Builder, ex-Uber), July 16, 2026  
+   "Claude is becoming almost unusable for serious coding, even on the $200 plan. ... Meanwhile, on Codex, I’m running four different agent loops in parallel ... At this point, the only real reason I still use Claude is Fable for verification tasks. ... These are signals that people are probably done being bullied by Anthropic!" (Clear fatigue with limits/benchmarks vs. practical use of both.)[[7]](https://x.com/VaibhavSisinty/status/2077734829572096122)
+
+8. **@alexcahiz** (Indie AI dev, stay-at-home dad), July 27, 2026  
+   "This is real and justified. That saturation of solutions that 'optimize' your agentic coding is real. ... What I think this means ... is that the stock harnesses coming from the frontier AI labs will in future organically adapt ... every individual’s instance of Claude Code will crystallize into a unique n/1 harness ... just a constantly shifting, optimizing, and self-improving system." (Reflects on the new-normal of personalized AI coding systems.)[[8]](https://x.com/alexcahiz/status/2081768301269594310)
+
+9. **@maxedapps** (Teaches AI & coding, YouTuber), July 11, 2026  
+   "Not surprising but it’s insane how quickly the AI gap between people is growing. ... But when you seriously work with cutting edge models AND tools (Claude code, codex, all those other amazing tools), you can’t seriously miss that you can work and operate on a totally different level now. Since at least December, still accelerating." (Highlights "coding will never be the same" productivity divide.)[[9]](https://x.com/maxedapps/status/2075972025869332799)
+
+10. **@GingerCoderSham** (Programmer, game developer, software engineer), July 23, 2026  
+    "oh ya........, just using claude (against my wishes but have to for work...) and I can see that having many many issues. no one knows the new parts of the codebase :\. and no ones following the 'responability of code' guidelines since AI writes it 'good enough' but I feel like the only person actually passionate about writing code, everyone else IRL (and most online) are in the profession for just the money. ... I felt like I went in with care in 2018. and in a matter of 2 years things got dismantled." (Strong nostalgia for hand-written, passionate coding pre-AI era.)[[10]](https://x.com/GingerCoderSham/status/2080085760162586846)
+
+11. **@leeleecode** (Founder), July 25, 2026  
+    "I was there, 2025. Everyone was saying 'AI is going to change coding forever' Claude jumps through a few hoops, and suddenly everyone starts saying professionals and their tools are obsolete. Yet, everytime I looked up I saw people struggling with the exact same software development issues that have always been present since the beginning. As much as they wanted it, AI couldn't replace software professionals." (Reflective pushback on "end-of-an-era" hype.)[[11]](https://x.com/leeleecode/status/2080823849512538186)
+
+12. **@abachurin** (Discusses senior programmer experiences), July 23, 2026  
+    "My good friend started in 1988-89. Now he is a senior programmer with lots of people under him, and also codes stuff himself. He started using Claude when Opus4.6 appeared in Dec 25 (I think). 2 weeks later he stopped looking at code, at code reviews, anything. Effectively stopped coding except when he does some analogue gadgets for fun and needs some code there in C or lower level. He quickly realized it’s just a waste of his effective time, checking after AI. He just set strict rules, insists on tests, one AI checks another etc." (End-of-era for traditional hand-coding/review by veterans; nostalgia for low-level fun.)[[12]](https://x.com/abachurin/status/2080346881842921826)
+
+These posts show a mix of excitement about productivity leaps, practical "use both Claude and Codex" workflows, frustration with limits/benchmarks, and reflective nostalgia or warnings about lost sharpness, technical debt, and shifting roles. Many treat AI agents as the entrenched "new normal" rather than a fad, with some explicitly calling out era shifts in hiring, reviewing, or brain-work. A few additional posts touched on similar themes but were more promotional or off-focus, so they were excluded.

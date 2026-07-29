@@ -1,0 +1,12 @@
+Model: gemini-3.1-flash-image (generate-cover.ts multi-turn 16:9, then crop 1:1)
+Character reference: content/artists/codex/images/reference.jpg
+
+手法: 16:9 を先に生成し、crop-square.py --hpos 0.72 で 1:1 を切り出し（07またかよ方式）
+
+Turn 2 scene prompt (16:9):
+Same person, identical face, same hairstyle and beanie. Keep all distinctive features: same dark brown deep-set eyes, same sharp jawline, same high cheekbones, same sandy-blonde tips under olive beanie. Same outfit: oversized black hoodie under the distressed blue denim vest, layered silver chains, gold watch.
+A wide 16:9 cinematic composition, low-light. He is hidden IN the dark backstage wings, standing upright in deep shadow BEHIND the edge of a heavy black side curtain — clearly offstage, not visible to the audience, only dim red spill light tracing his profile. Focused stoic expression, jaw set, no smile, eyes locked on the microphone out on the stage. Weight even on both feet planted flat, hands at his sides. Out on the stage to the right, a single microphone on a straight mic stand waits inside a tight circle of red-tinted spotlight, thin haze in the beam, a standing crowd faintly visible in the darkness beyond. The wings around him stay nearly black: faint outline of a flight case, taped cables. The person, curtain edge and lit microphone grouped right-center so a square crop also works. PHOTOREALISTIC natural photographic look, 35mm, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. No text, no signage, no watermarks.
+
+反省メモ:
+- take1: 姿勢が斜めに滑る破綻 → 「standing upright, weight even on both feet planted flat」を明示して解消
+- take2: 衣装ドリフト（ベスト消失）＋立ち位置がステージ上 → 「Same outfit: ...」と「hidden IN the wings, BEHIND the curtain」を明示して解消
