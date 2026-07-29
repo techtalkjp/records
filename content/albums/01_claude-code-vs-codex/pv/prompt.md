@@ -94,3 +94,12 @@ singing, background music before the final beat hit.
 - YouTube Shorts / Reels
 - 横長16:9が必要になったら FRAMING 行を戻して別生成（縦→横のクロップは不可）
 ```
+
+## 後処理（確定版の作り方）
+
+字幕＋BGM入り `アルバムPV (1080x1920) 字幕BGM.mp4` の再現手順:
+- 字幕: pv.srt を burn-in。force_style は FontSize=13, MarginV=30, Alignment=2
+  （libass は PlayResY=288 基準。MarginV=140 にすると画面中央に出る事故になる）
+- BGM: Complexes on the Codex の track.wav 先頭10.1秒を lowpass=600Hz, volume=0.8,
+  0.8秒フェードインで敷き、元音声と amix normalize=0（遠くで1曲目が鳴ってる演出）
+- volume=0.18〜0.3 では小さすぎて聞こえない（2026-07-29確認）。0.8が採用値
