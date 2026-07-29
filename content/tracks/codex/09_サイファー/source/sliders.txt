@@ -1,0 +1,17 @@
+Vocal Gender: Male
+
+Exclude: EDM, autotune, female vocals, glossy pop
+
+Initial Generation:
+  Weirdness: 45%
+  Style Influence: 70%
+
+Replace Section targets (if needed):
+  Chorus — Weirdness: 40%  Style Influence: 80%
+  Verse  — Weirdness: 45%  Style Influence: 65%
+  Outro  — Weirdness: 50%  Style Influence: 60%
+
+Notes:
+- 「輪は」は発音通り「わわ」で表記済み
+- 「話さんでも」は「はなさんでも」指定（縮約の読み事故防止）
+- CI/BGM は「シーアイ」「ビージーエム」でカタカナ指定

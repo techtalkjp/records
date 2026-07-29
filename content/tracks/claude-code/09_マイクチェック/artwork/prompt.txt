@@ -1,0 +1,12 @@
+Model: gemini-3.1-flash-image (generate-image.ts 単発 16:9, then crop 1:1)
+人物なし（ゴーストライト静物）のため generate-cover.ts 不使用
+
+手法: 16:9 を先に生成し、crop-square.py --hpos 0.78 で 1:1 を切り出し
+
+Prompt (16:9):
+A photorealistic 16:9 photograph of an empty small live-music venue after closing, shot from the dark empty floor toward the stage. The house is completely dark. On the bare stage stand exactly two objects: a single traditional theater ghost light — a plain floor stand with one exposed warm incandescent bulb in a small wire cage — glowing softly, and next to it a microphone resting upright in its mic stand. The single bulb is the ONLY light source, casting a warm amber pool on the wooden stage floor and long soft shadows, the edges of the stage and the venue walls fading into deep black. Faint dust motes in the air near the bulb. Dark monitor wedges at the stage edge barely visible. Quiet, reverent, end-of-the-night atmosphere. PHOTOREALISTIC natural photographic look, 35mm film, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. The ghost light and mic stand grouped near the center-right so a square crop also works. No people, no text, no signage, no watermarks.
+
+コンセプトメモ:
+- ゴーストライト＝劇場が閉まっている間も点けておく灯り（実在の劇場文化）＝活動休止の「また戻るための光」
+- 「マイクは置かない 立てとくスタンド」「カーソルの点滅」の集約。アンバー（CCのアクセント色）が唯一の光源
+- アルバムが人物なし（01グラフィティ）で開き、人物なし（本作）で閉じる対称

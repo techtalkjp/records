@@ -1,0 +1,16 @@
+Vocal Gender: Male
+
+Exclude: EDM, autotune, female vocals, glossy pop
+
+Initial Generation:
+  Weirdness: 45%
+  Style Influence: 65%
+
+Replace Section targets (if needed):
+  Chorus — Weirdness: 40%  Style Influence: 75%
+  Verse  — Weirdness: 45%  Style Influence: 65%
+  Outro  — Weirdness: 50%  Style Influence: 55%
+
+Notes:
+- SWE-bench は「スウィーベンチ」で指定（エスダブリュー読みの事故防止）
+- issue/close は「イシュー」「クローズ」でカタカナ指定

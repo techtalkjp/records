@@ -1,0 +1,16 @@
+Vocal Gender: Male
+
+Exclude: EDM, autotune, female vocals, glossy pop
+
+Initial Generation:
+  Weirdness: 40%
+  Style Influence: 70%
+
+Replace Section targets (if needed):
+  Chorus — Weirdness: 40%  Style Influence: 75%
+  Verse  — Weirdness: 45%  Style Influence: 65%
+  Outro  — Weirdness: 55%  Style Influence: 55%
+
+Notes:
+- 429 はひらがな「よんにーきゅー」で指定済み（フォートゥーナイン事故防止）
+- Outro の（RECのランプ 点いたまま）は歌詞から除外し、アノテーションで表現

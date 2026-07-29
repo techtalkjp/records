@@ -1,0 +1,17 @@
+Vocal Gender: Male
+
+Exclude: EDM, autotune, female vocals, glossy pop
+
+Initial Generation:
+  Weirdness: 45%
+  Style Influence: 70%
+
+Replace Section targets (if needed):
+  Chorus — Weirdness: 40%  Style Influence: 80%
+  Verse  — Weirdness: 45%  Style Influence: 65%
+  Outro  — Weirdness: 55%  Style Influence: 55%
+
+Notes:
+- （カツ、カツ……）等のSE行は歌詞から除外し、アノテーション（mic tap sound）で表現
+- 「聞こえてるな? ——マイクチェック」は改行で間を作る形に変換済み
+- 周波数の「は」は語中なので「しゅうはすう」のまま

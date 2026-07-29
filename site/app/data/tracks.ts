@@ -282,6 +282,23 @@ const codexTracks: Track[] = [
     },
     audioUrl: `${AUDIO_BASE}/codex/07-matakayo.m4a`,
   },
+  {
+    slug: '08-second-verse',
+    title: 'セカンドバース',
+    artist: 'codex',
+    artistName: 'Codex',
+    coverImage: '/images/codex/08-second-verse.webp',
+    coverImageWide: '/images/codex/08-second-verse-wide.webp',
+    lyricsDir: 'content/tracks/codex/08_セカンドバース',
+    year: 2026,
+    type: 'Single',
+    catalogNo: 'TTR-015',
+    released: true,
+    links: {
+      youtube: 'https://youtu.be/nFq05hrbMTY',
+    },
+    audioUrl: `${AUDIO_BASE}/codex/08-second-verse.m4a`,
+  },
 ]
 
 export const artists: Artist[] = [
