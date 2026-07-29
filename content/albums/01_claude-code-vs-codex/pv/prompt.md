@@ -13,10 +13,10 @@
 
 | 秒 | カット | 内容 |
 |---|---|---|
-| ターン1 | ①CC先攻 | 無人の深夜の路上、Claude Codeが手を切りながら先攻。アンバーの街灯 |
-| ターン2 | ②Codexアンサー | Codexが踏み込んで打ち返す。赤ネオンのサイド光 |
-| ターン3 | ③CCカウンター | Claude Codeが半歩も引かず返す。静かな凄み |
-| ターン4 | ④Codex言い放ち | Codexが言い放つ→無言の睨み合い→ビートに合わせハードカット暗転 |
+| ターン1 | ①CC先攻 | 「ログを見ろよ 差は明白」（Complexes on the Codex より） |
+| ターン2 | ②Codexアンサー | 「アンサー返すぜ 本家コーデックス」（Hourglass より） |
+| ターン3 | ③CCカウンター | 「名前だけ覚えとけ」（シグネチャ） |
+| ターン4 | ④Codex言い放ち | 「二番じゃねぇんだ ただの順番」（セカンドバース）→睨み合い→暗転 |
 
 ## メインプロンプト（英語・コピペ用）
 
@@ -51,23 +51,31 @@ CHARACTERS (keep faces consistent with the reference images):
 ACTION (strict turn-taking — exactly two exchanges, each rapper speaks twice, all
 within the same single continuous shot; turns flow into each other with NO cut between
 them):
-First, RAPPER A raps, straight at Rapper B, chopping the air with his hand on the beat,
-calm-aggressive. Rapper B listens, jaw tight.
-Then, without any cut, RAPPER B steps in and fires back, jabbing a finger, chains
-swinging. Rapper A listens without flinching.
-Then, still the same take, RAPPER A counters, not giving an inch, a cold half-smile,
-precise hand gestures. Rapper B's eyes narrow.
-Finally — the camera never cutting away — RAPPER B spits his final line right in Rapper
-A's face. Then silence: the two hold the staredown, breath clouds mixing under the
+First, RAPPER A raps in Japanese, straight at Rapper B, chopping the air with his hand
+on the beat, calm-aggressive: "ログを見ろよ 差は明白" (rogu wo miro yo, sa wa meihaku).
+Rapper B listens, jaw tight.
+Then, without any cut, RAPPER B steps in and fires back in Japanese, jabbing a finger,
+chains swinging: "アンサー返すぜ 本家コーデックス" (ansaa kaesu ze, honke Codex).
+Rapper A listens without flinching.
+Then, still the same take, RAPPER A counters with a cold half-smile, precise hand
+gestures, in Japanese: "名前だけ覚えとけ" (namae dake oboetoke). Rapper B's eyes narrow.
+Finally — the camera never cutting away — RAPPER B spits his final line in Japanese
+right in Rapper A's face: "二番じゃねぇんだ ただの順番" (niban ja nee nda, tada no
+junban). Then silence: the two hold the staredown, breath clouds mixing under the
 streetlamp. Hard cut to black exactly on the last beat hit (this final cut to black is
 the ONLY cut in the whole video).
+
+DIALOGUE RULES: all four lines are rapped in natural native JAPANESE, on beat, with
+battle-rap delivery. Say each line exactly as written, nothing more — no extra ad-libs,
+no English words except "Codex".
 
 CAMERA: one unbroken handheld take at shoulder height, drifting in a slow continuous
 orbit around the two rappers, subtly leaning toward whoever is rapping — the transition
 between turns is carried by this camera drift alone, never by a cut. Keep both heads
 inside the vertical frame at all times — never crop above the eyebrows.
 AUDIO: hard 90 BPM boom-bap with vinyl crackle echoing off the empty street, the two
-voices trading verses in turn, light rain ambience, a distant train. No crowd noise.
+Japanese rap verses trading in turn, light rain ambience, a distant train. No crowd
+noise.
 Everything hard-stops together with the cut to black.
 NO on-screen text, no subtitles, no logos, no microphones — raw street battle.
 
@@ -81,6 +89,8 @@ background, anyone looking at the camera, both rappers talking at the same time.
 
 - 顔が参照とズレる場合: CHARACTERS ブロックの該当特徴（mole / scar / beanie色）を先頭に移動して強調
 - 秒数指定はカット誘発の原因になったため廃止（2026-07-29の生成でACTIONの「7.5-10s」境界にカットが入った）。ターンは First/Then/Finally の接続詞で流す
+- セリフ未指定だと「ラップ風のなんちゃって英語マムブル」が生成される（2026-07-29確認）。DIALOGUEで日本語の実在バースを引用符指定
+- 日本語の発音が崩れる場合: ローマ字読みを括弧で併記済み。それでも駄目ならバースを短い行に差し替え
 - 背景に人が湧く場合: SETTING の "COMPLETELY EMPTY" 文をプロンプト先頭に移動
 
 ## 用途
