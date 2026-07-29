@@ -29,5 +29,6 @@ export default {
     '/tracks/codex/05-mikka-tenka',
     '/tracks/codex/06-zaiko',
     '/tracks/codex/07-matakayo',
+    '/tracks/codex/08-second-verse',
   ],
 } satisfies Config
