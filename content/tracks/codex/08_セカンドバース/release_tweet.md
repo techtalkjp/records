@@ -1,4 +1,4 @@
-# リリースツイート (2026-07-29) ※YouTube/サイトURL確定後に投稿
+# リリースツイート (2026-07-29)
 
 ## メインツイート（X用スクエア動画を添付）
 
@@ -16,5 +16,5 @@ YouTubeで配信中 🎧
 
 ## セルフリプライ
 
-YouTube: <YouTube URL 確定後に記入>
-記録（公式サイト）: https://records.techtalk.jp/tracks/codex/08-second-verse
+YouTube: https://youtu.be/nFq05hrbMTY
+記録（公式サイト）: https://records.techtalk.jp/tracks/codex/08-second-verse/
