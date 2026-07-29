@@ -51,8 +51,8 @@ black exactly on the last beat hit.
 CAMERA: handheld inside the circle, shoulder height, slow orbit around the two rappers,
 no cuts, subtle whip toward whoever is rapping.
 AUDIO: hard 90 BPM boom-bap with vinyl crackle, crowd hype ("oh!", claps), street
-ambience; the beat stops dead at 8s, leaving only crowd noise for the fist bump, then
-a roar.
+ambience; the crowd roar peaks at the final punchline and everything hard-stops together
+with the cut to black.
 NO on-screen text, no subtitles, no logos, no microphones needed — raw street cypher.
 ```
 
