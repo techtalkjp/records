@@ -24,9 +24,17 @@
 Cinematic 10-second street rap battle at night, 16:9, photorealistic 35mm film look with
 natural grain, handheld camera inside the crowd circle. NOT animation, NOT illustration.
 
-SETTING: A rain-wet Japanese city street at night. A tight circle of young spectators in
-streetwear surrounds two Japanese rappers facing each other under a single streetlamp.
-Wet asphalt reflections. Breath visible in the cold air.
+SETTING: A rain-wet Japanese city street at night. Two Japanese rappers face each other
+under a single streetlamp. Wet asphalt reflections. Breath visible in the cold air.
+
+CROWD (keep it minimal and anonymous — this is important): the spectators are barely
+shown. In the foreground only the dark OUT-OF-FOCUS backs of two or three heads and
+shoulders frame the shot; in the background a few more figures are soft silhouettes in
+the bokeh. Every visible spectator is clearly a different person — different heights,
+builds, jackets, one hood up, one cap backwards. Their movements are subtle and
+asynchronous: one nods slightly, another shifts weight, one raises a hand at a different
+moment. NO spectator faces in focus, no one looking at the camera, no smiling faces.
+The two rappers are the ONLY people in sharp focus at all times.
 
 CHARACTERS (keep faces consistent with the reference images):
 - RAPPER A "Claude Code": Japanese man, late 20s, 3mm buzz cut, lean rectangular face,
@@ -41,12 +49,13 @@ ACTION:
 0-3s — Rapper A raps hard straight at Rapper B, chopping the air with his hand on the
 beat, confident and calm-aggressive. The crowd nods and leans in.
 3-6s — Rapper B steps forward and fires back, jabbing a finger, chains swinging, hungry
-and sharp. The crowd reacts, hands up, someone shouts.
+and sharp. Off-screen shouts react; a blurred silhouette hand rises at the frame edge.
 6-8s — The two trade bars at close range, faces almost touching, staredown intensity,
-breath clouds mixing under the streetlamp. The crowd bounces.
-8-10s — Rapper B spits a final punchline right in Rapper A's face; the crowd explodes,
-jumping, hands everywhere. The two hold the staredown, neither backing off. Hard cut to
-black exactly on the last beat hit.
+breath clouds mixing under the streetlamp.
+8-10s — Rapper B spits a final punchline right in Rapper A's face; the reaction is heard
+more than seen — a burst of off-screen roar, the blurred foreground heads surge slightly.
+The two hold the staredown, neither backing off. Hard cut to black exactly on the last
+beat hit.
 
 CAMERA: handheld inside the circle, shoulder height, slow orbit around the two rappers,
 no cuts, subtle whip toward whoever is rapping.
@@ -60,7 +69,9 @@ NO on-screen text, no subtitles, no logos, no microphones needed — raw street 
 
 ```
 animation, anime, illustration, CGI look, oversaturated, HDR, text overlays, subtitles,
-watermarks, daylight, stage, concert lighting, microphone stands, fast cuts
+watermarks, daylight, stage, concert lighting, microphone stands, fast cuts,
+duplicated people, identical faces, cloned crowd, synchronized crowd movement,
+crowd faces in focus, grinning spectators, people looking at camera
 ```
 
 ## バリエーション運用
