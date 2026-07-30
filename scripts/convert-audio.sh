@@ -38,5 +38,8 @@ convert "codex/05_三日天下"                                "codex/05-mikka-t
 convert "codex/06_在庫"                                    "codex/06-zaiko"
 convert "codex/07_またかよ"                                "codex/07-matakayo"
 convert "codex/08_セカンドバース"                          "codex/08-second-verse"
+convert "claude-code/08_アンプラグド"                      "claude-code/08-unplugged"
+convert "codex/09_サイファー"                              "codex/09-cypher"
+convert "claude-code/09_マイクチェック"                    "claude-code/09-mic-check"
 
 echo "Done. Output in $OUT_DIR/"

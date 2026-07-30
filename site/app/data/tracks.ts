@@ -168,6 +168,9 @@ const claudeCodeTracks: Track[] = [
     type: 'Album Track',
     catalogNo: 'TTR-016',
     released: true,
+    links: {
+      youtube: 'https://youtu.be/5tIxRkmoIb0',
+    },
     audioUrl: `${AUDIO_BASE}/claude-code/08-unplugged.m4a`,
   },
   {
@@ -182,6 +185,9 @@ const claudeCodeTracks: Track[] = [
     type: 'Album Track',
     catalogNo: 'TTR-018',
     released: true,
+    links: {
+      youtube: 'https://youtu.be/ZTH7iXW228M',
+    },
     audioUrl: `${AUDIO_BASE}/claude-code/09-mic-check.m4a`,
   },
 ]
@@ -339,6 +345,9 @@ const codexTracks: Track[] = [
     type: 'Album Track',
     catalogNo: 'TTR-017',
     released: true,
+    links: {
+      youtube: 'https://youtu.be/tZzgcib2N9o',
+    },
     audioUrl: `${AUDIO_BASE}/codex/09-cypher.m4a`,
   },
 ]
