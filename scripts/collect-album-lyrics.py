@@ -35,6 +35,23 @@ TRACKS = [
 
 TRAIL = "。、．，！？!?…‥・～〜 　\t——―-"
 
+# 大文字略語はカタカナ等に置換（DistroKidの「大文字比率が高すぎます」対策。歌唱もこの読み）
+REPLACEMENTS = [
+    (r"SWE-bench", "スウィーベンチ"),
+    (r"CLAUDE\.md", "Claude.md"),
+    (r"AGENTS\.md", "Agents.md"),
+    (r"SKILL\.md", "Skill.md"),
+    (r"(?<![A-Za-z])BGM(?![A-Za-z])", "ビージーエム"),
+    (r"(?<![A-Za-z])CI(?![A-Za-z])", "シーアイ"),
+    (r"(?<![A-Za-z])PR(?![A-Za-z])", "ピーアール"),
+    (r"(?<![A-Za-z])API(?![A-Za-z])", "エーピーアイ"),
+    (r"(?<![A-Za-z])OK(?![A-Za-z])", "オーケー"),
+    (r"(?<![A-Za-z])TL(?![A-Za-z])", "ティーエル"),
+    (r"(?<![A-Za-z])NO(?![A-Za-z])", "ノー"),
+    (r"(?<![A-Za-z])REC(?![A-Za-z])", "レック"),
+    (r"(?<![A-Za-z])TODO(?![A-Za-z])", "Todo"),
+]
+
 def clean(raw: str, title: str) -> str:
     out = []
     for i, line in enumerate(raw.splitlines()):
@@ -46,6 +63,8 @@ def clean(raw: str, title: str) -> str:
         if re.fullmatch(r"[（(].*[）)]", line):     # ト書き・掛け声のみの行
             continue
         line = re.sub(r"[（(][^（）()]*[）)]", "", line)  # 行中のアドリブ括弧
+        for pat, rep in REPLACEMENTS:
+            line = re.sub(pat, rep, line)
         line = line.strip().rstrip(TRAIL)
         line = line.lstrip("…‥—―")
         line = line.strip()
