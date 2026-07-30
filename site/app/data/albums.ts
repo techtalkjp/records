@@ -19,6 +19,9 @@ export interface Album {
   sections: AlbumSection[]
   links?: {
     youtube?: string
+    appleMusic?: string
+    spotify?: string
+    hyperFollow?: string
   }
 }
 

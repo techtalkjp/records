@@ -118,6 +118,20 @@ export default function AlbumPage({ loaderData }: Route.ComponentProps) {
             {album.year} / {albumTracks.length} TRACKS
           </p>
 
+          {album.links && (
+            <div className="flex gap-4 pt-2">
+              {album.links.spotify && (
+                <a href={album.links.spotify} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Spotify</a>
+              )}
+              {album.links.appleMusic && (
+                <a href={album.links.appleMusic} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Apple Music</a>
+              )}
+              {album.links.hyperFollow && (
+                <a href={album.links.hyperFollow} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">All Platforms</a>
+              )}
+            </div>
+          )}
+
           <button
             type="button"
             onClick={() => playQueue(albumTracks)}
