@@ -10,3 +10,6 @@ opensrc/
 
 # generated audio files
 dist-audio/
+
+# DistroKid入稿用の一時収集フォルダ
+dist-album/
