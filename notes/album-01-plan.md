@@ -74,3 +74,14 @@
 3. Day 0 前日まで: albums.ts に links（appleMusic / spotify / hyperFollow）を反映
 4. Day 0 0:00 ストア公開 → PR #13 マージ → デプロイ確認 → 20-22時にアルバム告知ツイート（PV添付＋HyperFollow URL）
 5. Day 1〜: 個別スポットライト（アンプラグド → サイファー → 最後にマイクチェック=休止挨拶で投稿納め）
+
+## DistroKid入稿メモ（2026-07-31）
+- レーベルアーティスト名義: TechTalk、各曲 feat. Claude Code / feat. Codex を付与
+- 既発シングル4曲は同一ISRCで再収録（表記はfeat.付きに更新、Hourglassはタイトル欠け「on the Claude」→「on the Claude Code」に修正）
+  - Complexes on the Codex: QZNWY2633864
+  - Hourglass on the Claude Code: QZTAS2691302
+  - ターミナルの誇り: QZTAX2679456
+  - なんでだよ: QZTB32638420
+- 新曲14曲はISRC空欄（自動発番）
+- 共通設定: 露骨な歌詞=いいえ / AI生成=はい / 歌もの / Dolby Atmos=いいえ / 価格0.99ドル
+- 入稿素材: dist-album/claude-code-vs-codex/（scripts/collect-album-audio.sh で再生成可）
