@@ -16,6 +16,7 @@ dissから始まって、全18曲。どう終わるかは、通しで。
 ## セルフリプライ
 
 アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+Spotify / Apple Music ほか: https://distrokid.com/hyperfollow/techtalk2/claude-code-vs-codex
 
 新曲:
 アンプラグド — Claude Code: https://youtu.be/5tIxRkmoIb0

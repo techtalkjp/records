@@ -21,6 +21,11 @@
 入稿素材はすべて `dist-album/claude-code-vs-codex/` に連番で用意済み。
 （消してしまったら `bash scripts/collect-album-audio.sh` で再生成）
 
+### 1-5. 歌詞アップロード（任意・Basic無料枠）
+- 整形済み歌詞: `dist-album/claude-code-vs-codex-lyrics/`（`python3 scripts/collect-album-lyrics.py` で再生成）
+- DistroKidの各トラック「歌詞をアップロード」に貼り付け → 表示先は Basic（無料）でOK
+- 整形内容: セクションタグ・ト書き・括弧アドリブ除去、行末記号除去、行頭アルファベット大文字化
+
 ### 1-2. 全トラック共通の設定（毎トラック同じ）
 
 | 項目 | 入力 |
@@ -66,16 +71,16 @@
 ### 1-4. 入稿後にやること
 
 - [x] リリース日（Day 0）: **2026年8月5日（水）**
-- [ ] HyperFollow URL をここに記入: ____
+- [x] HyperFollow URL: https://distrokid.com/hyperfollow/techtalk2/claude-code-vs-codex
 - リリース日とHyperFollow URLが取れたら Claude に伝える → サイト反映と告知最終版を作る
 
 ---
 
 ## 2. Day 0 前日まで（Claude 作業）
 
-- [ ] albums.ts の links に appleMusic / spotify / hyperFollow を反映（対応実装済み、URL追加のみ）
-- [ ] アルバム告知ツイート最終版に HyperFollow URL を反映
-- [ ] 個別3曲のスポットライトツイート案を作成
+- [x] albums.ts に hyperFollow 反映済み（appleMusic / spotify の個別URLは配信開始後に判明したら追加）
+- [x] アルバム告知ツイートに HyperFollow URL 反映済み
+- [x] 個別3曲のスポットライトツイート案作成済み（各トラックの release_tweet.md）
 
 ## 3. Day 0（公開日）
 
