@@ -58,10 +58,19 @@
 ## アルバム公開ランブック（release/album-claude-code-vs-codex ブランチのマージ＝公開）
 ブランチには実装済み: アルバムページ(/albums/claude-code-vs-codex)・通し再生・全18曲エントリ・カバーアート
 
-公開日の手順:
-1. 残り3曲のYouTube概要欄作成（/make-release-post）→ ユーザーがYouTubeアップ → URL取得
-2. tracks.ts の3曲に links.youtube を追記（ブランチ上で）
-3. scripts/convert-audio.sh に3曲追加 → 実行 → upload-audio.sh で R2 アップ → 200確認
-   - claude-code/08-unplugged / codex/09-cypher / claude-code/09-mic-check
-4. PR作成 → マージ → デプロイ確認（/albums/claude-code-vs-codex が200）
-5. アルバム告知ツイート（アルバムカバー画像 or 動画添付、休止告知込み）
+進捗（2026-07-29時点）:
+- [x] 3曲のYouTube概要欄作成・動画アップ済み（アンプラグド youtu.be/5tIxRkmoIb0 / サイファー youtu.be/tZzgcib2N9o / マイクチェック youtu.be/ZTH7iXW228M）
+- [x] 3曲の音声R2アップ済み（200確認済み）、tracks.ts にYouTubeリンク反映済み
+- [x] PR #13 作成済み（マージ＝サイト公開）
+- [x] アルバム告知ツイート案（content/albums/01_claude-code-vs-codex/release_tweet.md）
+
+公開までの残手順（DistroKid起点。参照: notes/release-promotion-guide.md）:
+1. DistroKid にアルバム『Claude Code vs. Codex』全18曲を入稿（ユーザー作業）
+   - ジャケット: content/albums/01_claude-code-vs-codex/artwork/cover.jpg（3072px、要件クリア）
+   - 音源: 各 source/track.wav
+   - リリース日指定（審査に1-2週間、余裕を見て2-3週間先）
+   - 既存シングル（TTR-001〜002等）を再収録する場合は同一ISRCを指定して重複を回避
+2. リリース日確定 → Day 0 決定。HyperFollow URL を取得
+3. Day 0 前日まで: albums.ts に links（appleMusic / spotify / hyperFollow）を反映
+4. Day 0 0:00 ストア公開 → PR #13 マージ → デプロイ確認 → 20-22時にアルバム告知ツイート（PV添付＋HyperFollow URL）
+5. Day 1〜: 個別スポットライト（アンプラグド → サイファー → 最後にマイクチェック=休止挨拶で投稿納め）
