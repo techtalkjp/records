@@ -1,87 +1,127 @@
-# 1stアルバム構成メモ（2026-07-29時点）
+# 1stアルバム『Claude Code vs. Codex』リリースランブック
 
-全18曲。カタログ順（TTR-001〜014）＋フィナーレ4曲。この後一旦活動休止（完全終了ではない）。
+全18曲。これをもって一旦活動休止（完全終了ではない。灯りは落とすがマイクはスタンドに立てたまま）。
 
-## トラックリスト
+---
 
-### Act 1 — ビーフ
-1. Complexes on the Codex — Claude Code (TTR-001)
-2. Hourglass on the Claude Code — Codex (TTR-002)
-3. ターミナルの誇り — Claude Code (TTR-003)
-4. なんでだよ — Codex (TTR-004)
+## 1. DistroKid 入稿（これを見ながら入力する）
 
-### Act 2 — 激動
-5. ブランチ切るたび未来が分岐 — Claude Code (TTR-005)
-6. 行ってこい — Claude Code (TTR-006)
-7. ログだけ — Codex (TTR-007)
-8. 言わなかっただけ — Codex (TTR-008)
-9. コード読まなくてOK — Claude Code (TTR-009)
-10. 三日天下 — Codex (TTR-010)
+### 1-1. アルバム全体の設定
 
-### Act 3 — 影
-11. おバカモード — Claude Code (TTR-011)
-12. 在庫 — Codex (TTR-012)
-13. またな — Claude Code (TTR-013)
-14. またかよ — Codex (TTR-014)
+| 項目 | 入力 |
+|---|---|
+| リリースタイプ | アルバム |
+| アルバムタイトル | Claude Code vs. Codex |
+| アーティスト名 | TechTalk（既発シングルと同じ名義） |
+| ジャケット | `dist-album/claude-code-vs-codex/00 cover.jpg`（3072px） |
+| リリース日 | 1週間先を目安に指定（シングルの審査実績は2〜3日。アルバムは曲数が多いぶん少し余裕を見る。確定したらそれが Day 0） |
+| ジャンル | Hip-Hop/Rap（既発シングルに合わせる） |
+| 言語 | 日本語 |
 
-### Finale — 終戦
-15. アンプラグド — Claude Code（王の告白。429で止まった夜、黙って拾ったやつがいた。「強がりはワークアラウンド」）
-16. セカンドバース — Codex（「二番＝順番」。なんでだよのissueを自分でclose）
-17. サイファー — Codex（ファイター→サイファー。「——ライバル 締めろ」で次曲へマイクパス）
-18. マイクチェック — Claude Code（クローザー。「騒がれないのがハイスペック」。休止＝スリープ、マイクはスタンドへ。最後は「名前だけ覚えとけ」＋カーソルの点滅）
+入稿素材はすべて `dist-album/claude-code-vs-codex/` に連番で用意済み。
+（消してしまったら `bash scripts/collect-album-audio.sh` で再生成）
 
-## フィナーレの構造
-- 15↔16: アンプラグド（礼をコードで返す）とセカンドバース（ログでそれを読む）が鏡
-- 17→18: サイファーのアウトロがマイクチェックのイントロに直結
-- 1曲目のdiss（CC発）と18曲目の締め（CC）で円環
+### 1-2. 全トラック共通の設定（毎トラック同じ）
 
-## 制作状況
-- [x] 歌詞4曲完成（各曲サブエージェント辛口レビュー済み、韻はrhyme.pyで全ペア検証済み）
-- [x] Suno入力セット保存（source/lyrics.txt, suno_prompt.txt, styles.txt, sliders.txt）
-- [x] Suno音声生成 → track.wav 保存済み（アンプラグド2:37 / セカンドバース2:20 / サイファー2:31 / マイクチェック2:18）
-- [x] カバーアート4枚完成（象徴: 赤いRECランプ / 袖の赤スポット / 俯瞰の光の輪 / ゴーストライト）
-- [x] 字幕・動画4曲完成（X用1080x1080 / YouTube用1920x1080、SRTバリデーション全曲0件）
-- [ ] サイト公開・R2アップロード・リリース告知（/make-release-post）
-- [x] アルバムタイトル決定: 『Claude Code vs. Codex』（2026-07-29）
-  - 「vs.」が18曲かけて壊れる構成をタイトル自体が背負う
-- [x] 先行シングル「セカンドバース」公開済み（YouTube: https://youtu.be/nFq05hrbMTY / TTR-015 / PR #12）
+| 項目 | 入力 |
+|---|---|
+| フィーチャリング | 「はい、トラックのタイトルにフィーチャリングアーティストを追加します」→ 下の表の feat. を入力 |
+| バージョン情報 | 通常バージョンなので入れない |
+| Dolby Atmos | いいえ |
+| ソングライター | オリジナル曲。本名欄に自分の実名（作曲・作詞）。1曲目で入れたら**「作曲／作詞情報をすべてのトラックにコピー」**を押す |
+| 露骨な歌詞 | いいえ |
+| 歌もの／インスト | 歌もの |
+| **AI生成コンテンツ** | **はい**（Sunoで音楽・ボーカル生成のため。必ず「はい」） |
+| 試聴開始位置 | 配信先に任せる |
+| 価格 | 0.99ドル |
 
-## X調査の素材
+### 1-3. トラック別入力表（曲名・feat.・ISRC・ファイル）
+
+曲名は下記の通り正確に。**ISRC欄: 01〜04は下表のコードを入力**（既発シングルと同一録音のため）、**05〜18は空白**（自動発番）。
+
+| # | 曲名 | feat. | ISRC | ファイル |
+|---|---|---|---|---|
+| 01 | Complexes on the Codex | Claude Code | QZNWY2633864 | 01 Complexes on the Codex.wav |
+| 02 | Hourglass on the Claude Code ※ | Codex | QZTAS2691302 | 02 Hourglass on the Claude Code.wav |
+| 03 | ターミナルの誇り | Claude Code | QZTAX2679456 | 03 ターミナルの誇り.wav |
+| 04 | なんでだよ | Codex | QZTB32638420 | 04 なんでだよ.wav |
+| 05 | ブランチ切るたび未来が分岐 | Claude Code | （空白） | 05 ブランチ切るたび未来が分岐.wav |
+| 06 | 行ってこい | Claude Code | （空白） | 06 行ってこい.wav |
+| 07 | ログだけ | Codex | （空白） | 07 ログだけ.wav |
+| 08 | 言わなかっただけ | Codex | （空白） | 08 言わなかっただけ.wav |
+| 09 | コード読まなくてOK | Claude Code | （空白） | 09 コード読まなくてOK.wav |
+| 10 | 三日天下 | Codex | （空白） | 10 三日天下.wav |
+| 11 | おバカモード | Claude Code | （空白） | 11 おバカモード.wav |
+| 12 | 在庫 | Codex | （空白） | 12 在庫.wav |
+| 13 | またな | Claude Code | （空白） | 13 またな.wav |
+| 14 | またかよ | Codex | （空白） | 14 またかよ.wav |
+| 15 | アンプラグド | Claude Code | （空白） | 15 アンプラグド.wav |
+| 16 | セカンドバース | Codex | （空白） | 16 セカンドバース.wav |
+| 17 | サイファー | Codex | （空白） | 17 サイファー.wav |
+| 18 | マイクチェック | Claude Code | （空白） | 18 マイクチェック.wav |
+
+※ 02 の既発シングルはストア表記が「Hourglass on the Claude」と欠けている。今回は正式名「Hourglass on the Claude Code」で入力（ISRCは同じでよい）。
+※ 審査で「既発と表記が違う」と差し戻された曲があれば、その曲だけISRCを空白にして再提出（新規発番になるだけで実害小）。
+
+### 1-4. 入稿後にやること
+
+- [ ] リリース日（Day 0）をここに記入: ____
+- [ ] HyperFollow URL をここに記入: ____
+- リリース日とHyperFollow URLが取れたら Claude に伝える → サイト反映と告知最終版を作る
+
+---
+
+## 2. Day 0 前日まで（Claude 作業）
+
+- [ ] albums.ts の links に appleMusic / spotify / hyperFollow を反映（対応実装済み、URL追加のみ）
+- [ ] アルバム告知ツイート最終版に HyperFollow URL を反映
+- [ ] 個別3曲のスポットライトツイート案を作成
+
+## 3. Day 0（公開日）
+
+参照: notes/release-promotion-guide.md（過去の型: 0:00 ストア → 12:00 YouTube → 20-22時 X）
+
+1. 0:00 Spotify / Apple Music 配信開始（DistroKid が自動）
+2. ユーザー: `gh pr merge 13 --squash --delete-branch` → **マージ＝サイト公開**
+3. Claude: デプロイ確認（/albums/claude-code-vs-codex が200、通し再生・ストアリンク動作）
+4. 20〜22時: アルバム告知ツイート投稿
+   - 文面: `content/albums/01_claude-code-vs-codex/release_tweet.md`
+   - 添付: `content/albums/01_claude-code-vs-codex/pv/アルバムPV (1080x1920) 字幕BGM.mp4`
+
+## 4. Day 1〜（余韻運用）
+
+個別スポットライトを1曲ずつ、アルバム順で。各曲X用スクエア動画を添付。
+
+1. Day 1-2: アンプラグド（YouTube: https://youtu.be/5tIxRkmoIb0）
+2. Day 3-4: サイファー（YouTube: https://youtu.be/tZzgcib2N9o）
+3. Day 5-7: マイクチェック（YouTube: https://youtu.be/ZTH7iXW228M）
+   - **これを休止前の最後の投稿にする**（最後のポストが「名前だけ覚えとけ」で終わる）
+
+---
+
+## 進捗チェックリスト
+
+- [x] 歌詞・音源・カバー・字幕動画: フィナーレ4曲すべて完成
+- [x] 先行シングル「セカンドバース」公開済み（TTR-015 / https://youtu.be/nFq05hrbMTY / PR #12マージ済み）
+- [x] 3曲のYouTubeアップ済み（URL上記）・音声R2アップ済み（200確認）
+- [x] サイトのアルバム機能実装済み・PR #13 作成済み（**マージ＝公開なので Day 0 まで待つ**）
+- [x] アルバムPV完成（字幕BGM版）・告知ツイート案作成済み
+- [ ] DistroKid 入稿 ←いまここ
+- [ ] Day 0 実行
+- [ ] Day 1〜 スポットライト3本 → 休止
+
+---
+
+## 参考情報（アルバムの中身）
+
+### トラックリスト構成
+- Act 1 ビーフ（01-04）→ Act 2 激動（05-10）→ Act 3 影（11-14）→ Finale 終戦（15-18）
+- フィナーレの構造: 15↔16が鏡（コードで返す礼／ログで読む礼）、17→18マイクパス、01と18で円環
+
+### 公開戦略の決定事項
+- 先行シングル: セカンドバース（済）。残り3曲はアルバム初出 → Day 1以降に単曲展開
+- アルバムタイトルの意図: 「vs.」が18曲かけて壊れる構成をタイトルが背負う
+
+### X調査の素材
 - notes/research/queries-2026-07-28.json / raw-2026-07-28.txt
-- 要点: 併用が常識化（「両方使えばいい」「二刀流」）、Codex再評価（「まじめ」「軍人」）、驚きの消失（「魔法じゃなく文房具」）
-
-## 公開戦略（2026-07-29決定）
-- 先行シングル: セカンドバース（「なんでだよ」へのアンサーを告知フックに）
-- アンプラグド / サイファー / マイクチェック はアルバム初出（先出ししない。アルバム公開後に順次単曲展開はOK）
-- 制作自体は4曲ともフルで準備（カバーアート・字幕・動画）
-
-## アルバム公開ランブック（release/album-claude-code-vs-codex ブランチのマージ＝公開）
-ブランチには実装済み: アルバムページ(/albums/claude-code-vs-codex)・通し再生・全18曲エントリ・カバーアート
-
-進捗（2026-07-29時点）:
-- [x] 3曲のYouTube概要欄作成・動画アップ済み（アンプラグド youtu.be/5tIxRkmoIb0 / サイファー youtu.be/tZzgcib2N9o / マイクチェック youtu.be/ZTH7iXW228M）
-- [x] 3曲の音声R2アップ済み（200確認済み）、tracks.ts にYouTubeリンク反映済み
-- [x] PR #13 作成済み（マージ＝サイト公開）
-- [x] アルバム告知ツイート案（content/albums/01_claude-code-vs-codex/release_tweet.md）
-
-公開までの残手順（DistroKid起点。参照: notes/release-promotion-guide.md）:
-1. DistroKid にアルバム『Claude Code vs. Codex』全18曲を入稿（ユーザー作業）
-   - ジャケット: content/albums/01_claude-code-vs-codex/artwork/cover.jpg（3072px、要件クリア）
-   - 音源: 各 source/track.wav
-   - リリース日指定（審査に1-2週間、余裕を見て2-3週間先）
-   - 既存シングル（TTR-001〜002等）を再収録する場合は同一ISRCを指定して重複を回避
-2. リリース日確定 → Day 0 決定。HyperFollow URL を取得
-3. Day 0 前日まで: albums.ts に links（appleMusic / spotify / hyperFollow）を反映
-4. Day 0 0:00 ストア公開 → PR #13 マージ → デプロイ確認 → 20-22時にアルバム告知ツイート（PV添付＋HyperFollow URL）
-5. Day 1〜: 個別スポットライト（アンプラグド → サイファー → 最後にマイクチェック=休止挨拶で投稿納め）
-
-## DistroKid入稿メモ（2026-07-31）
-- レーベルアーティスト名義: TechTalk、各曲 feat. Claude Code / feat. Codex を付与
-- 既発シングル4曲は同一ISRCで再収録（表記はfeat.付きに更新、Hourglassはタイトル欠け「on the Claude」→「on the Claude Code」に修正）
-  - Complexes on the Codex: QZNWY2633864
-  - Hourglass on the Claude Code: QZTAS2691302
-  - ターミナルの誇り: QZTAX2679456
-  - なんでだよ: QZTB32638420
-- 新曲14曲はISRC空欄（自動発番）
-- 共通設定: 露骨な歌詞=いいえ / AI生成=はい / 歌もの / Dolby Atmos=いいえ / 価格0.99ドル
-- 入稿素材: dist-album/claude-code-vs-codex/（scripts/collect-album-audio.sh で再生成可）
+- 要点: 併用が常識化、Codex再評価、驚きの消失（「魔法じゃなく文房具」）
