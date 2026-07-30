@@ -65,7 +65,7 @@
 
 ### 1-4. 入稿後にやること
 
-- [ ] リリース日（Day 0）をここに記入: ____
+- [x] リリース日（Day 0）: **2026年8月5日（水）**
 - [ ] HyperFollow URL をここに記入: ____
 - リリース日とHyperFollow URLが取れたら Claude に伝える → サイト反映と告知最終版を作る
 
@@ -92,9 +92,9 @@
 
 個別スポットライトを1曲ずつ、アルバム順で。各曲X用スクエア動画を添付。
 
-1. Day 1-2: アンプラグド（YouTube: https://youtu.be/5tIxRkmoIb0）
-2. Day 3-4: サイファー（YouTube: https://youtu.be/tZzgcib2N9o）
-3. Day 5-7: マイクチェック（YouTube: https://youtu.be/ZTH7iXW228M）
+1. 8/6-7: アンプラグド（YouTube: https://youtu.be/5tIxRkmoIb0）
+2. 8/8-9: サイファー（YouTube: https://youtu.be/tZzgcib2N9o）
+3. 8/10-12: マイクチェック（YouTube: https://youtu.be/ZTH7iXW228M）
    - **これを休止前の最後の投稿にする**（最後のポストが「名前だけ覚えとけ」で終わる）
 
 ---
@@ -106,7 +106,7 @@
 - [x] 3曲のYouTubeアップ済み（URL上記）・音声R2アップ済み（200確認）
 - [x] サイトのアルバム機能実装済み・PR #13 作成済み（**マージ＝公開なので Day 0 まで待つ**）
 - [x] アルバムPV完成（字幕BGM版）・告知ツイート案作成済み
-- [ ] DistroKid 入稿 ←いまここ
+- [x] DistroKid 入稿完了（2026-07-31、全18曲・feat.表記確認済み）
 - [ ] Day 0 実行
 - [ ] Day 1〜 スポットライト3本 → 休止
 
