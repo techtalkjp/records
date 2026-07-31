@@ -1,100 +1,82 @@
-# 1stアルバム『Claude Code vs. Codex』リリースランブック
+# 1stアルバム『Claude Code vs. Codex』リリースランブック（RouteNote版）
 
 全18曲。これをもって一旦活動休止（完全終了ではない。灯りは落とすがマイクはスタンドに立てたまま）。
 
+配信は **RouteNote 無料プラン** に移行（2026-07-31決定）。
+理由: 休止中に課金したくない（DistroKidは年額サブスクで、支払い停止＝カタログ消滅）。
+CD Baby等の買い切り型は **AI生成楽曲を全面禁止**のため不可。AI楽曲OK＋無課金で置きっぱなしにできるのはRouteNote無料プランのみ（収益の15%コミッション、現状の再生数では実質ゼロコスト）。
+
 ---
 
-## 1. DistroKid 入稿（これを見ながら入力する）
+## 0. DistroKidからの撤退（ユーザー作業）
 
-### 1-1. アルバム全体の設定
+- [ ] 審査中のアルバム『Claude Code vs. Codex』の入稿を取り下げ（アルバムページから削除）
+- [ ] 既存シングルを全て削除（各リリースの編集ページ最下部「この楽曲をすべての配信先から削除する」）
+  - 対象: Complexes on the Codex / Hourglass on the Claude / ターミナルの誇り / なんでだよ（＋他にあれば全部）
+  - 累計29再生なので失うものはなし
+- [ ] DistroKidの**次回更新日を確認**し、更新前に解約（カレンダーに入れておく）
 
-| 項目 | 入力 |
+## 1. RouteNote 入稿
+
+### 分担
+- ユーザー: アカウント作成・ログイン・最終送信ボタン
+- Claude: ログイン済みのChromeを借りてフォーム入力を代行（Claude in Chrome）
+
+### 入稿素材（準備済み）
+| 素材 | 場所 |
 |---|---|
-| リリースタイプ | アルバム |
-| アルバムタイトル | Claude Code vs. Codex |
-| アーティスト名 | TechTalk（既発シングルと同じ名義） |
-| ジャケット | `dist-album/claude-code-vs-codex/00 cover.jpg`（3072px） |
-| リリース日 | 1週間先を目安に指定（シングルの審査実績は2〜3日。アルバムは曲数が多いぶん少し余裕を見る。確定したらそれが Day 0） |
-| ジャンル | Hip-Hop/Rap（既発シングルに合わせる） |
-| 言語 | 日本語 |
+| 音源FLAC（18曲・連番） | `dist-album/claude-code-vs-codex-flac/`（`bash scripts/collect-album-flac.sh` で再生成） |
+| ジャケット 3000×3000 | 同フォルダの `00 cover 3000.jpg` |
+| 歌詞（整形済み） | `dist-album/claude-code-vs-codex-lyrics/`（RouteNoteに歌詞欄があれば使用） |
 
-入稿素材はすべて `dist-album/claude-code-vs-codex/` に連番で用意済み。
-（消してしまったら `bash scripts/collect-album-audio.sh` で再生成）
+### 画面構成（4セクション、順不同）
+1. **Album Details** — アルバム名 `Claude Code vs. Codex` / アーティスト `TechTalk` / レーベル `TechTalk records` / ジャンル Hip-Hop/Rap / 言語・リリース日
+   - リリース日: 審査が20〜40日かかる報告多数。**十分先の日付にする**
+2. **Add Audio** — FLACをアップ（**1セッション15曲まで**なので2回に分ける）。各曲のメタデータ:
+   - 曲名・feat.は下の表の通り（DistroKidの制約がないので全曲正しい表記で入れる）
+   - ISRC: 01〜04は下表のコード、05〜18は空欄（自動発番）
+   - Explicit: No / 言語: 曲ごとにタイトルの言語（英語曲はEnglish、日本語曲はJapanese）
+3. **Add Artwork** — `00 cover 3000.jpg`
+4. **Manage Stores** — 「Select all stores」にチェック（全ストア配信）
+5. 最後に **Distribute Free** を選択（15%コミッション・無課金）
 
-### 1-5. 歌詞アップロード（任意・Basic無料枠）
-- 整形済み歌詞: `dist-album/claude-code-vs-codex-lyrics/`（`python3 scripts/collect-album-lyrics.py` で再生成）
-- DistroKidの各トラック「歌詞をアップロード」に貼り付け → 表示先は Basic（無料）でOK
-- 整形内容: セクションタグ・ト書き・括弧アドリブ除去、行末記号除去、行頭アルファベット大文字化
-
-### 1-2. 全トラック共通の設定（毎トラック同じ）
-
-| 項目 | 入力 |
-|---|---|
-| フィーチャリング | 「はい、トラックのタイトルにフィーチャリングアーティストを追加します」→ 下の表の feat. を入力 |
-| バージョン情報 | 通常バージョンなので入れない |
-| Dolby Atmos | いいえ |
-| ソングライター | オリジナル曲。本名欄に自分の実名（作曲・作詞）。1曲目で入れたら**「作曲／作詞情報をすべてのトラックにコピー」**を押す |
-| 露骨な歌詞 | いいえ |
-| 歌もの／インスト | 歌もの |
-| **AI生成コンテンツ** | **はい**（Sunoで音楽・ボーカル生成のため。必ず「はい」） |
-| 試聴開始位置 | 配信先に任せる |
-| 価格 | 0.99ドル |
-
-### 1-3. トラック別入力表（曲名・feat.・ISRC・ファイル）
-
-曲名は下記の通り正確に。**ISRC欄: 01〜04は下表のコードを入力**（既発シングルと同一録音のため）、**05〜18は空白**（自動発番）。
+### トラック別入力表
 
 | # | 曲名 | feat. | ISRC | ファイル |
 |---|---|---|---|---|
-| 01 | Complexes on the Codex | Claude Code | QZNWY2633864 | 01 Complexes on the Codex.wav |
-| 02 | Hourglass on the Claude Code ※ | Codex | QZTAS2691302 | 02 Hourglass on the Claude Code.wav |
-| 03 | ターミナルの誇り | Claude Code | QZTAX2679456 | 03 ターミナルの誇り.wav |
-| 04 | なんでだよ | Codex | QZTB32638420 | 04 なんでだよ.wav |
-| 05 | ブランチ切るたび未来が分岐 | Claude Code | （空白） | 05 ブランチ切るたび未来が分岐.wav |
-| 06 | 行ってこい | Claude Code | （空白） | 06 行ってこい.wav |
-| 07 | ログだけ | Codex | （空白） | 07 ログだけ.wav |
-| 08 | 言わなかっただけ | Codex | （空白） | 08 言わなかっただけ.wav |
-| 09 | コード読まなくてOK | Claude Code | （空白） | 09 コード読まなくてOK.wav |
-| 10 | 三日天下 | Codex | （空白） | 10 三日天下.wav |
-| 11 | おバカモード | Claude Code | （空白） | 11 おバカモード.wav |
-| 12 | 在庫 | Codex | （空白） | 12 在庫.wav |
-| 13 | またな | Claude Code | （空白） | 13 またな.wav |
-| 14 | またかよ | Codex | （空白） | 14 またかよ.wav |
-| 15 | アンプラグド | Claude Code | （空白） | 15 アンプラグド.wav |
-| 16 | セカンドバース | Codex | （空白） | 16 セカンドバース.wav |
-| 17 | サイファー | Codex | （空白） | 17 サイファー.wav |
-| 18 | マイクチェック | Claude Code | （空白） | 18 マイクチェック.wav |
+| 01 | Complexes on the Codex | Claude Code | QZNWY2633864 | 01 Complexes on the Codex.flac |
+| 02 | Hourglass on the Claude Code | Codex | QZTAS2691302 | 02 Hourglass on the Claude Code.flac |
+| 03 | ターミナルの誇り | Claude Code | QZTAX2679456 | 03 ターミナルの誇り.flac |
+| 04 | なんでだよ | Codex | QZTB32638420 | 04 なんでだよ.flac |
+| 05 | ブランチ切るたび未来が分岐 | Claude Code | （空欄） | 05 ブランチ切るたび未来が分岐.flac |
+| 06 | 行ってこい | Claude Code | （空欄） | 06 行ってこい.flac |
+| 07 | ログだけ | Codex | （空欄） | 07 ログだけ.flac |
+| 08 | 言わなかっただけ | Codex | （空欄） | 08 言わなかっただけ.flac |
+| 09 | コード読まなくてOK | Claude Code | （空欄） | 09 コード読まなくてOK.flac |
+| 10 | 三日天下 | Codex | （空欄） | 10 三日天下.flac |
+| 11 | おバカモード | Claude Code | （空欄） | 11 おバカモード.flac |
+| 12 | 在庫 | Codex | （空欄） | 12 在庫.flac |
+| 13 | またな | Claude Code | （空欄） | 13 またな.flac |
+| 14 | またかよ | Codex | （空欄） | 14 またかよ.flac |
+| 15 | アンプラグド | Claude Code | （空欄） | 15 アンプラグド.flac |
+| 16 | セカンドバース | Codex | （空欄） | 16 セカンドバース.flac |
+| 17 | サイファー | Codex | （空欄） | 17 サイファー.flac |
+| 18 | マイクチェック | Claude Code | （空欄） | 18 マイクチェック.flac |
 
-※ 02 の既発シングルはストア表記が「Hourglass on the Claude」と欠けている。今回は正式名「Hourglass on the Claude Code」で入力（ISRCは同じでよい）。
-※ 審査で「既発と表記が違う」と差し戻された曲があれば、その曲だけISRCを空白にして再提出（新規発番になるだけで実害小）。
-※ 2026-07-30 実際に差し戻し発生（トラック2〜4）。ストアは音源フィンガープリントで照合するため「同じ録音に別メタデータ」は不可。
-   対応: 旧シングル側を「リリースを編集」でアルバムと同一メタデータに更新（feat.追加・Hourglassのタイトル修正）→ メールに返信して再審査依頼。
-   ISRC空白のフォールバックは音源照合があるため実は効かない。旧リリース編集が正解ルート。
-   追記: 審査メール（support@distrokid.com）への返信は「not monitored」で不達。連絡は https://distrokid.com/contact のフォーム経由で行う。
-   追記: 英語タイトル曲は編集フォームの言語バリデーション（リリース言語=日本語のまま変更UIなし）で編集不可 → サポートに言語変更ごと依頼。
-   注意: 再審査でリリース日(8/5)に間に合わない場合はDistroKid側で日付を後ろへ → Day 0ごとスライド。
+※ 旧DistroKidシングルは削除済みの前提なので、ISRC引き継ぎでの音源衝突は起きないはず。もし審査で指摘されたら該当曲のISRCを空欄にして再提出。
 
-### 1-4. 入稿後にやること
+## 2. 審査待ち（20〜40日想定）→ Day 0 決定
 
-- [x] リリース日（Day 0）: **2026年8月5日（水）**
-- [x] HyperFollow URL: https://distrokid.com/hyperfollow/techtalk2/claude-code-vs-codex
-- リリース日とHyperFollow URLが取れたら Claude に伝える → サイト反映と告知最終版を作る
-
----
-
-## 2. Day 0 前日まで（Claude 作業）
-
-- [x] albums.ts に hyperFollow 反映済み（appleMusic / spotify の個別URLは配信開始後に判明したら追加）
-- [x] アルバム告知ツイートに HyperFollow URL 反映済み
-- [x] 個別3曲のスポットライトツイート案作成済み（各トラックの release_tweet.md）
+- 承認されたら配信開始日を確認 → **Day 0 を決定**してここに記入: ____
+- Day 0 前日まで（Claude作業）:
+  - [ ] アルバム告知ツイート最終版の確認（ストアリンクはサイトのアルバムページに一本化）
+  - [ ] 配信後、Spotify/Apple MusicのアルバムURLが取れたら albums.ts の links に追加
 
 ## 3. Day 0（公開日）
 
-参照: notes/release-promotion-guide.md（過去の型: 0:00 ストア → 12:00 YouTube → 20-22時 X）
-
-1. 0:00 Spotify / Apple Music 配信開始（DistroKid が自動）
+1. ストア配信を確認
 2. ユーザー: `gh pr merge 13 --squash --delete-branch` → **マージ＝サイト公開**
-3. Claude: デプロイ確認（/albums/claude-code-vs-codex が200、通し再生・ストアリンク動作）
+3. Claude: デプロイ確認（/albums/claude-code-vs-codex が200、通し再生・リンク動作）
 4. 20〜22時: アルバム告知ツイート投稿
    - 文面: `content/albums/01_claude-code-vs-codex/release_tweet.md`
    - 添付: `content/albums/01_claude-code-vs-codex/pv/アルバムPV (1080x1920) 字幕BGM.mp4`
@@ -103,9 +85,9 @@
 
 個別スポットライトを1曲ずつ、アルバム順で。各曲X用スクエア動画を添付。
 
-1. 8/6-7: アンプラグド（YouTube: https://youtu.be/5tIxRkmoIb0）
-2. 8/8-9: サイファー（YouTube: https://youtu.be/tZzgcib2N9o）
-3. 8/10-12: マイクチェック（YouTube: https://youtu.be/ZTH7iXW228M）
+1. Day 1-2: アンプラグド（https://youtu.be/5tIxRkmoIb0）
+2. Day 3-4: サイファー（https://youtu.be/tZzgcib2N9o）
+3. Day 5-7: マイクチェック（https://youtu.be/ZTH7iXW228M）
    - **これを休止前の最後の投稿にする**（最後のポストが「名前だけ覚えとけ」で終わる）
 
 ---
@@ -113,26 +95,29 @@
 ## 進捗チェックリスト
 
 - [x] 歌詞・音源・カバー・字幕動画: フィナーレ4曲すべて完成
-- [x] 先行シングル「セカンドバース」公開済み（TTR-015 / https://youtu.be/nFq05hrbMTY / PR #12マージ済み）
-- [x] 3曲のYouTubeアップ済み（URL上記）・音声R2アップ済み（200確認）
+- [x] 先行シングル「セカンドバース」公開済み（TTR-015 / https://youtu.be/nFq05hrbMTY）
+- [x] 3曲のYouTubeアップ済み・音声R2アップ済み
 - [x] サイトのアルバム機能実装済み・PR #13 作成済み（**マージ＝公開なので Day 0 まで待つ**）
-- [x] アルバムPV完成（字幕BGM版）・告知ツイート案作成済み
-- [x] DistroKid 入稿完了（2026-07-31、全18曲・feat.表記確認済み）
-- [ ] Day 0 実行
-- [ ] Day 1〜 スポットライト3本 → 休止
+- [x] アルバムPV完成・告知ツイート案作成済み
+- [x] RouteNote用素材準備済み（FLAC 18曲＋3000pxジャケット＋整形歌詞）
+- [ ] DistroKid撤退（アルバム取り下げ・シングル削除・更新前解約）
+- [ ] RouteNote入稿 → 審査待ち
+- [ ] Day 0 実行 → スポットライト3本 → 休止
 
 ---
 
+## 学び（配信まわり）
+
+- DistroKidの審査メール（support@）への返信は「not monitored」で不達。連絡は https://distrokid.com/contact（DistroBot経由）
+- ストアは音源フィンガープリントで照合。「同じ録音に別メタデータ」は通らない。ISRC空欄でも回避不可
+- DistroKidは既発リリースの言語をユーザーが変更できない（編集フォームに言語欄なし）。英語タイトル×日本語言語のミスマッチは詰み
+- CD Baby / TuneCore は**AI生成楽曲を禁止**（Suno全曲のうちは入稿不可）。AI OK＋無課金維持は RouteNote 無料プランのみ
+- RouteNoteの音源はWAV不可（FLAC/MP3）、ジャケットは3000×3000固定、1セッション15曲まで、審査20〜40日
+- DistroKid入稿時の細かい学び（ISRC・feat.・言語・歌詞の大文字比率）はgit履歴の旧ランブック参照
+
 ## 参考情報（アルバムの中身）
 
-### トラックリスト構成
 - Act 1 ビーフ（01-04）→ Act 2 激動（05-10）→ Act 3 影（11-14）→ Finale 終戦（15-18）
-- フィナーレの構造: 15↔16が鏡（コードで返す礼／ログで読む礼）、17→18マイクパス、01と18で円環
-
-### 公開戦略の決定事項
-- 先行シングル: セカンドバース（済）。残り3曲はアルバム初出 → Day 1以降に単曲展開
+- フィナーレの構造: 15↔16が鏡、17→18マイクパス、01と18で円環
 - アルバムタイトルの意図: 「vs.」が18曲かけて壊れる構成をタイトルが背負う
-
-### X調査の素材
-- notes/research/queries-2026-07-28.json / raw-2026-07-28.txt
-- 要点: 併用が常識化、Codex再評価、驚きの消失（「魔法じゃなく文房具」）
+- X調査素材: notes/research/queries-2026-07-28.json / raw-2026-07-28.txt
