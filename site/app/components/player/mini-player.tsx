@@ -131,8 +131,14 @@ export function MiniPlayer() {
     playNext,
     playPrev,
     accentColor: accent,
+    expandSignal,
   } = usePlayer()
   const [expanded, setExpanded] = useState(false)
+
+  // PLAY ALBUM 等のキュー再生開始時はフルパネルで開く
+  useEffect(() => {
+    if (expandSignal > 0) setExpanded(true)
+  }, [expandSignal])
 
   if (!currentTrack) return null
 
@@ -208,9 +214,11 @@ export function MiniPlayer() {
         <button
           type="button"
           onClick={() => setExpanded(false)}
-          className="absolute top-2 right-2 p-1 rounded-full bg-black/50 text-neutral-300 hover:text-white transition-colors"
+          className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-full bg-black/50 text-neutral-300 hover:text-white transition-colors"
         >
-          <span className="material-symbols-outlined text-lg block">close</span>
+          <span className="material-symbols-outlined text-base leading-none">
+            close
+          </span>
         </button>
       </div>
 

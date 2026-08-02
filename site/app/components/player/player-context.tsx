@@ -20,6 +20,8 @@ interface PlayerContextValue extends PlayerState {
   playlist: Track[]
   play: (track: Track) => void
   playQueue: (tracks: Track[], startIndex?: number) => void
+  /** playQueue が呼ばれるたびに増える。プレイヤーUIの自動展開トリガー */
+  expandSignal: number
   togglePlayPause: () => void
   seekTo: (time: number) => void
   playNext: () => void
@@ -44,6 +46,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const defaultPlaylist = useMemo(() => allTracks.filter((t) => t.audioUrl), [])
   const [queue, setQueue] = useState<Track[] | null>(null)
+  const [expandSignal, setExpandSignal] = useState(0)
   const playlist = queue ?? defaultPlaylist
 
   const [state, setState] = useState<PlayerState>({
@@ -88,6 +91,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
       const playable = tracks.filter((t) => t.audioUrl)
       if (playable.length === 0) return
       setQueue(playable)
+      setExpandSignal((n) => n + 1)
       const start = playable[Math.min(startIndex, playable.length - 1)]!
       const audio = audioRef.current
       if (!audio || !start.audioUrl) return
@@ -184,6 +188,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
         playlist,
         play,
         playQueue,
+        expandSignal,
         togglePlayPause,
         seekTo,
         playNext,
