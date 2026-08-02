@@ -402,8 +402,9 @@ h1, h2, h3, h4 {
 }
 .char img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: top;
   filter: grayscale(0.2);
 }
 .char h3 {
