@@ -422,6 +422,13 @@ h1, h2, h3, h4 {
   color: #e5e5e5;
   font-weight: 700;
 }
+.char .homeground {
+  margin: 0 20px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
 .char ul {
   margin: 0 20px 16px;
   padding-left: 1.1em;
