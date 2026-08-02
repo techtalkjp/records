@@ -276,16 +276,14 @@ export function MiniPlayer() {
           className={`w-full h-1 rounded-full appearance-none bg-surface-container accent-${accent} cursor-pointer`}
           aria-label="Seek"
         />
-        {duration > 0 && (
-          <div className="flex justify-between mt-1">
-            <span className="text-[9px] font-mono text-neutral-400">
-              {formatTime(currentTime)}
-            </span>
-            <span className="text-[9px] font-mono text-neutral-400">
-              {formatTime(duration)}
-            </span>
-          </div>
-        )}
+        <div className="flex justify-between mt-1">
+          <span className="text-[9px] font-mono text-neutral-400">
+            {formatTime(currentTime)}
+          </span>
+          <span className="text-[9px] font-mono text-neutral-400">
+            {duration > 0 ? formatTime(duration) : '-:--'}
+          </span>
+        </div>
       </div>
       </div>
     </div>
