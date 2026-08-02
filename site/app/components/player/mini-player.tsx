@@ -66,7 +66,7 @@ function SyncedLyrics({
     if (!el) return
     // 行の頭が必ず見えるように: 短い行は中央寄せ、長い行は上から48pxに固定
     const offset = Math.max(
-      48,
+      32,
       (container.clientHeight - el.clientHeight) / 2,
     )
     container.scrollTo({
@@ -95,7 +95,7 @@ function SyncedLyrics({
     <div
       key={trackKey}
       ref={containerRef}
-      className="h-72 overflow-y-auto px-4 py-8 scrollbar-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+      className="h-48 overflow-y-auto px-4 py-6 scrollbar-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
     >
       <div className="space-y-3">
         {lines.map((line, i) => (
@@ -168,57 +168,53 @@ export function MiniPlayer() {
 
   return (
     <div className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden">
-      {/* Cover art background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <img
-          src={currentTrack.coverImage}
-          alt=""
-          className="w-full h-full object-cover blur-xl scale-125 opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/75" />
-      </div>
-
+      {/* Cover art hero */}
       <div className="relative">
-      {/* Header: cover + info + close */}
-      <div className="flex items-center gap-3 p-3">
         <Link
           to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
           viewTransition
-          className="flex-shrink-0"
+          className="block"
         >
           <img
             src={currentTrack.coverImage}
             alt={currentTrack.title}
-            className="w-16 h-16 rounded-lg object-cover"
+            className="w-full aspect-square object-cover"
           />
         </Link>
-        <div className="flex-1 min-w-0">
-          <Link
-            to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
-            viewTransition
-            className="text-sm font-bold text-white truncate leading-tight block hover:underline font-headline"
-          >
-            {currentTrack.title}
-          </Link>
-          <Link
-            to={`/artists/${currentTrack.artist}`}
-            viewTransition
-            className="text-[10px] text-neutral-400 truncate leading-tight block hover:underline uppercase"
-          >
-            {currentTrack.artistName}
-          </Link>
-          <p className="text-[9px] font-mono text-neutral-600 mt-0.5">
-            {currentTrack.catalogNo}
-          </p>
+        {/* Title overlay on cover */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-4 pt-10 pb-3 pointer-events-none">
+          <div className="pointer-events-auto">
+            <Link
+              to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
+              viewTransition
+              className="text-lg font-black text-white leading-tight block hover:underline font-headline tracking-tight"
+            >
+              {currentTrack.title}
+            </Link>
+            <div className="flex items-baseline gap-2">
+              <Link
+                to={`/artists/${currentTrack.artist}`}
+                viewTransition
+                className="text-[10px] text-neutral-300 hover:underline uppercase tracking-widest"
+              >
+                {currentTrack.artistName}
+              </Link>
+              <span className="text-[9px] font-mono text-neutral-500">
+                {currentTrack.catalogNo}
+              </span>
+            </div>
+          </div>
         </div>
         <button
           type="button"
           onClick={() => setExpanded(false)}
-          className="p-0.5 text-neutral-500 hover:text-white transition-colors flex-shrink-0 self-start"
+          className="absolute top-2 right-2 p-1 rounded-full bg-black/50 text-neutral-300 hover:text-white transition-colors"
         >
-          <span className="material-symbols-outlined text-lg">close</span>
+          <span className="material-symbols-outlined text-lg block">close</span>
         </button>
       </div>
+
+      <div className="relative">
 
       {/* Synced lyrics */}
       <SyncedLyrics
