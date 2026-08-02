@@ -437,6 +437,14 @@ h1, h2, h3, h4 {
   color: #b8b8b8;
 }
 .char li { margin-bottom: 7px; }
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #444;
+}
+a:hover { text-decoration-color: var(--amber); }
+
 .chars-note {
   margin-top: 26px;
   font-size: 0.88rem;

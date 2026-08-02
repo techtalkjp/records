@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <p class="chars-note reveal">2人の関係性が dissから共闘へ変わっていく過程が、そのまま18曲の曲順になっている。設定の全文はリポジトリの <code>content/artists/*/profile.md</code> にある。</p>
+    <p class="chars-note reveal">2人の関係性が dissから共闘へ変わっていく過程が、そのまま18曲の曲順になっている。設定の全文はリポジトリの <a href="https://github.com/techtalkjp/records/tree/main/content/artists" target="_blank" rel="noopener noreferrer"><code>content/artists/*/profile.md</code></a> にある。</p>
   </div>
 </section>
 
@@ -581,31 +581,31 @@
     <div class="section-head reveal">
       <p class="label">06 — Liner Notes</p>
       <h2>クレジット</h2>
-      <p>このアルバムを作った道具立て。スキル6本、補助スクリプト10本、そしていくつかの外部サービス。</p>
+      <p>このアルバムを作った道具立て。スキル6本、補助スクリプト10本、そしていくつかの外部サービス。すべて <a href="https://github.com/techtalkjp/records" target="_blank" rel="noopener noreferrer">GitHub（techtalkjp/records）</a> で公開している。</p>
     </div>
 
     <div class="liner reveal">
       <div>
         <h4>Skills / 制作フロー順</h4>
         <dl>
-          <dt>/search-x-voices</dt><dd>Grok API の x_search で X からネタ素材を収集</dd>
-          <dt>/make-lyrics</dt><dd>韻ペアと構成を対話で磨き、歌詞を完成形まで仕上げる</dd>
-          <dt>/make-suno-prompt</dt><dd>Suno V5.5 用入力へ変換（ひらがな・タグ・styles / sliders）</dd>
-          <dt>/make-cover-art</dt><dd>マルチターン会話で Gemini による画像生成</dd>
-          <dt>/make-lyric-video</dt><dd>Whisper → SRT 検証 → ffmpeg で動画生成</dd>
-          <dt>/make-release-post</dt><dd>X 投稿・YouTube 概要欄の告知文作成</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/search-x-voices" target="_blank" rel="noopener noreferrer">/search-x-voices</a></dt><dd>Grok API の x_search で X からネタ素材を収集</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-lyrics" target="_blank" rel="noopener noreferrer">/make-lyrics</a></dt><dd>韻ペアと構成を対話で磨き、歌詞を完成形まで仕上げる</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-suno-prompt" target="_blank" rel="noopener noreferrer">/make-suno-prompt</a></dt><dd>Suno V5.5 用入力へ変換（ひらがな・タグ・styles / sliders）</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-cover-art" target="_blank" rel="noopener noreferrer">/make-cover-art</a></dt><dd>マルチターン会話で Gemini による画像生成</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-lyric-video" target="_blank" rel="noopener noreferrer">/make-lyric-video</a></dt><dd>Whisper → SRT 検証 → ffmpeg で動画生成</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-release-post" target="_blank" rel="noopener noreferrer">/make-release-post</a></dt><dd>X 投稿・YouTube 概要欄の告知文作成</dd>
         </dl>
       </div>
 
       <div>
         <h4>Scripts</h4>
         <dl>
-          <dt>generate-image.ts / generate-cover.ts</dt><dd>画像生成（単発 / マルチターン）</dd>
-          <dt>crop-square.py</dt><dd>16:9 から 1:1 を切り出す</dd>
-          <dt>search-x.ts</dt><dd>Grok API x_search</dd>
-          <dt>build-lyrics-timing.py</dt><dd>プレイヤーの歌詞同期 JSON を生成</dd>
-          <dt>collect-album-{audio,flac}.sh / collect-album-lyrics.py</dt><dd>配信入稿用の収集</dd>
-          <dt>convert-audio.sh / upload-audio.sh</dt><dd>WAV → M4A 変換と R2 アップロード</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/scripts" target="_blank" rel="noopener noreferrer">generate-image.ts / generate-cover.ts</a></dt><dd>画像生成（単発 / マルチターン）</dd>
+          <dt><a href="https://github.com/techtalkjp/records/blob/main/scripts/crop-square.py" target="_blank" rel="noopener noreferrer">crop-square.py</a></dt><dd>16:9 から 1:1 を切り出す</dd>
+          <dt><a href="https://github.com/techtalkjp/records/blob/main/scripts/search-x.ts" target="_blank" rel="noopener noreferrer">search-x.ts</a></dt><dd>Grok API x_search</dd>
+          <dt><a href="https://github.com/techtalkjp/records/blob/main/scripts/build-lyrics-timing.py" target="_blank" rel="noopener noreferrer">build-lyrics-timing.py</a></dt><dd>プレイヤーの歌詞同期 JSON を生成</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/scripts" target="_blank" rel="noopener noreferrer">collect-album-{audio,flac}.sh / collect-album-lyrics.py</a></dt><dd>配信入稿用の収集</dd>
+          <dt><a href="https://github.com/techtalkjp/records/tree/main/scripts" target="_blank" rel="noopener noreferrer">convert-audio.sh / upload-audio.sh</a></dt><dd>WAV → M4A 変換と R2 アップロード</dd>
         </dl>
       </div>
 
@@ -624,7 +624,8 @@
         <h4>Release</h4>
         <dl>
           <dt>Album</dt><dd>Claude Code vs. Codex（TTR-AL-001, 2026）</dd>
-          <dt>Label</dt><dd>TechTalk Records — records.techtalk.jp</dd>
+          <dt>Label</dt><dd>TechTalk Records — <a href="https://records.techtalk.jp" target="_blank" rel="noopener noreferrer">records.techtalk.jp</a></dd>
+          <dt>Repository</dt><dd><a href="https://github.com/techtalkjp/records" target="_blank" rel="noopener noreferrer">github.com/techtalkjp/records</a></dd>
           <dt>Distribution</dt><dd>RouteNote（FLAC 限定・3000×3000・15曲/回・審査20〜40日）</dd>
           <dt>Archive</dt><dd>2026-08-02 時点の記録</dd>
         </dl>
