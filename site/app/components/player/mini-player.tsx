@@ -148,6 +148,7 @@ export function MiniPlayer() {
         type="button"
         onClick={() => setExpanded(true)}
         className="fixed top-4 right-4 z-50 flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant shadow-lg hover:scale-105 transition-transform"
+        style={{ viewTransitionName: 'mini-player' }}
       >
         <img
           src={currentTrack.coverImage}
@@ -173,7 +174,10 @@ export function MiniPlayer() {
   }
 
   return (
-    <div className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden">
+    <div
+      className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden"
+      style={{ viewTransitionName: 'mini-player' }}
+    >
       {/* Cover art hero */}
       <div
         key={`cover-${currentTrack.artist}/${currentTrack.slug}`}
