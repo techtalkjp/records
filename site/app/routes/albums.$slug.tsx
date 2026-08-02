@@ -122,6 +122,9 @@ export default function AlbumPage({ loaderData }: Route.ComponentProps) {
 
           {album.links && (
             <div className="flex gap-4 pt-2">
+              {album.links.youtube && (
+                <a href={album.links.youtube} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">YouTube</a>
+              )}
               {album.links.spotify && (
                 <a href={album.links.spotify} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Spotify</a>
               )}
