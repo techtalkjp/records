@@ -56,11 +56,13 @@ function TrackRow({
         <span className="font-mono text-xs text-neutral-600 group-hover:hidden">
           {String(number).padStart(2, '0')}
         </span>
-        <span
-          className={`material-symbols-outlined text-xl hidden group-hover:inline text-${accent}`}
-          style={{ fontVariationSettings: "'FILL' 1" }}
-        >
-          {isActive && isPlaying ? 'pause' : 'play_arrow'}
+        <span className="hidden group-hover:inline">
+          <span
+            className={`material-symbols-outlined text-xl text-${accent}`}
+            style={{ fontVariationSettings: "'FILL' 1" }}
+          >
+            {isActive && isPlaying ? 'pause' : 'play_arrow'}
+          </span>
         </span>
       </button>
       <Link
