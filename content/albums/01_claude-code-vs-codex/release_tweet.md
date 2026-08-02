@@ -16,7 +16,6 @@ dissから始まって、全18曲。どう終わるかは、通しで。
 ## セルフリプライ
 
 アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
-YouTubeプレイリスト: https://www.youtube.com/playlist?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG
 
-（新曲3曲の個別リンクは載せない——スポットライト投稿で1曲ずつ出す。
-　Spotify / Apple Music はストア配信確認後にリプライ追加）
+（リンクはこれ一本。YouTubeプレイリストはアルバムページ内から。
+　新曲の個別リンクはスポットライト投稿で、ストアリンクは配信確認後にリプライ追加）
