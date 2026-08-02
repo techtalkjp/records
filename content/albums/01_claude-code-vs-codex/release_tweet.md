@@ -21,4 +21,4 @@ dissから始まって、全18曲。どう終わるかは、通しで。
 新曲:
 アンプラグド — Claude Code: https://youtu.be/5tIxRkmoIb0
 サイファー — Codex: https://youtu.be/tZzgcib2N9o
-マイクチェック — Claude Code: https://youtu.be/ZTH7iXW228M
+マイクチェック — Claude Code: https://youtu.be/erCppChN5Qo
