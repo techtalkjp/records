@@ -70,7 +70,7 @@ CD Baby等の買い切り型は **AI生成楽曲を全面禁止**のため不可
 - [x] サイトは公開済み（2026-08-02にPR #13マージ、デプロイ検証済み: ページ・音声・歌詞JSONすべて200）
 - [ ] **8/3(月) 12:00** アルバム告知ツイート投稿
    - 文面: `content/albums/01_claude-code-vs-codex/release_tweet.md`
-   - 添付: `content/albums/01_claude-code-vs-codex/pv/アルバムPV (1080x1920) 字幕BGM.mp4`
+   - 添付: `content/albums/01_claude-code-vs-codex/pv/アルバムPV (1080x1080) 字幕BGM.mp4`
 
 ## 3. Day 1〜: スポットライト → 休止入り
 
