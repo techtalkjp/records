@@ -17,9 +17,6 @@ dissから始まって、全18曲。どう終わるかは、通しで。
 
 アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
 YouTubeプレイリスト: https://www.youtube.com/playlist?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG
-（Spotify / Apple Music のリンクは配信確認後にリプライで追加）
 
-新曲:
-アンプラグド — Claude Code: https://youtu.be/5tIxRkmoIb0
-サイファー — Codex: https://youtu.be/tZzgcib2N9o
-マイクチェック — Claude Code: https://youtu.be/erCppChN5Qo
+（新曲3曲の個別リンクは載せない——スポットライト投稿で1曲ずつ出す。
+　Spotify / Apple Music はストア配信確認後にリプライ追加）
