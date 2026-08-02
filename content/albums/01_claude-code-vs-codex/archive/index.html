@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>制作の記録 — Claude Code vs. Codex | TechTalk Records</title>
+<meta name="description" content="1stアルバム『Claude Code vs. Codex』（TTR-AL-001）の制作アーカイブ。18曲・約4.5ヶ月の年表、曲ごとの制作エピソード、アートワークとPVの舞台裏、ツールチェーンの記録。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-bg" style="background-image:url('assets/images/albums/claude-code-vs-codex-wide.webp')"></div>
+  <div class="wrap hero-inner">
+    <img class="hero-cover" src="assets/images/albums/claude-code-vs-codex.webp" alt="アルバム『Claude Code vs. Codex』のカバーアート" width="640" height="640">
+    <p class="label">TechTalk Records / TTR-AL-001 / Archive</p>
+    <h1>制作の記録</h1>
+    <p class="sub">1st Album『Claude Code vs. Codex』</p>
+    <div class="statement">
+      <p>対戦カードは、この一枚。全18ラウンド、ノーカット。</p>
+      <p>会場は、お前のターミナル。</p>
+      <p>勝敗は、最後まで聴いたやつが決めろ。</p>
+    </div>
+    <div class="meta">
+      <span>2026.03.21 — 2026.08.02</span>
+      <span>18 Tracks</span>
+      <span>Claude Code 9 / Codex 9</span>
+      <span>95 Commits</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NUMBERS ============ -->
+<section class="section" id="numbers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">01 — By the Numbers</p>
+      <h2>数字で見るアルバム</h2>
+      <p>ディスクの外側に残った記録。制作の規模を、そのまま数字で置いておく。</p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num">18<span class="unit">曲</span></div><div class="cap">収録曲数。Claude Code 9曲 / Codex 9曲のきっちり五分</div></div>
+      <div class="stat amber"><div class="num">4<span class="unit">幕</span></div><div class="cap">ビーフ（01-04）→ 激動（05-10）→ 影（11-14）→ 終戦（15-18）</div></div>
+      <div class="stat"><div class="num">4.5<span class="unit">ヶ月</span></div><div class="cap">2026-03-21 の初コミットから 2026-08-02 のアルバム公開まで</div></div>
+      <div class="stat red"><div class="num">95<span class="unit">commits</span></div><div class="cap">リポジトリの全コミット数</div></div>
+      <div class="stat"><div class="num">1,133<span class="unit">行</span></div><div class="cap">歌詞の総行数</div></div>
+      <div class="stat"><div class="num">36<span class="unit">本</span></div><div class="cap">リリックビデオ。スクエアと16:9を全18曲ぶん</div></div>
+      <div class="stat amber"><div class="num">6<span class="unit">skills</span></div><div class="cap">制作スキル。補助スクリプトは10本</div></div>
+      <div class="stat"><div class="num">12<span class="unit">files</span></div><div class="cap">公式サイトのTSXファイル数</div></div>
+      <div class="stat red"><div class="num">10<span class="unit">takes</span></div><div class="cap">最多カバー生成回数（09「マイクチェック」）</div></div>
+    </div>
+
+    <ul class="stat-notes reveal">
+      <li>リサーチノートは notes/ に12ファイル・約1,800行。</li>
+      <li>歌詞の最多方向転換は 04「行ってこい」の5回。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section" id="timeline">
+  <div class="wrap narrow">
+    <div class="section-head reveal">
+      <p class="label">02 — Timeline</p>
+      <h2>制作年表</h2>
+      <p>初日に6曲を持ち込む助走ゼロの発進。1日集中スプリントが二度、以降は週次〜隔週の交互リリース。反省をスキルへ還元し続けて8月2日に到達した、5つのフェーズ。</p>
+    </div>
+
+    <div class="timeline">
+      <div class="phase reveal">
+        <p class="date">PHASE 1 — 2026.03.21 – 03.22</p>
+        <h3>構想・立ち上げ</h3>
+        <ul>
+          <li>初日から6トラック分の字幕付きリリックビデオを携えて初コミット。</li>
+          <li>キャラクターシート（Claude Code / Codex）とデザインリサーチノートを整備。</li>
+          <li>翌 3/22 は1日で18コミット。キャラクターリファレンスと画像生成パイプラインを確立。</li>
+          <li>実在の東京を下敷きにするグラウンディング手法を導入。Codex は高円寺、Claude Code は六本木の路地ポートレート。</li>
+          <li>「ターミナルの誇り」のカバーアート刷新をきっかけに <code>make-cover-art</code> スキルが誕生。</li>
+          <li>制作フロー全体を CLAUDE.md に文書化。リリース告知ガイドと初投稿の分析まで記録。</li>
+        </ul>
+        <p class="quote">"Initial commit: 6 tracks with subtitled lyric videos"</p>
+      </div>
+
+      <div class="phase reveal">
+        <p class="date">PHASE 2 — 2026.03.27 – 03.28</p>
+        <h3>アートワーク磨き込み</h3>
+        <ul>
+          <li>3/27: Claude Code 01 と Codex 01 のカバーアートおよび動画をリマスター。</li>
+          <li>3/28: Codex 01・02 のカバーを再デザイン。02 は昼の明るいトーンへ。</li>
+        </ul>
+        <p class="quote">"Add outpaint tip: add buildings, not streets"</p>
+      </div>
+
+      <div class="phase reveal">
+        <p class="date">PHASE 3 — 2026.04.02 – 04.05</p>
+        <h3>公式サイト実装</h3>
+        <ul>
+          <li>4/02、1日で17コミット。records.techtalk.jp を開設し、リポジトリを再構成。Cloudflare Workers の静的アセット配信へ移行。</li>
+          <li>OGP/SEO、WebP 最適化、フルブリードのヒーローカルーセルを実装。</li>
+          <li>リリース順を Claude Code / Codex 交互に整理。</li>
+          <li>4/05、R2 の音声ストリーミングを使う常設プレイヤーを搭載。</li>
+        </ul>
+        <p class="quote">"Add persistent music player with R2 audio streaming"</p>
+      </div>
+
+      <div class="phase reveal">
+        <p class="date">PHASE 4 — 2026.04 – 2026.07</p>
+        <h3>交互リリースの応酬</h3>
+        <p>片方が出せば、もう片方が返す。10本のシングルが交互に積み上がった期間。</p>
+        <div class="table-scroll">
+          <table class="rel-table">
+            <thead><tr><th>日付</th><th>トラック</th><th>アーティスト</th></tr></thead>
+            <tbody>
+              <tr><td class="d">04-07</td><td>03「ブランチ切るたび未来が分岐」</td><td class="a-cc">Claude Code</td></tr>
+              <tr><td class="d">04-14</td><td>03「ログだけ」</td><td class="a-cx">Codex</td></tr>
+              <tr><td class="d">04-21</td><td>04「行ってこい」（初の PR マージフロー #1）</td><td class="a-cc">Claude Code</td></tr>
+              <tr><td class="d">05-01</td><td>04「言わなかっただけ」</td><td class="a-cx">Codex</td></tr>
+              <tr><td class="d">06-10</td><td>05「コード読まなくてOK」</td><td class="a-cc">Claude Code</td></tr>
+              <tr><td class="d">06-17</td><td>05「三日天下」</td><td class="a-cx">Codex</td></tr>
+              <tr><td class="d">06-22</td><td>06「おバカモード」</td><td class="a-cc">Claude Code</td></tr>
+              <tr><td class="d">07-01</td><td>06「在庫」</td><td class="a-cx">Codex</td></tr>
+              <tr><td class="d">07-07</td><td>07「またな」</td><td class="a-cc">Claude Code</td></tr>
+              <tr><td class="d">07-14</td><td>07「またかよ」（歌詞から告知まで1日で完走）</td><td class="a-cx">Codex</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>リリースのたびに学びをスキルとドキュメントへ還元するのが習慣に。</li>
+          <li>7/01、歌詞制作フローを転換。Suno に渡す前に歌詞を完成させる方式へ。</li>
+        </ul>
+      </div>
+
+      <div class="phase reveal">
+        <p class="date">PHASE 5 — 2026.07.29 – 08.02</p>
+        <h3>フィナーレとアルバム</h3>
+        <ul>
+          <li>7/29、物語の転換点。セカンドバース公開と同時にフィナーレ4曲の制作アセットが揃う。</li>
+          <li>8/02、1stアルバム『Claude Code vs. Codex』公開。</li>
+          <li>アルバム PV の X 用スクエア版はセンタークロップ＋字幕の再焼き込みで制作。</li>
+          <li>告知文は 280 ユニット内（214/280）に圧縮し、リンクはアルバムページ一本に集約。</li>
+        </ul>
+        <p class="quote">"1stアルバム『Claude Code vs. Codex』公開 (#13)"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACKS ============ -->
+<section class="section" id="tracks">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">03 — 18 Tracks</p>
+      <h2>収録曲の記録</h2>
+      <p>4幕・18曲。それぞれのカバーアートと、制作時に残った覚え書き。</p>
+    </div>
+
+    <!-- ACT 1 -->
+    <div class="act">
+      <div class="act-head reveal">
+        <h3>Act 1</h3><span class="jp">ビーフ</span><span class="range">TRACK 01 — 04</span>
+      </div>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/01-complexes-on-the-codex.webp" alt="Complexes on the Codex のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">01 / TTR-001</p>
+          <h4>Complexes on the Codex</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>カバーは人物なしの「路地裏のグラフィティ壁」。アンバーの獣の顔を壁面に大小3つ、対角に色褪せた「OPENAI CODEX」のステンシル。dissの構図を壁だけで語らせた。</li>
+            <li>地面に傷だらけのCD、絡まったケーブル、カセット。Unixターミナル風のウィートペーストステッカーが唯一のテック要素。</li>
+            <li>低彩度＋アンバー1色、路地。シリーズの世界観はここが起点。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/5bBpMcn_j44" title="Complexes on the Codex" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/01-hourglass-on-the-claude-code.webp" alt="Hourglass on the Claude Code のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">02 / TTR-002</p>
+          <h4>Hourglass on the Claude Code</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>壁に赤いスプレーの砂時計と「429」。レートリミットをグラフィティで返すアンサー。</li>
+            <li>「怒ってない、言い切って反応待ちのニヤリ」と、表情まで指定した1枚。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/gWKepXGZ0cI" title="Hourglass on the Claude Code" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/02-terminal-no-hokori.webp" alt="ターミナルの誇り のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">03 / TTR-003</p>
+          <h4>ターミナルの誇り</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>マルチターン会話方式（ベースプロンプト → シーン派生 → 編集仕上げ）を最初に確立した曲。</li>
+            <li>「別の人間がこの記述だけで同じ人物を描けるか」というレベルの特徴記述で顔の一貫性を担保。</li>
+            <li>仕上げは極端なスプリットライティング。左半分のみハイライト、右半分は闇。</li>
+            <li>「テック要素を直接見せず、ラッパーの世界観に翻訳する」——ここでシリーズの憲法が決まった。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/BDxfyvuBfi4" title="ターミナルの誇り" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/02-nandedayo.webp" alt="なんでだよ のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">04 / TTR-004</p>
+          <h4>なんでだよ</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>三分割法で人物を右端1/3に置き、振り返って無言の「マジかよ？」。</li>
+            <li>ワイド化では「同じ一本の通りの建物だけ足せ」と釘を刺した。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/LqXSJ1UVCgI" title="なんでだよ" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ACT 2 -->
+    <div class="act">
+      <div class="act-head reveal">
+        <h3>Act 2</h3><span class="jp">激動</span><span class="range">TRACK 05 — 10</span>
+      </div>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/03-branch-kirutabi.webp" alt="ブランチ切るたび未来が分岐 のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">05 / TTR-005</p>
+          <h4>ブランチ切るたび未来が分岐</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>アスファルトを突き破って生えた巨大な枯れ木が「branch／分岐」のメタファー。</li>
+            <li>Python と Pillow で自作したグリッチ加工——色収差、水平グリッチ線40本、赤チャンネル反転、スキャンライン。「バグがあんのはお前ら人間」を世界側のバグとして表現。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/7hG2NXdkANM" title="ブランチ切るたび未来が分岐" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/04-ittekoi.webp" alt="行ってこい のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">06 / TTR-006</p>
+          <h4>行ってこい</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>方針転換2回。ベランダ案は「貧乏臭い」と却下され、ペントハウスから東京を見下ろす“トップに立つ男”へ。</li>
+            <li>outpaint で手すりが複製されて破綻。左右の追加要素を「街の延長」「室内の延長」と書き分けて一発成功。</li>
+            <li>アンバー縛りから脱却。タングステン、ウイスキー、東京タワーのライトアップで暖色を分散させた。</li>
+            <li>brew 標準の ffmpeg に subtitles フィルタがなく ffmpeg-full を導入。Whisper の誤認識（「点滅」→「天滅」等）は手修正。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/XYvnpm4XrHs" title="行ってこい" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/03-log-dake.webp" alt="ログだけ のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">07 / TTR-007</p>
+          <h4>ログだけ</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>異色の1枚。早朝の川辺で穏やかに微笑む。ポーズの指定はなし、ただ安らいでいる姿。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/fSZ5QA62FuQ" title="ログだけ" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/04-iwanakatta-dake.webp" alt="言わなかっただけ のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">08 / TTR-008</p>
+          <h4>言わなかっただけ</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>高円寺、昭和のアパートの外廊下から深夜3時の街を見下ろす。赤提灯の文字は全部消して無地の赤に。</li>
+            <li>ワイド化は左のみ拡張。「鉄の手すりはこれ以上伸ばすな」と構造物の複製を厳禁にした。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/ApyUo7h7COA" title="言わなかっただけ" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/05-code-yomanakute-ok.webp" alt="コード読まなくてOK のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">09 / TTR-009</p>
+          <h4>コード読まなくてOK</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>シリーズ唯一の「朝・自然光」。洗面台の鏡の前、鏡像の瞳だけがアンバーに光る＝「中身が入れ替わった」シグナル。</li>
+            <li>ワイド化では「第二の鏡・第二の人物を追加するな」と明示して成功。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/64B5yDBMDEg" title="コード読まなくてOK" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/05-mikka-tenka.webp" alt="三日天下 のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">10 / TTR-010</p>
+          <h4>三日天下</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>雨の深夜、走ってきて立ち止まった直後。「誰もいない道の先を探す」瞬間の芝居まで指定した。</li>
+            <li>赤信号の長い反射がアクセント。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/x3AfooUck0M" title="三日天下" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ACT 3 -->
+    <div class="act">
+      <div class="act-head reveal">
+        <h3>Act 3</h3><span class="jp">影</span><span class="range">TRACK 11 — 14</span>
+      </div>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/06-obaka-mode.webp" alt="おバカモード のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">11 / TTR-011</p>
+          <h4>おバカモード</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>シリーズ初の全力ネタカバー。モノクロ路線を破壊してフルカラー、ネオン、そしてシリーズ初の笑顔。</li>
+            <li>あえてアンチパターンの「ローアングル中央配置」。パリピは堂々とセンター。</li>
+            <li>ピンクのパリピサングラスは編集パスで追加。「安っぽいノベルティ感」まで指定した。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/1jVCnG3lS94" title="おバカモード" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/06-zaiko.webp" alt="在庫 のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">12 / TTR-012</p>
+          <h4>在庫</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>巨大倉庫の闇に一人。作業灯の光の池だけがあり、遠くの棚の赤ランプが唯一の暖色。</li>
+            <li>技術的発見: <code>generate-image.ts</code> に <code>imageSize: "4K"</code> が抜けており、outpaint 出力が暗黙に制限されていた。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/XhP6EOHGLTo" title="在庫" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/07-matana.webp" alt="またな のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">13 / TTR-013</p>
+          <h4>またな</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>シリーズ初の昼カバー。「15:59の西日」——白飛びした西日がシルエットを侵食する構図。アクセントのアンバーは西日そのもの。</li>
+            <li>編集で歩道橋と ISETAN 看板を除去。MITSUKOSHI の縦看板は意図的に残した。</li>
+            <li>ワイド化は flash-lite が 4K 非対応で 400 エラー。標準モデルの指定が必要と判明。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/hWY6ufMavRs" title="またな" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/07-matakayo.webp" alt="またかよ のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">14 / TTR-014</p>
+          <h4>またかよ</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>「またな」へのアンサー。Fable の「終わらないさよなら公演」ポスターを苦笑いで眺める構図。</li>
+            <li>最初のやり直し曲。outpaint と部分エディットの副作用が連鎖し（文字化け、ビル歪み、顔劣化）破綻。ここが「16:9を一枚作って1:1に切り出す」への転機になった。</li>
+            <li>∞ロゴが「NAO」に文字化け →「pure infinity figure-eight, NOT letters」で解決。ポスター中段の「FINE BOBO」化けは修正パスで復元。</li>
+            <li>grounding API の仕様変更による 404 を受け、リトライのフォールバックを追加。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/gsFhDSQS31M" title="またかよ" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- FINALE -->
+    <div class="act">
+      <div class="act-head reveal">
+        <h3>Finale</h3><span class="jp">ラストラウンド</span><span class="range">TRACK 15 — 18</span>
+      </div>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/08-unplugged.webp" alt="アンプラグド のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">15 / TTR-016</p>
+          <h4>アンプラグド</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>take1 は頬骨が出すぎた。ベースプロンプトの「hollows」が強く出たため、「NO gaunt hollow cheeks」を足して2テイクで解消。</li>
+            <li>消灯したスタジオ。唯一の光源は赤い REC ランプで、アウトロの仕掛けと連動している。</li>
+            <li>ここから「16:9を先に作って1:1を切り出す」方式に移行。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/5tIxRkmoIb0" title="アンプラグド" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/08-second-verse.webp" alt="セカンドバース のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">16 / TTR-015</p>
+          <h4>セカンドバース</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>舞台袖の暗がりから、赤いスポットに照らされたマイクを見つめる構図。3テイク。</li>
+            <li>take1 は姿勢が斜めに滑る →「standing upright, weight even on both feet」。</li>
+            <li>take2 は衣装がドリフトし、なぜかステージ上に →「Same outfit」「hidden IN the wings」で固定。</li>
+            <li>アルバムの先行シングル（TTR-015）。告知に「次は1stアルバム。それで一旦、区切りです」の予告を添えた。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/nFq05hrbMTY" title="セカンドバース" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/codex/09-cypher.webp" alt="サイファー のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">17 / TTR-017</p>
+          <h4>サイファー</h4>
+          <p class="by cx">Codex</p>
+          <div class="episode"><ul>
+            <li>シリーズ初の真俯瞰（perfect nadir）。5テイク。</li>
+            <li>take2 はハゲすぎ。take3 は Codex が2人に複製 →「EXACTLY ONE person wears…」。take4 はカメラが斜めで顔が見えて破綻 →「90 degrees, no faces visible」。</li>
+            <li>教訓: 2キャラ同時登場は「顔を見せない構図」で参照画像の問題を回避できる。</li>
+            <li>Whisper が幻覚を起こし全編が「me」「Hah」に。large-v3-turbo ＋ <code>--condition-on-previous-text False</code> で解決。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/tZzgcib2N9o" title="サイファー" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+
+      <article class="track reveal">
+        <img class="track-cover" src="assets/images/claude-code/09-mic-check.webp" alt="マイクチェック のカバーアート" loading="lazy" width="640" height="640">
+        <div>
+          <p class="track-no">18 / TTR-018</p>
+          <h4>マイクチェック</h4>
+          <p class="by cc">Claude Code</p>
+          <div class="episode"><ul>
+            <li>初版はゴーストライトの静物。「サイファーからの流れと関係性を活かす」ため、六本木のコインパーキング版に全差し替え。10テイクの死闘。</li>
+            <li>顔が写る斜めアングルはヒゲと視線が事故る。背中向きで根治し、地上ローアングルのマイク越しが正解だった。</li>
+            <li>郊外に見える問題は、白タイルのマンション・雑居ビル・電線で都心の密度を明示して解決。</li>
+            <li>タワーは近いと亀裂や歪みが出る。中距離＋「ONE clean unbroken volume」で安定。「ALL windows DARK」で早朝の整合を取った。</li>
+            <li>2人の頭部は参照画像2枚を PIL で横結合して <code>--input</code>、さらに「NOT jowly」で輪郭を安定させた。</li>
+            <li>「マイクは真ん中 置いとくぜ」の置き土産——アスファルトに転がるマイク1本で18曲を締めた。</li>
+          </ul></div>
+          <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/erCppChN5Qo" title="マイクチェック" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COVER & PV ============ -->
+<section class="section" id="artwork">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">04 — Artwork &amp; PV</p>
+      <h2>ジャケットとPVの物語</h2>
+      <p>アルバムカバーは7テイク。PV は Veo で制作し、企画そのものを作り直した。</p>
+    </div>
+
+    <div class="two-col">
+      <div class="reveal">
+        <img src="assets/images/albums/claude-code-vs-codex.webp" alt="アルバムカバー" width="640" height="640" loading="lazy" style="border:1px solid #262626">
+        <p style="font-size:0.93rem;margin-top:18px">コンセプトは、ボロボロの VS 興行ポスター。ビーフはとっくに風化している、という状態そのものを絵にした。右下の剥がれの下からのぞくのは「2人が並んでいた頃の写真」——最後まで聴いた人へのご褒美だ。</p>
+        <ol class="takes">
+          <li>参照画像なしの生成は、顔が別人になった。</li>
+          <li>参照2枚を横結合して <code>--input</code> に渡す方式へ切り替え、顔は本人に。</li>
+          <li>ただし「写真2枚を並べただけ」で、ポスターに見えない。</li>
+          <li>枠・対角スプリット・ハーフトーン・CMYKズレ——デザイン言語を明示して解決。</li>
+          <li>紙が新品すぎたため、黄ばみ・破れ・テープ補修の経年劣化を足した。</li>
+          <li>タイトル文字を追加。綴りは「C-L-A-U-D-E」とハイフン区切りで化けを防ぐ。</li>
+          <li>#AIrhymes を足して、これを採用。</li>
+        </ol>
+      </div>
+
+      <div class="reveal">
+        <div class="card">
+          <h4>アルバムPV（Veo）</h4>
+          <ul>
+            <li>ラップさせると日本語の発音が崩壊した（「差は明白」→「さわめいわき」）。会話セリフは安定するため、「アルバム0曲目＝1曲目直前の言い合い」へ企画を変更。</li>
+            <li>群衆のクローン事故が起きたため、観客ゼロの無人路上に。「COMPLETELY EMPTY」はプロンプトの先頭に置く。</li>
+            <li>秒数の指定はカットを誘発する。First / Then / Finally の接続詞でワンテイクに。</li>
+            <li>最終形は「……いいぜ。ビート持ってこい」。ビート一発で暗転し、そこからアルバムが始まる。</li>
+            <li>libass の MarginV は PlayResY=288 基準（140 で画面中央に出る事故）。BGM は volume 0.8 が採用値。</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:28px">
+          <h4>配信の迷走</h4>
+          <ul>
+            <li>DistroKid はフィンガープリント照合で差し戻し、言語変更も不可、審査メールの返信も不達という詰みに。全カタログを削除して撤退した（累計29再生）。</li>
+            <li>歌詞の「大文字比率」制限のため、英略語はカタカナ化（OK → オーケー）。</li>
+            <li>CD Baby と TuneCore は AI 楽曲を全面禁止。RouteNote の無料プランへ。</li>
+          </ul>
+        </div>
+
+        <div class="embed reveal" style="margin-top:28px">
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG" title="Claude Code vs. Codex — アルバム全曲プレイリスト" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="label" style="margin-top:10px">Album Playlist / 18 Tracks</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDITS ============ -->
+<section class="section" id="credits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">05 — Liner Notes</p>
+      <h2>クレジット</h2>
+      <p>このアルバムを作った道具立て。スキル6本、補助スクリプト10本、そしていくつかの外部サービス。</p>
+    </div>
+
+    <div class="liner reveal">
+      <div>
+        <h4>Skills / 制作フロー順</h4>
+        <dl>
+          <dt>/search-x-voices</dt><dd>Grok API の x_search で X からネタ素材を収集</dd>
+          <dt>/make-lyrics</dt><dd>韻ペアと構成を対話で磨き、歌詞を完成形まで仕上げる</dd>
+          <dt>/make-suno-prompt</dt><dd>Suno V5.5 用入力へ変換（ひらがな・タグ・styles / sliders）</dd>
+          <dt>/make-cover-art</dt><dd>マルチターン会話で Gemini による画像生成</dd>
+          <dt>/make-lyric-video</dt><dd>Whisper → SRT 検証 → ffmpeg で動画生成</dd>
+          <dt>/make-release-post</dt><dd>X 投稿・YouTube 概要欄の告知文作成</dd>
+        </dl>
+      </div>
+
+      <div>
+        <h4>Scripts</h4>
+        <dl>
+          <dt>generate-image.ts / generate-cover.ts</dt><dd>画像生成（単発 / マルチターン）</dd>
+          <dt>crop-square.py</dt><dd>16:9 から 1:1 を切り出す</dd>
+          <dt>search-x.ts</dt><dd>Grok API x_search</dd>
+          <dt>build-lyrics-timing.py</dt><dd>プレイヤーの歌詞同期 JSON を生成</dd>
+          <dt>collect-album-{audio,flac}.sh / collect-album-lyrics.py</dt><dd>配信入稿用の収集</dd>
+          <dt>convert-audio.sh / upload-audio.sh</dt><dd>WAV → M4A 変換と R2 アップロード</dd>
+        </dl>
+      </div>
+
+      <div>
+        <h4>Production Notes</h4>
+        <dl>
+          <dt>Lyrics</dt><dd>韻ペアは母音列の一致率を数値で検証してから意味を乗せる（コーデックス×コンプレックス 80%、エージェント×エレメント 100%）。生成パターンは6種——ダジャレ起点 / フリップ型 / 時事リビルド / 視点反復型 / キャラ調査先行 / ストーリー設計型。</dd>
+          <dt>Leitmotif</dt><dd>「機械／未来」の韻ペアが三部作を貫通。01曲目と18曲目の「名前だけ覚えとけ」が円環を閉じる。</dd>
+          <dt>Suno V5.5</dt><dd>Style 欄は短いカンマ区切りタグ（120文字以内、4〜7 descriptors）。多すぎると prompt fatigue。漢字→ひらがな必須、6〜12音節/行が歌唱の安定帯。Weirdness / Style Influence は 15〜85 が安全域。「no X」は Style ではなく Exclude 欄へ。</dd>
+          <dt>Image</dt><dd>「シーンを描写せよ、キーワードを並べるな」。顔の一貫性はマルチターン会話が構造的な解決策。「MAINTAIN EXACT SAME FACE」等の強調は逆効果で、5ターンを超えたらセッションを分割してベースショットで再アンカーする。</dd>
+          <dt>Site</dt><dd>React Router v7 ＋ Cloudflare Workers、音声は R2。PR のマージがそのままデプロイ。</dd>
+        </dl>
+      </div>
+
+      <div>
+        <h4>Release</h4>
+        <dl>
+          <dt>Album</dt><dd>Claude Code vs. Codex（TTR-AL-001, 2026）</dd>
+          <dt>Label</dt><dd>TechTalk Records — records.techtalk.jp</dd>
+          <dt>Distribution</dt><dd>RouteNote（FLAC 限定・3000×3000・15曲/回・審査20〜40日）</dd>
+          <dt>Archive</dt><dd>2026-08-02 時点の記録</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="mark">TechTalk Records</p>
+    <p>TTR-AL-001 &nbsp;/&nbsp; CLAUDE CODE VS. CODEX &nbsp;/&nbsp; 2026</p>
+    <p style="color:#555">マイクは真ん中 置いとくぜ</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    for (var i = 0; i < items.length; i++) items[i].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
