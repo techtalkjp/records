@@ -77,7 +77,7 @@ function SyncedLyrics({
 
   if (lines === null) {
     return (
-      <div className="h-64 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
+      <div className="h-48 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
         Loading lyrics...
       </div>
     )
@@ -85,7 +85,7 @@ function SyncedLyrics({
 
   if (lines.length === 0) {
     return (
-      <div className="h-64 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
+      <div className="h-48 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
         No synced lyrics
       </div>
     )
@@ -95,7 +95,7 @@ function SyncedLyrics({
     <div
       key={trackKey}
       ref={containerRef}
-      className="h-48 overflow-y-auto px-4 py-6 scrollbar-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+      className="h-48 overflow-y-auto px-4 py-6 scrollbar-none animate-fade-in [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
     >
       <div className="space-y-3">
         {lines.map((line, i) => (
@@ -175,7 +175,10 @@ export function MiniPlayer() {
   return (
     <div className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden">
       {/* Cover art hero */}
-      <div className="relative">
+      <div
+        key={`cover-${currentTrack.artist}/${currentTrack.slug}`}
+        className="relative animate-fade-in"
+      >
         <Link
           to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
           viewTransition
