@@ -184,7 +184,7 @@ const claudeCodeTracks: Track[] = [
     catalogNo: 'TTR-018',
     released: true,
     links: {
-      youtube: 'https://youtu.be/ZTH7iXW228M',
+      youtube: 'https://youtu.be/erCppChN5Qo',
     },
     audioUrl: `${AUDIO_BASE}/claude-code/09-mic-check.m4a`,
   },

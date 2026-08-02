@@ -81,7 +81,7 @@ CD Baby等の買い切り型は **AI生成楽曲を全面禁止**のため不可
 
 1. 8/4頃: アンプラグド（https://youtu.be/5tIxRkmoIb0）
 2. 8/6頃: サイファー（https://youtu.be/tZzgcib2N9o）
-3. 8/8頃: マイクチェック（https://youtu.be/ZTH7iXW228M）
+3. 8/8頃: マイクチェック（https://youtu.be/erCppChN5Qo）
    - **これを音楽活動としての最後の投稿にする**（締めが「名前だけ覚えとけ」）
 
 ## 4. 第2波（後日・RouteNote配信開始時）
