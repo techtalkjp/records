@@ -1,6 +1,7 @@
 import { Link, data } from 'react-router'
 import type { Route } from './+types/tracks.$artist.$slug'
 import { getTrack, getArtist } from '~/data/tracks'
+import { getAlbumOfTrack } from '~/data/albums'
 import { readLyrics } from '~/data/lyrics.server'
 import { usePlayer } from '~/components/player/player-context'
 
@@ -9,8 +10,9 @@ export function loader({ params }: Route.LoaderArgs) {
   if (!track) throw data('Track not found', { status: 404 })
 
   const lyrics = readLyrics(track.lyricsDir)
+  const album = getAlbumOfTrack(track) ?? null
 
-  return { track, lyrics }
+  return { track, lyrics, album: album && { slug: album.slug, title: album.title } }
 }
 
 export function meta({ data }: Route.MetaArgs) {
@@ -51,7 +53,7 @@ function parseLyrics(raw: string) {
 }
 
 export default function TrackPage({ loaderData }: Route.ComponentProps) {
-  const { track, lyrics } = loaderData
+  const { track, lyrics, album } = loaderData
   const artist = getArtist(track.artist)
   const accent = artist?.accentColor ?? 'amber-accent'
   const sections = parseLyrics(lyrics)
@@ -94,6 +96,16 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
           <p className="font-label text-[10px] text-outline uppercase tracking-widest">
             {track.year} / {track.type}
           </p>
+
+          {album && (
+            <Link
+              to={`/albums/${album.slug}`}
+              viewTransition
+              className="block text-xs font-mono text-neutral-500 hover:text-white transition-colors uppercase tracking-widest"
+            >
+              FROM THE ALBUM: {album.title}
+            </Link>
+          )}
 
           {track.links && (
             <div className="flex gap-4 pt-2">

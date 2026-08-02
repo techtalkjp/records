@@ -1,0 +1,21 @@
+Model: gemini-3.1-flash-image (generate-image.ts 単発 16:9 + --input 参照合成画像, then crop 1:1 --hpos 0.66)
+参照: content/albums/01_claude-code-vs-codex/artwork/drafts/ref_combo.jpg
+  （claude-code/images/reference.jpg + codex/images/reference.jpg を横合成した1枚。
+    generate-image.ts の --input が1枚のみのため、2キャラは合成参照で渡す）
+
+採用プロンプト (w07):
+Reference image: two Japanese male rappers — LEFT man: buzz cut, hazel-brown eyes, mole below right eye, scar on left cheekbone, black bomber jacket. RIGHT man: OLIVE-GREEN knit beanie, sandy-blonde tipped hair, denim vest over black hoodie, silver chains. Use their EXACT faces.
+Create: a photorealistic 16:9 night photograph of a weathered concrete wall in a narrow city street, shot straight-on. Wheat-pasted onto the wall is a large PRINTED boxing-match promotional poster that has been up for years and is badly worn: paper yellowed and water-stained, sun-faded chalky colors, deep creases, torn ragged edges with small chunks missing, old tape repairs, grime, graffiti scuffs near the bottom. Poster design: bold distressed frame border, hard diagonal split into an amber half and a deep-red half, halftone print texture, CMYK misregistration. LEFT half: the LEFT man, head-and-shoulders staredown, amber duotone. RIGHT half: the RIGHT man, head-and-shoulders staredown, red duotone. Center: big distressed chipped 'VS' emblem. Typography in bold vintage boxing-poster lettering: above the left man 'CLAUDE CODE' spelled exactly C-L-A-U-D-E space C-O-D-E; above the right man 'CODEX' spelled exactly C-O-D-E-X; and centered along the poster's bottom edge, in a smaller promoter-credit style print, the hashtag '#AIrhymes' spelled exactly hash-A-I-r-h-y-m-e-s with capital A capital I lowercase rhymes. These three text elements and the VS emblem are the ONLY readable text. Check every spelling carefully. The bottom-right corner peels up in a small tattered curl, and through the gap only a narrow sliver of an older sun-faded poster shows — a hint of warm streetlight glow and two shoulders, mostly hidden. A single cold streetlamp lights the wall. Poster placed right-center so a square crop also works. PHOTOREALISTIC natural photographic look, 35mm film, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. No watermarks.
+
+コンセプトメモ:
+- 『Claude Code vs. Codex』= 興行ポスター。ただし長年貼られてボロボロ＝ビーフはとっくに風化
+- 右下の剥がれの下に「2人が並んでいた頃の写真」がチラ見え＝アルバムを聴き終えた人へのご褒美
+- 文字は CLAUDE CODE / VS / CODEX / #AIrhymes のみ
+
+反省メモ（7テイク）:
+- take1-2: 参照なし生成は顔が別人になる。2キャラ同時は参照合成画像を --input で渡すのが正解
+- take3: 顔は本人化。だがポスターが「写真2枚並べただけ」でポスターに見えない
+- take4: デザイン言語（枠・対角スプリット・ハーフトーン・CMYKズレ）を指定して解決。ただし紙が新品すぎ
+- take5: 経年劣化（黄ばみ・破れ・テープ補修・グラフィティ擦れ）を明示
+- take6: タイトル文字追加。綴りはハイフン区切りで指定すると化けない
+- take7: #AIrhymes 追加（大文字小文字も指定）。採用

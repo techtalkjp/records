@@ -3,6 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useViewTransitionState } from 'react-router'
 import { artists, getArtist, getReleasedTracks } from '~/data/tracks'
+import { getReleasedAlbums } from '~/data/albums'
 import { usePlayer } from '~/components/player/player-context'
 
 function CarouselSlide({
@@ -226,6 +227,34 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Album */}
+      {getReleasedAlbums().map((album) => (
+        <section key={album.slug} className="px-6 max-w-2xl mx-auto mb-24">
+          <h2 className="text-[10px] tracking-[0.3em] font-label text-neutral-500 mb-8 uppercase">
+            1ST ALBUM
+          </h2>
+          <Link
+            to={`/albums/${album.slug}`}
+            viewTransition
+            className="group block"
+          >
+            <div className="aspect-square overflow-hidden bg-surface-container-low mb-4">
+              <img
+                src={album.coverImage}
+                alt={album.title}
+                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+              />
+            </div>
+            <p className="text-3xl font-black tracking-tighter font-headline uppercase text-white group-hover:underline leading-none">
+              {album.title}
+            </p>
+            <p className="font-mono text-[10px] tracking-[0.3em] text-neutral-500 uppercase mt-2">
+              {album.catalogNo} / 18 TRACKS
+            </p>
+          </Link>
+        </section>
+      ))}
+
       {/* Artists */}
       <section className="px-6 max-w-2xl mx-auto mb-24">
         <h2 className="text-[10px] tracking-[0.3em] font-label text-neutral-500 mb-8 uppercase">
@@ -248,7 +277,7 @@ export default function Index() {
           TYPE: INDEPENDENT AI LABEL
         </div>
         <div className="text-[10px] font-mono text-neutral-600 text-right leading-relaxed">
-          TTR-001 — TTR-004
+          TTR-001 — {releases[releases.length - 1]?.catalogNo ?? 'TTR-001'}
           <br />
           AVAILABLE WORLDWIDE
           <br />

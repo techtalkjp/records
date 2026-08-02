@@ -7,12 +7,13 @@ export function TopNav() {
   return (
     <>
       <nav className="flex justify-between items-center w-full px-6 py-4 bg-black fixed top-0 z-40">
-        <Link
-          to="/"
-          viewTransition
-          className="text-2xl font-black text-white tracking-tighter font-headline uppercase"
-        >
-          TECHTALK
+        <Link to="/" viewTransition className="group inline-block leading-none">
+          <span className="block text-2xl font-black text-white tracking-tighter font-headline uppercase leading-none">
+            TECHTALK
+          </span>
+          <span className="block text-right font-mono text-[8px] tracking-[0.52em] text-neutral-500 uppercase mt-0.5 group-hover:text-neutral-300 transition-colors">
+            Records
+          </span>
         </Link>
       </nav>
       <div className="h-16" />

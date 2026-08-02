@@ -1,12 +1,24 @@
-Model: gemini-3.1-flash-image (generate-image.ts 単発 16:9, then crop 1:1)
-人物なし（ゴーストライト静物）のため generate-cover.ts 不使用
+Model: gemini-3.1-flash-image (generate-image.ts 16:9 + --input 参照合成画像, then crop 1:1 --hpos 0.55)
+参照: drafts/ref_combo.jpg（CC+Codexのreference.jpgを横結合）→ 確定後drafts削除のため再生成は
+python3でPIL結合（アルバムカバー制作と同手法）
 
-手法: 16:9 を先に生成し、crop-square.py --hpos 0.78 で 1:1 を切り出し
+■ 差し替え履歴: 初版はゴーストライト静物（cover_*_ghostlight_backup.jpg として保存）。
+サイファーからの流れと2人の関係性を活かすため、六本木のコインパーキング版に変更（2026-07-31、10テイク）。
 
-Prompt (16:9):
-A photorealistic 16:9 photograph of an empty small live-music venue after closing, shot from the dark empty floor toward the stage. The house is completely dark. On the bare stage stand exactly two objects: a single traditional theater ghost light — a plain floor stand with one exposed warm incandescent bulb in a small wire cage — glowing softly, and next to it a microphone resting upright in its mic stand. The single bulb is the ONLY light source, casting a warm amber pool on the wooden stage floor and long soft shadows, the edges of the stage and the venue walls fading into deep black. Faint dust motes in the air near the bulb. Dark monitor wedges at the stage edge barely visible. Quiet, reverent, end-of-the-night atmosphere. PHOTOREALISTIC natural photographic look, 35mm film, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. The ghost light and mic stand grouped near the center-right so a square crop also works. No people, no text, no signage, no watermarks.
+採用プロンプト (w10):
+Reference image: two Japanese male rappers — LEFT man: 3mm buzz cut, LEAN rectangular face with a SHARP square jawline, athletic build, black bomber jacket. RIGHT man: OLIVE-GREEN knit beanie (dark olive drab green wool, NOT grey), sandy-blonde tipped hair, BLUE DENIM sleeveless vest over a black hoodie — the denim clearly visible. Match their head shapes, jawlines and builds EXACTLY, even from behind.
+Create: a photorealistic FULL-BLEED 16:9 photograph, camera very LOW, just above the asphalt of a small coin-parking lot in central Tokyo (Roppongi back street). Very early dawn: still mostly dark, hazy sky with the first cold blue of morning. Dense urban surroundings: a white tiled apartment building with balconies and AC units over a low block wall, narrow multi-tenant buildings, tangled utility wires. In the MIDDLE DISTANCE beyond the low rooftops ahead, a tall elegant skyscraper in the style of Tokyo Midtown rises with its ROOFTOP VISIBLE against the dawn sky: a slender rectangular tower of glass and steel with fine HORIZONTAL louver bands across the facade, ONE clean continuous unbroken volume — a single flawless facade with NO vertical seam, NO crack, NO split, NO warping, perfectly straight vertical edges. All windows DARK this early, the glass faintly reflecting the dawn sky, a small red aviation light at the top. The lot: cracked dark asphalt with faded yellow parking lines, greenish streetlamp, two glowing vending machines and a small blue payment kiosk. The two men from the reference walk toward the OPEN EXIT of the lot in the direction of the distant tower, side by side, in step, BACKS fully to the camera, no faces: the LEFT man's head compact with a tight sharp jaw, NOT jowly; the RIGHT man in the olive beanie and blue denim vest. They do not look back. FOREGROUND in the warm lamplight pool: a single handheld microphone on the asphalt, thick black cable loosely coiled beside it — left behind on purpose. Long soft shadows stretch back toward the microphone. No other people, no cars. Shallow depth: microphone crisp, figures softly focused. PHOTOREALISTIC natural photographic look, 35mm film, heavy natural film grain — NOT an illustration, NOT HDR, NOT oversaturated, NOT painterly. Signage tiny and illegible. Microphone and figures center-right so a square crop also works. No readable text, no watermarks.
 
 コンセプトメモ:
-- ゴーストライト＝劇場が閉まっている間も点けておく灯り（実在の劇場文化）＝活動休止の「また戻るための光」
-- 「マイクは置かない 立てとくスタンド」「カーソルの点滅」の集約。アンバー（CCのアクセント色）が唯一の光源
-- アルバムが人物なし（01グラフィティ）で開き、人物なし（本作）で閉じる対称
+- サイファー（俯瞰の輪・コインパーキング）からの続き。「マイクは真ん中 置いとくぜ」の置き土産と、
+  ビーフで始まった2人が並んで帰る背中で18曲を締める
+- 夜明けの青＝長い夜（ビーフ）が明けた朝。「毎朝のマイクチェック」の朝
+- 参照: トラストパーク六本木7丁目のGoogle Maps写真の空気（自販機・精算機・ブロック塀・黄枠線）
+
+反省メモ（10テイク）:
+- 顔が写る斜めアングルはヒゲ・視線の事故る（→背中向きで根治）
+- 俯瞰は「つまらない」、地上ローアングルのマイク越しが正解だった
+- 郊外に見える問題→白タイルのマンション・雑居ビル・電線で都心密度を明示
+- タワーは近すぎると亀裂・歪み事故。中距離＋「ONE clean unbroken volume」指定で安定
+- 早朝なのに窓が点灯してる問題→「ALL windows DARK, nobody is at work」指定
+- 2人の頭部造形は参照合成画像を--inputで渡す＋「NOT jowly」等の輪郭指定が効く
