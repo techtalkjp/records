@@ -132,6 +132,8 @@ export function MiniPlayer() {
     playPrev,
     accentColor: accent,
     expandSignal,
+    repeatMode,
+    cycleRepeatMode,
   } = usePlayer()
   const [expanded, setExpanded] = useState(false)
 
@@ -268,6 +270,20 @@ export function MiniPlayer() {
           className="text-neutral-400 hover:text-white transition-colors"
         >
           <span className="material-symbols-outlined text-xl">skip_next</span>
+        </button>
+        <button
+          type="button"
+          onClick={cycleRepeatMode}
+          aria-label={`repeat: ${repeatMode}`}
+          className={`transition-colors ${
+            repeatMode === 'off'
+              ? 'text-neutral-600 hover:text-neutral-400'
+              : `text-${accent}`
+          }`}
+        >
+          <span className="material-symbols-outlined text-lg">
+            {repeatMode === 'one' ? 'repeat_one' : 'repeat'}
+          </span>
         </button>
       </div>
 

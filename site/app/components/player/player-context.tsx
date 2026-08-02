@@ -16,12 +16,16 @@ interface PlayerState {
   duration: number
 }
 
+export type RepeatMode = 'off' | 'all' | 'one'
+
 interface PlayerContextValue extends PlayerState {
   playlist: Track[]
   play: (track: Track) => void
   playQueue: (tracks: Track[], startIndex?: number) => void
   /** playQueue が呼ばれるたびに増える。プレイヤーUIの自動展開トリガー */
   expandSignal: number
+  repeatMode: RepeatMode
+  cycleRepeatMode: () => void
   togglePlayPause: () => void
   seekTo: (time: number) => void
   playNext: () => void
@@ -47,7 +51,14 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
   const defaultPlaylist = useMemo(() => allTracks.filter((t) => t.audioUrl), [])
   const [queue, setQueue] = useState<Track[] | null>(null)
   const [expandSignal, setExpandSignal] = useState(0)
+  const [repeatMode, setRepeatMode] = useState<RepeatMode>('off')
+  const repeatModeRef = useRef<RepeatMode>('off')
+  repeatModeRef.current = repeatMode
   const playlist = queue ?? defaultPlaylist
+
+  const cycleRepeatMode = useCallback(() => {
+    setRepeatMode((m) => (m === 'off' ? 'all' : m === 'all' ? 'one' : 'off'))
+  }, [])
 
   const [state, setState] = useState<PlayerState>({
     currentTrack: null,
@@ -92,6 +103,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
       if (playable.length === 0) return
       setQueue(playable)
       setExpandSignal((n) => n + 1)
+      setRepeatMode('all')
       const start = playable[Math.min(startIndex, playable.length - 1)]!
       const audio = audioRef.current
       if (!audio || !start.audioUrl) return
@@ -152,10 +164,20 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
     const onPlay = () => setState((s) => ({ ...s, isPlaying: true }))
     const onPause = () => setState((s) => ({ ...s, isPlaying: false }))
     const onEnded = () => {
+      const mode = repeatModeRef.current
+      if (mode === 'one') {
+        audio.currentTime = 0
+        safePlay(audio)
+        return
+      }
       setState((s) => {
         const idx = s.currentTrack
           ? playlist.findIndex((t) => isSameTrack(t, s.currentTrack!))
           : -1
+        // off: 最後の曲で止まる / all: 先頭に戻ってループ
+        if (mode === 'off' && idx >= playlist.length - 1) {
+          return { ...s, isPlaying: false }
+        }
         const next = playlist[(idx + 1) % playlist.length]
         if (next?.audioUrl) {
           audio.src = next.audioUrl
@@ -189,6 +211,8 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
         play,
         playQueue,
         expandSignal,
+        repeatMode,
+        cycleRepeatMode,
         togglePlayPause,
         seekTo,
         playNext,
