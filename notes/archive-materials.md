@@ -10,12 +10,30 @@ https://github.com/techtalkjp/artifactshare/issues/1399 の対応待ち。
 
 # 制作年表
 
-全95コミット（2026-03-21 〜 2026-08-02、約4ヶ月半）の git 履歴より。
+git 履歴（95コミット）＋ ファイル作成日 ＋ X投稿 ＋ YouTube公開日より。
+
+## Phase 0: 前史 — リポジトリ以前（2026年3月6日〜20日）
+
+出典: X検索（Grok x_search）、ファイルbirthtime、YouTube公開日（yt-dlp）
+
+- **3/06** 韻辞書スキル「ダジャレ Skill v1.3.0」公開（4万語の韻辞書・母音一致チェック。のちの韻検証の原型）
+- **3/09** 日本語ラップスキル（韻bedding Search）公開。同日、Suno で作った最初の曲を X に投稿
+- **3/10** 「Complexes on the Codex」Apple Music 配信開始（DistroKid）
+- **3/17** #AIrhymes 初投稿（14:16 Hourglass アンサー告知、14:55「AIで作ったAIの日本語ラップ1曲目改めて」）。Complexes / Hourglass の2曲を YouTube 公開
+- **3/20** 「ターミナルの誇り」track.wav 完成（20:01、リポジトリに残る最古のファイル）
+
+### YouTube 公開日（初期）
+| 日付 | 曲 |
+|---|---|
+| 3/17 | Complexes on the Codex / Hourglass on the Claude |
+| 3/25 | ターミナルの誇り |
+| 3/30 | なんでだよ |
+| 4/07〜 | 以降は Phase 4 の表と同一（コミット日＝公開日） |
 
 ## Phase 1: 構想・立ち上げ（2026年3月21日〜22日）
 
-**2026-03-21 — プロジェクト始動**
-- 初日から6トラック分の字幕付きリリックビデオを携えて初コミット
+**2026-03-21 — リポジトリ開設**
+- 完成済みの6曲（Claude Code 01–04、Codex 01–02）を持ち込んで初コミット（制作自体は前史から）
   > "Initial commit: 6 tracks with subtitled lyric videos"
 - キャラクターシート（Claude Code / Codex）とデザインリサーチノートを整備
 
