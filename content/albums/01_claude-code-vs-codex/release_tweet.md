@@ -1,4 +1,4 @@
-# アルバムリリースツイート（マージ＝公開後に投稿）
+# アルバムリリースツイート（投稿予定: 2026-08-03(月) 12:00）
 
 ## メインツイート（添付: pv/アルバムPV (1080x1920) 字幕BGM.mp4）
 
@@ -16,6 +16,7 @@ dissから始まって、全18曲。どう終わるかは、通しで。
 ## セルフリプライ
 
 アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+YouTubeプレイリスト: https://www.youtube.com/playlist?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG
 （Spotify / Apple Music のリンクは配信確認後にリプライで追加）
 
 新曲:

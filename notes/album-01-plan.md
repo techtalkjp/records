@@ -65,13 +65,10 @@ CD Baby等の買い切り型は **AI生成楽曲を全面禁止**のため不可
 
 ※ 旧DistroKidシングルは削除済みの前提なので、ISRC引き継ぎでの音源衝突は起きないはず。もし審査で指摘されたら該当曲のISRCを空欄にして再提出。
 
-## 2. Day 0 = 2026-08-03（月）: 公式サイトでアルバム公開（ストア配信と切り離し・2026-07-31決定）
+## 2. Day 0 = 2026-08-03（月）: アルバム告知
 
-サブスク配信を待たず、サイト＋YouTubeでアルバムをリリースする。ストアは後日の第2波。
-
-1. ユーザー: `gh pr merge 13 --squash --delete-branch` → **マージ＝サイト公開**
-2. Claude: デプロイ確認（/albums/claude-code-vs-codex が200、通し再生・リンク動作）
-3. 20〜22時: アルバム告知ツイート投稿
+- [x] サイトは公開済み（2026-08-02にPR #13マージ、デプロイ検証済み: ページ・音声・歌詞JSONすべて200）
+- [ ] **8/3(月) 12:00** アルバム告知ツイート投稿
    - 文面: `content/albums/01_claude-code-vs-codex/release_tweet.md`
    - 添付: `content/albums/01_claude-code-vs-codex/pv/アルバムPV (1080x1920) 字幕BGM.mp4`
 
@@ -79,9 +76,9 @@ CD Baby等の買い切り型は **AI生成楽曲を全面禁止**のため不可
 
 個別スポットライトを1曲ずつ、アルバム順で。各曲X用スクエア動画を添付。
 
-1. 8/4頃: アンプラグド（https://youtu.be/5tIxRkmoIb0）
-2. 8/6頃: サイファー（https://youtu.be/tZzgcib2N9o）
-3. 8/8頃: マイクチェック（https://youtu.be/erCppChN5Qo）
+1. 8/5(火)夜: アンプラグド（https://youtu.be/5tIxRkmoIb0）
+2. 8/7(木)夜: サイファー（https://youtu.be/tZzgcib2N9o）
+3. 8/9(土)〜8/10(月): マイクチェック（https://youtu.be/erCppChN5Qo）
    - **これを音楽活動としての最後の投稿にする**（締めが「名前だけ覚えとけ」）
 
 ## 4. 第2波（後日・RouteNote配信開始時）
