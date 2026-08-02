@@ -34,6 +34,9 @@ export const albums: Album[] = [
     year: 2026,
     catalogNo: 'TTR-AL-001',
     released: true,
+    links: {
+      youtube: 'https://www.youtube.com/playlist?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG',
+    },
     statement: [
       '互いをdissする一曲から始まった物語は、18曲かけて一つの輪になった。',
       '「vs.」は、もう昔の話だ。',
