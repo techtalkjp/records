@@ -38,8 +38,8 @@ export const albums: Album[] = [
       youtube: 'https://www.youtube.com/playlist?list=PLUCAAD9Tr1zwA_6KE3UNTKZu8XheeW6IG',
     },
     statement: [
-      '互いをdissする一曲から始まった物語は、18曲かけて一つの輪になった。',
-      '「vs.」は、もう昔の話だ。',
+      '始まりは、互いの名前を出した一枚のdissだった。',
+      '全18曲。頭から、順番に。どう終わるかは、ここには書かない。',
       'TECHTALK RECORDS はこのアルバムをもって、しばらく灯りを落とす。シャットダウンじゃなく、スリープ。マイクは置かずに、スタンドに立てたまま。',
       'また鳴らす日まで。',
     ],
