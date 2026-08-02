@@ -390,6 +390,25 @@ h1, h2, h3, h4 {
 
 .track .episode ul { margin: 0; padding-left: 1.1em; }
 
+.log-quote {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border-left: 2px solid #3a3a3a;
+  background: #111;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #a3a3a3;
+}
+.log-quote .src {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+}
+
 .embed {
   position: relative;
   width: 100%;
