@@ -64,8 +64,13 @@ function SyncedLyrics({
       `[data-line="${activeIndex}"]`,
     )
     if (!el) return
+    // 行の頭が必ず見えるように: 短い行は中央寄せ、長い行は上から48pxに固定
+    const offset = Math.max(
+      48,
+      (container.clientHeight - el.clientHeight) / 2,
+    )
     container.scrollTo({
-      top: el.offsetTop - container.clientHeight / 2 + el.clientHeight / 2,
+      top: el.offsetTop - offset,
       behavior: 'smooth',
     })
   }, [activeIndex])
@@ -90,7 +95,7 @@ function SyncedLyrics({
     <div
       key={trackKey}
       ref={containerRef}
-      className="h-64 overflow-y-auto px-4 py-6 scrollbar-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+      className="h-72 overflow-y-auto px-4 py-8 scrollbar-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
     >
       <div className="space-y-3">
         {lines.map((line, i) => (
@@ -103,8 +108,8 @@ function SyncedLyrics({
               i === activeIndex
                 ? `text-${accent} font-bold`
                 : i < activeIndex
-                  ? 'text-neutral-600 hover:text-neutral-400'
-                  : 'text-neutral-500 hover:text-neutral-300'
+                  ? 'text-neutral-500 hover:text-neutral-300'
+                  : 'text-neutral-400 hover:text-neutral-200'
             }`}
           >
             {line.text}
@@ -163,6 +168,17 @@ export function MiniPlayer() {
 
   return (
     <div className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden">
+      {/* Cover art background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src={currentTrack.coverImage}
+          alt=""
+          className="w-full h-full object-cover blur-xl scale-125 opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/75" />
+      </div>
+
+      <div className="relative">
       {/* Header: cover + info + close */}
       <div className="flex items-center gap-3 p-3">
         <Link
@@ -258,14 +274,15 @@ export function MiniPlayer() {
         />
         {duration > 0 && (
           <div className="flex justify-between mt-1">
-            <span className="text-[9px] font-mono text-neutral-500">
+            <span className="text-[9px] font-mono text-neutral-400">
               {formatTime(currentTime)}
             </span>
-            <span className="text-[9px] font-mono text-neutral-500">
+            <span className="text-[9px] font-mono text-neutral-400">
               {formatTime(duration)}
             </span>
           </div>
         )}
+      </div>
       </div>
     </div>
   )
