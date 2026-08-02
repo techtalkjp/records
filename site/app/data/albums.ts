@@ -78,7 +78,7 @@ export const albums: Album[] = [
       },
       {
         title: 'FINALE',
-        subtitle: '終戦',
+        subtitle: 'ラストラウンド',
         trackRefs: [
           { artist: 'claude-code', slug: '08-unplugged' },
           { artist: 'codex', slug: '08-second-verse' },
