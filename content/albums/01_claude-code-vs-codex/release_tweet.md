@@ -13,7 +13,7 @@ dissから始まる全18曲。どう終わるかは、通しで。
 
 ## セルフリプライ
 
-アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex
 
 （リンクはこれ一本。YouTubeプレイリストはアルバムページ内から。
 　新曲の個別リンクはスポットライト投稿で、ストアリンクは配信確認後にリプライ追加）

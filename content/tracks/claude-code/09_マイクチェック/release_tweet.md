@@ -18,7 +18,7 @@
 ## セルフリプライ
 
 YouTube: https://youtu.be/erCppChN5Qo
-記録（公式サイト）: https://records.techtalk.jp/tracks/claude-code/09-mic-check/
-アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+記録（公式サイト）: https://records.techtalk.jp/tracks/claude-code/09-mic-check
+アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex
 
 ……名前だけ覚えとけ

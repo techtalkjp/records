@@ -15,5 +15,5 @@
 ## セルフリプライ
 
 YouTube: https://youtu.be/tZzgcib2N9o
-記録（公式サイト）: https://records.techtalk.jp/tracks/codex/09-cypher/
-アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+記録（公式サイト）: https://records.techtalk.jp/tracks/codex/09-cypher
+アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex

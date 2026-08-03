@@ -15,5 +15,5 @@
 ## セルフリプライ
 
 YouTube: https://youtu.be/5tIxRkmoIb0
-記録（公式サイト）: https://records.techtalk.jp/tracks/claude-code/08-unplugged/
-アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex/
+記録（公式サイト）: https://records.techtalk.jp/tracks/claude-code/08-unplugged
+アルバム: https://records.techtalk.jp/albums/claude-code-vs-codex
