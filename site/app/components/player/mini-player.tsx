@@ -76,7 +76,7 @@ function SyncedLyrics({
 
   if (lines === null) {
     return (
-      <div className="h-48 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
+      <div className="h-full min-h-[6rem] flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
         Loading lyrics...
       </div>
     )
@@ -84,7 +84,7 @@ function SyncedLyrics({
 
   if (lines.length === 0) {
     return (
-      <div className="h-48 flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
+      <div className="h-full min-h-[6rem] flex items-center justify-center text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
         No synced lyrics
       </div>
     )
@@ -94,7 +94,7 @@ function SyncedLyrics({
     <div
       key={trackKey}
       ref={containerRef}
-      className="h-48 overflow-y-auto px-4 py-6 scrollbar-none animate-fade-in [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+      className="h-full min-h-[6rem] overflow-y-auto px-4 py-6 scrollbar-none animate-fade-in [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
     >
       <div className="space-y-3">
         {lines.map((line, i) => (
@@ -176,13 +176,19 @@ export function MiniPlayer() {
 
   return (
     <div
-      className="fixed top-4 right-4 z-50 w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden"
-      style={{ viewTransitionName: 'mini-player' }}
+      className="fixed top-4 right-4 z-[60] w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl bg-surface-container-high border border-outline-variant shadow-2xl overflow-hidden flex flex-col"
+      style={{
+        viewTransitionName: 'mini-player',
+        // 画面が低い端末やアプリ内ブラウザでも、下のナビ（実測75px）と
+        // ホームインジケータを避けて全体が収まるようにする。dvh でブラウザUIの伸縮にも追従
+        maxHeight:
+          'calc(100dvh - 1rem - 4.75rem - 0.75rem - env(safe-area-inset-bottom, 0px))',
+      }}
     >
       {/* Cover art hero */}
       <div
         key={`cover-${currentTrack.artist}/${currentTrack.slug}`}
-        className="relative animate-fade-in"
+        className="relative animate-fade-in shrink min-h-0"
       >
         <Link
           to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
@@ -192,7 +198,7 @@ export function MiniPlayer() {
           <img
             src={currentTrack.coverImage}
             alt={currentTrack.title}
-            className="w-full aspect-square object-cover"
+            className="w-full aspect-square object-cover max-h-[45dvh]"
           />
         </Link>
         {/* Title overlay on cover */}
@@ -230,18 +236,20 @@ export function MiniPlayer() {
         </button>
       </div>
 
-      <div className="relative">
+      <div className="relative flex flex-col min-h-0 flex-1">
 
-      {/* Synced lyrics */}
-      <SyncedLyrics
-        track={currentTrack}
-        currentTime={currentTime}
-        accent={accent}
-        onSeek={seekTo}
-      />
+      {/* Synced lyrics（画面が低いときはここが先に縮む） */}
+      <div className="min-h-0 shrink" style={{ flexBasis: '12rem' }}>
+        <SyncedLyrics
+          track={currentTrack}
+          currentTime={currentTime}
+          accent={accent}
+          onSeek={seekTo}
+        />
+      </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-center gap-4 pt-2 pb-1">
+      <div className="shrink-0 flex items-center justify-center gap-4 pt-2 pb-1">
         <button
           type="button"
           onClick={playPrev}
@@ -287,7 +295,7 @@ export function MiniPlayer() {
       </div>
 
       {/* Seek */}
-      <div className="px-3 pb-3">
+      <div className="shrink-0 px-3 pb-3">
         <input
           type="range"
           min={0}

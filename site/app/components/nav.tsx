@@ -31,7 +31,7 @@ export function BottomNav() {
     location.pathname.startsWith('/tracks')
 
   return (
-    <nav className="fixed bottom-0 w-full flex justify-around items-center py-4 bg-black z-50">
+    <nav className="fixed bottom-0 w-full flex justify-around items-center py-4 pb-[max(1rem,env(safe-area-inset-bottom))] bg-black z-50">
       <NavItem to="/" label="HOME" icon="home" active={isHome} />
       <NavItem
         to="/artists"
