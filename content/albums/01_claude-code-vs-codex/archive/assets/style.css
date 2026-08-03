@@ -27,6 +27,8 @@ body {
   font-family: var(--font-body);
   line-height: 1.8;
   overflow-x: hidden;
+  /* 日本語は文節単位で改行する（対応ブラウザのみ。非対応環境は従来どおり） */
+  word-break: auto-phrase;
 }
 
 img { max-width: 100%; height: auto; display: block; }
