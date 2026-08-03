@@ -468,7 +468,9 @@ a:hover { text-decoration-color: var(--amber); }
   padding: 0;
 }
 .toc-list a {
-  display: block;
+  display: flex;
+  gap: 7px;
+  align-items: baseline;
   padding: 5px 0;
   font-size: 0.68rem;
   line-height: 1.5;
@@ -481,10 +483,15 @@ a:hover { text-decoration-color: var(--amber); }
     color 0.2s,
     border-color 0.2s;
 }
+/* 番号は固定幅の列にして、折り返した本文が番号の下に潜り込まないようにする */
 .toc-list a .n {
+  flex: 0 0 auto;
   color: #3f3f3f;
-  margin-right: 6px;
   transition: color 0.2s;
+}
+.toc-list a .t {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .toc-list a:hover {
   color: #d4d4d4;
