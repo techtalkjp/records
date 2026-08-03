@@ -456,6 +456,113 @@ a:hover { text-decoration-color: var(--amber); }
   .chars { grid-template-columns: 1fr; }
 }
 
+/* --- スキルの SKILL.md モーダル --- */
+.skill-hint {
+  margin: -6px 0 14px;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.skill-open {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #444;
+}
+.skill-open:hover { text-decoration-color: var(--amber); }
+
+.modal[hidden] { display: none; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(2px);
+}
+.modal-panel {
+  position: relative;
+  width: min(860px, 100%);
+  max-height: min(80dvh, 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0b0b0b;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+.modal-head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #1c1c1c;
+}
+.modal-path {
+  margin: 4px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #d4d4d4;
+  word-break: break-all;
+}
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+.modal-actions a {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.modal-actions a:hover { color: var(--amber); }
+.modal-close {
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0 2px;
+  cursor: pointer;
+}
+.modal-close:hover { color: #fff; }
+.modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+  padding: 18px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.75;
+  color: #c8c8c8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  tab-size: 2;
+}
+@media (max-width: 720px) {
+  .modal { padding: 12px; }
+  .modal-body { font-size: 0.72rem; padding: 14px; }
+}
+
 .log-quote {
   margin: 14px 0 0;
   padding: 10px 14px;

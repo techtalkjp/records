@@ -587,13 +587,14 @@
     <div class="liner reveal">
       <div>
         <h4>Skills / 制作フロー順</h4>
+        <p class="skill-hint">スキル名を押すと SKILL.md の中身を表示します。</p>
         <dl>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/search-x-voices" target="_blank" rel="noopener noreferrer">/search-x-voices</a></dt><dd>Grok API の x_search で X からネタ素材を収集</dd>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-lyrics" target="_blank" rel="noopener noreferrer">/make-lyrics</a></dt><dd>韻ペアと構成を対話で磨き、歌詞を完成形まで仕上げる</dd>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-suno-prompt" target="_blank" rel="noopener noreferrer">/make-suno-prompt</a></dt><dd>Suno V5.5 用入力へ変換（ひらがな・タグ・styles / sliders）</dd>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-cover-art" target="_blank" rel="noopener noreferrer">/make-cover-art</a></dt><dd>マルチターン会話で Gemini による画像生成</dd>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-lyric-video" target="_blank" rel="noopener noreferrer">/make-lyric-video</a></dt><dd>Whisper → SRT 検証 → ffmpeg で動画生成</dd>
-          <dt><a href="https://github.com/techtalkjp/records/tree/main/.claude/skills/make-release-post" target="_blank" rel="noopener noreferrer">/make-release-post</a></dt><dd>X 投稿・YouTube 概要欄の告知文作成</dd>
+          <dt><button type="button" class="skill-open" data-skill="search-x-voices">/search-x-voices</button></dt><dd>Grok API の x_search で X からネタ素材を収集</dd>
+          <dt><button type="button" class="skill-open" data-skill="make-lyrics">/make-lyrics</button></dt><dd>韻ペアと構成を対話で磨き、歌詞を完成形まで仕上げる</dd>
+          <dt><button type="button" class="skill-open" data-skill="make-suno-prompt">/make-suno-prompt</button></dt><dd>Suno V5.5 用入力へ変換（ひらがな・タグ・styles / sliders）</dd>
+          <dt><button type="button" class="skill-open" data-skill="make-cover-art">/make-cover-art</button></dt><dd>マルチターン会話で Gemini による画像生成</dd>
+          <dt><button type="button" class="skill-open" data-skill="make-lyric-video">/make-lyric-video</button></dt><dd>Whisper → SRT 検証 → ffmpeg で動画生成</dd>
+          <dt><button type="button" class="skill-open" data-skill="make-release-post">/make-release-post</button></dt><dd>X 投稿・YouTube 概要欄の告知文作成</dd>
         </dl>
       </div>
 
@@ -634,6 +635,24 @@
   </div>
 </section>
 
+<!-- ============ SKILL MODAL ============ -->
+<div class="modal" id="skill-modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="skill-modal-title">
+    <div class="modal-head">
+      <div>
+        <p class="label" id="skill-modal-title">SKILL.md</p>
+        <p class="modal-path" id="skill-modal-path"></p>
+      </div>
+      <div class="modal-actions">
+        <a id="skill-modal-gh" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button type="button" class="modal-close" data-close aria-label="閉じる">×</button>
+      </div>
+    </div>
+    <pre class="modal-body" id="skill-modal-body" tabindex="0"></pre>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <p class="mark">TechTalk Records</p>
@@ -642,7 +661,51 @@
   </div>
 </footer>
 
+<script src="assets/skills.js"></script>
 <script>
+// スキル名クリックで SKILL.md をモーダル表示
+(function () {
+  var modal = document.getElementById('skill-modal')
+  var body = document.getElementById('skill-modal-body')
+  var path = document.getElementById('skill-modal-path')
+  var gh = document.getElementById('skill-modal-gh')
+  var lastFocus = null
+
+  function open(name) {
+    var src = (window.__SKILLS || {})[name]
+    if (!src) return
+    body.textContent = src
+    body.scrollTop = 0
+    path.textContent = '.claude/skills/' + name + '/SKILL.md'
+    gh.href =
+      'https://github.com/techtalkjp/records/blob/main/.claude/skills/' +
+      name +
+      '/SKILL.md'
+    lastFocus = document.activeElement
+    modal.hidden = false
+    document.body.style.overflow = 'hidden'
+    body.focus()
+  }
+
+  function close() {
+    modal.hidden = true
+    document.body.style.overflow = ''
+    if (lastFocus) lastFocus.focus()
+  }
+
+  document.querySelectorAll('.skill-open').forEach(function (b) {
+    b.addEventListener('click', function () {
+      open(b.getAttribute('data-skill'))
+    })
+  })
+  modal.querySelectorAll('[data-close]').forEach(function (el) {
+    el.addEventListener('click', close)
+  })
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) close()
+  })
+})()
+
 (function () {
   var items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
