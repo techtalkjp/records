@@ -37,6 +37,15 @@ body {
   color: black;
 }
 
+/* 展開プレイヤーの最大高。下のナビ(75px)とセーフエリアを避ける。
+   dvh 非対応ブラウザ向けに vh のフォールバックを先に置く */
+.player-panel {
+  max-height: calc(100vh - 1rem - 4.75rem - 0.75rem);
+  max-height: calc(
+    100dvh - 1rem - 4.75rem - 0.75rem - env(safe-area-inset-bottom, 0px)
+  );
+}
+
 /* View Transition: detail pages have fixed transition names */
 .track-detail-cover {
   view-transition-name: cover-art;
