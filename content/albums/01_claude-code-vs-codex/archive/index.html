@@ -635,6 +635,22 @@
   </div>
 </section>
 
+<!-- ============ TOC ============ -->
+<nav class="toc" id="toc" aria-label="目次">
+  <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-list">
+    <span class="toc-toggle-icon" aria-hidden="true"></span>
+    <span>目次</span>
+  </button>
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#characters"><span class="n">01</span> 対戦カード</a></li>
+    <li><a href="#numbers"><span class="n">02</span> 数字で見るアルバム</a></li>
+    <li><a href="#timeline"><span class="n">03</span> 制作年表</a></li>
+    <li><a href="#tracks"><span class="n">04</span> 収録曲の記録</a></li>
+    <li><a href="#artwork"><span class="n">05</span> ジャケットとPV</a></li>
+    <li><a href="#credits"><span class="n">06</span> クレジット</a></li>
+  </ol>
+</nav>
+
 <!-- ============ SKILL MODAL ============ -->
 <div class="modal" id="skill-modal" hidden>
   <div class="modal-backdrop" data-close></div>
@@ -662,6 +678,62 @@
 </footer>
 
 <script src="assets/skills.js"></script>
+<script>
+// スクロール連動の目次
+(function () {
+  var toc = document.getElementById('toc');
+  var toggle = document.getElementById('toc-toggle');
+  var links = [].slice.call(toc.querySelectorAll('a'));
+  var sections = links
+    .map(function (a) {
+      return document.getElementById(a.getAttribute('href').slice(1));
+    })
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var idx = -1;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].getBoundingClientRect().top <= 140) idx = i;
+    }
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.toggle('active', j === idx);
+    }
+    toc.classList.toggle('past-hero', idx >= 0);
+  }
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+
+  // 折りたたみ（狭い画面）
+  function setOpen(v) {
+    toc.classList.toggle('open', v);
+    toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', function () {
+    setOpen(!toc.classList.contains('open'));
+  });
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOpen(false);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!toc.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();
+</script>
 <script>
 // スキル名クリックで SKILL.md をモーダル表示
 (function () {

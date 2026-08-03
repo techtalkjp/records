@@ -456,6 +456,119 @@ a:hover { text-decoration-color: var(--amber); }
   .chars { grid-template-columns: 1fr; }
 }
 
+/* --- スクロール連動の目次 --- */
+.toc {
+  position: fixed;
+  z-index: 90;
+  font-family: var(--font-mono);
+}
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toc-list a {
+  display: block;
+  padding: 5px 0;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #5c5c5c;
+  text-decoration: none;
+  border-left: 1px solid #262626;
+  padding-left: 12px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.toc-list a .n {
+  color: #3f3f3f;
+  margin-right: 6px;
+  transition: color 0.2s;
+}
+.toc-list a:hover {
+  color: #d4d4d4;
+}
+.toc-list a.active {
+  color: #fff;
+  border-left-color: var(--amber);
+}
+.toc-list a.active .n {
+  color: var(--amber);
+}
+
+/* ノートPC以上: 左余白に常時表示（本文1080pxと重ならない幅で） */
+@media (min-width: 1400px) {
+  .toc {
+    top: 50%;
+    left: 16px;
+    width: 140px;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+  .toc.past-hero {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .toc-toggle {
+    display: none;
+  }
+}
+
+/* それ以外: 折りたたみ */
+@media (max-width: 1399px) {
+  .toc {
+    right: 16px;
+    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .toc-toggle {
+    order: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: #d4d4d4;
+    background: #111;
+    border: 1px solid #2e2e2e;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  .toc-toggle-icon {
+    width: 12px;
+    height: 8px;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+  }
+  .toc-list {
+    order: 1;
+    display: none;
+    max-width: min(72vw, 260px);
+    padding: 10px 14px;
+    background: #0d0d0d;
+    border: 1px solid #262626;
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  }
+  .toc.open .toc-list {
+    display: block;
+  }
+  .toc-list a {
+    padding: 7px 0 7px 12px;
+    font-size: 0.74rem;
+  }
+}
+
 /* --- スキルの SKILL.md モーダル --- */
 .skill-hint {
   margin: -6px 0 14px;
