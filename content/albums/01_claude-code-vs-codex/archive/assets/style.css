@@ -521,15 +521,15 @@ a:hover { text-decoration-color: var(--amber); }
 @media (max-width: 1399px) {
   .toc {
     right: 16px;
-    bottom: 16px;
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    top: 16px;
+    top: calc(16px + env(safe-area-inset-top, 0px));
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
   }
   .toc-toggle {
-    order: 2;
+    order: 1;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -551,9 +551,11 @@ a:hover { text-decoration-color: var(--amber); }
     border-bottom: 1px solid currentColor;
   }
   .toc-list {
-    order: 1;
+    order: 2;
     display: none;
     max-width: min(72vw, 260px);
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
     padding: 10px 14px;
     background: #0d0d0d;
     border: 1px solid #262626;
