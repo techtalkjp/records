@@ -182,7 +182,8 @@ export function MiniPlayer() {
       {/* Cover art hero */}
       <div
         key={`cover-${currentTrack.artist}/${currentTrack.slug}`}
-        className="relative animate-fade-in shrink min-h-0"
+        // overflow-hidden がないと、縮んだ枠から画像がはみ出して歌詞に垂れ込む
+        className="relative animate-fade-in shrink min-h-0 overflow-hidden"
       >
         <Link
           to={`/tracks/${currentTrack.artist}/${currentTrack.slug}`}
