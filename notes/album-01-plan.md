@@ -87,10 +87,20 @@ RouteNote入稿は急がず進める（審査20〜40日）。配信が開始さ�
 
 - [ ] albums.ts の links に Spotify / Apple Music のアルバムURLを追加（小PR）
 - [ ] アルバム告知ツイートのリプライにストアリンクを追加
-- [ ] **Zenn記事を公開**: AIエージェントだけで1stアルバムを作って一旦休止するまでの制作記
-  - ネタ: 歌詞制作フロー（韻検証・辛口レビュー）、Suno、カバー/PVの画像・動画生成の試行錯誤、
-    サイト実装、配信の落とし穴（DistroKid差し戻し・AI楽曲ポリシー・RouteNote移行）
+- [x] **Zenn記事の執筆完了**（2026-08-03）: `zenn-content/articles/ai-music-label-with-claude-code.md`
+  - 現在 `published: false` の下書き。**公開＝この行を true にしてpushするだけ**
+  - 構成: 動機（Agent Skillの自動化検証）→ 制作フロー → 「またかよ」ケーススタディ → 工程別の学び → 配信の落とし穴 → 結論（ルーチンは行ける／「面白い」は80点止まり）
+  - 記事内に「ストア配信は執筆時点で審査待ち」と明記済み。**RouteNote配信が開始したらこの一文の更新が必要**
+- [ ] **Zenn記事を公開**（タイミングは任意。配信開始を待たずに出せる構成にしてある）
   - 記事公開のポストは「休止後の事務連絡＋技術記事」の扱い（音楽活動の最終投稿はマイクチェックのまま）
+
+### 制作の記録（アーカイブページ）
+
+- [x] artifactshare に公開済み: https://artifactshare.com/a/k99v79p200
+  - ソースは `content/albums/01_claude-code-vs-codex/archive/`、更新は同じURLに差し替わる
+    （`npx @artifactshare/cli share <dir> --key album-01-seisaku-no-kiroku`）
+  - 現在の公開範囲は **workspace**（techtalk.jp のみ）。外部に見せるなら link 共有に変更が必要:
+    `npx @artifactshare/cli edit k99v79p200 --visibility link --json`
 
 ---
 
@@ -104,8 +114,10 @@ RouteNote入稿は急がず進める（審査20〜40日）。配信が開始さ�
 - [x] RouteNote用素材準備済み（FLAC 18曲＋3000pxジャケット＋整形歌詞）
 - [ ] DistroKid撤退（アルバム取り下げ・シングル削除・更新前解約）
 - [ ] Day 0 (8/3月) サイト公開 → スポットライト3本 → 休止
+- [x] 制作の記録（アーカイブページ）をartifactshareに公開
+- [x] Zenn記事の執筆（下書き完成、公開待ち）
 - [ ] RouteNote入稿 → 審査待ち（急がない）
-- [ ] 第2波: ストアリンク反映＋Zenn記事
+- [ ] 第2波: ストアリンク反映＋Zenn記事の公開
 
 ---
 
