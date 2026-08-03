@@ -47,7 +47,7 @@ const claudeCodeTracks: Track[] = [
     released: true,
     links: {
       youtube: 'https://youtu.be/5bBpMcn_j44',
-      appleMusic: 'https://music.apple.com/jp/album/complexes-on-the-codex-single/1883681529',
+      appleMusic: 'https://music.apple.com/jp/album/1883681529',
       spotify: 'https://open.spotify.com/intl-ja/album/5SVwxbdpVCFNWS3sJ760Mn',
     },
     audioUrl: `${AUDIO_BASE}/claude-code/01-complexes-on-the-codex.m4a`,
@@ -66,8 +66,8 @@ const claudeCodeTracks: Track[] = [
     released: true,
     links: {
       youtube: 'https://youtu.be/BDxfyvuBfi4',
-      appleMusic: 'https://music.apple.com/jp/album/ターミナルの誇り-single/1887627926',
-      spotify: 'https://open.spotify.com/intl-ja/track/32Y3lkYItRnwbGSLA5zQH0',
+      appleMusic: 'https://music.apple.com/jp/album/1887627926',
+      spotify: 'https://open.spotify.com/intl-ja/album/42bHlDdBpIfXG0TxFIJRPO',
     },
     audioUrl: `${AUDIO_BASE}/claude-code/02-terminal-no-hokori.m4a`,
   },
@@ -207,7 +207,7 @@ const codexTracks: Track[] = [
     released: true,
     links: {
       youtube: 'https://youtu.be/gWKepXGZ0cI',
-      appleMusic: 'https://music.apple.com/jp/album/hourglass-on-the-claude-single/1886201261',
+      appleMusic: 'https://music.apple.com/jp/album/1886201261',
       spotify: 'https://open.spotify.com/intl-ja/album/5J4biJb2sUYQqUFpAMTxcM',
     },
     audioUrl: `${AUDIO_BASE}/codex/01-hourglass-on-the-claude-code.m4a`,
