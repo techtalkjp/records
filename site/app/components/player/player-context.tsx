@@ -151,18 +151,43 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
     const audio = audioRef.current
     if (!audio) return
 
-    let lastSecond = -1
-    const onTimeUpdate = () => {
-      const sec = Math.floor(audio.currentTime)
-      if (sec !== lastSecond) {
-        lastSecond = sec
-        setState((s) => ({ ...s, currentTime: audio.currentTime }))
+    // 歌詞同期のため再生中は rAF で細かく追従する。
+    // timeupdate は 250ms 程度でしか発火せず、歌詞が体感で遅れる。
+    let raf = 0
+    let lastPushed = -1
+    const pushTime = () => {
+      const t = audio.currentTime
+      if (Math.abs(t - lastPushed) >= 0.1) {
+        lastPushed = t
+        setState((s) => ({ ...s, currentTime: t }))
       }
     }
+    const tick = () => {
+      pushTime()
+      raf = requestAnimationFrame(tick)
+    }
+    const startTicking = () => {
+      if (!raf) raf = requestAnimationFrame(tick)
+    }
+    const stopTicking = () => {
+      if (raf) {
+        cancelAnimationFrame(raf)
+        raf = 0
+      }
+    }
+    // 一時停止中のシークや読み込み直後にも追従させる
+    const onTimeUpdate = pushTime
+    const onSeeked = pushTime
     const onLoadedMetadata = () =>
       setState((s) => ({ ...s, duration: audio.duration }))
-    const onPlay = () => setState((s) => ({ ...s, isPlaying: true }))
-    const onPause = () => setState((s) => ({ ...s, isPlaying: false }))
+    const onPlay = () => {
+      startTicking()
+      setState((s) => ({ ...s, isPlaying: true }))
+    }
+    const onPause = () => {
+      stopTicking()
+      setState((s) => ({ ...s, isPlaying: false }))
+    }
     const onEnded = () => {
       const mode = repeatModeRef.current
       if (mode === 'one') {
@@ -189,13 +214,17 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
     }
 
     audio.addEventListener('timeupdate', onTimeUpdate)
+    audio.addEventListener('seeked', onSeeked)
     audio.addEventListener('loadedmetadata', onLoadedMetadata)
     audio.addEventListener('play', onPlay)
     audio.addEventListener('pause', onPause)
     audio.addEventListener('ended', onEnded)
+    if (!audio.paused) startTicking()
 
     return () => {
+      stopTicking()
       audio.removeEventListener('timeupdate', onTimeUpdate)
+      audio.removeEventListener('seeked', onSeeked)
       audio.removeEventListener('loadedmetadata', onLoadedMetadata)
       audio.removeEventListener('play', onPlay)
       audio.removeEventListener('pause', onPause)
