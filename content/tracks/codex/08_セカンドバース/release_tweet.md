@@ -17,4 +17,4 @@ YouTubeで配信中 🎧
 ## セルフリプライ
 
 YouTube: https://youtu.be/nFq05hrbMTY
-記録（公式サイト）: https://records.techtalk.jp/tracks/codex/08-second-verse/
+記録（公式サイト）: https://records.techtalk.jp/tracks/codex/08-second-verse
