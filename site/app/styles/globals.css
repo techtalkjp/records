@@ -28,6 +28,8 @@ body {
   background-color: #000000;
   color: #e2e2e2;
   font-family: var(--font-body);
+  /* 日本語は文節単位で改行する（対応ブラウザのみ。非対応環境は従来どおり） */
+  word-break: auto-phrase;
 }
 
 ::selection {
