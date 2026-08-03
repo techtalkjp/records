@@ -64,16 +64,15 @@ function SyncedLyrics({
       `[data-line="${activeIndex}"]`,
     )
     if (!el) return
-    // 行の頭が必ず見えるように: 短い行は中央寄せ、長い行は上から48pxに固定
-    const offset = Math.max(
-      32,
-      (container.clientHeight - el.clientHeight) / 2,
-    )
-    container.scrollTo({
-      top: el.offsetTop - offset,
-      behavior: 'smooth',
-    })
-  }, [activeIndex])
+    // offsetTop は offsetParent 基準でコンテナ内座標にならないため、
+    // 矩形の差分から「コンテナのスクロール量」を直接求める
+    const cRect = container.getBoundingClientRect()
+    const eRect = el.getBoundingClientRect()
+    // 行の頭が必ず見えるように: 短い行は中央寄せ、長い行は上から32pxに固定
+    const offset = Math.max(32, (container.clientHeight - eRect.height) / 2)
+    const top = container.scrollTop + (eRect.top - cRect.top) - offset
+    container.scrollTo({ top, behavior: 'smooth' })
+  }, [activeIndex, lines])
 
   if (lines === null) {
     return (
