@@ -8,6 +8,7 @@ import {
   useState,
 } from 'react'
 import { type Track, allTracks, getArtist, isSameTrack } from '~/data/tracks'
+import { getAlbumTracks, getReleasedAlbums } from '~/data/albums'
 
 interface PlayerState {
   currentTrack: Track | null
@@ -48,7 +49,15 @@ function safePlay(audio: HTMLAudioElement) {
 
 export function PlayerProvider({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement>(null)
-  const defaultPlaylist = useMemo(() => allTracks.filter((t) => t.audioUrl), [])
+  // 既定の再生順はアルバムの曲順。allTracks はカタログ順（＝リリース順）なので、
+  // 先行シングルが収録位置とずれる（例: セカンドバースがアンプラグドより前に来る）
+  const defaultPlaylist = useMemo(() => {
+    const albumOrder = getReleasedAlbums().flatMap(getAlbumTracks)
+    const rest = allTracks.filter(
+      (t) => !albumOrder.some((a) => isSameTrack(a, t)),
+    )
+    return [...albumOrder, ...rest].filter((t) => t.audioUrl)
+  }, [])
   const [queue, setQueue] = useState<Track[] | null>(null)
   const [expandSignal, setExpandSignal] = useState(0)
   const [repeatMode, setRepeatMode] = useState<RepeatMode>('off')
