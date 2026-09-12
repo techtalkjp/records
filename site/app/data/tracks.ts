@@ -2,6 +2,7 @@ export interface TrackLinks {
   youtube?: string
   appleMusic?: string
   spotify?: string
+  musicVideo?: string
 }
 
 export interface Track {
@@ -47,6 +48,7 @@ const claudeCodeTracks: Track[] = [
     released: true,
     links: {
       youtube: 'https://youtu.be/5bBpMcn_j44',
+      musicVideo: 'https://youtu.be/s9oyeREHJCk',
       appleMusic: 'https://music.apple.com/jp/album/1883681529',
       spotify: 'https://open.spotify.com/intl-ja/album/5SVwxbdpVCFNWS3sJ760Mn',
     },

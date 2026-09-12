@@ -112,6 +112,9 @@ export default function TrackPage({ loaderData }: Route.ComponentProps) {
               {track.links.youtube && (
                 <a href={track.links.youtube} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">YouTube</a>
               )}
+              {track.links.musicVideo && (
+                <a href={track.links.musicVideo} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Music Video</a>
+              )}
               {track.links.appleMusic && (
                 <a href={track.links.appleMusic} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Apple Music</a>
               )}
